@@ -1,0 +1,28 @@
+/*
+Theme Name: Mischa Colley
+Theme URI: http://www.mischacolley.com.au
+Author: Mischa Colley
+Author URI: http://www.mischacolley.com.au
+Description: A custom theme for my personal site
+Version: 1.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: mischacolley
+Domain Path: /languages/
+Tags:
+
+This theme, like WordPress, is licensed under the GPL.
+Use it to make something cool, have fun, and share what you've learned with others.
+
+Mischa Colley is based on Underscores http://underscores.me/, (C) 2012-2014 Automattic, Inc.
+
+Resetting and rebuilding styles have been helped along thanks to the fine work of
+Eric Meyer http://meyerweb.com/eric/tools/css/reset/index.html
+along with Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
+and Blueprint http://www.blueprintcss.org/
+*/
+
+body {
+	color: grey;
+	background: #000000;
+}
