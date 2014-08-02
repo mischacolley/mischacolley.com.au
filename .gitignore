@@ -2,6 +2,7 @@
 /*
 !.gitignore
 !wp-content/
+!index.html
  
 # Ignore everything in the "wp-content" directory, except the "plugins" and "themes" directories.
 wp-content/*
