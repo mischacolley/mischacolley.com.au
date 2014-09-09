@@ -2,13 +2,6 @@
 /*
 !.gitignore
 !wp-content/
-
-# Temp allowed files and dir
-!index.html
-!img/
-!js/
-!styles/
-!bower_components/
  
 # Ignore everything in the "wp-content" directory, except the "plugins" and "themes" directories.
 wp-content/*
