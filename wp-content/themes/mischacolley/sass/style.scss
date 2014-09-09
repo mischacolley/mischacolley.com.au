@@ -25,4 +25,67 @@ and Blueprint http://www.blueprintcss.org/
 body {
 	color: grey;
 	background: #000000;
+	margin: 0;
+	padding: 0;
+}
+
+/* Init */
+
+$col-primary: #6699CC;
+
+$brandon-grotesque: "brandon-grotesque",helvetica,arial;
+
+/* apply a natural box layout model to all elements */
+*, *:before, *:after {
+  -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box;
+ }
+
+/* END Init */
+
+
+/* Global */
+
+.wrapper {
+	margin: 0 auto;
+	max-width: 1920px;
+}
+
+.panel {
+	height: 100%;
+	background: #f1f1f1;
+	padding: 2em;
+}
+
+a {
+	color: $col-primary;
+	text-decoration: none;
+}
+
+img {
+	max-width: 100%;
+}
+
+a:hover {
+	opacity: 0.8;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-family: $brandon-grotesque;
+	text-transform: uppercase;
+}
+
+.intro {
+	height:100vh;
+}
+
+.intro {
+	background: url('img/bg-intro.jpg') no-repeat;
+	background-size: cover;
+	background-position: center center;
+	padding: 0;
 }

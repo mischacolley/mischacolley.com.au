@@ -85,13 +85,29 @@ function mischa_colley_widgets_init() {
 		'before_title'  => '<h1 class="widget-title">',
 		'after_title'   => '</h1>',
 	) );
+	register_sidebar( array(
+		'name'          => __( 'Pocket Widget Area', 'mischacolley' ),
+		'id'            => 'pocket-widget-area',
+		'description'   => '',
+		'before_widget' => '<div class="pocket-widget">',
+		'after_widget'  => '</div>',
+	) );
 }
 add_action( 'widgets_init', 'mischa_colley_widgets_init' );
+
+// Add Options pages
+
+if( function_exists('acf_add_options_page') ) {
+
+	acf_add_options_page('Homepage');
+
+}
 
 /**
  * Enqueue scripts and styles.
  */
 function mischa_colley_scripts() {
+
 	wp_enqueue_style( 'mischacolley-style', get_stylesheet_uri() );
 
 	//wp_enqueue_script( 'mischacolley-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20120206', true );
