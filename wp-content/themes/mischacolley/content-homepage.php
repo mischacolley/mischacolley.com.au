@@ -18,7 +18,19 @@
 
 	<article>
 
-		<?php the_field('about_copy', 'option'); ?>
+		<?php the_field('about_copy_intro', 'option'); ?>
+
+		<div class="call-to-action-container">
+
+			<button class="call-to-action menu-contact">Work with me</button>
+
+			<button class="call-to-action highlight find-out-more">Find out more</button>
+			
+		</div>
+
+		<div class="about-copy-more" style="display:none;">
+			<?php the_field('about_copy_more', 'option'); ?>
+		</div>
 
 	</article>
 
@@ -26,7 +38,8 @@
 
 		<img src="<?php the_field('about_image', 'option'); ?>" alt="Mischa Colley & Sandra Colley" />
 
-		<p>I'm <a target="_blank" href="https://twitter.com/mischacolley"><i class="fa fa-twitter"></i> @mischacolley</a> on Twitter</p>
+		<p>I'm <a target="_blank" href="https://twitter.com/mischacolley"><i class="fa fa-twitter"></i> @mischacolley</a> on Twitter, <br/>
+		why not say hi</p>
 
 		<?php display_latest_tweets('mischacolley'); ?>
 

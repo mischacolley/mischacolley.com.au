@@ -326,7 +326,8 @@ a.btn-filled {
 	color: #ffffff;
 }
 
-.contact h2 {
+.contact h2,
+.contact h3 {
 	color: #ffffff;
 }
 
@@ -363,3 +364,28 @@ a.btn-filled {
 button {
 	outline: none;
 }
+
+.call-to-action-container {
+	margin: 0 auto;
+	display: table;
+}
+
+button.call-to-action {
+	background: none;
+	border: 1px solid rgba(0, 0, 0, 0.1);
+	color: $col-primary;
+	text-transform: uppercase;
+	padding: 0.6em 0.8em 0.5em 0.8em;
+	border-radius: 0.1em;
+	margin: 0 0.5em;
+}
+
+button.call-to-action.highlight {
+	background: $col-primary;
+	color: #ffffff;
+}
+
+// button.call-to-action.highlight:hover {
+// 	background: none;
+// 	color: $col-primary;
+// }

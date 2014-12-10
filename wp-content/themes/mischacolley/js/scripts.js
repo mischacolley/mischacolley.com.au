@@ -1,5 +1,10 @@
 jQuery(document).ready(function($){
 
+    $( ".find-out-more" ).click(function() {
+      $( ".about-copy-more" ).toggle( "slow", function() {
+      });
+    });
+
     $(".scroll-down, .menu-about").click(function() {
       $('#about').ScrollTo({
           duration: 2000,
