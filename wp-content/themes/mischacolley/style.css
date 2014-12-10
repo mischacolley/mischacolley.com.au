@@ -297,9 +297,12 @@ a.btn-filled {
     margin: 1em auto;
     display: block; }
   .about p {
+    font-size: 16px;
+    line-height: 25px; }
+  .about .about-copy-intro p {
     font-size: 22px;
     line-height: 28px; }
-  .about p:nth-child(1) {
+  .about .about-copy-intro p:nth-child(1) {
     font-size: 25px;
     line-height: 35px; }
   .about .netengine {
@@ -310,6 +313,12 @@ a.btn-filled {
     color: #21759b; }
   .about .drupal {
     color: #0678be; }
+  .about .col {
+    float: left;
+    width: 24%;
+    margin-right: 0.5em; }
+    .about .col .col-four {
+      margin-right: 0; }
   @media (min-width: 1024px) {
     .about {
       height: 100vh; }

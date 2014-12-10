@@ -249,11 +249,16 @@ a.btn-filled {
 	}
 
 	p {
+		font-size: 16px;
+		line-height: 25px;
+	}
+
+	.about-copy-intro p {
 		font-size: 22px;
 		line-height: 28px;
 	}
 
-	p:nth-child(1) {
+	.about-copy-intro p:nth-child(1) {
 		font-size: 25px;
 		line-height: 35px;
 	}
@@ -272,6 +277,18 @@ a.btn-filled {
 
 	.drupal {
 		color: $col-drupal;
+	}
+
+	.col {
+
+		float: left;
+		width: 24%;
+		margin-right: 0.5em;
+
+		.col-four {
+			margin-right: 0;
+		}
+
 	}
 
 	@include breakpoint($largeish) { 

@@ -19,7 +19,6 @@
 			<?php the_field('contact_copy', 'option'); ?>
 
 			<ul>
-				<li class="location"><i class="fa fa-map-marker"></i> Byron Bay, Australia</li>
 				<li><i class="fa fa-mobile"></i> <a href="tel:+61417906042">0417 906 042</a></li>
 				<li><i class="fa fa-envelope-o"></i> <a href="mailto:me@mischacolley.com.au">me@mischacolley.com.au</a></li>
 			</ul>

@@ -18,7 +18,9 @@
 
 	<article>
 
-		<?php the_field('about_copy_intro', 'option'); ?>
+		<div class="about-copy-intro">
+			<?php the_field('about_copy_intro', 'option'); ?>
+		</div>
 
 		<div class="call-to-action-container">
 
