@@ -92,6 +92,13 @@ function mischa_colley_widgets_init() {
 		'before_widget' => '<div class="pocket-widget">',
 		'after_widget'  => '</div>',
 	) );
+	register_sidebar( array(
+		'name'          => __( 'Latest Posts Widget Area', 'mischacolley' ),
+		'id'            => 'latest-posts-widget-area',
+		'description'   => '',
+		'before_widget' => '<div class="latest-posts-widget">',
+		'after_widget'  => '</div>',
+	) );
 }
 add_action( 'widgets_init', 'mischa_colley_widgets_init' );
 
@@ -110,7 +117,13 @@ function mischa_colley_scripts() {
 
 	wp_enqueue_style( 'mischacolley-style', get_stylesheet_uri() );
 
-	//wp_enqueue_script( 'mischacolley-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20120206', true );
+	wp_enqueue_script( 'jquery' );
+
+	wp_enqueue_script( 'mischacolley-scrollto', get_template_directory_uri() . '/js/min/jquery-scrollto-min.js', array(), '20120206', true );
+
+	wp_enqueue_script( 'mischacolley-waypoints', get_template_directory_uri() . '/js/min/waypoints-min.js', array(), '20120206', true );
+
+	wp_enqueue_script( 'mischacolley-scripts', get_template_directory_uri() . '/js/min/scripts-min.js', array(), '20120206', true );
 
 	//wp_enqueue_script( 'mischacolley-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20130115', true );
 
@@ -119,6 +132,7 @@ function mischa_colley_scripts() {
 	// }
 }
 add_action( 'wp_enqueue_scripts', 'mischa_colley_scripts' );
+
 
 /**
  * Implement the Custom Header feature.

@@ -6,15 +6,34 @@
  */
 ?>
 
+<?php include("navigation.php"); ?>
+
 <section class="panel intro">
 
-	<h1>Hi, I'm Mischa Colley</h1>
-
-	<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat.</p>
+	<a class="scroll-down icon-arrow-left" href="#about" data-offset="-45"><span class="hidden">Scroll Down</span></a>
 	
 </section>
 
-<section class="panel">
+<section id="about" class="panel about">
+
+	<article>
+
+		<?php the_field('about_copy', 'option'); ?>
+
+	</article>
+
+	<aside>
+
+		<img src="<?php the_field('about_image', 'option'); ?>" alt="Mischa Colley & Sandra Colley" />
+
+		<p>I'm <a target="_blank" href="https://twitter.com/mischacolley"><i class="fa fa-twitter"></i> @mischacolley</a> on Twitter</p>
+
+		<?php display_latest_tweets('mischacolley'); ?>
+
+	</aside>
+
+
+	<!--  		
 
 	<h1>Sometimes I Write / Sometimes I Read</h1>
 
@@ -22,11 +41,7 @@
 
 		<h2>Written</h2>
 
-		<ul>
-			<li><a href="#">Lorem ipsum dolor</a></li>
-			<li><a href="#">Lorem ipsum dolor</a></li>
-			<li><a href="#">Lorem ipsum dolor</a></li>
-		</ul>
+		<?php dynamic_sidebar( 'latest-posts-widget-area' ); ?>
 		
 	</article>
 	
@@ -38,15 +53,21 @@
 		
 	</article>
 
+	-->
+
 </section>
 
-<section class="panel">
+<!-- 
 
-	<h1>Sometimes I Watch / Sometimes I Listen</h1>
+<section class="panel blog">
+
+	<h2>Blog</h2>
+
+	<h3>Sometimes I Watch / Sometimes I Listen</h3>
 
 	<article>
 
-		<h2>Watched</h2>
+		<h4>Watched</h4>
 
 		<ul>
 			<li><a href="#">Lorem ipsum dolor</a></li>
@@ -58,7 +79,7 @@
 	
 	<article>
 
-		<h2>Heard</h2>
+		<h4>Heard</h4>
 
 		<ul>
 			<li><a href="#">Lorem ipsum dolor</a></li>
@@ -66,14 +87,26 @@
 			<li><a href="#">Lorem ipsum dolor</a></li>
 		</ul>
 		
-	</article>	
+	</article>
 	
 </section>
 
-<section class="contact">
+<section class="panel work">
 
-	<h1>Get in Touch</h1>
+	<h2>Work</h2>
 	
 </section>
 
+<section class="panel projects">
 
+	<h2>Projects</h2>
+	
+</section>
+
+<section class="panel resume">
+
+	<h2>Resume</h2>
+	
+</section>
+
+-->

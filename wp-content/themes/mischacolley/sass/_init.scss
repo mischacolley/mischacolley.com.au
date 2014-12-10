@@ -1,0 +1,40 @@
+/* Imports */
+
+@import "susy";
+
+@import "../bower_components/breakpoint-sass/stylesheets/breakpoint";
+
+/* Variables */
+
+	/* Colours */
+
+	$col-primary: #6699CC;
+
+	$col-exposecreative: #DC1D48;
+
+	$col-netengine: #06a8f9;
+	$col-orangedigital: #ff4819;
+
+	$col-wordpress: #21759b;
+
+	$col-drupal: #0678be;
+
+	/* Typography */
+
+	$brandon-grotesque: "brandon-grotesque",helvetica,arial;
+
+/* Mixins */
+
+/* apply a natural box layout model to all elements */
+*, *:before, *:after {
+  -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box;
+ }
+
+
+ /* Breakpoints */
+
+ $smallish: 500px;
+
+ $mediumish: 768px;
+
+ $largeish: 1024px;

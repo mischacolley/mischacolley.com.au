@@ -10,13 +10,37 @@
 
 	</div><!-- #content -->
 
-	<footer id="colophon" class="site-footer" role="contentinfo">
-		<div class="site-info">
-			<a href="<?php echo esc_url( __( 'http://wordpress.org/', 'mischacolley' ) ); ?>"><?php printf( __( 'Proudly powered by %s', 'mischacolley' ), 'WordPress' ); ?></a>
-			<span class="sep"> | </span>
-			<?php printf( __( 'Theme: %1$s by %2$s.', 'mischacolley' ), 'Mischa Colley', '<a href="http://www.mischacolley.com.au" rel="designer">MischaColley</a>' ); ?>
-		</div><!-- .site-info -->
-	</footer><!-- #colophon -->
+	<section id="contact" class="panel contact">
+
+		<div class="column">
+
+			<h2>Get in Touch</h2>
+
+			<?php the_field('contact_copy', 'option'); ?>
+
+			<ul>
+				<li class="location"><i class="fa fa-map-marker"></i> Byron Bay, Australia</li>
+				<li><i class="fa fa-mobile"></i> <a href="tel:+61417906042">0417 906 042</a></li>
+				<li><i class="fa fa-envelope-o"></i> <a href="mailto:me@mischacolley.com.au">me@mischacolley.com.au</a></li>
+			</ul>
+			
+
+			
+
+		</div>
+
+		<div class="column">
+
+		<?php gravity_form(1, $display_title=false, $display_description=false, $display_inactive=false, $field_values=null, $ajax=true, $tabindex); ?>
+
+		</div>
+
+	</section>
+
+	<footer class="site-footer" role="contentinfo">
+		
+	</footer><!-- site-footer -->
+
 </div><!-- #page -->
 
 <?php wp_footer(); ?>
