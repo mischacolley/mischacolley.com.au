@@ -122,7 +122,13 @@ body {
 /* Global */
 .wrapper {
   margin: 0 auto;
-  max-width: 1920px; }
+  max-width: 1920px;
+  margin-left: auto;
+  margin-right: auto; }
+  .wrapper:after {
+    content: " ";
+    display: block;
+    clear: both; }
 
 .panel {
   height: 100%;
@@ -313,23 +319,40 @@ a.btn-filled {
     color: #21759b; }
   .about .drupal {
     color: #0678be; }
-  .about .col {
-    float: left;
-    width: 24%;
-    margin-right: 0.5em; }
-    .about .col .col-four {
-      margin-right: 0; }
-  @media (min-width: 1024px) {
-    .about {
-      height: 100vh; }
-      .about article {
-        width: 75%;
-        float: right;
-        padding: 1em; }
-      .about aside {
-        width: 25%;
-        float: left;
-        padding: 1em; } }
+  @media (min-width: 768px) {
+    .about .col {
+      -moz-box-sizing: border-box;
+      box-sizing: border-box;
+      width: 50%;
+      float: left;
+      padding-left: 0.83333%;
+      padding-right: 0.83333%; } }
+  @media (min-width: 0px) and (max-width: 1340px) {
+    .about .col.col-three {
+      clear: both; } }
+  @media (min-width: 960px) {
+    .about article {
+      -moz-box-sizing: border-box;
+      box-sizing: border-box;
+      width: 75%;
+      float: right;
+      padding: 1em; }
+    .about aside {
+      -moz-box-sizing: border-box;
+      box-sizing: border-box;
+      width: 25%;
+      float: left;
+      padding-left: 0.83333%;
+      padding-right: 0.83333%;
+      padding: 1em; } }
+  @media (min-width: 1340px) {
+    .about .col {
+      -moz-box-sizing: border-box;
+      box-sizing: border-box;
+      width: 25%;
+      float: left;
+      padding-left: 0.83333%;
+      padding-right: 0.83333%; } }
 
 .exposecreative {
   color: #DC1D48; }
@@ -337,9 +360,7 @@ a.btn-filled {
 .contact {
   background: #6699CC;
   float: left; }
-  .contact .column {
-    padding: 1em; }
-  @media (min-width: 1024px) {
+  @media (min-width: 960px) {
     .contact {
       height: 100vh; }
       .contact .column {
@@ -361,10 +382,9 @@ a.btn-filled {
   line-height: 25px; }
 
 .contact .fa {
-  font-size: 2em;
+  font-size: 1.5em;
   text-align: center;
-  margin: 0 auto;
-  width: 50px; }
+  margin-right: 10px; }
 
 .location {
   color: #ffffff;
@@ -381,8 +401,12 @@ button {
   outline: none; }
 
 .call-to-action-container {
-  margin: 0 auto;
-  display: table; }
+  margin: 0 auto 1.8em auto;
+  display: table;
+  clear: both; }
+  @media (min-width: 768px) {
+    .call-to-action-container {
+      margin: 0 auto 1em auto; } }
 
 button.call-to-action {
   background: none;
@@ -396,5 +420,38 @@ button.call-to-action {
 button.call-to-action.highlight {
   background: #6699CC;
   color: #ffffff; }
+
+button.call-to-action:hover {
+  background: none;
+  color: #6699CC; }
+
+@media (min-width: 768px) {
+  .gform_wrapper form {
+    margin-top: 54px; } }
+ul.contact-deets li {
+  float: left;
+  margin-right: 1em; }
+
+ul.contact-deets li i {
+  top: 4px;
+  position: relative; }
+
+input,
+textarea {
+  -webkit-appearance: none !important;
+  appearance: none !important;
+  border-radius: 0 !important;
+  border: none; }
+
+/* Temporary */
+.menu-blog a,
+.menu-work a,
+.menu-projects a {
+  text-decoration: line-through;
+  opacity: 0.5; }
+
+div#gforms_confirmation_message {
+  color: #ffffff;
+  margin-top: 25px; }
 
 /*# sourceMappingURL=style.css.map */

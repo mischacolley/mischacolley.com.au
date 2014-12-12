@@ -37,4 +37,14 @@
 
  $mediumish: 768px;
 
- $largeish: 1024px;
+ $largeish: 960px;
+
+ $larger: 1340px;
+
+ $susy: (
+  columns: 12,
+  gutters: 1/4,
+  math: fluid,
+  output: float,
+  gutter-position: inside,
+);

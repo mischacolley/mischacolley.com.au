@@ -39,7 +39,7 @@ body {
 
 .wrapper {
 	margin: 0 auto;
-	max-width: 1920px;
+	@include container(1920px);
 }
 
 .panel {
@@ -279,32 +279,41 @@ a.btn-filled {
 		color: $col-drupal;
 	}
 
-	.col {
+	@include breakpoint($mediumish) { 
+		.col {
+			@include span(6);
+		}
 
-		float: left;
-		width: 24%;
-		margin-right: 0.5em;
+		
+	}
 
-		.col-four {
-			margin-right: 0;
+	@include breakpoint(0px $larger) {
+
+		.col.col-three {
+			clear: both;
+		}
+	}	
+
+	@include breakpoint($largeish) { 
+
+		article {
+			@include span(last 9 nest);
+			padding: 1em;
+
+		}
+
+		aside {
+			@include span(3);
+			padding: 1em;
 		}
 
 	}
 
-	@include breakpoint($largeish) { 
-		height: 100vh;
+	@include breakpoint($larger) { 
 
-			article {
-				width: 75%;
-				float: right;
-				padding: 1em;
-			}
-
-			aside {
-				width: 25%;
-				float: left;
-				padding: 1em;
-			}
+		.col {
+			@include span(3);	
+		}
 
 	}
 
@@ -319,10 +328,6 @@ a.btn-filled {
 	
 	background: $col-primary;
 	float: left;
-
-	.column {
-		padding: 1em;
-	}
 
 	@include breakpoint($largeish) { 
 		height: 100vh;
@@ -354,10 +359,9 @@ a.btn-filled {
 }
 
 .contact .fa {
-	font-size: 2em;
+	font-size: 1.5em;
 	text-align: center;
-	margin: 0 auto;
-	width: 50px;
+	margin-right: 10px;
 }
 
 .location {
@@ -383,8 +387,13 @@ button {
 }
 
 .call-to-action-container {
-	margin: 0 auto;
+	margin: 0 auto 1.8em auto;
 	display: table;
+	clear: both;
+
+	@include breakpoint($mediumish) { 
+		margin: 0 auto 1em auto;
+	}
 }
 
 button.call-to-action {
@@ -402,7 +411,46 @@ button.call-to-action.highlight {
 	color: #ffffff;
 }
 
-// button.call-to-action.highlight:hover {
-// 	background: none;
-// 	color: $col-primary;
-// }
+button.call-to-action:hover {
+	background: none;
+	color: $col-primary;
+}
+
+@include breakpoint($mediumish) { 
+	.gform_wrapper form {
+		margin-top: 54px;
+	}
+}
+
+ul.contact-deets li {
+	float: left;
+	margin-right: 1em;
+}
+
+ul.contact-deets li i {
+	top: 4px;
+	position: relative;
+}
+
+input,
+textarea {
+	-webkit-appearance:none !important;
+	appearance: none !important;
+	border-radius: 0 !important;
+	border: none;
+}
+
+
+/* Temporary */
+
+.menu-blog a,
+.menu-work a,
+.menu-projects a {
+	text-decoration: line-through;
+	opacity: 0.5;
+}
+
+div#gforms_confirmation_message {
+color: #ffffff;
+margin-top: 25px;
+}

@@ -1,20 +1,20 @@
 jQuery(document).ready(function($){
 
-    $( ".find-out-more" ).click(function() {
-      $( ".about-copy-more" ).toggle( "slow", function() {
-      });
-    });
+    // $( ".find-out-more" ).click(function() {
+    //   $( ".about-copy-more" ).toggle( "slow", function() {
+    //   });
+    // });
 
     $(".scroll-down, .menu-about").click(function() {
       $('#about').ScrollTo({
-          duration: 2000,
+          duration: 1000,
           easing: 'linear'
       });
     }); 
 
     $(".menu-contact").click(function() {
       $('#contact').ScrollTo({
-          duration: 2000,
+          duration: 1000,
           easing: 'linear'
       });
     }); 
