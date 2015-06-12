@@ -1,11 +1,141 @@
 ---
-title: Page Title
+title: Mischa Colley
 ---
 
-.delete-me
-  .container
-    %h1 Proteus
-    %p
-      You're all set!
-      <a href="http://github.com/thoughtbot/proteus-middleman">Let's get started</a>
-      building your prototype.
+
+#page.hfeed.site
+  #content.site-content
+    %header
+      %nav.main-navigation{:role => "navigation"}
+        %a{:href => "/"}
+          %h1.logo
+            %span.m M
+            %span.ischa ischa
+            %span.c C
+            %span.olley olley
+          %h2.description Front-End Developer
+        %button.menu-toggle Menu
+        %nav.main-navigation{:role => "navigation"}
+          %a{:href => "/"}
+            %h1.logo
+              %span.m M
+              %span.ischa ischa
+              %span.c C
+              %span.olley olley
+            %h2.description Front-End Developer
+          %button.menu-toggle Menu
+          .menu-primary-menu-container
+            %ul#menu-primary-menu.menu
+              %li#menu-item-13.menu-about.menu-item.menu-item-type-custom.menu-item-object-custom.menu-item-13
+                %a{:href => "#about"} About
+              %li#menu-item-14.menu-blog.menu-item.menu-item-type-custom.menu-item-object-custom.current-menu-item.current_page_item.menu-item-14
+                %a{:href => "/", :title => "Blog – Coming Soon"} Blog
+              %li#menu-item-15.menu-work.menu-item.menu-item-type-custom.menu-item-object-custom.current-menu-item.current_page_item.menu-item-15
+                %a{:href => "/", :title => "Work – Coming Soon"} Work
+              %li#menu-item-16.menu-projects.menu-item.menu-item-type-custom.menu-item-object-custom.current-menu-item.current_page_item.menu-item-16
+                %a{:href => "/", :title => "Projects – Coming Soon"} Projects
+              %li#menu-item-17.menu-resume.menu-item.menu-item-type-custom.menu-item-object-custom.menu-item-17
+                %a{:href => "https://www.linkedin.com/in/mischacolley", :rel => "no-follow ", :target => "_blank", :title => "LinkedIn Profile"} Resume
+              %li#menu-item-18.menu-contact.menu-item.menu-item-type-custom.menu-item-object-custom.menu-item-18
+                %a{:href => "#contact"} Contact
+    %section.panel.intro
+      %a.scroll-down.icon-arrow-left{"data-offset" => "-45", :href => "#about"}
+        %span.hidden Scroll Down
+    %section#about.panel.about
+      %article
+        .about-copy-intro
+          %p
+            Hi I’m
+            = succeed "." do
+              %strong Mischa Colley
+            %strong Front-End Developer
+            from the
+            %strong Northern Rivers
+            region of
+            = succeed "." do
+              %strong NSW, Australia
+            %strong Byron Bay
+            home.
+          %p
+            I’ve been working on the web since
+            = succeed "." do
+              %strong 2010
+            %strong Brisbane
+            agencies such as
+            %strong
+              %a.netengine{:href => "http://netengine.com.au"} Netengine
+            and
+            %strong
+              %a.orangedigital{:href => "http://www.orangedigital.com.au"} Orange Digital
+            along with my own clients through
+            = succeed "." do
+              %strong
+                %a.exposecreative Exposé Creative
+        .call-to-action-container
+          %button.call-to-action.menu-contact.highlight Work with Me
+        .about-copy-more
+          .col.col-one
+            %h3 As a Developer
+            %p
+              I love writing
+              %i.fa.fa-html5
+              HTML &
+              %i.fa.fa-css3
+              CSS (Sass). I’m extremely passionate about building
+              %em responsive
+              sites that are a joy to use for the owner and customer alike.
+            %p
+              I specialise in
+              %i.fa.fa-wordpress.wordpress
+              %strong WordPress
+              development but I also have experience with CMS like
+              %i.fa.fa-drupal.drupal
+              = succeed "," do
+                %strong Drupal
+              %strong Rails
+              and some
+              = succeed "." do
+                %strong Mobile Development
+          .col.col-two
+            %h3  
+            %p
+              I believe technology doesn’t have to be hard and that it’s my job as a developer to make the technology disappear so that you are just left with the
+              = succeed "." do
+                %em experience
+            %p
+              If I had one dream for the websites I create and the projects that I work on it would be that they never be marked as
+              = succeed "." do
+                %em finished
+              %em Finished
+              is where websites go to die.
+          .col.col-three
+            %h3
+              As a 
+              %b Lifelong Learner
+            %p
+              I have a passion for
+              = succeed "," do
+                %strong Education
+              = succeed "and" do
+                %strong Technology
+              = succeed "." do
+                %strong Creative Arts
+              %strong Music
+              and would love to find the time for that again.
+            %p
+              I speak German, but wish I spoke it better. I love 
+              %strong> History
+              ,
+              %strong Traveling
+              and exploring other cultures. I love to teach people what I know, be it clients or my peers.
+          .col.col-four
+            %h3 As a Family Man
+            %p I love being dad. I have a young son and love spending time with him and his mum. Family always comes first for me.
+            %p
+              Starting a family has brought a lot of my youthful desires for making the
+              %em world a better place
+              to the surface. I believe strongly in the
+              = succeed "," do
+                %em enabling power of the web
+      %aside
+        = tag :img, :src => "/assets/images/profile-shot.jpg"
