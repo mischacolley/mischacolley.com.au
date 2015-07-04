@@ -1,0 +1,23 @@
+body {
+  background-color: #ffffff;
+}
+
+/* Global */
+.wrapper {
+  margin: 0 auto;
+  max-width: 1920px;
+}
+
+.panel {
+  height: 100%;
+  background: #ffffff;
+  padding: 2em;
+  background: url(image-path('subtle_dots.png'));
+  background-repeat: repeat;
+}
+
+
+img {
+  max-width: 100%; 
+}
+

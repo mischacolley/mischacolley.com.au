@@ -1,0 +1,152 @@
+.intro {
+  height: 100vh; }
+
+.intro {
+  background: url(image-path('bg-intro.jpg'));
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  padding: 0; }
+
+p {
+  font-family: "open-sans",sans-serif;
+  font-weight: 300; }
+
+
+/* About Panel */
+.about {
+  height: auto;
+  float: left; 
+}
+
+.about img {
+  margin: 1em auto;
+  display: block; 
+  border-radius: 50%;
+  border: 1px solid #eee;
+}
+
+.about .about-copy-intro p {
+  font-size: 25px;
+  line-height: 35px;
+}
+
+.about .about-copy-intro p:nth-child(1) {
+  font-size: 35px;
+  line-height: 45px; 
+}
+
+  .about .netengine {
+    color: #06a8f9; }
+  .about .orangedigital {
+    color: #ff4819; }
+  .about .wordpress {
+    color: #21759b; }
+  .about .drupal {
+    color: #0678be; }
+
+  @media (min-width: 768px) {
+    .about .col {
+      -moz-box-sizing: border-box;
+      box-sizing: border-box;
+      width: 50%;
+      float: left;
+      padding-left: 0.83333%;
+      padding-right: 0.83333%; } }
+  @media (min-width: 0px) and (max-width: 1340px) {
+    .about .col.col-three {
+      clear: both; } }
+  @media (min-width: 960px) {
+    .about article {
+      -moz-box-sizing: border-box;
+      box-sizing: border-box;
+      width: 75%;
+      float: right;
+      padding: 1em; }
+    .about aside {
+      -moz-box-sizing: border-box;
+      box-sizing: border-box;
+      width: 25%;
+      float: left;
+      padding-left: 0.83333%;
+      padding-right: 0.83333%;
+      padding: 1em; } }
+  @media (min-width: 1340px) {
+    .about .col {
+      -moz-box-sizing: border-box;
+      box-sizing: border-box;
+      width: 25%;
+      float: left;
+      padding-left: 0.83333%;
+      padding-right: 0.83333%; } }
+
+.exposecreative {
+  color: #DC1D48; }
+
+
+
+button {
+  outline: none; }
+
+button.call-to-action {
+  background: none;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  color: #6699CC;
+  text-transform: uppercase;
+  padding: 0.6em 0.8em 0.5em 0.8em;
+  border-radius: 0.1em;
+}
+
+button.call-to-action.highlight {
+  background: #6699CC;
+  color: #ffffff; }
+
+button.call-to-action:hover {
+  background: none;
+  color: #6699CC; }
+
+.icon-arrow-left:before {
+  content: "\f605"; 
+}
+
+.scroll-down {
+  display: block;
+  position: absolute;
+  z-index: 100;
+  bottom: 45px;
+  left: 50%;
+  margin-left: -16px;
+  width: 34px;
+  height: 34px;
+  font-size: 34px;
+  text-align: center;
+  text-decoration: none;
+  color: rgba(255, 255, 255, 0.7);
+  -webkit-transform: rotate(-90deg);
+  -ms-transform: rotate(-90deg);
+      transform: rotate(-90deg);
+  -webkit-animation: bounce 4s 2s infinite;
+  animation: bounce 4s 2s infinite; }
+
+.what-i-do {
+  clear: both;
+  color: #ffffff;
+  background: url(image-path('bridge.jpg'));
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  padding: 0;
+  padding: 2em 1em;
+}
+
+h2#im-a-bridge {
+  color: #ffffff;
+  font-size: 1.5em;
+  text-align: center;
+  border: 1px solid;
+  display: block;
+  margin: 0 auto;
+  padding: 0.5em;
+  width: 15%;
+  background: rgba(0, 0, 0, 0.1);
+}

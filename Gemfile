@@ -7,3 +7,7 @@ gem "middleman-livereload"
 gem "middleman-deploy"
 gem "bourbon"
 gem "neat"
+
+gem 'haml'
+gem 'kramdown'
+gem 'haml-kramdown'

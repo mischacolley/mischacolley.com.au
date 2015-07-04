@@ -19,6 +19,19 @@ h6 {
   margin: 0 0 $small-spacing;
 }
 
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "brandon-grotesque", helvetica, arial;
+  text-transform: uppercase;
+  color: #6699CC; 
+}
+
+
 p {
   margin: 0 0 $small-spacing;
 }

@@ -38,6 +38,9 @@ GEM
     ffi (1.9.8)
     haml (4.0.6)
       tilt
+    haml-kramdown (0.1.0)
+      haml (~> 4.0)
+      kramdown
     hike (1.2.3)
     hitimes (1.2.2)
     hooks (0.4.0)
@@ -137,6 +140,9 @@ PLATFORMS
 
 DEPENDENCIES
   bourbon
+  haml
+  haml-kramdown
+  kramdown
   middleman
   middleman-deploy
   middleman-livereload
