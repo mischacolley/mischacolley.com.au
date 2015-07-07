@@ -9,6 +9,10 @@ gem "middleman-deploy"
 gem "bourbon"
 gem "neat"
 
+gem "nokogiri"
+
+gem 'builder'
+
 gem 'haml'
 gem 'kramdown'
 gem 'haml-kramdown'

@@ -1,11 +1,22 @@
 body {
-  background-color: #ffffff;
+  background: url(image-path('subtle_dots.png')) #ffffff;
+  background-repeat: repeat;
 }
 
 /* Global */
 .wrapper {
   margin: 0 auto;
   max-width: 1920px;
+}
+
+main {
+  margin-top: 130px;
+  padding: 2em;
+}
+
+.index main {
+  padding: 0;
+  margin-top: 0;
 }
 
 .panel {

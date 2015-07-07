@@ -3,7 +3,8 @@ pageable: true
 per_page: 12
 ---
 %h1
-  Articles tagged '#{'tagname'}'
+  Articles tagged
+  = tagname
 - if paginate && num_pages > 1
   %p
     Page #{page_number} of #{num_pages}
