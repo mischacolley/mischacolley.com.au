@@ -17,22 +17,40 @@ h6 {
   font-size: $base-font-size;
   line-height: $heading-line-height;
   margin: 0 0 $small-spacing;
-}
-
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
   font-family: "brandon-grotesque", helvetica, arial;
-  text-transform: uppercase;
   color: #6699CC; 
 }
 
+.article {
+
+  h1, .h1 {
+    font-size: rem(26);
+  }
+
+  h2, .h2 {
+    font-size: rem(24);
+  }
+
+  h3, .h3 {
+    font-size: rem(22);
+  }
+
+  h4, .h4 {
+    font-size: rem(20);
+  }
+
+  h5, .h5 {
+    font-size: rem(18);
+  }
+
+  h6, .h6 {
+    font-size: rem(16);
+  }
+
+}
 
 p {
+  font-size: rem(16);
   margin: 0 0 $small-spacing;
 }
 

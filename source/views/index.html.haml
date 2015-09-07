@@ -2,7 +2,7 @@
 title: Mischa Colley
 ---
 
-%section.panel.intro
+%section.intro
   %a.scroll-down.icon-arrow-left{"data-offset" => "-45", :href => "#about"}
     %span.hidden Scroll Down
 %section#about.panel.about
@@ -14,15 +14,52 @@ title: Mischa Colley
       %button.call-to-action.menu-contact.highlight Talk to Me
   %aside
     = tag :img, :src => "/assets/images/profile-shot.jpg"
-%section#what-i-do.panel.what-i-do
-  %article
-    = partial "what_i_do"
-%section#about.panel.about
-  %article
-    %p As a Front-End Developer I write markup, styles and a bit of behavior. This means I author HTML, CSS and JavaScript. But so does everyone else right? At least a little bit.
+%section#what-i-do.what-i-do
+  
+  .section-title
+    %h2 What I Do
 
-    %p The difference is I specialise in it. 
-    %p I work with designs to bring their designs to life in the browser and developers and programmers to 
+  %article
+    
+    %h3 I Build Websites
+
+    %p I love writing HTML & CSS and I'm extremely passionate about building great responsive web experiences. 
+
+    %p The work I do lies at the crossroads between design and development. As a Front-End Developer I'm responsible for bringing designs to life in the browser and applying those designs to the underlying functionality and logic that makes websites do what they do. 
+
+    %p I'm experienced with popular front-end frameworks like Bootstrap CMSs like WordPress and Drupal as well as frameworks like Rails. 
+
+
+    %p I have a passion for Education, Technology and the Creative Arts. I used to play and write a lot of Music and would love to find the time for that again. I speak German, but wish I spoke it better. I love History,Traveling and exploring other cultures. I love to teach people what I know, be it clients or my peers.
+    AS A FAMILY MAN
+
+    %p I love being dad. I have a young son and love spending time with him and his mum. Family always comes first for me. Starting a family has brought a lot of my youthful desires for making the world a better place to the surface. I believe strongly in the enabling power of the web , it’s what drew me to it in the first place.
+
+%section.latest-posts
+
+  .section-title
+    %h2 Latest Posts
+
+  - blog.articles[0...2].each do |article|
+    %article
+      .panel
+        %h1
+          %a{:href => article.url}= article.title
+        %time= article.date.strftime('%b %e %Y')
+        .tags= article.tags
+        %img{:src => article.url+"featured_image.jpg"}
+        = article.summary
+        %a{:href => article.url} Read more
+
+%section.work
+
+  .section-title
+    %h2 Latest Work
+
+%section.projects
+
+  .section-title
+    %h2 Latest Projects
 
 .instagram
   #instafeed

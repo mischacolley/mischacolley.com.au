@@ -128,25 +128,60 @@ button.call-to-action:hover {
   -webkit-animation: bounce 4s 2s infinite;
   animation: bounce 4s 2s infinite; }
 
-.what-i-do {
-  clear: both;
-  color: #ffffff;
-  background: url(image-path('bridge.jpg'));
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center center;
-  padding: 0;
-  padding: 2em 1em;
-}
+.index {
 
-h2#im-a-bridge {
-  color: #ffffff;
-  font-size: 1.5em;
-  text-align: center;
-  border: 1px solid;
-  display: block;
-  margin: 0 auto;
-  padding: 0.5em;
-  width: 15%;
-  background: rgba(0, 0, 0, 0.1);
+  section {
+
+    .section-title  {
+
+      clear: both;
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center center;
+      padding: 0;
+      padding: 2em 1em;
+
+      h2 {
+        color: #ffffff;
+        font-size: 1.5em;
+        text-align: center;
+        border: 1px solid;
+        display: block;
+        margin: 0 auto;
+        padding: 0.5em;
+        width: 15%;
+        background: rgba(0, 0, 0, 0.1);
+      }
+
+    }
+
+    &.what-i-do .section-title {
+      background-image: url(image-path('bridge.jpg'));
+    }
+
+    &.latest-posts .section-title  {
+      background-image: url(image-path('latest-posts.jpg'));
+    }
+
+    &.work .section-title  {
+      background-image: url(image-path('latest-posts.jpg'));
+    }
+
+    &.projects .section-title  {
+      background-image: url(image-path('latest-posts.jpg'));
+    }
+
+  }
+
+  .latest-posts article {
+
+    float: left;
+    width: 50%;
+
+    .panel {
+      
+    }
+
+  }
+
 }

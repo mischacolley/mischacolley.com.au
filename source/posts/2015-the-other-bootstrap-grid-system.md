@@ -4,6 +4,8 @@ date: 10/07/2015
 tags: Bootstrap
 ---
 
+![My Photo](/featured_image.jpg)
+
 **TLDR:** Bootstap Sass grid Mixin examples
 
 Bootstrap. Some love it. Some hate it. Who cares. 

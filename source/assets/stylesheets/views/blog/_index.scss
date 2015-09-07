@@ -1,19 +1,29 @@
-main section {
-  // @include outer-container;
-  
-  @include span-columns(9);
-  background-color: #ffffff;
-  border: 1px solid #ddd;
-  padding: 30px;
+.blog {
+
+  main section {
+    // @include outer-container;
+    
+    @include span-columns(9);
+    padding: 30px;
+
+  }
+
+  article.article {
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    padding: 30px;
+    margin-bottom: 2rem;
+  }
+
+  main aside {
+    
+    @include span-columns(3);
+
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    padding: 30px;
+
+  }
 
 }
 
-main aside {
-  
-  @include span-columns(3);
-
-  background-color: #ffffff;
-  border: 1px solid #ddd;
-  padding: 30px;
-
-}

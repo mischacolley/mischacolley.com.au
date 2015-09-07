@@ -20,11 +20,8 @@ main {
 }
 
 .panel {
-  height: 100%;
-  background: #ffffff;
+  border: 1px solid #eee;
   padding: 2em;
-  background: url(image-path('subtle_dots.png'));
-  background-repeat: repeat;
 }
 
 
