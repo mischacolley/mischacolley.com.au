@@ -17,49 +17,55 @@ title: Mischa Colley
 %section#what-i-do.what-i-do
   
   .section-title
-    %h2 What I Do
+    %h2 Me Mischa Colley
 
   %article
-    
-    %h3 I Build Websites
 
-    %p I love writing HTML & CSS and I'm extremely passionate about building great responsive web experiences. 
+    .intro-text I love writing HTML & CSS and I'm extremely passionate about building great user experiences.
 
-    %p The work I do lies at the crossroads between design and development. As a Front-End Developer I'm responsible for bringing designs to life in the browser and applying those designs to the underlying functionality and logic that makes websites do what they do. 
+    .box-container
+      .box
+        %h3 Websites & Apps
+        %p As a Front-End Developer the work I do in teams lies at the crossroads between design and development. I work with designers to bring designs to life in the browser and engineers to applying those designs to the underlying functionality and logic that makes websites and apps do what they do. 
+      
+      .box
+        %h3 Digital + Business
+        %p As a digital native I've developed an understanding and unique set of skills that enable me to help business owners. I'm able to provide knowledge and simple tools to make the web work for them. I pride myself on delivering simple solutions where people come before technology.
 
-    %p I'm experienced with popular front-end frameworks like Bootstrap CMSs like WordPress and Drupal as well as frameworks like Rails. 
+      .box
+        %h3 Family & Life
+        %p I'm passionate about the work I do but family comes first. I have a young son and love spending time with him and his mum. I have a passion for Education, Technology and the Creative Arts. Starting a family has brought a lot of my youthful desires for making the world a better place to the surface. 
 
 
-    %p I have a passion for Education, Technology and the Creative Arts. I used to play and write a lot of Music and would love to find the time for that again. I speak German, but wish I spoke it better. I love History,Traveling and exploring other cultures. I love to teach people what I know, be it clients or my peers.
-    AS A FAMILY MAN
+    .intro-text I believe strongly in the enabling power of the web, that being what drew me to it in the first place.
 
-    %p I love being dad. I have a young son and love spending time with him and his mum. Family always comes first for me. Starting a family has brought a lot of my youthful desires for making the world a better place to the surface. I believe strongly in the enabling power of the web , it’s what drew me to it in the first place.
+    -# %p I love to teach people what I know, be it clients or my peers.
 
-%section.latest-posts
+-# %section.latest-posts
 
-  .section-title
-    %h2 Latest Posts
+-#   .section-title
+-#     %h2 Latest Posts
 
-  - blog.articles[0...2].each do |article|
-    %article
-      .panel
-        %h1
-          %a{:href => article.url}= article.title
-        %time= article.date.strftime('%b %e %Y')
-        .tags= article.tags
-        %img{:src => article.url+"featured_image.jpg"}
-        = article.summary
-        %a{:href => article.url} Read more
+-#   - blog.articles[0...2].each do |article|
+-#     %article
+-#       .panel
+-#         %h1
+-#           %a{:href => article.url}= article.title
+-#         %time= article.date.strftime('%b %e %Y')
+-#         .tags= article.tags
+-#         %img{:src => article.url+"featured_image.jpg"}
+-#         = article.summary
+-#         %a{:href => article.url} Read more
 
-%section.work
+-# %section.work
 
-  .section-title
-    %h2 Latest Work
+-#   .section-title
+-#     %h2 Latest Work
 
-%section.projects
+-# %section.projects
 
-  .section-title
-    %h2 Latest Projects
+-#   .section-title
+-#     %h2 Latest Projects
 
 .instagram
   #instafeed
