@@ -4,3 +4,9 @@ title: Work | Mischa Colley
 
 %h1 Work
 %p Examples of my work here
+
+- data.work.work.each_with_index do |work, index|
+  .work
+    %img{:src => "/images/#{work.image}"}
+    %h3=work.title
+    %p=work.text

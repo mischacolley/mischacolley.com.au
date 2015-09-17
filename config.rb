@@ -1,7 +1,9 @@
 require "extensions/views"
 
+activate :autoprefixer
+
 activate :blog do |blog|
-  blog.sources = "posts/{year}-{title}.html"
+  blog.sources = "blog/{title}/index.html"
   blog.tag_template = "tag.html"
   blog.calendar_template = "calendar.html"
 
@@ -32,8 +34,8 @@ end
 
 activate :views
 activate :directory_indexes
+activate :relative_assets
 
-page "posts/*", :directory_index => false
 page "/feed.xml", :layout => false
 
 # page "views/calendar", :directory_index => false
@@ -41,14 +43,14 @@ page "/feed.xml", :layout => false
 
 Time.zone = "Australia/Sydney"
 
-# A path which all have the same layout
-with_layout :blog do
-  page "/posts/*"
-end
+# # A path which all have the same layout
+# with_layout :blog do
+#   page "/posts/*"
+# end
 
 page "blog/*", :layout => :blog
 
-set :relative_links, true
+# set :relative_links, true
 set :css_dir, 'assets/stylesheets'
 set :js_dir, 'assets/javascripts'
 set :images_dir, 'assets/images'
@@ -57,11 +59,6 @@ set :layout, 'layouts/application'
 
 configure :development do
  activate :livereload
-end
-
-configure :build do
-  # Relative assets needed to deploy to Github Pages
-  activate :relative_assets
 end
 
 activate :deploy do |deploy|

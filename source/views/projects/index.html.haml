@@ -1,0 +1,11 @@
+--
+title: Projects
+---
+
+%h1 Projects
+
+- data.projects.projects.each_with_index do |projects, index|
+  .projects
+    %img{:src => "/images/#{projects.image}"}
+    %h3=projects.title
+    %p=projects.text

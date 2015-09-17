@@ -29,3 +29,29 @@ button {
     opacity: 0.5;
   }
 }
+
+
+// TODO: Simplify
+
+button {
+  outline: none; 
+}
+
+button.cta {
+  background: none;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  color: #6699CC;
+  text-transform: uppercase;
+  padding: 0.6em 0.8em 0.5em 0.8em;
+  border-radius: 0.1em;
+}
+
+button.cta.highlight {
+  background: #6699CC;
+  color: #ffffff; 
+}
+
+button.cta:hover {
+  background: none;
+  color: #6699CC; 
+}

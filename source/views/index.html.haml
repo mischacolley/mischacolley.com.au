@@ -2,24 +2,24 @@
 title: Mischa Colley
 ---
 
-%section.intro
+.section.intro
   %a.scroll-down.icon-arrow-left{"data-offset" => "-45", :href => "#about"}
     %span.hidden Scroll Down
-%section#about.panel.about
-  %article
-    .about-copy-intro
-      = partial "intro"
 
-    .call-to-action-container
-      %button.call-to-action.menu-contact.highlight Talk to Me
-  %aside
+.section.about-summary#about
+  .about-copy-intro
+    = partial "intro"
+
+    .cta-container
+      %button.cta.highlight Talk to Me
+  .profile-shot
     = tag :img, :src => "/assets/images/profile-shot.jpg"
-%section#what-i-do.what-i-do
+.section.about-detail
   
   .section-title
     %h2 Me Mischa Colley
 
-  %article
+  .about-detail-inner
 
     .intro-text I love writing HTML & CSS and I'm extremely passionate about building great user experiences.
 
@@ -36,36 +36,81 @@ title: Mischa Colley
         %h3 Family & Life
         %p I'm passionate about the work I do but family comes first. I have a young son and love spending time with him and his mum. I have a passion for Education, Technology and the Creative Arts. Starting a family has brought a lot of my youthful desires for making the world a better place to the surface. 
 
-
     .intro-text I believe strongly in the enabling power of the web, that being what drew me to it in the first place.
 
-    -# %p I love to teach people what I know, be it clients or my peers.
+.section.latest-posts
 
--# %section.latest-posts
+  .section-title
+    %h2 Latest Posts
 
--#   .section-title
--#     %h2 Latest Posts
+  - blog.articles[0...2].each do |article|
+    %article
+      .panel
+        %h1
+          %a{:href => article.url}= article.title
+        -# %img{:src => article.url+"featured_image.jpg"}
+        %img{:src => "https://unsplash.it/600/354"}
+        .post-meta
+          %span Posted on
+          %time= article.date.strftime('%b %e %Y')
+          %ul
+            - blog.tags.each do |tag, articles|
+              %li= link_to "#{tag}", tag_path(tag)
+        .summary
+          %p= Nokogiri::HTML(article.summary).text
+          = link_to "Read more", "#{article.url}", :class => 'read-more'
+        
+.section.work
 
--#   - blog.articles[0...2].each do |article|
--#     %article
--#       .panel
--#         %h1
--#           %a{:href => article.url}= article.title
--#         %time= article.date.strftime('%b %e %Y')
--#         .tags= article.tags
--#         %img{:src => article.url+"featured_image.jpg"}
--#         = article.summary
--#         %a{:href => article.url} Read more
+  .section-title
+    %h2 Featured Work
 
--# %section.work
+  - data.work.work[0...2].each_with_index do |work, index|
+    %article.work
+      .panel
+        %h1
+          = link_to "#{work.title}", "/work/" + work.permalink
+        -# %img{:src => "/images/#{work.image}"}
+        %img{:src => "https://unsplash.it/600/236"}
+        .summary
+          %p=work.summary
+          = link_to "Read more", "/work/" + work.permalink, :class => 'read-more'
 
--#   .section-title
--#     %h2 Latest Work
+.section.projects
 
--# %section.projects
+  .section-title
+    %h2 Featured Projects
 
--#   .section-title
--#     %h2 Latest Projects
+  - data.projects.projects[0...2].each_with_index do |projects, index|
+    %article.projects
+      .panel
+        %h1
+          = link_to "#{projects.title}", "/projects/" + projects.permalink
+        -# %img{:src => "/images/#{projects.image}"}
+        %img{:src => "https://unsplash.it/600/236"}
+        .summary
+          %p=projects.summary
+          = link_to "Read more", "/projects/" + projects.permalink, :class => 'read-more'
 
 .instagram
   #instafeed
+
+%footer
+  %ul
+    %li
+      = link_to "#" do 
+        %i.fa.fa-twitter
+    %li
+      = link_to "#" do 
+        %i.fa.fa-linkedin
+    %li
+      = link_to "#" do 
+        %i.fa.fa-github
+    %li
+      = link_to "#" do 
+        %i.fa.fa-codepen
+    %li
+      = link_to "#" do 
+        %i.fa.fa-instagram
+
+        

@@ -1,10 +1,10 @@
 ---
 title: The Other Bootstrap Grid System
 date: 10/07/2015
-tags: Bootstrap
+tags: Bootstrap, Web Development
 ---
 
-![My Photo](/featured_image.jpg)
+![My Photo](/blog/the-other-bootstrap-grid-system/featured_image.jpg)
 
 **TLDR:** Bootstap Sass grid Mixin examples
 
