@@ -5,6 +5,10 @@ jQuery(document).ready(function($){
     //   });
     // });
 
+    $(".contact").click(function() {
+      $('.contact-details').toggleClass('show-contacts');
+    }); 
+
     $(".scroll-down, .menu-about").click(function() {
       $('#about').ScrollTo({
           duration: 1000,

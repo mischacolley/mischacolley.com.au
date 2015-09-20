@@ -1,5 +1,9 @@
 .blog_index {
 
+  header {
+    background-color: $brand-primary;
+  }
+
   main section {
     // @include outer-container;
     
@@ -26,4 +30,3 @@
   }
 
 }
-

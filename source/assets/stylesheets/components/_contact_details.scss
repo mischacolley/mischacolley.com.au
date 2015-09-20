@@ -1,0 +1,20 @@
+.contact-details {
+
+  background-color: #ffffff;
+  display: none;
+
+  &.show-contacts {
+    display: block;
+  }
+
+  ul li {
+    display: inline-block;
+    padding: 1em;
+  }
+
+}
+
+// .scrolled .contact-details {
+//   position: fixed;
+//   top: 0;
+// }

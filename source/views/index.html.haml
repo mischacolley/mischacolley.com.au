@@ -1,5 +1,5 @@
 ---
-title: Mischa Colley
+title: Test
 ---
 
 .section.intro
@@ -11,7 +11,7 @@ title: Mischa Colley
     = partial "intro"
 
     .cta-container
-      %button.cta.highlight Talk to Me
+      %button.cta.highlight.contact Talk to Me
   .profile-shot
     = tag :img, :src => "/assets/images/profile-shot.jpg"
 .section.about-detail
@@ -49,7 +49,7 @@ title: Mischa Colley
         %h1
           %a{:href => article.url}= article.title
         -# %img{:src => article.url+"featured_image.jpg"}
-        %img{:src => "https://unsplash.it/600/354"}
+        %img{:src => "http://placehold.it/600x354"}
         .post-meta
           %span Posted on
           %time= article.date.strftime('%b %e %Y')
@@ -59,6 +59,8 @@ title: Mischa Colley
         .summary
           %p= Nokogiri::HTML(article.summary).text
           = link_to "Read more", "#{article.url}", :class => 'read-more'
+
+  = link_to "All Posts", "/blog", :class => 'section-cta'
         
 .section.work
 
@@ -71,10 +73,12 @@ title: Mischa Colley
         %h1
           = link_to "#{work.title}", "/work/" + work.permalink
         -# %img{:src => "/images/#{work.image}"}
-        %img{:src => "https://unsplash.it/600/236"}
+        %img{:src => "http://placehold.it/600x236"}
         .summary
           %p=work.summary
           = link_to "Read more", "/work/" + work.permalink, :class => 'read-more'
+
+  = link_to "All Work", "/work", :class => 'section-cta'
 
 .section.projects
 
@@ -87,30 +91,12 @@ title: Mischa Colley
         %h1
           = link_to "#{projects.title}", "/projects/" + projects.permalink
         -# %img{:src => "/images/#{projects.image}"}
-        %img{:src => "https://unsplash.it/600/236"}
+        %img{:src => "http://placehold.it/600x236"}
         .summary
           %p=projects.summary
           = link_to "Read more", "/projects/" + projects.permalink, :class => 'read-more'
 
+  = link_to "All Projects", "/projects", :class => 'section-cta'
+
 .instagram
-  #instafeed
-
-%footer
-  %ul
-    %li
-      = link_to "#" do 
-        %i.fa.fa-twitter
-    %li
-      = link_to "#" do 
-        %i.fa.fa-linkedin
-    %li
-      = link_to "#" do 
-        %i.fa.fa-github
-    %li
-      = link_to "#" do 
-        %i.fa.fa-codepen
-    %li
-      = link_to "#" do 
-        %i.fa.fa-instagram
-
-        
+  #instafeed 

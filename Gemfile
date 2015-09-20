@@ -1,20 +1,18 @@
 # If you have OpenSSL installed, we recommend updating
 # the following line to use "https"
-source "http://rubygems.org"
+source "https://rubygems.org"
 
+gem "bourbon"
+gem 'builder'
+gem 'font-awesome-middleman'
+gem 'haml'
+gem 'haml-kramdown'
+gem 'kramdown'
 gem "middleman"
 gem 'middleman-autoprefixer'
 gem "middleman-blog"
-gem "middleman-livereload"
 gem "middleman-deploy"
-gem "bourbon"
+gem "middleman-livereload"
+gem 'middleman-meta-tags'
 gem "neat"
-
 gem "nokogiri"
-
-
-gem 'builder'
-
-gem 'haml'
-gem 'kramdown'
-gem 'haml-kramdown'
