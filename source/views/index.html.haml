@@ -21,20 +21,23 @@ title: Test
 
   .about-detail-inner
 
-    .intro-text I love writing HTML & CSS and I'm extremely passionate about building great user experiences.
+    .intro-text I love writing HTML & CSS and I am passionate about building great user experiences.
 
     .box-container
       .box
         %h3 Websites & Apps
         %p As a Front-End Developer the work I do in teams lies at the crossroads between design and development. I work with designers to bring designs to life in the browser and engineers to applying those designs to the underlying functionality and logic that makes websites and apps do what they do. 
+        %button.cta.highlight.contact Hire me for your team
       
       .box
         %h3 Digital + Business
         %p As a digital native I've developed an understanding and unique set of skills that enable me to help business owners. I'm able to provide knowledge and simple tools to make the web work for them. I pride myself on delivering simple solutions where people come before technology.
+        %button.cta.highlight.contact Get help with your business
 
       .box
         %h3 Family & Life
-        %p I'm passionate about the work I do but family comes first. I have a young son and love spending time with him and his mum. I have a passion for Education, Technology and the Creative Arts. Starting a family has brought a lot of my youthful desires for making the world a better place to the surface. 
+        %p I'm passionate about the work I do but family and friends come first. I have a young son and love spending time with him and his mum. I have a passion for Education, Technology and the Creative Arts. Starting a family has brought a lot of my youthful desires for making the world a better place to the surface. 
+        %button.cta.highlight.contact Get to know me
 
     .intro-text I believe strongly in the enabling power of the web, that being what drew me to it in the first place.
 
@@ -48,19 +51,14 @@ title: Test
       .panel
         %h1
           %a{:href => article.url}= article.title
-        -# %img{:src => article.url+"featured_image.jpg"}
-        %img{:src => "http://placehold.it/600x354"}
-        .post-meta
-          %span Posted on
-          %time= article.date.strftime('%b %e %Y')
-          %ul
-            - blog.tags.each do |tag, articles|
-              %li= link_to "#{tag}", tag_path(tag)
+        %img{:src => article.url+"featured_image.jpg"}
+        -# %img{:src => "http://placehold.it/600x354"
         .summary
           %p= Nokogiri::HTML(article.summary).text
           = link_to "Read more", "#{article.url}", :class => 'read-more'
 
-  = link_to "All Posts", "/blog", :class => 'section-cta'
+  .section-cta
+    = link_to "All Posts", "/blog"
         
 .section.work
 
@@ -72,13 +70,14 @@ title: Test
       .panel
         %h1
           = link_to "#{work.title}", "/work/" + work.permalink
-        -# %img{:src => "/images/#{work.image}"}
-        %img{:src => "http://placehold.it/600x236"}
+        %img{:src => "/assets/images/work/#{work.image}"}
+        -# %img{:src => "http://placehold.it/600x236"}
         .summary
           %p=work.summary
           = link_to "Read more", "/work/" + work.permalink, :class => 'read-more'
 
-  = link_to "All Work", "/work", :class => 'section-cta'
+  .section-cta
+    = link_to "All Work", "/work"
 
 .section.projects
 
@@ -90,13 +89,14 @@ title: Test
       .panel
         %h1
           = link_to "#{projects.title}", "/projects/" + projects.permalink
-        -# %img{:src => "/images/#{projects.image}"}
-        %img{:src => "http://placehold.it/600x236"}
+        %img{:src => "/assets/images/projects/#{projects.image}"}
+        -# %img{:src => "http://placehold.it/600x236"}
         .summary
           %p=projects.summary
           = link_to "Read more", "/projects/" + projects.permalink, :class => 'read-more'
 
-  = link_to "All Projects", "/projects", :class => 'section-cta'
+  .section-cta
+    = link_to "All Projects", "/projects"
 
 .instagram
   #instafeed 

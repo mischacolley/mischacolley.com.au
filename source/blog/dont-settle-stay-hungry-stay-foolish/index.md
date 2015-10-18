@@ -1,7 +1,6 @@
 ---
 title: Don't Settle, Stay Hungary, Stay Foolish
-date: 10/07/2015
-tags: 
+date: 27/05/2012
 ---
 
 A few days ago I was fortunate enough to be one of the lucky attendees at **TEDxBrisbane 2011**. All the speakers were amazing, some resonated with me more than others, but everyone had something valuable to offer, even Steve Jobs. 

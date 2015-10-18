@@ -1,36 +1,34 @@
-!!!
-%html
-  %head
-    %meta{charset: "utf-8"}
-    %meta{content: "IE=edge,chrome=1", http: {equiv: "X-UA-Compatible"}}
-    %meta{name: "viewport", content: "width=device-width, initial-scale=1"}
-    -# %title= current_page.data.title || "The Middleman"
-    = feed_tag :atom, "#{blog.options.prefix.to_s}/feed.xml", title: "Atom Feed"
-    = stylesheet_link_tag "http://fonts.googleapis.com/css?family=Oswald:400,300,700"
-    = stylesheet_link_tag "//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css"
-    = stylesheet_link_tag "application"
-
-  %body{class: page_classes}
-    = partial "partials/header"
-    %main{:role => "main"}
-      %section
+= wrap_layout :application do
+  %section
+    %h1 Blog
+    - if is_blog_article?
+      %article
+        %h1= current_article.title
+        %img{:src => current_article.url+"featured_image.jpg"}
+        .article-inner.article
+          = yield
+    - else 
+      .articles
         = yield
-      %%aside
-        %h2 Recent Articles
-        %ol
-          - blog.articles[0...10].each do |article|
-            %li
-              = link_to article.title, article
-              %span= article.date.strftime('%b %e')
-        %h2 Tags
-        %ol
-          - blog.tags.each do |tag, articles|
-            %li= link_to "#{tag} (#{articles.size})", tag_path(tag)
-        %h2 By Year
-        %ol
-          - blog.articles.group_by {|a| a.date.year }.each do |year, articles|
-            %li= link_to "#{year} (#{articles.size})", blog_year_path(year)
 
-    = partial "partials/footer"
-    = javascript_include_tag "https://code.jquery.com/jquery-2.1.1.min.js", "application"
+    -# %aside
+    -#   %h2 Recent Articles
+    -#   %ol
+    -#     - blog.articles[0...10].each do |article|
+    -#       %li
+    -#         = link_to article.title, article
+    -#   %h2 Categories
+    -#   %ol
+    -#     - categories = build_categories(blog.articles)
+    -#     - categories.each do |category|
+    -#       %li
+    -#         = link_to category, category_path(category)
+    -#   %h2 Tags
+    -#   %ol
+    -#     - blog.tags.each do |tag, articles|
+    -#       %li= link_to "#{tag} (#{articles.size})", tag_path(tag)
 
+    -#   %h2 By Year
+    -#   %ol
+    -#     - blog.articles.group_by {|a| a.date.year }.each do |year, articles|
+    -#       %li= link_to "#{year} (#{articles.size})", blog_year_path(year)

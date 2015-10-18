@@ -1,6 +1,11 @@
+html {
+  overflow-y: scroll;
+}
+
 body {
   background: url(image-path('subtle_dots.png')) #ffffff;
   background-repeat: repeat;
+  overflow: hidden;
 }
 
 /* Global */

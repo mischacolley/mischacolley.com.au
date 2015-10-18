@@ -11,6 +11,14 @@ activate :blog do |blog|
   blog.year_link = "blog/{year}.html"
   blog.layout = "layouts/blog"
   blog.default_extension = ".md"
+
+  blog.custom_collections = {
+    category: {
+      link: 'blog/categories/{category}.html',
+      template: 'category.html'
+    }
+  }
+
 end
 
 activate :directory_indexes
@@ -47,6 +55,7 @@ set :layout, 'layouts/application'
 
 page "/feed.xml", :layout => false
 page "blog/*", :layout => :blog
+# page "blog/*/*", :layout => :blog
 
 # Custom Helpers
 
@@ -61,4 +70,16 @@ helpers do
     options[:class] << " active" if page_url == current_url
     link_to(link_text, page_url, options)
   end
+
+  def build_categories(articles)
+    categories = []
+    articles.each do |article|
+      category = article.metadata[:page]['category']
+      unless categories.include? category
+        categories.push(category)
+      end
+    end
+    return categories
+  end
+  
 end

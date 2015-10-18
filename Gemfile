@@ -2,6 +2,7 @@
 # the following line to use "https"
 source "https://rubygems.org"
 
+gem "breakpoint"
 gem "bourbon"
 gem 'builder'
 gem 'font-awesome-middleman'

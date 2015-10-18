@@ -3,8 +3,8 @@ pageable: true
 per_page: 12
 ---
 %h1
-  Posts tagged:
-  = tagname
+  Posts categorized: 
+  = category
 - if paginate && num_pages > 1
   %p
     Page #{page_number} of #{num_pages}
