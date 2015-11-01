@@ -2,6 +2,8 @@
 
   background-color: #ffffff;
   display: none;
+  position: relative;
+  z-index: 6;
 
   &.show-contacts {
     display: block;
@@ -13,8 +15,3 @@
   }
 
 }
-
-// .scrolled .contact-details {
-//   position: fixed;
-//   top: 0;
-// }

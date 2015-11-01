@@ -1,32 +1,5 @@
 .blog {
 
-  header {
-    background-color: $brand-primary;
-
-    .main-navigation {
-      padding: 1em;
-      height: 83px;
-    }
-  }
-
-  .logo {
-
-    display: inline-block;
-    padding-right: 12px;
-
-    .ischa,
-    .olley {
-      display: none;
-    }
-
-  }
-
-  .description {
-    position: absolute;
-    top: 0;
-    left: 60px;
-  }
-
   main {
     margin-top: 75px;
   }

@@ -9,18 +9,19 @@
         %span.olley olley
       %h2.description Front-End Developer
     
-    %button.menu-toggle Menu
+    %button.menu-toggle 
+      %i.fa.fa-bars
     .menu-primary-menu-container
       %ul#menu-primary-menu.menu
         %li
-          %a{:href => "#about"} About
+          %a.about-link.anchor{:href => "#about"} About
         %li
-          %a{:href => "/blog", :title => "Blog"} Blog
+          %a.anchor{:href => "/blog", :title => "Blog"} Blog
         %li
-          %a{:href => "/work", :title => "Examples of my Work"} Work
+          %a.anchor{:href => "/work", :title => "Examples of my Work"} Work
         %li
-          %a{:href => "/projects", :title => "Projects"} Projects
+          %a.anchor{:href => "/projects", :title => "Projects"} Projects
         %li
-          %a{:href => "https://www.linkedin.com/in/mischacolley", :rel => "no-follow ", :target => "_blank", :title => "LinkedIn Profile"} Resume
+          %a.anchor{:href => "https://www.linkedin.com/in/mischacolley", :rel => "no-follow ", :target => "_blank", :title => "LinkedIn Profile"} Resume
         %li
           %a.contact{:href => "#contact"} Contact

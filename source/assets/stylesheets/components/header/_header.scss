@@ -4,7 +4,7 @@ header {
 
   position: absolute;
   width: 100%;
-  z-index: 1; 
+  z-index: 5; 
 
   h1,
   h2 {
@@ -16,24 +16,14 @@ header {
 header.scrolled {
   position: fixed;
   top: 0;
-  opacity: 0;
   transition: all 1s ease;
-}
-
-header.scrolled:hover {
-
-  opacity: 1; 
-
   nav.main-navigation {
-    background-color: #6699CC;
     display: inline-block;
     width: 100%;
   }
-
-}
-
-header.scrolled.at-panel-two:hover {
-  background: rgba(102, 153, 204, 0.9); 
+  &.at-panel-two {
+    background: rgba(102, 153, 204, 0.9); 
+  }
 }
 
 /* Branding */
@@ -114,23 +104,37 @@ a.btn-filled {
   transition: visibility 0s linear 0.5s,opacity 0.5s linear; 
 }
 
-.menu-primary-menu-container.hide {
+.menu-toggled .menu-primary-menu-container {
   visibility: visible;
   opacity: 1;
   transition-delay: 0s; 
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: rgba(102, 153, 204, 0.9);
+  z-index: 1;
+  .menu {
+    display: block;
+    text-align: center;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  ul li {
+    float: none;
+    font-size: 2.5em;
+  }
 }
 
-.at-panel-two .menu-primary-menu-container,
-.at-panel-two .menu-primary-menu-container.hide:hover {
-  visibility: visible;
-  opacity: 1;
-  transition-delay: 0s; 
-}
-
-.at-panel-two .menu-primary-menu-container.hide {
-  visibility: hidden;
-  opacity: 0;
-  transition: visibility 0s linear 0.5s,opacity 0.5s linear; 
+body.index.menu-toggled .menu-toggle {
+  z-index: 2;
+  position: relative;
+  i {
+    top: -2px;
+    position: inherit;
+  }
 }
 
 nav ul li {
@@ -143,8 +147,36 @@ nav ul li a {
   color: #ffffff; }
 
 .main-navigation {
-  padding: 2em;
-  height: 130px;
+  padding: 1em 1em 0.7em 1em;
+}
+
+// Small Nav
+
+.blog,
+.at-panel-two {
+
+  header {
+    background: rgba(102, 153, 204, 0.9); 
+  }
+
+  .logo {
+
+    display: inline-block;
+    padding-right: 12px;
+
+    .ischa,
+    .olley {
+      display: none;
+    }
+
+  }
+
+  .description {
+    position: absolute;
+    top: 0;
+    left: 60px;
+  }
+
 }
 
 /* Temporary */
@@ -163,16 +195,14 @@ nav ul li a {
 }
 
 .menu-toggle {
-
   box-sizing: border-box;
   display: inline-block;
   float: right;
-  padding: 0 8px;
+  padding: 6px 8px;
   border: 1px solid rgba(255, 255, 255, 0.6);
   color: #ffffff;
   text-align: center;
   font-size: 1.5em;
-  line-height: inherit;
   text-transform: uppercase;
   border-radius: 0.1em;
   background: rgba(0, 0, 0, 0.2);

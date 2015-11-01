@@ -80,6 +80,13 @@
     .box button.cta {
       margin: 0 auto;
       display: block;
+
+      a {
+        color: #ffffff;
+      }
+      &:hover a {
+        color: #6699CC;
+      }
     }
 
     .intro-text {

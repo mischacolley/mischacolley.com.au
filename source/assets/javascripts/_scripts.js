@@ -1,20 +1,16 @@
 jQuery(document).ready(function($){
 
-    // $( ".find-out-more" ).click(function() {
-    //   $( ".about-copy-more" ).toggle( "slow", function() {
-    //   });
-    // });
-
     $(".contact").click(function() {
       $('.contact-details').toggleClass('show-contacts');
     }); 
 
-    $(".scroll-down, .menu-about").click(function() {
-      $('#about').ScrollTo({
-          duration: 1000,
-          easing: 'linear'
-      });
-    }); 
+    $('.scroll-down, .about-link').click(function(e) {
+      // Prevent the jump and the #hash from appearing on the address bar
+      e.preventDefault();
+      // Scroll the window, stop any previous animation, stop on user manual scroll
+      // Check https://github.com/flesler/jquery.scrollTo for more customizability
+      $(window).stop(true).scrollTo(this.hash, {duration:1000, offset:-82, interrupt:true});
+    });
 
     $(".menu-contact").click(function() {
       $('#contact').ScrollTo({
@@ -24,8 +20,14 @@ jQuery(document).ready(function($){
     }); 
 
     $(".menu-toggle").click(function() {
-        $(".menu-primary-menu-container").toggleClass("hide");
+        $("body").toggleClass("menu-toggled");
+        $('.menu-toggle i').toggleClass('fa-bars fa-times');
     });  
+
+    $(document).on('click', ".menu-primary-menu-container ul li a.anchor", function() {
+      $('body').removeClass('menu-toggled');
+      $('.menu-toggle i').toggleClass('fa-times fa-bars');
+    });
   
   $(window).scroll(function() {
     
@@ -37,7 +39,7 @@ jQuery(document).ready(function($){
   });
 
 
-  $('.about').waypoint(function(direction) {
+  $('.about-summary').waypoint(function(direction) {
     if (direction === 'down') {
         $('header').addClass('at-panel-two');
     }
