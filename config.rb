@@ -35,6 +35,13 @@ activate :deploy do |deploy|
   deploy.method = :git
 end
 
+# Google Analytics
+activate :google_analytics do |ga|
+  ga.tracking_id = 'UA-57613563-1' # Replace with your property ID.
+  ga.development = false
+  ga.minify = true
+end
+
 # Global Settings
 
 Time.zone = "Australia/Sydney"
