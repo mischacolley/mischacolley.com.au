@@ -16,5 +16,6 @@ gem "middleman-deploy"
 gem "middleman-google-analytics"
 gem "middleman-livereload"
 gem 'middleman-meta-tags'
+gem 'middleman-simple-thumbnailer'
 gem "neat"
 gem "nokogiri"

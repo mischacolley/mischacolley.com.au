@@ -51,72 +51,55 @@ title: Test
   .section-title
     %h2 Latest Posts
 
+  - blog.articles[0...2].each do |article|
     %article
       .panel
+        %h1
+          %a{:href => article.url}= article.title
+        = image_tag article.url+"featured_image.jpg", resize_to: '600x354', class: 'thumbnail'
         .summary
-          %p Posts will be back soon ...
+          %p= Nokogiri::HTML(article.summary).text
+          = link_to "Read more", "#{article.url}", :class => 'read-more'
 
-  -# - blog.articles[0...2].each do |article|
-  -#   %article
-  -#     .panel
-  -#       %h1
-  -#         %a{:href => article.url}= article.title
-  -#       %img{:src => article.url+"featured_image.jpg"}
-  -#       -# %img{:src => "http://placehold.it/600x354"
-  -#       .summary
-  -#         %p= Nokogiri::HTML(article.summary).text
-  -#         = link_to "Read more", "#{article.url}", :class => 'read-more'
-
-  -# .section-cta
-  -#   = link_to "All Posts", "/blog"
+  .section-cta
+    = link_to "All Posts", "/blog"
         
 .section.work
 
   .section-title
     %h2 Featured Work
 
+  - data.work.work[0...2].each_with_index do |work, index|
     %article.work
       .panel
+        %h1
+          = link_to "#{work.title}", "/work/" + work.permalink
+        = image_tag "work/#{work.image}", resize_to: '600x236', class: 'thumbnail'
         .summary
-          %p Work will be back soon ...
+          %p=work.summary
+          = link_to "Read more", "/work/" + work.permalink, :class => 'read-more'
 
-  -# - data.work.work[0...2].each_with_index do |work, index|
-  -#   %article.work
-  -#     .panel
-  -#       %h1
-  -#         = link_to "#{work.title}", "/work/" + work.permalink
-  -#       %img{:src => "/assets/images/work/#{work.image}"}
-  -#       -# %img{:src => "http://placehold.it/600x236"}
-  -#       .summary
-  -#         %p=work.summary
-  -#         = link_to "Read more", "/work/" + work.permalink, :class => 'read-more'
-
-  -# .section-cta
-  -#   = link_to "All Work", "/work"
+  .section-cta
+    = link_to "All Work", "/work"
 
 .section.projects
 
   .section-title
     %h2 Featured Projects
 
+  - data.projects.projects[0...2].each_with_index do |projects, index|
     %article.projects
       .panel
+        %h1
+          = link_to "#{projects.title}", "/projects/" + projects.permalink
+        %img{:src => "/assets/images/projects/#{projects.image}"}
+        -# %img{:src => "http://placehold.it/600x236"}
         .summary
-          %p Projects will be back soon ...
+          %p=projects.summary
+          = link_to "Read more", "/projects/" + projects.permalink, :class => 'read-more'
 
-  -# - data.projects.projects[0...2].each_with_index do |projects, index|
-  -#   %article.projects
-  -#     .panel
-  -#       %h1
-  -#         = link_to "#{projects.title}", "/projects/" + projects.permalink
-  -#       %img{:src => "/assets/images/projects/#{projects.image}"}
-  -#       -# %img{:src => "http://placehold.it/600x236"}
-  -#       .summary
-  -#         %p=projects.summary
-  -#         = link_to "Read more", "/projects/" + projects.permalink, :class => 'read-more'
-
-  -# .section-cta
-  -#   = link_to "All Projects", "/projects"
+  .section-cta
+    = link_to "All Projects", "/projects"
 
 .instagram
   #instafeed 

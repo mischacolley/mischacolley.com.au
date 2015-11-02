@@ -26,6 +26,8 @@ activate :relative_assets
 activate :meta_tags
 activate :views
 
+activate :middleman_simple_thumbnailer
+
 configure :development do
  activate :livereload
 end
@@ -62,7 +64,8 @@ set :layout, 'layouts/application'
 
 page "/feed.xml", :layout => false
 page "blog/*", :layout => :blog
-# page "blog/*/*", :layout => :blog
+page "projects/*/*", :layout => :projects
+page "work/*/*", :layout => :work
 
 # Custom Helpers
 

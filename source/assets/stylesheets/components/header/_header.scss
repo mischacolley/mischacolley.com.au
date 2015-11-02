@@ -17,10 +17,6 @@ header.scrolled {
   position: fixed;
   top: 0;
   transition: all 1s ease;
-  nav.main-navigation {
-    display: inline-block;
-    width: 100%;
-  }
   &.at-panel-two {
     background: rgba(102, 153, 204, 0.9); 
   }
@@ -148,6 +144,8 @@ nav ul li a {
 
 .main-navigation {
   padding: 1em 1em 0.7em 1em;
+  display: inline-block;
+  width: 100%;
 }
 
 // Small Nav
