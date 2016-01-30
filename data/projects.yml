@@ -1,6 +1,7 @@
 projects:
 - title: "Byron Web"
   permalink: "byronweb"
+  externallink: "http://www.example.com"
   summary: "Byron Web is a monthly social gathering for web designers and developers in the Byron Bay area to meet and share knowledge with like-minded people."
   image: "byronweb.jpg"
 - title: "#manyyesses"

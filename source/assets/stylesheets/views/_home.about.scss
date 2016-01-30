@@ -41,6 +41,11 @@
 
     }
 
+    .about-copy-intro .cta-container {
+      float: left;
+      margin-right: 2%;
+    }  
+
   }
 
   // About Detail
@@ -62,13 +67,16 @@
 
     .box {
 
-      border: 1px solid #eee;
-      padding: 1em;
       @include span-columns(12);
-      background-color: #ffffff;
 
       @media (min-width: 768px) {
         @include span-columns(4);
+      }
+
+      p {
+        background-color: #ffffff;
+        border: 1px solid #eee;
+        padding: 1em;
       }
 
       h3 {
@@ -78,14 +86,23 @@
     }
 
     .box button.cta {
-      margin: 0 auto;
-      display: block;
+      width: 100%;
 
       a {
         color: #ffffff;
       }
       &:hover a {
         color: #6699CC;
+      }
+    }
+
+    .box button.cta.ec {
+      background-color: #90132f;
+      &:hover {
+        background-color: #ffffff;
+      }
+      &:hover a {
+        color: #90132f;
       }
     }
 

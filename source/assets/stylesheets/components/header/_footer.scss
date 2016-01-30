@@ -11,6 +11,37 @@ footer {
   font-weight: 300;
 }
 
-.index footer {
+.homepage-footer {
   position: relative;
+  float: left;
+  width: 100%;
 }
+
+.twitter-feed {
+
+  position: absolute;
+  z-index: 22;
+  color: #ffffff;
+  width: 65%;
+  left: 32.5%;
+  margin-left: -14.5%;
+  text-align: center;
+  top: 50%;
+  transform: translateY(-50%);
+
+  p {
+    font-size: 1.7rem;
+  }
+
+  .user,
+  .interact {
+    display: none;
+  }
+
+  .timePosted a {
+    color: #ffffff;
+    font-weight: 500;
+  }
+
+}
+
