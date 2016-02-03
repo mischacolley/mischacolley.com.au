@@ -1,5 +1,21 @@
 .index {
 
+  .employment-status {
+    font-size: 18px;
+
+    @media (max-width: 660px) {
+      float: left;
+      clear: both;
+      margin: 1.5rem 0;
+    }
+
+    @media (min-width: 661px) { 
+      position: relative;
+      top: 5px;
+    }
+    
+  }
+
   .about-summary {
 
     height: auto;
@@ -11,6 +27,10 @@
       display: block; 
       border-radius: 50%;
       border: 1px solid #eee;
+      @media (min-width: 550px) and (max-width: 960px) { 
+        max-width: 50%;
+      }
+
     }
 
     .about-copy-intro p {
@@ -57,12 +77,15 @@
     }
 
     .about-detail-inner {
-      padding: 30px;
+      padding: 30px 15px;
+      @media (min-width: 768px) { 
+        padding: 60px 30px;
+      }
     }
 
     .box-container {
       @include outer-container;
-      padding: 30px 0;
+      padding: 60px 0;
     }
 
     .box {
@@ -70,23 +93,30 @@
       @include span-columns(12);
 
       @media (min-width: 768px) {
-        @include span-columns(4);
+        @include span-columns(6);
       }
 
       p {
         background-color: #ffffff;
         border: 1px solid #eee;
         padding: 1em;
+        font-size: 1.27rem;
+        @media (min-width: 768px) {
+          font-size: 1.37rem;
+        }
       }
 
       h3 {
         text-align: center;
+        font-size: 1.5rem;
+        margin-top: 1rem;
       }
 
     }
 
     .box button.cta {
       width: 100%;
+      padding: 15px;
 
       a {
         color: #ffffff;

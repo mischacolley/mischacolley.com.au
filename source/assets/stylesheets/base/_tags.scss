@@ -1,0 +1,29 @@
+.category a {
+  background: #6699CC;
+  color: #ffffff;
+  font-size: 0.8rem;
+  padding: 5px 10px;
+  border-bottom: none;
+  float: left;
+  margin-right: 1%;
+  border-right: 5px solid #6390BD;
+}
+
+.tags a {
+  background: #eee;
+  color: #333;
+  font-size: 0.7rem;
+  padding: 3px 10px 4px 10px;
+  border-bottom: none;
+  border-radius: 3px
+}
+
+.article-meta {
+  border-bottom: 1px solid #6699CC;
+  padding: 5px 0;
+  margin-bottom: 2rem;
+}
+
+.summary {
+  clear: both;
+}

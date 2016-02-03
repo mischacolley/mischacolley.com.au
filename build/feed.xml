@@ -1,0 +1,243 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>Blog Name</title>
+  <subtitle>Blog subtitle</subtitle>
+  <id>http://blog.url.com/</id>
+  <link href="http://blog.url.com/"/>
+  <link href="http://blog.url.com/feed.xml" rel="self"/>
+  <updated>2015-09-27T00:00:00+10:00</updated>
+  <author>
+    <name>Blog Author</name>
+  </author>
+  <entry>
+    <title>The Other Bootstrap Grid System</title>
+    <link rel="alternate" href="http://blog.url.com/blog/the-other-bootstrap-grid-system/"/>
+    <id>http://blog.url.com/blog/the-other-bootstrap-grid-system/</id>
+    <published>2015-09-27T00:00:00+10:00</published>
+    <updated>2016-02-05T14:00:04+11:00</updated>
+    <author>
+      <name>Article Author</name>
+    </author>
+    <content type="html">&lt;p&gt;Bootstrap. Some love it. Some hate it. Who cares.&lt;/p&gt;
+
+&lt;p&gt;There have been far too many posts written about the pros and cons of Bootstrap. This isn't one of them. This post started its life because I couldn't find a good reference point for the mixins needed to build layouts without adding grid classes to your markup.&lt;/p&gt;
+
+&lt;p&gt;There are a few tutorials out there but no easy Sass reference I could use and point my team to so I made a &lt;a href="http://codepen.io/mischacolley/pen/bdeoop"&gt;pen&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p data-height="268" data-theme-id="14405" data-slug-hash="bdeoop" data-default-tab="result" data-user="mischacolley" class="codepen"&gt;See the Pen &lt;a href="http://codepen.io/mischacolley/pen/bdeoop/"&gt;Bootstrap Sass grid Mixin examples&lt;/a&gt; by Mischa Colley (&lt;a href="http://codepen.io/mischacolley"&gt;@mischacolley&lt;/a&gt;) on &lt;a href="http://codepen.io"&gt;CodePen&lt;/a&gt;.&lt;/p&gt;
+&lt;script async="" src="//assets.codepen.io/assets/embed/ei.js"&gt;&lt;/script&gt;
+
+&lt;p&gt;&lt;small&gt;&lt;strong&gt;Note:&lt;/strong&gt; This may become obsolete for new projects when &lt;a href="http://blog.getbootstrap.com/2015/08/19/bootstrap-4-alpha/"&gt;Bootstrap moves to Sass in version 4&lt;/a&gt;.&lt;/small&gt;&lt;/p&gt;
+
+&lt;h2 id="dont-be-a-hater"&gt;Don't be a Hater&lt;/h2&gt;
+
+&lt;p&gt;Writing this reference got me thinking about all the Bootstrap love and hate and basically how pointless it is. Don't get me wrong, Bootstrap has a time and a place. But if you are a professional developer you will find yourself deep within it at some point. Unless it's a personal project, how you feel about it probably won't matter. Don't be a hater, just get the job done and do it well. To do that you need to know everything about it. Make it yours.&lt;/p&gt;
+
+&lt;h2 id="where-problems-start"&gt;Where Problems Start&lt;/h2&gt;
+
+&lt;p&gt;I've worked with Bootstrap on both large and small scale projects and &lt;em&gt;it&lt;/em&gt; hasn't been the problem. The problems I have encountered have been related to:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Team members (myself included) having insufficient understanding of the complete Framework&lt;/li&gt;
+  &lt;li&gt;Differing stakeholder priorities&lt;/li&gt;
+  &lt;li&gt;Time constraints&lt;/li&gt;
+  &lt;li&gt;Misuse of &lt;a href="http://getbootstrap.com/css/#responsive-utilities"&gt;Responsive Utilities&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Insufficient separation of Markup and Styles. This is normally the biggie and the origins of this post.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id="its-not-all-or-nothing"&gt;It's Not All or Nothing&lt;/h2&gt;
+
+&lt;p&gt;An important thing to remember is just because you are using Bootstrap doesn't mean you have to use all off it and only it.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;I think Zurb have a better &lt;a href="http://zurb.com/playground/responsive-tables"&gt;responsive tables solution&lt;/a&gt; so I often use that.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Given the time and budget heed your better judgment and refrain from hiding vast swathes of your site on mobiles with &lt;a href="http://getbootstrap.com/css/#responsive-utilities"&gt;.hidden-xs&lt;/a&gt; and so on. The Bootstrap docs even warn about this. Try to use these on a limited basis and avoid creating entirely different versions of the same site. Instead, use them to complement each devices presentation.&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id="make-bootstrap-yours"&gt;Make Bootstrap Yours&lt;/h2&gt;
+
+&lt;p&gt;A good developer should know how to customize Bootstrap to your needs and that of the project. With an experienced and well balanced design and development team it should just become another tool.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Get to know &lt;a href="https://github.com/twbs/bootstrap-sass/tree/master/assets/stylesheets/bootstrap"&gt;the code&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Specifically the &lt;a href="https://github.com/twbs/bootstrap-sass/blob/master/assets/stylesheets/bootstrap/_variables.scss"&gt;variables partial&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;I setup my Sass directory structure something like below (Rails) so I can customise and override to my harts content.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;pre class="highlight scss"&gt;&lt;code&gt;
+&lt;span class="cm"&gt;/* Load custom overrides for Bootstrap variables and mixins */&lt;/span&gt;
+&lt;span class="k"&gt;@import&lt;/span&gt; &lt;span class="s2"&gt;"./public/bootstrap/variables"&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+&lt;span class="k"&gt;@import&lt;/span&gt; &lt;span class="s2"&gt;"./public/bootstrap/mixins/**/*"&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+
+&lt;span class="cm"&gt;/* Load Bootstrap Defaults. */&lt;/span&gt;
+&lt;span class="k"&gt;@import&lt;/span&gt; &lt;span class="s2"&gt;"bootstrap/mixins"&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+&lt;span class="k"&gt;@import&lt;/span&gt; &lt;span class="s2"&gt;"bootstrap/variables"&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+
+&lt;span class="k"&gt;@import&lt;/span&gt; &lt;span class="s2"&gt;"./public/bootstrap/**/*"&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+
+&lt;span class="k"&gt;@import&lt;/span&gt; &lt;span class="s2"&gt;"./public/base/**/*"&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+&lt;span class="k"&gt;@import&lt;/span&gt; &lt;span class="s1"&gt;'./public/components/**/*'&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+&lt;span class="k"&gt;@import&lt;/span&gt; &lt;span class="s1"&gt;'./public/views/**/*'&lt;/span&gt;&lt;span class="p"&gt;;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h2 id="decouple-your-markup--styles"&gt;Decouple your Markup &amp;amp; Styles &lt;/h2&gt;
+
+&lt;p&gt;There are a few tutorials out there but the Bootstrap docs themselves don't do a great job at advocating a separation of markup and styles.&lt;/p&gt;
+
+&lt;p&gt;The commonly used prebuilt grid classes might serve you well on smaller projects but on larger ones insufficient separation of markup and styles can cause real issues. Trust me. I've been there, it isn't pretty!&lt;/p&gt;
+
+&lt;p&gt;But this is not inherently a problem with Bootstrap, it's a problem with your implementation.&lt;/p&gt;
+
+&lt;p&gt;Grid systems like &lt;a href="http://neat.bourbon.io/"&gt;Bourbon Neat&lt;/a&gt; and &lt;a href="http://susy.oddbird.net/"&gt;Susy&lt;/a&gt; have long used Mixins to define layout in css rather then with presentational classes. You can easily work with Bootstrap this way too. Just refer to my &lt;a href="http://codepen.io/mischacolley/pen/bdeoop"&gt;pen&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id="tiny-bootstraps-for-every-client"&gt;Tiny Bootstraps, for Every Client&lt;/h2&gt;
+
+&lt;p&gt;If you customize Bootstrap enough, eventually you might find that you start to develop a reusable codebase. One that takes the best Bootstrap has to offer but leaves out all the junk.&lt;/p&gt;
+</content>
+  </entry>
+  <entry>
+    <title>Oranges &amp; Mandarins</title>
+    <link rel="alternate" href="http://blog.url.com/blog/oranges-and-mandarins/"/>
+    <id>http://blog.url.com/blog/oranges-and-mandarins/</id>
+    <published>2014-11-05T00:00:00+11:00</published>
+    <updated>2016-02-05T16:25:05+11:00</updated>
+    <author>
+      <name>Article Author</name>
+    </author>
+    <content type="html">&lt;p&gt;In early 2013 I interviewed at &lt;a href="http://www.orangedigital.com.au"&gt;Orange Digital&lt;/a&gt; and soon after began working there part time. Sandra and I were recently back from 4.5 months in Europe and I was struggling to get myself reengaged with uni. If you remember I all but decided I was dropping out when we left to go traveling.&lt;/p&gt;
+
+&lt;p&gt;Part time quickly turned to full time and then I never enrolled for my next semester. As I had found at Netengine, I was learning a lot more in the industry then I ever was in uni.&lt;/p&gt;
+
+&lt;p&gt;I spent almost 2 years at Orange building awesome sites and mobile apps with a fantastic team of people.&lt;/p&gt;
+
+&lt;p&gt;I started at Orange with a focus on WordPress development but over the course of about six months or so I transitioned to also developing Drupal sites. This new knowledge made me a better WordPress developer and added another CMS to my toolkit.&lt;/p&gt;
+
+&lt;blockquote class="instagram-media" data-instgrm-captioned="" data-instgrm-version="6" style=" background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 1px; max-width:658px; padding:0; width:99.375%; width:-webkit-calc(100% - 2px); width:calc(100% - 2px);"&gt;&lt;div style="padding:8px;"&gt; &lt;div style=" background:#F8F8F8; line-height:0; margin-top:40px; padding:50% 0; text-align:center; width:100%;"&gt; &lt;div style=" background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACwAAAAsCAMAAAApWqozAAAAGFBMVEUiIiI9PT0eHh4gIB4hIBkcHBwcHBwcHBydr+JQAAAACHRSTlMABA4YHyQsM5jtaMwAAADfSURBVDjL7ZVBEgMhCAQBAf//42xcNbpAqakcM0ftUmFAAIBE81IqBJdS3lS6zs3bIpB9WED3YYXFPmHRfT8sgyrCP1x8uEUxLMzNWElFOYCV6mHWWwMzdPEKHlhLw7NWJqkHc4uIZphavDzA2JPzUDsBZziNae2S6owH8xPmX8G7zzgKEOPUoYHvGz1TBCxMkd3kwNVbU0gKHkx+iZILf77IofhrY1nYFnB/lQPb79drWOyJVa/DAvg9B/rLB4cC+Nqgdz/TvBbBnr6GBReqn/nRmDgaQEej7WhonozjF+Y2I/fZou/qAAAAAElFTkSuQmCC); display:block; height:44px; margin:0 auto -44px; position:relative; top:-22px; width:44px;"&gt;&lt;/div&gt;&lt;/div&gt; &lt;p style=" margin:8px 0 0 0; padding:0 4px;"&gt; &lt;a href="https://www.instagram.com/p/h26JtrvlKl/" style=" color:#000; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:normal; line-height:17px; text-decoration:none; word-wrap:break-word;" target="_blank"&gt;Late night at work bending Drupal to my will. Last one before 4 weeks off.&lt;/a&gt;&lt;/p&gt; &lt;p style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; line-height:17px; margin-bottom:0; margin-top:8px; overflow:hidden; padding:8px 0 7px; text-align:center; text-overflow:ellipsis; white-space:nowrap;"&gt;A photo posted by Mischa Colley (@mischacolley) on &lt;time style=" font-family:Arial,sans-serif; font-size:14px; line-height:17px;" datetime="2013-12-13T10:10:09+00:00"&gt;Dec 13, 2013 at 2:10am PST&lt;/time&gt;&lt;/p&gt;&lt;/div&gt;&lt;/blockquote&gt;
+&lt;script async="" defer="" src="//platform.instagram.com/en_US/embeds.js"&gt;&lt;/script&gt;
+
+&lt;p&gt;Much of my time at Orange was also spent with a focus on building responsive sites and improving workflows surrounding those type of projects.&lt;/p&gt;
+
+&lt;p&gt;In my time at Orange I:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;Built sites both large and small. I've worked on large custom WordPress sites for Government, large Drupal sites for schools, small sites, medium sites, old sites, new sites and landing pages and more.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;I built numerous e-commerce sites in both WordPress and Drupal working with things like Jigoshop, WooCommerce and Drupal Commerce and Ubercart. This work involved theming, custom development, product entry, gateway integration and testing etc.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;For many of the sites I arranged quotes on hosting, did the server provisioning and initial live deployment among other server administration tasks.&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Other tasks included:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;SEO development and Analytics / GWT setup&lt;/li&gt;
+  &lt;li&gt;On and off site client training sessions with individuals and teams&lt;/li&gt;
+  &lt;li&gt;On and off site client meetings&lt;/li&gt;
+  &lt;li&gt;Assisting with development quotes for the sales team&lt;/li&gt;
+  &lt;li&gt;Mentoring junior developers and interns&lt;/li&gt;
+  &lt;li&gt;Team meetings &amp;amp; training presentations&lt;/li&gt;
+  &lt;li&gt;Working with remote staff&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Achievements:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Together with some of the other devs I helped establish GIT as part of our development workflow along with championing the adoption of Sass&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;blockquote class="instagram-media" data-instgrm-captioned="" data-instgrm-version="6" style=" background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 1px; max-width:658px; padding:0; width:99.375%; width:-webkit-calc(100% - 2px); width:calc(100% - 2px);"&gt;&lt;div style="padding:8px;"&gt; &lt;div style=" background:#F8F8F8; line-height:0; margin-top:40px; padding:50% 0; text-align:center; width:100%;"&gt; &lt;div style=" background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACwAAAAsCAMAAAApWqozAAAAGFBMVEUiIiI9PT0eHh4gIB4hIBkcHBwcHBwcHBydr+JQAAAACHRSTlMABA4YHyQsM5jtaMwAAADfSURBVDjL7ZVBEgMhCAQBAf//42xcNbpAqakcM0ftUmFAAIBE81IqBJdS3lS6zs3bIpB9WED3YYXFPmHRfT8sgyrCP1x8uEUxLMzNWElFOYCV6mHWWwMzdPEKHlhLw7NWJqkHc4uIZphavDzA2JPzUDsBZziNae2S6owH8xPmX8G7zzgKEOPUoYHvGz1TBCxMkd3kwNVbU0gKHkx+iZILf77IofhrY1nYFnB/lQPb79drWOyJVa/DAvg9B/rLB4cC+Nqgdz/TvBbBnr6GBReqn/nRmDgaQEej7WhonozjF+Y2I/fZou/qAAAAAElFTkSuQmCC); display:block; height:44px; margin:0 auto -44px; position:relative; top:-22px; width:44px;"&gt;&lt;/div&gt;&lt;/div&gt; &lt;p style=" margin:8px 0 0 0; padding:0 4px;"&gt; &lt;a href="https://www.instagram.com/p/uHIjbEvlDy/" style=" color:#000; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:normal; line-height:17px; text-decoration:none; word-wrap:break-word;" target="_blank"&gt;Git it Together&lt;/a&gt;&lt;/p&gt; &lt;p style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; line-height:17px; margin-bottom:0; margin-top:8px; overflow:hidden; padding:8px 0 7px; text-align:center; text-overflow:ellipsis; white-space:nowrap;"&gt;A photo posted by Mischa Colley (@mischacolley) on &lt;time style=" font-family:Arial,sans-serif; font-size:14px; line-height:17px;" datetime="2014-10-13T23:40:35+00:00"&gt;Oct 13, 2014 at 4:40pm PDT&lt;/time&gt;&lt;/p&gt;&lt;/div&gt;&lt;/blockquote&gt;
+&lt;script async="" defer="" src="//platform.instagram.com/en_US/embeds.js"&gt;&lt;/script&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Because of my love for tooling and everything new and shiny in our industry I was able to transition the whole team to tools like Trello and Slack&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id="the-billboard-place"&gt;The Billboard Place&lt;/h2&gt;
+
+&lt;p&gt;&lt;img alt="alt text" title="Logo Title Text 1" src="billboard.jpg" /&gt;&lt;/p&gt;
+
+&lt;p&gt;When I started we were located on the corner of Upper Roma and Milton Road and were better known, at least to all my friends, as &lt;em&gt;"The Billboard"&lt;/em&gt; place.&lt;/p&gt;
+
+&lt;p&gt;The Billboard place was fun but it quickly got a little cramped as we started to grow.&lt;/p&gt;
+
+&lt;p&gt;It was here that I began working more and more with my new &lt;em&gt;friend&lt;/em&gt; Drupal.&lt;/p&gt;
+
+&lt;h2 id="the-valley-office"&gt;The Valley Office&lt;/h2&gt;
+
+&lt;p&gt;This was a major upgrade&lt;/p&gt;
+
+&lt;blockquote class="instagram-media" data-instgrm-captioned="" data-instgrm-version="6" style=" background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 1px; max-width:658px; padding:0; width:99.375%; width:-webkit-calc(100% - 2px); width:calc(100% - 2px);"&gt;&lt;div style="padding:8px;"&gt; &lt;div style=" background:#F8F8F8; line-height:0; margin-top:40px; padding:50% 0; text-align:center; width:100%;"&gt; &lt;div style=" background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACwAAAAsCAMAAAApWqozAAAAGFBMVEUiIiI9PT0eHh4gIB4hIBkcHBwcHBwcHBydr+JQAAAACHRSTlMABA4YHyQsM5jtaMwAAADfSURBVDjL7ZVBEgMhCAQBAf//42xcNbpAqakcM0ftUmFAAIBE81IqBJdS3lS6zs3bIpB9WED3YYXFPmHRfT8sgyrCP1x8uEUxLMzNWElFOYCV6mHWWwMzdPEKHlhLw7NWJqkHc4uIZphavDzA2JPzUDsBZziNae2S6owH8xPmX8G7zzgKEOPUoYHvGz1TBCxMkd3kwNVbU0gKHkx+iZILf77IofhrY1nYFnB/lQPb79drWOyJVa/DAvg9B/rLB4cC+Nqgdz/TvBbBnr6GBReqn/nRmDgaQEej7WhonozjF+Y2I/fZou/qAAAAAElFTkSuQmCC); display:block; height:44px; margin:0 auto -44px; position:relative; top:-22px; width:44px;"&gt;&lt;/div&gt;&lt;/div&gt; &lt;p style=" margin:8px 0 0 0; padding:0 4px;"&gt; &lt;a href="https://www.instagram.com/p/mxPrL6PlGX/" style=" color:#000; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:normal; line-height:17px; text-decoration:none; word-wrap:break-word;" target="_blank"&gt;Waiting on the back steps of our new office for the big reveal&lt;/a&gt;&lt;/p&gt; &lt;p style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; line-height:17px; margin-bottom:0; margin-top:8px; overflow:hidden; padding:8px 0 7px; text-align:center; text-overflow:ellipsis; white-space:nowrap;"&gt;A photo posted by Mischa Colley (@mischacolley) on &lt;time style=" font-family:Arial,sans-serif; font-size:14px; line-height:17px;" datetime="2014-04-14T11:59:45+00:00"&gt;Apr 14, 2014 at 4:59am PDT&lt;/time&gt;&lt;/p&gt;&lt;/div&gt;&lt;/blockquote&gt;
+&lt;script async="" defer="" src="//platform.instagram.com/en_US/embeds.js"&gt;&lt;/script&gt;
+
+&lt;blockquote class="instagram-media" data-instgrm-captioned="" data-instgrm-version="6" style=" background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 1px; max-width:658px; padding:0; width:99.375%; width:-webkit-calc(100% - 2px); width:calc(100% - 2px);"&gt;&lt;div style="padding:8px;"&gt; &lt;div style=" background:#F8F8F8; line-height:0; margin-top:40px; padding:50% 0; text-align:center; width:100%;"&gt; &lt;div style=" background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACwAAAAsCAMAAAApWqozAAAAGFBMVEUiIiI9PT0eHh4gIB4hIBkcHBwcHBwcHBydr+JQAAAACHRSTlMABA4YHyQsM5jtaMwAAADfSURBVDjL7ZVBEgMhCAQBAf//42xcNbpAqakcM0ftUmFAAIBE81IqBJdS3lS6zs3bIpB9WED3YYXFPmHRfT8sgyrCP1x8uEUxLMzNWElFOYCV6mHWWwMzdPEKHlhLw7NWJqkHc4uIZphavDzA2JPzUDsBZziNae2S6owH8xPmX8G7zzgKEOPUoYHvGz1TBCxMkd3kwNVbU0gKHkx+iZILf77IofhrY1nYFnB/lQPb79drWOyJVa/DAvg9B/rLB4cC+Nqgdz/TvBbBnr6GBReqn/nRmDgaQEej7WhonozjF+Y2I/fZou/qAAAAAElFTkSuQmCC); display:block; height:44px; margin:0 auto -44px; position:relative; top:-22px; width:44px;"&gt;&lt;/div&gt;&lt;/div&gt; &lt;p style=" margin:8px 0 0 0; padding:0 4px;"&gt; &lt;a href="https://www.instagram.com/p/mxQB9OPlG2/" style=" color:#000; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:normal; line-height:17px; text-decoration:none; word-wrap:break-word;" target="_blank"&gt;Watching breakfast be prepared by our new office chef and barista&lt;/a&gt;&lt;/p&gt; &lt;p style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; line-height:17px; margin-bottom:0; margin-top:8px; overflow:hidden; padding:8px 0 7px; text-align:center; text-overflow:ellipsis; white-space:nowrap;"&gt;A photo posted by Mischa Colley (@mischacolley) on &lt;time style=" font-family:Arial,sans-serif; font-size:14px; line-height:17px;" datetime="2014-04-14T12:02:52+00:00"&gt;Apr 14, 2014 at 5:02am PDT&lt;/time&gt;&lt;/p&gt;&lt;/div&gt;&lt;/blockquote&gt;
+&lt;script async="" defer="" src="//platform.instagram.com/en_US/embeds.js"&gt;&lt;/script&gt;
+
+&lt;p&gt;&lt;a href="https://www.google.com.au/maps/place/orange+digital/@-27.4565756,153.0343612,3a,75y,306.34h,90t/data=!3m4!1e1!3m2!1sq_bDpJ40HH0AAAQo8DNcBg!2e0!4m2!3m1!1s0x0:0xb27f817982a90d69?sa=X&amp;amp;ved=0ahUKEwinm4S71N_KAhUMJJQKHTxFBEsQoB8IazAN"&gt;Checkout the office&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id="thinkdo---the-brains-of-orange-digital"&gt;ThinkDo - The Brains of Orange Digital&lt;/h2&gt;
+
+&lt;p&gt;For the majority of the time I was at Orange Digital I spent 1 day a week in our innovation office &lt;a href="http://thinkdo.com.au/"&gt;ThinkDo&lt;/a&gt;, working on internal projects. I worked on three different projects during that time. We learned a lot and lots of those lessons have gone into inventing, building and delivering disruptive business innovations for Orange clients. The lessons I learned during ThinkDo time are serving me well today, including how important down time is.&lt;/p&gt;
+
+&lt;blockquote class="instagram-media" data-instgrm-captioned="" data-instgrm-version="6" style=" background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 1px; max-width:658px; padding:0; width:99.375%; width:-webkit-calc(100% - 2px); width:calc(100% - 2px);"&gt;&lt;div style="padding:8px;"&gt; &lt;div style=" background:#F8F8F8; line-height:0; margin-top:40px; padding:50% 0; text-align:center; width:100%;"&gt; &lt;div style=" background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACwAAAAsCAMAAAApWqozAAAAGFBMVEUiIiI9PT0eHh4gIB4hIBkcHBwcHBwcHBydr+JQAAAACHRSTlMABA4YHyQsM5jtaMwAAADfSURBVDjL7ZVBEgMhCAQBAf//42xcNbpAqakcM0ftUmFAAIBE81IqBJdS3lS6zs3bIpB9WED3YYXFPmHRfT8sgyrCP1x8uEUxLMzNWElFOYCV6mHWWwMzdPEKHlhLw7NWJqkHc4uIZphavDzA2JPzUDsBZziNae2S6owH8xPmX8G7zzgKEOPUoYHvGz1TBCxMkd3kwNVbU0gKHkx+iZILf77IofhrY1nYFnB/lQPb79drWOyJVa/DAvg9B/rLB4cC+Nqgdz/TvBbBnr6GBReqn/nRmDgaQEej7WhonozjF+Y2I/fZou/qAAAAAElFTkSuQmCC); display:block; height:44px; margin:0 auto -44px; position:relative; top:-22px; width:44px;"&gt;&lt;/div&gt;&lt;/div&gt; &lt;p style=" margin:8px 0 0 0; padding:0 4px;"&gt; &lt;a href="https://www.instagram.com/p/he0RTGPlF3/" style=" color:#000; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:normal; line-height:17px; text-decoration:none; word-wrap:break-word;" target="_blank"&gt;Our next-door neighbors like our new office toys&lt;/a&gt;&lt;/p&gt; &lt;p style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; line-height:17px; margin-bottom:0; margin-top:8px; overflow:hidden; padding:8px 0 7px; text-align:center; text-overflow:ellipsis; white-space:nowrap;"&gt;A photo posted by Mischa Colley (@mischacolley) on &lt;time style=" font-family:Arial,sans-serif; font-size:14px; line-height:17px;" datetime="2013-12-04T01:36:59+00:00"&gt;Dec 3, 2013 at 5:36pm PST&lt;/time&gt;&lt;/p&gt;&lt;/div&gt;&lt;/blockquote&gt;
+&lt;script async="" defer="" src="//platform.instagram.com/en_US/embeds.js"&gt;&lt;/script&gt;
+
+&lt;h3 id="nodunno"&gt;1 - Nodunno&lt;/h3&gt;
+
+&lt;p&gt;Nodunno is an iOS App we developed over about a year. It is still available for &lt;a href="https://itunes.apple.com/au/app/nodunno/id795605504?mt=8"&gt;download on the App Store&lt;/a&gt; but I don't believe it has had an update in a while. The basic premise was:&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Making a decision can be so hard right? With Nodunno, it’s easy. You pick three options (text or pics) and send it to your buddies. Once they tap on your question, it shows the three options and they only have a few seconds to pick one. You get a guaranteed response, every time.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;We had a team of 5-6 split between, design, dev and marketing. I built the promotional website and did Front-End work on the app. They marketing guys and girls had a lot of fun doing promotional videos for us. Like this one!&lt;/p&gt;
+
+&lt;iframe width="560" height="315" src="https://www.youtube.com/embed/NdbcW9kMRYM" frameborder="0" allowfullscreen=""&gt;&lt;/iframe&gt;
+
+&lt;p&gt;And this slightly more tasteful one.&lt;/p&gt;
+
+&lt;iframe src="https://player.vimeo.com/video/90093944" frameborder="0" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen=""&gt;&lt;/iframe&gt;
+
+&lt;p&gt;I learned a lot on this team about:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;developing and submitting apps to the App Store&lt;/li&gt;
+  &lt;li&gt;building effective landing pages and Facebook apps to drive campaigns&lt;/li&gt;
+  &lt;li&gt;marketing and SEO dos and donts&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;blockquote class="instagram-media" data-instgrm-captioned="" data-instgrm-version="6" style=" background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 1px; max-width:658px; padding:0; width:99.375%; width:-webkit-calc(100% - 2px); width:calc(100% - 2px);"&gt;&lt;div style="padding:8px;"&gt; &lt;div style=" background:#F8F8F8; line-height:0; margin-top:40px; padding:50% 0; text-align:center; width:100%;"&gt; &lt;div style=" background:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACwAAAAsCAMAAAApWqozAAAAGFBMVEUiIiI9PT0eHh4gIB4hIBkcHBwcHBwcHBydr+JQAAAACHRSTlMABA4YHyQsM5jtaMwAAADfSURBVDjL7ZVBEgMhCAQBAf//42xcNbpAqakcM0ftUmFAAIBE81IqBJdS3lS6zs3bIpB9WED3YYXFPmHRfT8sgyrCP1x8uEUxLMzNWElFOYCV6mHWWwMzdPEKHlhLw7NWJqkHc4uIZphavDzA2JPzUDsBZziNae2S6owH8xPmX8G7zzgKEOPUoYHvGz1TBCxMkd3kwNVbU0gKHkx+iZILf77IofhrY1nYFnB/lQPb79drWOyJVa/DAvg9B/rLB4cC+Nqgdz/TvBbBnr6GBReqn/nRmDgaQEej7WhonozjF+Y2I/fZou/qAAAAAElFTkSuQmCC); display:block; height:44px; margin:0 auto -44px; position:relative; top:-22px; width:44px;"&gt;&lt;/div&gt;&lt;/div&gt; &lt;p style=" margin:8px 0 0 0; padding:0 4px;"&gt; &lt;a href="https://www.instagram.com/p/kTO6eUPlKX/" style=" color:#000; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:normal; line-height:17px; text-decoration:none; word-wrap:break-word;" target="_blank"&gt;Just a regular day at #thinkdo&lt;/a&gt;&lt;/p&gt; &lt;p style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; line-height:17px; margin-bottom:0; margin-top:8px; overflow:hidden; padding:8px 0 7px; text-align:center; text-overflow:ellipsis; white-space:nowrap;"&gt;A photo posted by Mischa Colley (@mischacolley) on &lt;time style=" font-family:Arial,sans-serif; font-size:14px; line-height:17px;" datetime="2014-02-12T03:13:06+00:00"&gt;Feb 11, 2014 at 7:13pm PST&lt;/time&gt;&lt;/p&gt;&lt;/div&gt;&lt;/blockquote&gt;
+&lt;script async="" defer="" src="//platform.instagram.com/en_US/embeds.js"&gt;&lt;/script&gt;
+
+&lt;p&gt;Ultimately our biggest lesson was that you need to launch quickly and fail fast. We learned our lesson for the next two projects and went to the other extreme. Taking a product to market in just 3 days with 3 people per team.&lt;/p&gt;
+
+&lt;h3 id="knowenough"&gt;2 - #Knowenough&lt;/h3&gt;
+
+&lt;p&gt;Matt, Tom and I took our idea in a more serous "improve the world". We developed the concept for an "Enlightened" fasion product. We launched a &lt;a href="https://www.kickstarter.com/"&gt;Kickstarter&lt;/a&gt; campaign for it and raised a couple of hundred bucks but ultimately our project wasn't chosen to continue internally and we didn't reach our funding goal. I took away a lot from this project about how Kickstarter works and how simple is best. There isn't much online to show for the project anymore but here is a video we made about it for the Kickstarter campaign.&lt;/p&gt;
+
+&lt;iframe src="https://www.youtube.com/embed/gjDk42vH2HM" frameborder="0" allowfullscreen=""&gt;&lt;/iframe&gt;
+
+&lt;p&gt;The team that did win this round of innovation built &lt;a href="http://thecoffeepost.com.au/"&gt;The Coffee Post&lt;/a&gt; which I believe is still an operating business.&lt;/p&gt;
+
+&lt;h3 id="bitwally"&gt;3 - 1BitWally&lt;/h3&gt;
+
+&lt;p&gt;For our next round Matt, Tom and I took it pretty easy and had a lot of fun. We created a stupid little web game where you had to find a hidden pixel on the screen. If you clicked it you got to leave a message on the wall of the site. It quickly turned into an obscene mess but it was fun while it lasted. On the surface it appeared hard to solve but if you knew anything about html or just even used your tab key you could solve it in about 2 seconds.&lt;/p&gt;
+
+&lt;p&gt;Long story short we somehow got a lot of traffic from Reddit, had a new submission at least ever second and crashed our server 3 times, got the site "hacked", had people un-hack it for us …&lt;/p&gt;
+
+&lt;p&gt;Sadly 1bitwally is no longer online but you can get a feel for it's &lt;em&gt;brilliance&lt;/em&gt; thanks to the &lt;a href="https://web.archive.org/web/20150509204942/http://1bitwally.com/"&gt;Internet Archive&lt;/a&gt;. Have a listen to the track below (we had it auto playing in the background ) as you view it and imagine a new message appearing almost every second across the page.&lt;/p&gt;
+
+&lt;iframe width="100%" height="166" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/58976109&amp;amp;color=ff5500" class="soundcloud"&gt;&lt;/iframe&gt;
+
+&lt;p&gt;Since I left Orange, the ThinkDo teams have continued to do wonderful things like, I particular like &lt;a href="http://www.sendyourfriendapenisdrawing.com/"&gt;sendyourfriendapenisdrawing.com&lt;/a&gt;.&lt;/p&gt;
+
+</content>
+  </entry>
+</feed>

@@ -29,8 +29,17 @@ footer {
   top: 50%;
   transform: translateY(-50%);
 
+  // @media (min-width: 768px) { 
+  //   top: 50%;
+  //   transform: translateY(-50%);
+  // }
+
   p {
     font-size: 1.7rem;
+  }
+
+  .tweet {
+    @include word-wrap;
   }
 
   .user,

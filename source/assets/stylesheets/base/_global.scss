@@ -26,8 +26,12 @@ main {
 
 .panel {
   border: 1px solid #eee;
-  padding: 2em;
   position: relative;
+  padding: 1rem;
+  @media (min-width: 768px) { 
+    padding: 2em;
+  }
+
 }
 
 

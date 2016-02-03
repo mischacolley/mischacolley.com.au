@@ -79,9 +79,16 @@ body.work {
 
     }
 
-    > img {
+    .featured-image {
       border-top: 1px solid #ddd;
       border-bottom: 1px solid #ddd;
+      background: #ccc;
+      width: 100%;
+
+      img {
+        margin: 0 auto;
+        display: block;
+      }
     }
 
     .article-inner {
