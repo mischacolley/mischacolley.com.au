@@ -1,0 +1,19 @@
+= wrap_layout :application do
+  %section
+    - if is_blog_article?
+      = link_to "Back to Blog", "/blog", :class => 'back-top'
+      %article
+        .post-heading
+          %h1= current_article.title
+        .featured-image
+          = image_tag current_article.url+"featured_image.jpg", resize_to: '960x378', class: 'thumbnail'
+        .article-inner.article
+          = yield
+      = link_to "Back to Blog", "/blog", :class => 'back-bottom'
+    - else 
+      %h1 Blog
+      %p.section-desc infrequent posts about stuff and things
+      .articles
+        = yield
+
+= stylesheet_link_tag "syntax_highlight"

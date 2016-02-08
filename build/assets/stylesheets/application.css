@@ -2747,27 +2747,37 @@ body {
 
 /* line 17, /Users/mischacolley/Sandbox/mischacolley/source/assets/stylesheets/base/_global.scss */
 main {
-  margin-top: 130px;
-  padding: 2em; }
+  max-width: 1920px;
+  margin: 130px auto 0 auto;
+  padding: 1em; }
+  @media (min-width: 768px) {
+    /* line 17, /Users/mischacolley/Sandbox/mischacolley/source/assets/stylesheets/base/_global.scss */
+    main {
+      padding: 2em; } }
 
-/* line 22, /Users/mischacolley/Sandbox/mischacolley/source/assets/stylesheets/base/_global.scss */
+/* line 29, /Users/mischacolley/Sandbox/mischacolley/source/assets/stylesheets/base/_global.scss */
 .index main {
   padding: 0;
   margin-top: 0; }
 
-/* line 27, /Users/mischacolley/Sandbox/mischacolley/source/assets/stylesheets/base/_global.scss */
+/* line 34, /Users/mischacolley/Sandbox/mischacolley/source/assets/stylesheets/base/_global.scss */
 .panel {
   border: 1px solid #eee;
-  padding: 2em;
-  position: relative; }
+  position: relative;
+  padding: 1rem; }
+  @media (min-width: 768px) {
+    /* line 34, /Users/mischacolley/Sandbox/mischacolley/source/assets/stylesheets/base/_global.scss */
+    .panel {
+      padding: 2em; } }
 
-/* line 34, /Users/mischacolley/Sandbox/mischacolley/source/assets/stylesheets/base/_global.scss */
+/* line 45, /Users/mischacolley/Sandbox/mischacolley/source/assets/stylesheets/base/_global.scss */
 img {
   max-width: 100%; }
 
 /* line 1, /Users/mischacolley/Sandbox/mischacolley/source/assets/stylesheets/base/_buttons.scss */
 button, input[type="button"], input[type="reset"], input[type="submit"],
-button {
+button,
+.btn {
   -ms-appearance: none;
   -o-appearance: none;
   appearance: none;
@@ -2787,24 +2797,32 @@ button {
   user-select: none;
   vertical-align: middle;
   white-space: nowrap; }
-  /* line 21, /Users/mischacolley/Sandbox/mischacolley/source/assets/stylesheets/base/_buttons.scss */
+  /* line 22, /Users/mischacolley/Sandbox/mischacolley/source/assets/stylesheets/base/_buttons.scss */
   button:hover, button:focus, input[type="button"]:hover, input[type="button"]:focus, input[type="reset"]:hover, input[type="reset"]:focus, input[type="submit"]:hover, input[type="submit"]:focus,
   button:hover,
-  button:focus {
+  button:focus,
+  .btn:hover,
+  .btn:focus {
     background-color: #3973ac;
     color: #fff; }
-  /* line 27, /Users/mischacolley/Sandbox/mischacolley/source/assets/stylesheets/base/_buttons.scss */
+  /* line 28, /Users/mischacolley/Sandbox/mischacolley/source/assets/stylesheets/base/_buttons.scss */
   button:disabled, input[type="button"]:disabled, input[type="reset"]:disabled, input[type="submit"]:disabled,
-  button:disabled {
+  button:disabled,
+  .btn:disabled {
     cursor: not-allowed;
     opacity: 0.5; }
+  /* line 33, /Users/mischacolley/Sandbox/mischacolley/source/assets/stylesheets/base/_buttons.scss */
+  button a, input[type="button"] a, input[type="reset"] a, input[type="submit"] a,
+  button a,
+  .btn a {
+    color: #ffffff; }
 
-/* line 36, /Users/mischacolley/Sandbox/mischacolley/source/assets/stylesheets/base/_buttons.scss */
+/* line 41, /Users/mischacolley/Sandbox/mischacolley/source/assets/stylesheets/base/_buttons.scss */
 button {
   outline: none; }
 
-/* line 40, /Users/mischacolley/Sandbox/mischacolley/source/assets/stylesheets/base/_buttons.scss */
-button.cta {
+/* line 45, /Users/mischacolley/Sandbox/mischacolley/source/assets/stylesheets/base/_buttons.scss */
+.cta {
   background: none;
   border: 1px solid rgba(0, 0, 0, 0.1);
   color: #6699CC;
@@ -2812,35 +2830,42 @@ button.cta {
   padding: 0.6em 0.8em 0.5em 0.8em;
   border-radius: 0.1em; }
 
-/* line 49, /Users/mischacolley/Sandbox/mischacolley/source/assets/stylesheets/base/_buttons.scss */
+/* line 54, /Users/mischacolley/Sandbox/mischacolley/source/assets/stylesheets/base/_buttons.scss */
 .read-more {
   background: #6699CC;
   border: 1px solid rgba(0, 0, 0, 0.1);
   color: #ffffff;
   text-transform: uppercase;
   padding: 0.6em 0.8em 0.5em 0.8em;
-  border-radius: 0.1em; }
+  border-radius: 0.1em;
+  margin-top: 0.3rem;
+  display: inline-block; }
 
-/* line 58, /Users/mischacolley/Sandbox/mischacolley/source/assets/stylesheets/base/_buttons.scss */
-button.cta.highlight {
+/* line 65, /Users/mischacolley/Sandbox/mischacolley/source/assets/stylesheets/base/_buttons.scss */
+.cta.highlight {
   background: #6699CC;
   color: #ffffff; }
 
-/* line 63, /Users/mischacolley/Sandbox/mischacolley/source/assets/stylesheets/base/_buttons.scss */
-button.cta:hover {
+/* line 70, /Users/mischacolley/Sandbox/mischacolley/source/assets/stylesheets/base/_buttons.scss */
+.cta:hover {
   background: none;
   color: #6699CC; }
 
-/* line 68, /Users/mischacolley/Sandbox/mischacolley/source/assets/stylesheets/base/_buttons.scss */
+/* line 75, /Users/mischacolley/Sandbox/mischacolley/source/assets/stylesheets/base/_buttons.scss */
 .section-cta {
   text-align: center; }
-  /* line 72, /Users/mischacolley/Sandbox/mischacolley/source/assets/stylesheets/base/_buttons.scss */
+  /* line 79, /Users/mischacolley/Sandbox/mischacolley/source/assets/stylesheets/base/_buttons.scss */
   .section-cta a {
     padding: 8px 30px;
-    background-color: rebeccapurple;
+    background-color: #6699CC;
     display: inline-block;
     margin-bottom: 30px;
-    color: #ffffff; }
+    color: #ffffff;
+    text-transform: uppercase; }
+    /* line 87, /Users/mischacolley/Sandbox/mischacolley/source/assets/stylesheets/base/_buttons.scss */
+    .section-cta a:hover, .section-cta a:focus {
+      background-color: #3973ac;
+      color: #fff; }
 
 /* line 1, /Users/mischacolley/Sandbox/mischacolley/source/assets/stylesheets/base/_forms.scss */
 fieldset {
@@ -2949,6 +2974,19 @@ dl {
   dl dd {
     margin: 0; }
 
+/* line 1, /Users/mischacolley/Sandbox/mischacolley/source/assets/stylesheets/base/_nav.scss */
+a.back-top,
+a.back-bottom {
+  display: block; }
+
+/* line 6, /Users/mischacolley/Sandbox/mischacolley/source/assets/stylesheets/base/_nav.scss */
+a.back-top {
+  margin-bottom: 1rem; }
+
+/* line 11, /Users/mischacolley/Sandbox/mischacolley/source/assets/stylesheets/base/_nav.scss */
+a.back-bottom {
+  margin: 1rem 0; }
+
 /*
 
 Base styles scoped for page, post content. 
@@ -2957,127 +2995,135 @@ These styles should, if need be, override global heading/typography styles etc
 */
 /* line 11, /Users/mischacolley/Sandbox/mischacolley/source/assets/stylesheets/base/_post_content.scss */
 .article p {
-  font-size: 1.5rem; }
-/* line 17, /Users/mischacolley/Sandbox/mischacolley/source/assets/stylesheets/base/_post_content.scss */
+  font-size: 1.2rem; }
+@media (min-width: 768px) {
+  /* line 16, /Users/mischacolley/Sandbox/mischacolley/source/assets/stylesheets/base/_post_content.scss */
+  .article p {
+    font-size: 1.5rem; } }
+/* line 23, /Users/mischacolley/Sandbox/mischacolley/source/assets/stylesheets/base/_post_content.scss */
 .article h1:first-of-type {
   text-align: center; }
-/* line 21, /Users/mischacolley/Sandbox/mischacolley/source/assets/stylesheets/base/_post_content.scss */
+/* line 27, /Users/mischacolley/Sandbox/mischacolley/source/assets/stylesheets/base/_post_content.scss */
 .article h1, .article h2, .article h3, .article h4, .article h5, .article h6 {
   font-style: normal;
   margin: 0 0 1.5 0;
   color: black; }
-/* line 27, /Users/mischacolley/Sandbox/mischacolley/source/assets/stylesheets/base/_post_content.scss */
+/* line 33, /Users/mischacolley/Sandbox/mischacolley/source/assets/stylesheets/base/_post_content.scss */
 .article h1, .article .h1 {
   font-size: 30px;
   line-height: 42px; }
-/* line 32, /Users/mischacolley/Sandbox/mischacolley/source/assets/stylesheets/base/_post_content.scss */
+/* line 38, /Users/mischacolley/Sandbox/mischacolley/source/assets/stylesheets/base/_post_content.scss */
 .article h2, .article .h2 {
   font-size: 25px;
   line-height: 34px; }
-/* line 37, /Users/mischacolley/Sandbox/mischacolley/source/assets/stylesheets/base/_post_content.scss */
+/* line 43, /Users/mischacolley/Sandbox/mischacolley/source/assets/stylesheets/base/_post_content.scss */
 .article h3, .article .h3 {
   font-size: 20px;
   line-height: 32px; }
-/* line 42, /Users/mischacolley/Sandbox/mischacolley/source/assets/stylesheets/base/_post_content.scss */
+/* line 48, /Users/mischacolley/Sandbox/mischacolley/source/assets/stylesheets/base/_post_content.scss */
 .article h4, .article .h4 {
   font-size: 15px;
   line-height: 26px; }
-/* line 47, /Users/mischacolley/Sandbox/mischacolley/source/assets/stylesheets/base/_post_content.scss */
+/* line 53, /Users/mischacolley/Sandbox/mischacolley/source/assets/stylesheets/base/_post_content.scss */
 .article h5, .article .h5 {
   font-size: 12px;
   line-height: 17px; }
-/* line 52, /Users/mischacolley/Sandbox/mischacolley/source/assets/stylesheets/base/_post_content.scss */
+/* line 58, /Users/mischacolley/Sandbox/mischacolley/source/assets/stylesheets/base/_post_content.scss */
 .article h6, .article .h6 {
   font-size: 10px;
   line-height: 13px; }
 @media (min-width: 34em) {
-  /* line 59, /Users/mischacolley/Sandbox/mischacolley/source/assets/stylesheets/base/_post_content.scss */
+  /* line 65, /Users/mischacolley/Sandbox/mischacolley/source/assets/stylesheets/base/_post_content.scss */
   .article h1, .article .h1 {
     font-size: 32px;
     line-height: 44px; }
-  /* line 64, /Users/mischacolley/Sandbox/mischacolley/source/assets/stylesheets/base/_post_content.scss */
+  /* line 70, /Users/mischacolley/Sandbox/mischacolley/source/assets/stylesheets/base/_post_content.scss */
   .article h2, .article .h2 {
     font-size: 27px;
     line-height: 36px; }
-  /* line 69, /Users/mischacolley/Sandbox/mischacolley/source/assets/stylesheets/base/_post_content.scss */
+  /* line 75, /Users/mischacolley/Sandbox/mischacolley/source/assets/stylesheets/base/_post_content.scss */
   .article h3, .article .h3 {
     font-size: 22px;
     line-height: 34px; }
-  /* line 74, /Users/mischacolley/Sandbox/mischacolley/source/assets/stylesheets/base/_post_content.scss */
+  /* line 80, /Users/mischacolley/Sandbox/mischacolley/source/assets/stylesheets/base/_post_content.scss */
   .article h4, .article .h4 {
     font-size: 17px;
     line-height: 28px; }
-  /* line 79, /Users/mischacolley/Sandbox/mischacolley/source/assets/stylesheets/base/_post_content.scss */
+  /* line 85, /Users/mischacolley/Sandbox/mischacolley/source/assets/stylesheets/base/_post_content.scss */
   .article h5, .article .h5 {
     font-size: 14px;
     line-height: 22px; }
-  /* line 84, /Users/mischacolley/Sandbox/mischacolley/source/assets/stylesheets/base/_post_content.scss */
+  /* line 90, /Users/mischacolley/Sandbox/mischacolley/source/assets/stylesheets/base/_post_content.scss */
   .article h6, .article .h6 {
     font-size: 12px;
     line-height: 15px; } }
 @media (min-width: 48em) {
-  /* line 94, /Users/mischacolley/Sandbox/mischacolley/source/assets/stylesheets/base/_post_content.scss */
+  /* line 100, /Users/mischacolley/Sandbox/mischacolley/source/assets/stylesheets/base/_post_content.scss */
   .article h1, .article .h1 {
     font-size: 34px;
     line-height: 46px; }
-  /* line 99, /Users/mischacolley/Sandbox/mischacolley/source/assets/stylesheets/base/_post_content.scss */
+  /* line 105, /Users/mischacolley/Sandbox/mischacolley/source/assets/stylesheets/base/_post_content.scss */
   .article h2, .article .h2 {
     font-size: 29px;
     line-height: 38px; }
-  /* line 104, /Users/mischacolley/Sandbox/mischacolley/source/assets/stylesheets/base/_post_content.scss */
+  /* line 110, /Users/mischacolley/Sandbox/mischacolley/source/assets/stylesheets/base/_post_content.scss */
   .article h3, .article .h3 {
     font-size: 24px;
     line-height: 36px; }
-  /* line 109, /Users/mischacolley/Sandbox/mischacolley/source/assets/stylesheets/base/_post_content.scss */
+  /* line 115, /Users/mischacolley/Sandbox/mischacolley/source/assets/stylesheets/base/_post_content.scss */
   .article h4, .article .h4 {
     font-size: 19px;
     line-height: 30px; }
-  /* line 114, /Users/mischacolley/Sandbox/mischacolley/source/assets/stylesheets/base/_post_content.scss */
+  /* line 120, /Users/mischacolley/Sandbox/mischacolley/source/assets/stylesheets/base/_post_content.scss */
   .article h5, .article .h5 {
     font-size: 16px;
     line-height: 21px; }
-  /* line 119, /Users/mischacolley/Sandbox/mischacolley/source/assets/stylesheets/base/_post_content.scss */
+  /* line 125, /Users/mischacolley/Sandbox/mischacolley/source/assets/stylesheets/base/_post_content.scss */
   .article h6, .article .h6 {
     font-size: 13px;
     line-height: 16px; } }
 @media (min-width: 62em) {
-  /* line 129, /Users/mischacolley/Sandbox/mischacolley/source/assets/stylesheets/base/_post_content.scss */
+  /* line 135, /Users/mischacolley/Sandbox/mischacolley/source/assets/stylesheets/base/_post_content.scss */
   .article h1, .article .h1 {
     font-size: 36px;
     line-height: 48px; }
-  /* line 134, /Users/mischacolley/Sandbox/mischacolley/source/assets/stylesheets/base/_post_content.scss */
+  /* line 140, /Users/mischacolley/Sandbox/mischacolley/source/assets/stylesheets/base/_post_content.scss */
   .article h2, .article .h2 {
     font-size: 31px;
     line-height: 40px; }
-  /* line 139, /Users/mischacolley/Sandbox/mischacolley/source/assets/stylesheets/base/_post_content.scss */
+  /* line 145, /Users/mischacolley/Sandbox/mischacolley/source/assets/stylesheets/base/_post_content.scss */
   .article h3, .article .h3 {
     font-size: 26px;
     line-height: 38px; }
-  /* line 144, /Users/mischacolley/Sandbox/mischacolley/source/assets/stylesheets/base/_post_content.scss */
+  /* line 150, /Users/mischacolley/Sandbox/mischacolley/source/assets/stylesheets/base/_post_content.scss */
   .article h4, .article .h4 {
     font-size: 21px;
     line-height: 32px; } }
-/* line 153, /Users/mischacolley/Sandbox/mischacolley/source/assets/stylesheets/base/_post_content.scss */
+/* line 159, /Users/mischacolley/Sandbox/mischacolley/source/assets/stylesheets/base/_post_content.scss */
 .article a {
   border-bottom: 1px dotted #6699CC; }
-  /* line 157, /Users/mischacolley/Sandbox/mischacolley/source/assets/stylesheets/base/_post_content.scss */
+  /* line 163, /Users/mischacolley/Sandbox/mischacolley/source/assets/stylesheets/base/_post_content.scss */
   .article a:hover, .article a:focus, .article a:active, .article a:visited {
     text-decoration: none;
     outline: 0; }
-/* line 167, /Users/mischacolley/Sandbox/mischacolley/source/assets/stylesheets/base/_post_content.scss */
+/* line 173, /Users/mischacolley/Sandbox/mischacolley/source/assets/stylesheets/base/_post_content.scss */
 .article a.btn {
   border-bottom: 1px solid #eee; }
-/* line 171, /Users/mischacolley/Sandbox/mischacolley/source/assets/stylesheets/base/_post_content.scss */
+/* line 177, /Users/mischacolley/Sandbox/mischacolley/source/assets/stylesheets/base/_post_content.scss */
 .article ol,
 .article ul {
   list-style-type: disc;
   margin-bottom: 0.75em;
   padding-left: 1.5em; }
-/* line 180, /Users/mischacolley/Sandbox/mischacolley/source/assets/stylesheets/base/_post_content.scss */
+/* line 186, /Users/mischacolley/Sandbox/mischacolley/source/assets/stylesheets/base/_post_content.scss */
 .article li {
-  font-size: 1rem;
-  line-height: 1.5; }
-/* line 187, /Users/mischacolley/Sandbox/mischacolley/source/assets/stylesheets/base/_post_content.scss */
+  line-height: 1.5;
+  font-size: 1.2rem; }
+  @media (min-width: 768px) {
+    /* line 186, /Users/mischacolley/Sandbox/mischacolley/source/assets/stylesheets/base/_post_content.scss */
+    .article li {
+      font-size: 1.5rem; } }
+/* line 196, /Users/mischacolley/Sandbox/mischacolley/source/assets/stylesheets/base/_post_content.scss */
 .article blockquote {
   font-weight: 400;
   color: #6699CC;
@@ -3089,50 +3135,50 @@ These styles should, if need be, override global heading/typography styles etc
   text-indent: 10px;
   font-size: 21px; }
   @media (min-width: 48em) {
-    /* line 187, /Users/mischacolley/Sandbox/mischacolley/source/assets/stylesheets/base/_post_content.scss */
+    /* line 196, /Users/mischacolley/Sandbox/mischacolley/source/assets/stylesheets/base/_post_content.scss */
     .article blockquote {
       font-size: 31px; } }
-  /* line 204, /Users/mischacolley/Sandbox/mischacolley/source/assets/stylesheets/base/_post_content.scss */
+  /* line 213, /Users/mischacolley/Sandbox/mischacolley/source/assets/stylesheets/base/_post_content.scss */
   .article blockquote:before, .article blockquote:after {
     font-weight: 400;
     color: #6699CC;
     font-size: 21px; }
     @media (min-width: 48em) {
-      /* line 204, /Users/mischacolley/Sandbox/mischacolley/source/assets/stylesheets/base/_post_content.scss */
+      /* line 213, /Users/mischacolley/Sandbox/mischacolley/source/assets/stylesheets/base/_post_content.scss */
       .article blockquote:before, .article blockquote:after {
         font-size: 31px; } }
-  /* line 218, /Users/mischacolley/Sandbox/mischacolley/source/assets/stylesheets/base/_post_content.scss */
+  /* line 227, /Users/mischacolley/Sandbox/mischacolley/source/assets/stylesheets/base/_post_content.scss */
   .article blockquote:before {
     content: '“';
     position: absolute;
     left: -10px; }
-  /* line 224, /Users/mischacolley/Sandbox/mischacolley/source/assets/stylesheets/base/_post_content.scss */
+  /* line 233, /Users/mischacolley/Sandbox/mischacolley/source/assets/stylesheets/base/_post_content.scss */
   .article blockquote:after {
     content: '”';
     position: relative;
     left: -5px; }
-/* line 234, /Users/mischacolley/Sandbox/mischacolley/source/assets/stylesheets/base/_post_content.scss */
+/* line 243, /Users/mischacolley/Sandbox/mischacolley/source/assets/stylesheets/base/_post_content.scss */
 .article table p {
   margin: 0; }
-/* line 240, /Users/mischacolley/Sandbox/mischacolley/source/assets/stylesheets/base/_post_content.scss */
+/* line 249, /Users/mischacolley/Sandbox/mischacolley/source/assets/stylesheets/base/_post_content.scss */
 .article .embed-responsive {
   margin-bottom: 1.5; }
-/* line 246, /Users/mischacolley/Sandbox/mischacolley/source/assets/stylesheets/base/_post_content.scss */
+/* line 255, /Users/mischacolley/Sandbox/mischacolley/source/assets/stylesheets/base/_post_content.scss */
 .article figure,
 .article img {
   margin-top: 15px;
   margin-right: auto;
   margin-bottom: 1.5;
   margin-left: auto; }
-/* line 256, /Users/mischacolley/Sandbox/mischacolley/source/assets/stylesheets/base/_post_content.scss */
+/* line 265, /Users/mischacolley/Sandbox/mischacolley/source/assets/stylesheets/base/_post_content.scss */
 .article figure {
   display: table;
   text-align: center; }
-  /* line 261, /Users/mischacolley/Sandbox/mischacolley/source/assets/stylesheets/base/_post_content.scss */
+  /* line 270, /Users/mischacolley/Sandbox/mischacolley/source/assets/stylesheets/base/_post_content.scss */
   .article figure img {
     margin: 0;
     width: 100%; }
-/* line 268, /Users/mischacolley/Sandbox/mischacolley/source/assets/stylesheets/base/_post_content.scss */
+/* line 277, /Users/mischacolley/Sandbox/mischacolley/source/assets/stylesheets/base/_post_content.scss */
 .article figcaption {
   text-align: center;
   padding: 0.5em;
@@ -3140,32 +3186,64 @@ These styles should, if need be, override global heading/typography styles etc
   font-size: 14px;
   font-style: italic; }
 
-/* line 1, /Users/mischacolley/Sandbox/mischacolley/source/assets/stylesheets/base/_tables.scss */
-table {
-  -ms-font-feature-settings: "kern", "liga", "tnum";
-  font-feature-settings: "kern", "liga", "tnum";
-  border-collapse: collapse;
-  margin: 0.75em 0;
-  table-layout: fixed;
-  width: 100%; }
+/* line 5, /Users/mischacolley/Sandbox/mischacolley/source/assets/stylesheets/base/_responsive_utilities.scss */
+.embed-responsive {
+  position: relative;
+  display: block;
+  height: 0;
+  padding: 0;
+  overflow: hidden; }
+  /* line 12, /Users/mischacolley/Sandbox/mischacolley/source/assets/stylesheets/base/_responsive_utilities.scss */
+  .embed-responsive .embed-responsive-item,
+  .embed-responsive iframe,
+  .embed-responsive embed,
+  .embed-responsive object,
+  .embed-responsive video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    height: 100%;
+    width: 100%;
+    border: 0; }
 
-/* line 9, /Users/mischacolley/Sandbox/mischacolley/source/assets/stylesheets/base/_tables.scss */
-th {
-  border-bottom: 1px solid #b7b7b7;
-  font-weight: 600;
-  padding: 0.75em 0;
-  text-align: left; }
+/* line 28, /Users/mischacolley/Sandbox/mischacolley/source/assets/stylesheets/base/_responsive_utilities.scss */
+.embed-responsive-16by9 {
+  padding-bottom: 56.25%; }
 
-/* line 16, /Users/mischacolley/Sandbox/mischacolley/source/assets/stylesheets/base/_tables.scss */
-td {
-  border-bottom: 1px solid #ddd;
-  padding: 0.75em 0; }
+/* line 33, /Users/mischacolley/Sandbox/mischacolley/source/assets/stylesheets/base/_responsive_utilities.scss */
+.embed-responsive-4by3 {
+  padding-bottom: 75%; }
 
-/* line 21, /Users/mischacolley/Sandbox/mischacolley/source/assets/stylesheets/base/_tables.scss */
-tr,
-td,
-th {
-  vertical-align: middle; }
+/* line 1, /Users/mischacolley/Sandbox/mischacolley/source/assets/stylesheets/base/_tags.scss */
+.category a {
+  background: #6699CC;
+  color: #ffffff;
+  font-size: 0.8rem;
+  padding: 5px 10px;
+  border-bottom: none;
+  float: left;
+  margin-right: 1%;
+  border-right: 5px solid #6390BD; }
+
+/* line 12, /Users/mischacolley/Sandbox/mischacolley/source/assets/stylesheets/base/_tags.scss */
+.tags a {
+  background: #eee;
+  color: #333;
+  font-size: 0.7rem;
+  padding: 3px 10px 4px 10px;
+  border-bottom: none;
+  border-radius: 3px; }
+
+/* line 21, /Users/mischacolley/Sandbox/mischacolley/source/assets/stylesheets/base/_tags.scss */
+.article-meta {
+  border-bottom: 1px solid #6699CC;
+  padding: 5px 0;
+  margin-bottom: 2rem; }
+
+/* line 27, /Users/mischacolley/Sandbox/mischacolley/source/assets/stylesheets/base/_tags.scss */
+.summary {
+  clear: both; }
 
 /* line 1, /Users/mischacolley/Sandbox/mischacolley/source/assets/stylesheets/base/_typography.scss */
 body {
@@ -3256,14 +3334,22 @@ picture {
   color: #ff4819; }
 
 /* line 15, /Users/mischacolley/Sandbox/mischacolley/source/assets/stylesheets/base/_utility.scss */
+.bnm {
+  color: #ff8200; }
+
+/* line 19, /Users/mischacolley/Sandbox/mischacolley/source/assets/stylesheets/base/_utility.scss */
+.byronweb {
+  color: #0095CB; }
+
+/* line 23, /Users/mischacolley/Sandbox/mischacolley/source/assets/stylesheets/base/_utility.scss */
 .wordpress {
   color: #21759b; }
 
-/* line 19, /Users/mischacolley/Sandbox/mischacolley/source/assets/stylesheets/base/_utility.scss */
+/* line 27, /Users/mischacolley/Sandbox/mischacolley/source/assets/stylesheets/base/_utility.scss */
 .drupal {
   color: #0678be; }
 
-/* line 23, /Users/mischacolley/Sandbox/mischacolley/source/assets/stylesheets/base/_utility.scss */
+/* line 31, /Users/mischacolley/Sandbox/mischacolley/source/assets/stylesheets/base/_utility.scss */
 .exposecreative {
   color: #DC1D48; }
 
@@ -3290,28 +3376,52 @@ html {
     padding: 1em; }
 
 /* line 1, /Users/mischacolley/Sandbox/mischacolley/source/assets/stylesheets/components/_instagram.scss */
-.instagram a {
+.instagram a,
+.work img {
   float: left;
-  width: 20%;
+  width: 50%;
   margin: 0;
   padding: 0;
   line-height: 0; }
 
-/* line 9, /Users/mischacolley/Sandbox/mischacolley/source/assets/stylesheets/components/_instagram.scss */
-.instagram {
+@media (min-width: 768px) {
+  /* line 10, /Users/mischacolley/Sandbox/mischacolley/source/assets/stylesheets/components/_instagram.scss */
+  .instagram a {
+    width: 20%; } }
+
+@media (min-width: 500px) {
+  /* line 16, /Users/mischacolley/Sandbox/mischacolley/source/assets/stylesheets/components/_instagram.scss */
+  .work img {
+    width: 33.33%; } }
+@media (min-width: 769px) {
+  /* line 16, /Users/mischacolley/Sandbox/mischacolley/source/assets/stylesheets/components/_instagram.scss */
+  .work img {
+    width: 20%; } }
+
+/* line 25, /Users/mischacolley/Sandbox/mischacolley/source/assets/stylesheets/components/_instagram.scss */
+.instagram,
+.work-list {
   position: relative;
   float: left;
   width: 100%; }
-  /* line 15, /Users/mischacolley/Sandbox/mischacolley/source/assets/stylesheets/components/_instagram.scss */
-  .instagram:after {
+  /* line 32, /Users/mischacolley/Sandbox/mischacolley/source/assets/stylesheets/components/_instagram.scss */
+  .instagram:after,
+  .work-list:after {
     position: absolute;
     top: 0;
     left: 0;
     content: "";
-    background-color: rgba(0, 0, 0, 0.5);
     width: 100%;
     height: 100%;
     z-index: 2; }
+
+/* line 45, /Users/mischacolley/Sandbox/mischacolley/source/assets/stylesheets/components/_instagram.scss */
+.work-list:after {
+  background-color: rgba(0, 0, 0, 0.8); }
+
+/* line 51, /Users/mischacolley/Sandbox/mischacolley/source/assets/stylesheets/components/_instagram.scss */
+.instagram:after {
+  background-color: rgba(0, 0, 0, 0.6); }
 
 /* line 1, /Users/mischacolley/Sandbox/mischacolley/source/assets/stylesheets/components/header/_footer.scss */
 footer {
@@ -3327,8 +3437,52 @@ footer {
   font-weight: 300; }
 
 /* line 14, /Users/mischacolley/Sandbox/mischacolley/source/assets/stylesheets/components/header/_footer.scss */
-.index footer {
-  position: relative; }
+.homepage-footer {
+  position: relative;
+  float: left;
+  width: 100%; }
+
+/* line 20, /Users/mischacolley/Sandbox/mischacolley/source/assets/stylesheets/components/header/_footer.scss */
+.twitter-feed,
+.work-info {
+  position: absolute;
+  z-index: 4;
+  color: #ffffff;
+  width: 65%;
+  left: 32.5%;
+  margin-left: -14.5%;
+  text-align: center;
+  top: 25%;
+  transform: translateY(-25%); }
+  @media (min-width: 768px) {
+    /* line 20, /Users/mischacolley/Sandbox/mischacolley/source/assets/stylesheets/components/header/_footer.scss */
+    .twitter-feed,
+    .work-info {
+      top: 50%;
+      transform: translateY(-50%); } }
+  /* line 38, /Users/mischacolley/Sandbox/mischacolley/source/assets/stylesheets/components/header/_footer.scss */
+  .twitter-feed p,
+  .work-info p {
+    font-size: 1.7rem; }
+  /* line 42, /Users/mischacolley/Sandbox/mischacolley/source/assets/stylesheets/components/header/_footer.scss */
+  .twitter-feed .tweet,
+  .work-info .tweet {
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+    -ms-word-break: break-all;
+    word-break: break-word;
+    hyphens: auto; }
+  /* line 46, /Users/mischacolley/Sandbox/mischacolley/source/assets/stylesheets/components/header/_footer.scss */
+  .twitter-feed .user,
+  .twitter-feed .interact,
+  .work-info .user,
+  .work-info .interact {
+    display: none; }
+  /* line 51, /Users/mischacolley/Sandbox/mischacolley/source/assets/stylesheets/components/header/_footer.scss */
+  .twitter-feed .timePosted a,
+  .work-info .timePosted a {
+    color: #ffffff;
+    font-weight: 500; }
 
 /* Header Global */
 /* line 4, /Users/mischacolley/Sandbox/mischacolley/source/assets/stylesheets/components/header/_header.scss */
@@ -3347,36 +3501,39 @@ header.scrolled {
   top: 0;
   transition: all 1s ease; }
   /* line 21, /Users/mischacolley/Sandbox/mischacolley/source/assets/stylesheets/components/header/_header.scss */
-  header.scrolled nav.main-navigation {
-    display: inline-block;
-    width: 100%; }
-  /* line 25, /Users/mischacolley/Sandbox/mischacolley/source/assets/stylesheets/components/header/_header.scss */
   header.scrolled.at-panel-two {
     background: rgba(102, 153, 204, 0.9); }
+  @media (max-width: 400px) {
+    /* line 25, /Users/mischacolley/Sandbox/mischacolley/source/assets/stylesheets/components/header/_header.scss */
+    header.scrolled .main-navigation {
+      height: 68px; } }
 
 /* Branding */
-/* line 32, /Users/mischacolley/Sandbox/mischacolley/source/assets/stylesheets/components/header/_header.scss */
+/* line 33, /Users/mischacolley/Sandbox/mischacolley/source/assets/stylesheets/components/header/_header.scss */
 .home-link {
   position: absolute; }
 
-/* line 36, /Users/mischacolley/Sandbox/mischacolley/source/assets/stylesheets/components/header/_header.scss */
+/* line 37, /Users/mischacolley/Sandbox/mischacolley/source/assets/stylesheets/components/header/_header.scss */
 .logo {
   font-family: 'Oswald', sans-serif;
   font-size: 1.5em;
   text-transform: uppercase;
   color: #ffffff;
-  padding: 0 8px;
+  padding: 2px 8px;
   border: 1px solid rgba(255, 255, 255, 0.6);
   line-height: inherit;
-  background: rgba(0, 0, 0, 0.2);
+  background: rgba(0, 0, 0, 0.3);
   border-radius: 0.1em; }
   @media (min-width: 500px) {
-    /* line 36, /Users/mischacolley/Sandbox/mischacolley/source/assets/stylesheets/components/header/_header.scss */
+    /* line 37, /Users/mischacolley/Sandbox/mischacolley/source/assets/stylesheets/components/header/_header.scss */
     .logo {
-      font-size: 2em;
+      font-size: 2em; } }
+  @media (min-width: 769px) {
+    /* line 37, /Users/mischacolley/Sandbox/mischacolley/source/assets/stylesheets/components/header/_header.scss */
+    .logo {
       background: rgba(0, 0, 0, 0.1); } }
 
-/* line 54, /Users/mischacolley/Sandbox/mischacolley/source/assets/stylesheets/components/header/_header.scss */
+/* line 58, /Users/mischacolley/Sandbox/mischacolley/source/assets/stylesheets/components/header/_header.scss */
 .description {
   color: rgba(255, 255, 255, 0.9);
   font-size: 13px;
@@ -3385,53 +3542,52 @@ header.scrolled {
   text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.7);
   margin: 0.3em 0 0 0.6em; }
   @media (min-width: 500px) {
-    /* line 54, /Users/mischacolley/Sandbox/mischacolley/source/assets/stylesheets/components/header/_header.scss */
+    /* line 58, /Users/mischacolley/Sandbox/mischacolley/source/assets/stylesheets/components/header/_header.scss */
     .description {
       font-size: 17px;
       text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.4); } }
 
-/* line 70, /Users/mischacolley/Sandbox/mischacolley/source/assets/stylesheets/components/header/_header.scss */
+/* line 74, /Users/mischacolley/Sandbox/mischacolley/source/assets/stylesheets/components/header/_header.scss */
 .m,
 .c {
   letter-spacing: -6px; }
 
-/* line 75, /Users/mischacolley/Sandbox/mischacolley/source/assets/stylesheets/components/header/_header.scss */
+/* line 79, /Users/mischacolley/Sandbox/mischacolley/source/assets/stylesheets/components/header/_header.scss */
 .m,
 .ischa,
 .mischa {
   font-weight: 700; }
 
-/* line 80, /Users/mischacolley/Sandbox/mischacolley/source/assets/stylesheets/components/header/_header.scss */
+/* line 84, /Users/mischacolley/Sandbox/mischacolley/source/assets/stylesheets/components/header/_header.scss */
 .c,
 .olley,
 .colley {
   font-weight: 300; }
 
-/* line 85, /Users/mischacolley/Sandbox/mischacolley/source/assets/stylesheets/components/header/_header.scss */
+/* line 89, /Users/mischacolley/Sandbox/mischacolley/source/assets/stylesheets/components/header/_header.scss */
 .logo .ischa {
   padding-right: 0.3em; }
 
-/* line 88, /Users/mischacolley/Sandbox/mischacolley/source/assets/stylesheets/components/header/_header.scss */
+/* line 92, /Users/mischacolley/Sandbox/mischacolley/source/assets/stylesheets/components/header/_header.scss */
 header .btn {
   position: absolute;
   right: 2em;
   top: 2em; }
 
-/* line 93, /Users/mischacolley/Sandbox/mischacolley/source/assets/stylesheets/components/header/_header.scss */
+/* line 97, /Users/mischacolley/Sandbox/mischacolley/source/assets/stylesheets/components/header/_header.scss */
 a.btn-filled {
   background: #ffffff; }
 
 /* Navigation */
-/* line 99, /Users/mischacolley/Sandbox/mischacolley/source/assets/stylesheets/components/header/_header.scss */
+/* line 103, /Users/mischacolley/Sandbox/mischacolley/source/assets/stylesheets/components/header/_header.scss */
 .menu-primary-menu-container {
-  float: right;
   visibility: hidden;
   opacity: 0;
   position: relative;
   top: 0.8em;
   transition: visibility 0s linear 0.5s,opacity 0.5s linear; }
 
-/* line 108, /Users/mischacolley/Sandbox/mischacolley/source/assets/stylesheets/components/header/_header.scss */
+/* line 111, /Users/mischacolley/Sandbox/mischacolley/source/assets/stylesheets/components/header/_header.scss */
 .menu-toggled .menu-primary-menu-container {
   visibility: visible;
   opacity: 1;
@@ -3443,80 +3599,99 @@ a.btn-filled {
   left: 0;
   background: rgba(102, 153, 204, 0.9);
   z-index: 1; }
-  /* line 119, /Users/mischacolley/Sandbox/mischacolley/source/assets/stylesheets/components/header/_header.scss */
+  /* line 122, /Users/mischacolley/Sandbox/mischacolley/source/assets/stylesheets/components/header/_header.scss */
   .menu-toggled .menu-primary-menu-container .menu {
     display: block;
     text-align: center;
     position: relative;
     top: 50%;
     transform: translateY(-50%); }
-  /* line 126, /Users/mischacolley/Sandbox/mischacolley/source/assets/stylesheets/components/header/_header.scss */
+  /* line 129, /Users/mischacolley/Sandbox/mischacolley/source/assets/stylesheets/components/header/_header.scss */
   .menu-toggled .menu-primary-menu-container ul li {
     float: none;
     font-size: 2.5em; }
 
-/* line 132, /Users/mischacolley/Sandbox/mischacolley/source/assets/stylesheets/components/header/_header.scss */
+/* line 135, /Users/mischacolley/Sandbox/mischacolley/source/assets/stylesheets/components/header/_header.scss */
 body.index.menu-toggled .menu-toggle {
   z-index: 2;
   position: relative; }
-  /* line 135, /Users/mischacolley/Sandbox/mischacolley/source/assets/stylesheets/components/header/_header.scss */
+  /* line 138, /Users/mischacolley/Sandbox/mischacolley/source/assets/stylesheets/components/header/_header.scss */
   body.index.menu-toggled .menu-toggle i {
     top: -2px;
     position: inherit; }
 
-/* line 141, /Users/mischacolley/Sandbox/mischacolley/source/assets/stylesheets/components/header/_header.scss */
+/* line 144, /Users/mischacolley/Sandbox/mischacolley/source/assets/stylesheets/components/header/_header.scss */
 nav ul li {
   list-style: none;
   text-align: center;
   float: left;
   margin: 0 1em; }
 
-/* line 147, /Users/mischacolley/Sandbox/mischacolley/source/assets/stylesheets/components/header/_header.scss */
+/* line 150, /Users/mischacolley/Sandbox/mischacolley/source/assets/stylesheets/components/header/_header.scss */
 nav ul li a {
   color: #ffffff; }
 
-/* line 150, /Users/mischacolley/Sandbox/mischacolley/source/assets/stylesheets/components/header/_header.scss */
+/* line 153, /Users/mischacolley/Sandbox/mischacolley/source/assets/stylesheets/components/header/_header.scss */
 .main-navigation {
-  padding: 1em 1em 0.7em 1em; }
+  padding: 1em 1em 0.7em 1em;
+  display: inline-block;
+  width: 100%; }
 
-/* line 159, /Users/mischacolley/Sandbox/mischacolley/source/assets/stylesheets/components/header/_header.scss */
+/* line 166, /Users/mischacolley/Sandbox/mischacolley/source/assets/stylesheets/components/header/_header.scss */
 .blog header,
+.work header,
+.projects header,
 .at-panel-two header {
-  background: rgba(102, 153, 204, 0.9); }
-/* line 163, /Users/mischacolley/Sandbox/mischacolley/source/assets/stylesheets/components/header/_header.scss */
+  background: #6699cc; }
+  @media (max-width: 400px) {
+    /* line 170, /Users/mischacolley/Sandbox/mischacolley/source/assets/stylesheets/components/header/_header.scss */
+    .blog header .main-navigation,
+    .work header .main-navigation,
+    .projects header .main-navigation,
+    .at-panel-two header .main-navigation {
+      height: 68px; } }
+/* line 177, /Users/mischacolley/Sandbox/mischacolley/source/assets/stylesheets/components/header/_header.scss */
 .blog .logo,
+.work .logo,
+.projects .logo,
 .at-panel-two .logo {
   display: inline-block;
   padding-right: 12px; }
-  /* line 168, /Users/mischacolley/Sandbox/mischacolley/source/assets/stylesheets/components/header/_header.scss */
+  /* line 182, /Users/mischacolley/Sandbox/mischacolley/source/assets/stylesheets/components/header/_header.scss */
   .blog .logo .ischa,
   .blog .logo .olley,
+  .work .logo .ischa,
+  .work .logo .olley,
+  .projects .logo .ischa,
+  .projects .logo .olley,
   .at-panel-two .logo .ischa,
   .at-panel-two .logo .olley {
     display: none; }
-/* line 175, /Users/mischacolley/Sandbox/mischacolley/source/assets/stylesheets/components/header/_header.scss */
+/* line 189, /Users/mischacolley/Sandbox/mischacolley/source/assets/stylesheets/components/header/_header.scss */
 .blog .description,
+.work .description,
+.projects .description,
 .at-panel-two .description {
   position: absolute;
-  top: 0;
+  top: 2px;
   left: 60px; }
 
 /* Temporary */
-/* line 184, /Users/mischacolley/Sandbox/mischacolley/source/assets/stylesheets/components/header/_header.scss */
+/* line 198, /Users/mischacolley/Sandbox/mischacolley/source/assets/stylesheets/components/header/_header.scss */
 .menu-blog a,
 .menu-work a,
 .menu-projects a {
   text-decoration: line-through;
   opacity: 0.5; }
 
-/* line 191, /Users/mischacolley/Sandbox/mischacolley/source/assets/stylesheets/components/header/_header.scss */
+/* line 205, /Users/mischacolley/Sandbox/mischacolley/source/assets/stylesheets/components/header/_header.scss */
 .btn {
   padding: 0.5em 1em;
   text-align: center;
   border: 1px solid #eeeeee;
   font-size: 3vh; }
 
-/* line 198, /Users/mischacolley/Sandbox/mischacolley/source/assets/stylesheets/components/header/_header.scss */
+/* line 212, /Users/mischacolley/Sandbox/mischacolley/source/assets/stylesheets/components/header/_header.scss */
 .menu-toggle {
   box-sizing: border-box;
   display: inline-block;
@@ -3533,7 +3708,7 @@ nav ul li a {
   font-family: 'Oswald', sans-serif;
   font-weight: 100; }
   @media (min-width: 500px) {
-    /* line 198, /Users/mischacolley/Sandbox/mischacolley/source/assets/stylesheets/components/header/_header.scss */
+    /* line 212, /Users/mischacolley/Sandbox/mischacolley/source/assets/stylesheets/components/header/_header.scss */
     .menu-toggle {
       font-size: 2em;
       background: rgba(0, 0, 0, 0.1); } }
@@ -3544,69 +3719,154 @@ nav ul li a {
   color: #333;
   font-weight: 100; }
 
-/* line 3, /Users/mischacolley/Sandbox/mischacolley/source/assets/stylesheets/views/_blog.scss */
-.blog main {
+/* line 5, /Users/mischacolley/Sandbox/mischacolley/source/assets/stylesheets/views/_blog.scss */
+body.blog main,
+body.projects main,
+body.work main {
   margin-top: 75px; }
-/* line 7, /Users/mischacolley/Sandbox/mischacolley/source/assets/stylesheets/views/_blog.scss */
-.blog section > h1 {
+/* line 9, /Users/mischacolley/Sandbox/mischacolley/source/assets/stylesheets/views/_blog.scss */
+body.blog .section-desc,
+body.projects .section-desc,
+body.work .section-desc {
+  text-align: center;
+  margin: -2.9em 0 3em 0;
+  font-size: 1.3em;
+  font-weight: 300; }
+/* line 16, /Users/mischacolley/Sandbox/mischacolley/source/assets/stylesheets/views/_blog.scss */
+body.blog section > h1,
+body.projects section > h1,
+body.work section > h1 {
   text-align: center;
   font-size: 2rem;
   color: #000000;
   padding: 1em 2em; }
-/* line 14, /Users/mischacolley/Sandbox/mischacolley/source/assets/stylesheets/views/_blog.scss */
-.blog section > article {
+/* line 23, /Users/mischacolley/Sandbox/mischacolley/source/assets/stylesheets/views/_blog.scss */
+body.blog section > article,
+body.projects section > article,
+body.work section > article {
   background-color: #ffffff;
   border: 1px solid #ddd; }
-  /* line 19, /Users/mischacolley/Sandbox/mischacolley/source/assets/stylesheets/views/_blog.scss */
-  .blog section > article .post-heading {
+  /* line 28, /Users/mischacolley/Sandbox/mischacolley/source/assets/stylesheets/views/_blog.scss */
+  body.blog section > article .post-heading,
+  body.projects section > article .post-heading,
+  body.work section > article .post-heading {
     padding: 1em;
     text-align: center; }
-    /* line 24, /Users/mischacolley/Sandbox/mischacolley/source/assets/stylesheets/views/_blog.scss */
-    .blog section > article .post-heading h1 {
+    /* line 33, /Users/mischacolley/Sandbox/mischacolley/source/assets/stylesheets/views/_blog.scss */
+    body.blog section > article .post-heading h1,
+    body.projects section > article .post-heading h1,
+    body.work section > article .post-heading h1 {
       margin: 0;
       font-size: 2rem;
       color: #333; }
-  /* line 32, /Users/mischacolley/Sandbox/mischacolley/source/assets/stylesheets/views/_blog.scss */
-  .blog section > article .article-inner {
+  /* line 41, /Users/mischacolley/Sandbox/mischacolley/source/assets/stylesheets/views/_blog.scss */
+  body.blog section > article .article-inner,
+  body.projects section > article .article-inner,
+  body.work section > article .article-inner {
     padding: 4% 8%; }
-/* line 38, /Users/mischacolley/Sandbox/mischacolley/source/assets/stylesheets/views/_blog.scss */
-.blog .articles,
-.blog section > article {
+    /* line 45, /Users/mischacolley/Sandbox/mischacolley/source/assets/stylesheets/views/_blog.scss */
+    body.blog section > article .article-inner img,
+    body.projects section > article .article-inner img,
+    body.work section > article .article-inner img {
+      margin: 0 auto;
+      display: block;
+      border: 10px solid #eee;
+      outline: 1px solid #ddd; }
+    /* line 52, /Users/mischacolley/Sandbox/mischacolley/source/assets/stylesheets/views/_blog.scss */
+    body.blog section > article .article-inner .instagram-media,
+    body.projects section > article .article-inner .instagram-media,
+    body.work section > article .article-inner .instagram-media {
+      margin: 0 auto !important; }
+    /* line 56, /Users/mischacolley/Sandbox/mischacolley/source/assets/stylesheets/views/_blog.scss */
+    body.blog section > article .article-inner .embed-responsive,
+    body.blog section > article .article-inner .instagram-media,
+    body.blog section > article .article-inner iframe,
+    body.blog section > article .article-inner embed,
+    body.blog section > article .article-inner object,
+    body.blog section > article .article-inner video,
+    body.projects section > article .article-inner .embed-responsive,
+    body.projects section > article .article-inner .instagram-media,
+    body.projects section > article .article-inner iframe,
+    body.projects section > article .article-inner embed,
+    body.projects section > article .article-inner object,
+    body.projects section > article .article-inner video,
+    body.work section > article .article-inner .embed-responsive,
+    body.work section > article .article-inner .instagram-media,
+    body.work section > article .article-inner iframe,
+    body.work section > article .article-inner embed,
+    body.work section > article .article-inner object,
+    body.work section > article .article-inner video {
+      margin-bottom: 1rem !important; }
+/* line 69, /Users/mischacolley/Sandbox/mischacolley/source/assets/stylesheets/views/_blog.scss */
+body.blog .articles,
+body.blog section > article,
+body.projects .articles,
+body.projects section > article,
+body.work .articles,
+body.work section > article {
   width: 100%;
   margin: 0 auto; }
   @media screen and (min-width: 62em) {
-    /* line 38, /Users/mischacolley/Sandbox/mischacolley/source/assets/stylesheets/views/_blog.scss */
-    .blog .articles,
-    .blog section > article {
+    /* line 69, /Users/mischacolley/Sandbox/mischacolley/source/assets/stylesheets/views/_blog.scss */
+    body.blog .articles,
+    body.blog section > article,
+    body.projects .articles,
+    body.projects section > article,
+    body.work .articles,
+    body.work section > article {
       width: 80%; } }
   @media screen and (min-width: 75em) {
-    /* line 38, /Users/mischacolley/Sandbox/mischacolley/source/assets/stylesheets/views/_blog.scss */
-    .blog .articles,
-    .blog section > article {
-      width: 70%; } }
-/* line 54, /Users/mischacolley/Sandbox/mischacolley/source/assets/stylesheets/views/_blog.scss */
-.blog article {
+    /* line 69, /Users/mischacolley/Sandbox/mischacolley/source/assets/stylesheets/views/_blog.scss */
+    body.blog .articles,
+    body.blog section > article,
+    body.projects .articles,
+    body.projects section > article,
+    body.work .articles,
+    body.work section > article {
+      max-width: 960px; } }
+/* line 85, /Users/mischacolley/Sandbox/mischacolley/source/assets/stylesheets/views/_blog.scss */
+body.blog article,
+body.projects article,
+body.work article {
   background-color: #ffffff;
   border: 1px solid #ddd;
   margin-bottom: 2rem; }
-  /* line 60, /Users/mischacolley/Sandbox/mischacolley/source/assets/stylesheets/views/_blog.scss */
-  .blog article .post-heading {
+  /* line 91, /Users/mischacolley/Sandbox/mischacolley/source/assets/stylesheets/views/_blog.scss */
+  body.blog article .post-heading,
+  body.projects article .post-heading,
+  body.work article .post-heading {
     padding: 1em;
     text-align: center; }
-    /* line 65, /Users/mischacolley/Sandbox/mischacolley/source/assets/stylesheets/views/_blog.scss */
-    .blog article .post-heading h1 {
+    /* line 96, /Users/mischacolley/Sandbox/mischacolley/source/assets/stylesheets/views/_blog.scss */
+    body.blog article .post-heading h1,
+    body.projects article .post-heading h1,
+    body.work article .post-heading h1 {
       margin: 0;
       font-size: 2rem;
       color: #333; }
-  /* line 73, /Users/mischacolley/Sandbox/mischacolley/source/assets/stylesheets/views/_blog.scss */
-  .blog article > img {
+  /* line 104, /Users/mischacolley/Sandbox/mischacolley/source/assets/stylesheets/views/_blog.scss */
+  body.blog article .featured-image,
+  body.projects article .featured-image,
+  body.work article .featured-image {
     border-top: 1px solid #ddd;
-    border-bottom: 1px solid #ddd; }
-  /* line 78, /Users/mischacolley/Sandbox/mischacolley/source/assets/stylesheets/views/_blog.scss */
-  .blog article .article-inner {
+    border-bottom: 1px solid #ddd;
+    background: #ccc;
+    width: 100%; }
+    /* line 110, /Users/mischacolley/Sandbox/mischacolley/source/assets/stylesheets/views/_blog.scss */
+    body.blog article .featured-image img,
+    body.projects article .featured-image img,
+    body.work article .featured-image img {
+      margin: 0 auto;
+      display: block; }
+  /* line 116, /Users/mischacolley/Sandbox/mischacolley/source/assets/stylesheets/views/_blog.scss */
+  body.blog article .article-inner,
+  body.projects article .article-inner,
+  body.work article .article-inner {
     padding: 4% 8%; }
-/* line 84, /Users/mischacolley/Sandbox/mischacolley/source/assets/stylesheets/views/_blog.scss */
-.blog aside {
+/* line 122, /Users/mischacolley/Sandbox/mischacolley/source/assets/stylesheets/views/_blog.scss */
+body.blog aside,
+body.projects aside,
+body.work aside {
   float: left;
   display: block;
   margin-right: 2.35765%;
@@ -3615,114 +3875,174 @@ nav ul li a {
   border: 1px solid #ddd;
   padding: 30px; }
   /* line 89, /Users/mischacolley/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/neat-1.7.2/app/assets/stylesheets/grid/_span-columns.scss */
-  .blog aside:last-child {
+  body.blog aside:last-child,
+  body.projects aside:last-child,
+  body.work aside:last-child {
     margin-right: 0; }
   @media screen and (min-width: 62em) {
-    /* line 84, /Users/mischacolley/Sandbox/mischacolley/source/assets/stylesheets/views/_blog.scss */
-    .blog aside {
+    /* line 122, /Users/mischacolley/Sandbox/mischacolley/source/assets/stylesheets/views/_blog.scss */
+    body.blog aside,
+    body.projects aside,
+    body.work aside {
       float: left;
       display: block;
       margin-right: 2.35765%;
       width: 40.29137%; }
       /* line 89, /Users/mischacolley/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/neat-1.7.2/app/assets/stylesheets/grid/_span-columns.scss */
-      .blog aside:last-child {
+      body.blog aside:last-child,
+      body.projects aside:last-child,
+      body.work aside:last-child {
         margin-right: 0; } }
   @media screen and (min-width: 75em) {
-    /* line 84, /Users/mischacolley/Sandbox/mischacolley/source/assets/stylesheets/views/_blog.scss */
-    .blog aside {
+    /* line 122, /Users/mischacolley/Sandbox/mischacolley/source/assets/stylesheets/views/_blog.scss */
+    body.blog aside,
+    body.projects aside,
+    body.work aside {
       float: left;
       display: block;
       margin-right: 2.35765%;
       width: 31.76157%; }
       /* line 89, /Users/mischacolley/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/neat-1.7.2/app/assets/stylesheets/grid/_span-columns.scss */
-      .blog aside:last-child {
+      body.blog aside:last-child,
+      body.projects aside:last-child,
+      body.work aside:last-child {
         margin-right: 0; } }
 
 /* line 3, /Users/mischacolley/Sandbox/mischacolley/source/assets/stylesheets/views/_home.about.scss */
+.index .employment-status {
+  font-size: 18px; }
+  @media (max-width: 660px) {
+    /* line 3, /Users/mischacolley/Sandbox/mischacolley/source/assets/stylesheets/views/_home.about.scss */
+    .index .employment-status {
+      float: left;
+      clear: both;
+      margin: 1.5rem 0; } }
+  @media (min-width: 661px) {
+    /* line 3, /Users/mischacolley/Sandbox/mischacolley/source/assets/stylesheets/views/_home.about.scss */
+    .index .employment-status {
+      position: relative;
+      top: 5px; } }
+/* line 19, /Users/mischacolley/Sandbox/mischacolley/source/assets/stylesheets/views/_home.about.scss */
 .index .about-summary {
   height: auto;
   float: left;
   padding: 30px; }
-  /* line 9, /Users/mischacolley/Sandbox/mischacolley/source/assets/stylesheets/views/_home.about.scss */
+  /* line 25, /Users/mischacolley/Sandbox/mischacolley/source/assets/stylesheets/views/_home.about.scss */
   .index .about-summary img {
     margin: 1em auto;
     display: block;
     border-radius: 50%;
     border: 1px solid #eee; }
-  /* line 16, /Users/mischacolley/Sandbox/mischacolley/source/assets/stylesheets/views/_home.about.scss */
+    @media (min-width: 550px) and (max-width: 960px) {
+      /* line 25, /Users/mischacolley/Sandbox/mischacolley/source/assets/stylesheets/views/_home.about.scss */
+      .index .about-summary img {
+        max-width: 50%; } }
+  /* line 36, /Users/mischacolley/Sandbox/mischacolley/source/assets/stylesheets/views/_home.about.scss */
+  .index .about-summary .about-copy-intro {
+    display: inline-block; }
+  /* line 40, /Users/mischacolley/Sandbox/mischacolley/source/assets/stylesheets/views/_home.about.scss */
   .index .about-summary .about-copy-intro p {
     font-size: 25px;
     line-height: 35px; }
-  /* line 21, /Users/mischacolley/Sandbox/mischacolley/source/assets/stylesheets/views/_home.about.scss */
+  /* line 45, /Users/mischacolley/Sandbox/mischacolley/source/assets/stylesheets/views/_home.about.scss */
   .index .about-summary .about-copy-intro p:nth-child(1) {
     font-size: 35px;
     line-height: 45px; }
   @media (min-width: 960px) {
-    /* line 28, /Users/mischacolley/Sandbox/mischacolley/source/assets/stylesheets/views/_home.about.scss */
+    /* line 52, /Users/mischacolley/Sandbox/mischacolley/source/assets/stylesheets/views/_home.about.scss */
     .index .about-summary .about-copy-intro {
       width: 75%;
       float: right;
       padding: 1em; }
-    /* line 34, /Users/mischacolley/Sandbox/mischacolley/source/assets/stylesheets/views/_home.about.scss */
+    /* line 58, /Users/mischacolley/Sandbox/mischacolley/source/assets/stylesheets/views/_home.about.scss */
     .index .about-summary .profile-shot {
       width: 25%;
       float: left;
       padding-left: 0.83333%;
       padding-right: 0.83333%;
       padding: 1em; } }
-/* line 50, /Users/mischacolley/Sandbox/mischacolley/source/assets/stylesheets/views/_home.about.scss */
+  /* line 68, /Users/mischacolley/Sandbox/mischacolley/source/assets/stylesheets/views/_home.about.scss */
+  .index .about-summary .about-copy-intro .cta-container {
+    float: left;
+    margin-right: 2%; }
+/* line 79, /Users/mischacolley/Sandbox/mischacolley/source/assets/stylesheets/views/_home.about.scss */
 .index .about-detail .section-title {
   background-image: url("../images/section-title-1.jpg"); }
-/* line 54, /Users/mischacolley/Sandbox/mischacolley/source/assets/stylesheets/views/_home.about.scss */
+/* line 83, /Users/mischacolley/Sandbox/mischacolley/source/assets/stylesheets/views/_home.about.scss */
 .index .about-detail .about-detail-inner {
-  padding: 30px; }
-/* line 58, /Users/mischacolley/Sandbox/mischacolley/source/assets/stylesheets/views/_home.about.scss */
+  padding: 30px 15px; }
+  @media (min-width: 768px) {
+    /* line 83, /Users/mischacolley/Sandbox/mischacolley/source/assets/stylesheets/views/_home.about.scss */
+    .index .about-detail .about-detail-inner {
+      padding: 60px 30px; } }
+/* line 90, /Users/mischacolley/Sandbox/mischacolley/source/assets/stylesheets/views/_home.about.scss */
 .index .about-detail .box-container {
   max-width: 68em;
   margin-left: auto;
   margin-right: auto;
-  padding: 30px 0; }
+  padding: 60px 0; }
   /* line 20, /Users/mischacolley/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/bourbon-4.2.3/app/assets/stylesheets/addons/_clearfix.scss */
   .index .about-detail .box-container::after {
     clear: both;
     content: "";
     display: table; }
-/* line 63, /Users/mischacolley/Sandbox/mischacolley/source/assets/stylesheets/views/_home.about.scss */
+/* line 95, /Users/mischacolley/Sandbox/mischacolley/source/assets/stylesheets/views/_home.about.scss */
 .index .about-detail .box {
-  border: 1px solid #eee;
-  padding: 1em;
   float: left;
   display: block;
   margin-right: 2.35765%;
-  width: 100%;
-  background-color: #ffffff; }
+  width: 100%; }
   /* line 89, /Users/mischacolley/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/neat-1.7.2/app/assets/stylesheets/grid/_span-columns.scss */
   .index .about-detail .box:last-child {
     margin-right: 0; }
   @media (min-width: 768px) {
-    /* line 63, /Users/mischacolley/Sandbox/mischacolley/source/assets/stylesheets/views/_home.about.scss */
+    /* line 95, /Users/mischacolley/Sandbox/mischacolley/source/assets/stylesheets/views/_home.about.scss */
     .index .about-detail .box {
       float: left;
       display: block;
       margin-right: 2.35765%;
-      width: 31.76157%; }
+      width: 48.82117%; }
       /* line 89, /Users/mischacolley/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/neat-1.7.2/app/assets/stylesheets/grid/_span-columns.scss */
       .index .about-detail .box:last-child {
         margin-right: 0; } }
-  /* line 74, /Users/mischacolley/Sandbox/mischacolley/source/assets/stylesheets/views/_home.about.scss */
+  /* line 103, /Users/mischacolley/Sandbox/mischacolley/source/assets/stylesheets/views/_home.about.scss */
+  .index .about-detail .box p {
+    background-color: #ffffff;
+    border: 1px solid #eee;
+    padding: 1em;
+    font-size: 1.27rem; }
+    @media (min-width: 768px) {
+      /* line 103, /Users/mischacolley/Sandbox/mischacolley/source/assets/stylesheets/views/_home.about.scss */
+      .index .about-detail .box p {
+        font-size: 1.37rem; } }
+  /* line 113, /Users/mischacolley/Sandbox/mischacolley/source/assets/stylesheets/views/_home.about.scss */
   .index .about-detail .box h3 {
-    text-align: center; }
-/* line 80, /Users/mischacolley/Sandbox/mischacolley/source/assets/stylesheets/views/_home.about.scss */
-.index .about-detail .box button.cta {
-  margin: 0 auto;
-  display: block; }
-  /* line 84, /Users/mischacolley/Sandbox/mischacolley/source/assets/stylesheets/views/_home.about.scss */
-  .index .about-detail .box button.cta a {
+    text-align: center;
+    font-size: 1.5rem;
+    margin-top: 1rem; }
+/* line 121, /Users/mischacolley/Sandbox/mischacolley/source/assets/stylesheets/views/_home.about.scss */
+.index .about-detail .box .cta {
+  width: 100%;
+  padding: 15px;
+  display: block;
+  text-align: center;
+  font-weight: 600; }
+  /* line 128, /Users/mischacolley/Sandbox/mischacolley/source/assets/stylesheets/views/_home.about.scss */
+  .index .about-detail .box .cta a {
     color: #ffffff; }
-  /* line 87, /Users/mischacolley/Sandbox/mischacolley/source/assets/stylesheets/views/_home.about.scss */
-  .index .about-detail .box button.cta:hover a {
+  /* line 131, /Users/mischacolley/Sandbox/mischacolley/source/assets/stylesheets/views/_home.about.scss */
+  .index .about-detail .box .cta:hover a {
     color: #6699CC; }
-/* line 92, /Users/mischacolley/Sandbox/mischacolley/source/assets/stylesheets/views/_home.about.scss */
+/* line 136, /Users/mischacolley/Sandbox/mischacolley/source/assets/stylesheets/views/_home.about.scss */
+.index .about-detail .box .cta.ec {
+  background-color: #90132f; }
+  /* line 138, /Users/mischacolley/Sandbox/mischacolley/source/assets/stylesheets/views/_home.about.scss */
+  .index .about-detail .box .cta.ec:hover {
+    background-color: #ffffff; }
+  /* line 141, /Users/mischacolley/Sandbox/mischacolley/source/assets/stylesheets/views/_home.about.scss */
+  .index .about-detail .box .cta.ec:hover a {
+    color: #90132f; }
+/* line 146, /Users/mischacolley/Sandbox/mischacolley/source/assets/stylesheets/views/_home.about.scss */
 .index .about-detail .intro-text {
   text-align: center;
   width: 80%;
@@ -3796,7 +4116,7 @@ nav ul li a {
         width: 20%; } }
 /* line 38, /Users/mischacolley/Sandbox/mischacolley/source/assets/stylesheets/views/_home.scss */
 .index article {
-  padding: 30px;
+  padding: 15px;
   max-width: 68em;
   margin-left: auto;
   margin-right: auto;
@@ -3807,11 +4127,11 @@ nav ul li a {
     clear: both;
     content: "";
     display: table; }
-  @media (min-width: 768px) {
+  @media (min-width: 769px) {
     /* line 38, /Users/mischacolley/Sandbox/mischacolley/source/assets/stylesheets/views/_home.scss */
     .index article {
       width: 50%;
-      margin-top: 2.5%; } }
+      padding: 30px; } }
 /* line 52, /Users/mischacolley/Sandbox/mischacolley/source/assets/stylesheets/views/_home.scss */
 .index .panel {
   background-color: #ffffff;
@@ -3844,6 +4164,20 @@ nav ul li a {
   background-color: #6699CC;
   float: right; }
 
-/* line 1, /Users/mischacolley/Sandbox/mischacolley/source/assets/stylesheets/views/_home.work.scss */
+/* line 3, /Users/mischacolley/Sandbox/mischacolley/source/assets/stylesheets/views/_home.work.scss */
 .work .section-title {
   background-image: url("../images/section-title-3.jpg"); }
+/* line 7, /Users/mischacolley/Sandbox/mischacolley/source/assets/stylesheets/views/_home.work.scss */
+.work h3 {
+  color: #ffffff;
+  font-size: 1.5rem; }
+/* line 12, /Users/mischacolley/Sandbox/mischacolley/source/assets/stylesheets/views/_home.work.scss */
+.work p {
+  font-size: 1.3rem; }
+
+/* line 2, /Users/mischacolley/Sandbox/mischacolley/source/assets/stylesheets/views/_work.scss */
+.work button:hover {
+  border: 1px solid #ffffff; }
+  /* line 4, /Users/mischacolley/Sandbox/mischacolley/source/assets/stylesheets/views/_work.scss */
+  .work button:hover a {
+    color: #ffffff; }
