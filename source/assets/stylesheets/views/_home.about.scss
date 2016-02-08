@@ -33,6 +33,10 @@
 
     }
 
+    .about-copy-intro {
+      display: inline-block;
+    }
+
     .about-copy-intro p {
       font-size: 25px;
       line-height: 35px;
@@ -114,9 +118,12 @@
 
     }
 
-    .box button.cta {
+    .box .cta {
       width: 100%;
       padding: 15px;
+      display: block;
+      text-align: center;
+      font-weight: 600;
 
       a {
         color: #ffffff;
@@ -126,7 +133,7 @@
       }
     }
 
-    .box button.cta.ec {
+    .box .cta.ec {
       background-color: #90132f;
       &:hover {
         background-color: #ffffff;

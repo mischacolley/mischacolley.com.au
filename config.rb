@@ -26,6 +26,8 @@ activate :relative_assets
 activate :meta_tags
 activate :views
 
+activate :syntax
+
 activate :middleman_simple_thumbnailer
 
 configure :development do
@@ -59,6 +61,8 @@ set :js_dir, 'assets/javascripts'
 set :images_dir, 'assets/images'
 set :fonts_dir, 'assets/fonts'
 set :layout, 'layouts/application'
+
+set :markdown_engine, :kramdown
 
 # Layouts
 

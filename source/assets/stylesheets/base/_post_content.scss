@@ -8,7 +8,13 @@ These styles should, if need be, override global heading/typography styles etc
 .article {
 
   p {
-    font-size: 1.5rem;
+    font-size: 1.2rem;
+  }
+
+  @media (min-width: 768px) { 
+    p {
+      font-size: 1.5rem;
+    }
   }
 
   // Headings
@@ -177,8 +183,11 @@ These styles should, if need be, override global heading/typography styles etc
   // Lists
 
   li {
-    font-size: 1.5rem;
     line-height: $base-line-height;
+    font-size: 1.2rem;
+    @media (min-width: 768px) { 
+      font-size: 1.5rem;
+    }
   }
 
   // Quotes

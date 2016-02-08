@@ -15,8 +15,15 @@ body {
 }
 
 main {
-  margin-top: 130px;
-  padding: 2em;
+  max-width: 1920px;
+  margin: 130px auto 0 auto;
+
+  padding: 1em;
+
+  @media (min-width: 768px) { 
+    padding: 2em;
+  }
+
 }
 
 .index main {

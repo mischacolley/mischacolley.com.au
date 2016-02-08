@@ -1,5 +1,6 @@
 #{$all-button-inputs},
-button {
+button,
+.btn {
   @include appearance(none);
   -webkit-font-smoothing: antialiased;
   background-color: $action-color;
@@ -28,6 +29,10 @@ button {
     cursor: not-allowed;
     opacity: 0.5;
   }
+
+  a {
+    color: #ffffff;
+  }
 }
 
 
@@ -37,7 +42,7 @@ button {
   outline: none; 
 }
 
-button.cta {
+.cta {
   background: none;
   border: 1px solid rgba(0, 0, 0, 0.1);
   color: #6699CC;
@@ -57,12 +62,12 @@ button.cta {
   display: inline-block;
 }
 
-button.cta.highlight {
+.cta.highlight {
   background: #6699CC;
   color: #ffffff; 
 }
 
-button.cta:hover {
+.cta:hover {
   background: none;
   color: #6699CC; 
 }
@@ -77,6 +82,13 @@ button.cta:hover {
     display: inline-block;
     margin-bottom: 30px;
     color: #ffffff;
+    text-transform: uppercase;
+
+    &:hover,
+    &:focus {
+      background-color: darken($action-color, 15%);
+      color: #fff;
+    }
   }
 
 }

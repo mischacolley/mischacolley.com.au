@@ -17,22 +17,23 @@ footer {
   width: 100%;
 }
 
-.twitter-feed {
+.twitter-feed,
+.work-info {
 
   position: absolute;
-  z-index: 22;
+  z-index: 4;
   color: #ffffff;
   width: 65%;
   left: 32.5%;
   margin-left: -14.5%;
   text-align: center;
-  top: 50%;
-  transform: translateY(-50%);
+  top: 25%;
+  transform: translateY(-25%);
 
-  // @media (min-width: 768px) { 
-  //   top: 50%;
-  //   transform: translateY(-50%);
-  // }
+  @media (min-width: 768px) { 
+    top: 50%;
+    transform: translateY(-50%);
+  }
 
   p {
     font-size: 1.7rem;

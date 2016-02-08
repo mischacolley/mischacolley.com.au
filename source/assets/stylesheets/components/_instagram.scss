@@ -1,17 +1,29 @@
-.instagram a {
+.instagram a,
+.work img {
   float: left;
   width: 50%;
   margin: 0;
   padding: 0;
   line-height: 0;
+}
 
+.instagram a {
   @media (min-width: 768px) { 
     width: 20%;
   }
-
 }
 
-.instagram {
+.work img {
+  @media (min-width: 500px) { 
+    width: 33.33%;
+  }
+  @media (min-width: 769px) { 
+    width: 20%;
+  }
+}
+
+.instagram,
+.work-list {
 
   position: relative;
   float: left;
@@ -22,10 +34,21 @@
     top: 0;
     left: 0;
     content: "";
-    background-color: rgba(0,0,0,0.6);
     width: 100%;
     height: 100%;
     z-index: 2;
   }
 
+}
+
+.work-list {
+  &:after {
+    background-color: rgba(0,0,0,0.8);
+  }
+}
+
+.instagram {
+  &:after {
+    background-color: rgba(0,0,0,0.6);
+  }
 }

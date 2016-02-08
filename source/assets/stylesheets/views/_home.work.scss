@@ -1,3 +1,16 @@
-.work .section-title  {
-  background-image: url(image-path('section-title-3.jpg'));
+.work {
+
+  .section-title  {
+    background-image: url(image-path('section-title-3.jpg'));
+  }
+
+  h3 {
+    color: #ffffff;
+    font-size: 1.5rem;
+  }
+
+  p {
+    font-size: 1.3rem;
+  }
+
 }

@@ -39,7 +39,29 @@ body.work {
     }
     
     .article-inner {
+
       padding: 4% 8%;
+
+      img {
+        margin: 0 auto;
+        display: block;
+        border: 10px solid #eee;
+        outline: 1px solid #ddd;
+      }
+
+      .instagram-media {
+        margin: 0 auto !important;
+      }
+
+      .embed-responsive,
+      .instagram-media,
+      iframe,
+      embed,
+      object,
+      video {
+        margin-bottom: 1rem !important;
+      }
+
     }
 
   }
@@ -55,7 +77,7 @@ body.work {
     }
 
     @include media($xl) {
-      width: 70%;
+      max-width: 960px;
     }
 
   }

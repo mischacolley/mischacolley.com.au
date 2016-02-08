@@ -1,10 +1,9 @@
 projects:
 - title: "Byron Web"
-  permalink: "byronweb"
-  externallink: "http://www.example.com"
+  permalink: "http://www.meetup.com/byronweb/"
   summary: "Byron Web is a monthly social gathering for web designers and developers in the Byron Bay area to meet and share knowledge with like-minded people."
   image: "byronweb.jpg"
 - title: "#manyyesses"
-  permalink: "manyyesses"
+  permalink: "https://www.facebook.com/Many-Yeses-742452762523654/"
   summary: "Exploring people and movements striving to make this world a better place. Focused on positive stories and real solutions, not just the problems."
   image: "manyyesses.jpg"
