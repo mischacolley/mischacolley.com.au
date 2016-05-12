@@ -1,6 +1,6 @@
 jQuery(document).ready(function($){
 
-    $(".contact").click(function() {
+    $(".contact-toggle").click(function() {
       $('.contact-details').toggleClass('show-contacts');
     }); 
 

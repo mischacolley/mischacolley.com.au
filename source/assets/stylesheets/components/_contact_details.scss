@@ -14,4 +14,14 @@
     padding: 1em;
   }
 
+  .contact-toggle {
+    right: 31px;
+    z-index: 5;
+    position: absolute;
+    top: 15px;
+    font-size: 22px;
+    color: #333;
+    cursor: pointer;
+  }
+
 }
