@@ -18,7 +18,18 @@ header.scrolled {
   top: 0;
   transition: all 1s ease;
   &.at-panel-two {
-    background: rgba(102, 153, 204, 0.9); 
+    background: rgb(255, 255, 255);
+    box-shadow: 0 1px 0 rgba(0, 0, 0, 0.1);
+
+    .logo,
+    .menu-toggle {
+      background: rgb(102, 153, 204);
+    }
+
+    .description {
+      color: #333;
+    }
+
   }
   @media (max-width: 400px) { 
     .main-navigation {
@@ -41,7 +52,7 @@ header.scrolled {
   padding: 2px 8px;
   border: 1px solid rgba(255, 255, 255, 0.6);
   line-height: inherit;
-  background: rgba(0, 0, 0, 0.3);
+  background: rgb(102, 153, 204);
   border-radius: 0.1em; 
 
   @media (min-width: 500px) { 
@@ -59,13 +70,11 @@ header.scrolled {
   color: rgba(255, 255, 255, 0.9);
   font-size: 13px;
   text-transform: uppercase;
-  font-weight: 100;
-  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.7); 
+  font-weight: 100; 
   margin: 0.3em 0 0 0.6em;
 
   @media (min-width: 500px) {
-    font-size: 17px;
-    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.4); 
+    font-size: 17px; 
   }
 
 }

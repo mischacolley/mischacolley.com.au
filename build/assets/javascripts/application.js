@@ -14,7 +14,7 @@ void 0===c?d&&"get"in d&&null!==(e=d.get(a,b))?e:(e=n.find.attr(a,b),null==e?voi
 
 ;(function(f){"use strict";"function"===typeof define&&define.amd?define(["jquery"],f):"undefined"!==typeof module&&module.exports?module.exports=f(require("jquery")):f(jQuery)})(function($){"use strict";function n(a){return!a.nodeName||-1!==$.inArray(a.nodeName.toLowerCase(),["iframe","#document","html","body"])}function h(a){return $.isFunction(a)||$.isPlainObject(a)?a:{top:a,left:a}}var p=$.scrollTo=function(a,d,b){return $(window).scrollTo(a,d,b)};p.defaults={axis:"xy",duration:0,limit:!0};$.fn.scrollTo=function(a,d,b){"object"=== typeof d&&(b=d,d=0);"function"===typeof b&&(b={onAfter:b});"max"===a&&(a=9E9);b=$.extend({},p.defaults,b);d=d||b.duration;var u=b.queue&&1<b.axis.length;u&&(d/=2);b.offset=h(b.offset);b.over=h(b.over);return this.each(function(){function k(a){var k=$.extend({},b,{queue:!0,duration:d,complete:a&&function(){a.call(q,e,b)}});r.animate(f,k)}if(null!==a){var l=n(this),q=l?this.contentWindow||window:this,r=$(q),e=a,f={},t;switch(typeof e){case "number":case "string":if(/^([+-]=?)?\d+(\.\d+)?(px|%)?$/.test(e)){e= h(e);break}e=l?$(e):$(e,q);case "object":if(e.length===0)return;if(e.is||e.style)t=(e=$(e)).offset()}var v=$.isFunction(b.offset)&&b.offset(q,e)||b.offset;$.each(b.axis.split(""),function(a,c){var d="x"===c?"Left":"Top",m=d.toLowerCase(),g="scroll"+d,h=r[g](),n=p.max(q,c);t?(f[g]=t[m]+(l?0:h-r.offset()[m]),b.margin&&(f[g]-=parseInt(e.css("margin"+d),10)||0,f[g]-=parseInt(e.css("border"+d+"Width"),10)||0),f[g]+=v[m]||0,b.over[m]&&(f[g]+=e["x"===c?"width":"height"]()*b.over[m])):(d=e[m],f[g]=d.slice&& "%"===d.slice(-1)?parseFloat(d)/100*n:d);b.limit&&/^\d+$/.test(f[g])&&(f[g]=0>=f[g]?0:Math.min(f[g],n));!a&&1<b.axis.length&&(h===f[g]?f={}:u&&(k(b.onAfterFirst),f={}))});k(b.onAfter)}})};p.max=function(a,d){var b="x"===d?"Width":"Height",h="scroll"+b;if(!n(a))return a[h]-$(a)[b.toLowerCase()]();var b="client"+b,k=a.ownerDocument||a.document,l=k.documentElement,k=k.body;return Math.max(l[h],k[h])-Math.min(l[b],k[b])};$.Tween.propHooks.scrollLeft=$.Tween.propHooks.scrollTop={get:function(a){return $(a.elem)[a.prop]()}, set:function(a){var d=this.get(a);if(a.options.interrupt&&a._last&&a._last!==d)return $(a.elem).stop();var b=Math.round(a.now);d!==b&&($(a.elem)[a.prop](b),a._last=this.get(a))}};return p});
 /*********************************************************************
-*  #### Twitter Post Fetcher v13.1 ####
+*  #### Twitter Post Fetcher v15.0.1 ####
 *  Coded by Jason Mayes 2015. A present to all the developers out there.
 *  www.jasonmayes.com
 *  Please keep this disclaimer with my code if you use it. Thanks. :-)
@@ -24,16 +24,362 @@ void 0===c?d&&"get"in d&&null!==(e=d.get(a,b))?e:(e=n.find.attr(a,b),null==e?voi
 *  Updates will be posted to this site.
 *********************************************************************/
 
-(function(w,p){"function"===typeof define&&define.amd?define([],p):"object"===typeof exports?module.exports=p():p()})(this,function(){function w(a){return a.replace(/<b[^>]*>(.*?)<\/b>/gi,function(a,g){return g}).replace(/class=".*?"|data-query-source=".*?"|dir=".*?"|rel=".*?"/gi,"")}function p(a){a=a.getElementsByTagName("a");for(var c=a.length-1;0<=c;c--)a[c].setAttribute("target","_blank")}function n(a,c){for(var g=[],f=new RegExp("(^| )"+c+"( |$)"),h=a.getElementsByTagName("*"),b=0,k=h.length;b<
-k;b++)f.test(h[b].className)&&g.push(h[b]);return g}var B="",k=20,C=!0,u=[],x=!1,v=!0,q=!0,y=null,z=!0,D=!0,A=null,E=!0,F=!1,r=!0,G=!0,m=null,H={fetch:function(a){void 0===a.maxTweets&&(a.maxTweets=20);void 0===a.enableLinks&&(a.enableLinks=!0);void 0===a.showUser&&(a.showUser=!0);void 0===a.showTime&&(a.showTime=!0);void 0===a.dateFunction&&(a.dateFunction="default");void 0===a.showRetweet&&(a.showRetweet=!0);void 0===a.customCallback&&(a.customCallback=null);void 0===a.showInteraction&&(a.showInteraction=
-!0);void 0===a.showImages&&(a.showImages=!1);void 0===a.linksInNewWindow&&(a.linksInNewWindow=!0);void 0===a.showPermalinks&&(a.showPermalinks=!0);if(x)u.push(a);else{x=!0;B=a.domId;k=a.maxTweets;C=a.enableLinks;q=a.showUser;v=a.showTime;D=a.showRetweet;y=a.dateFunction;A=a.customCallback;E=a.showInteraction;F=a.showImages;r=a.linksInNewWindow;G=a.showPermalinks;var c=document.getElementsByTagName("head")[0];null!==m&&c.removeChild(m);m=document.createElement("script");m.type="text/javascript";m.src=
-"https://cdn.syndication.twimg.com/widgets/timelines/"+a.id+"?&lang="+(a.lang||"en")+"&callback=twitterFetcher.callback&suppress_response_codes=true&rnd="+Math.random();c.appendChild(m)}},callback:function(a){var c=document.createElement("div");c.innerHTML=a.body;"undefined"===typeof c.getElementsByClassName&&(z=!1);a=[];var g=[],f=[],h=[],b=[],m=[],t=[],e=0;if(z)for(c=c.getElementsByClassName("tweet");e<c.length;){0<c[e].getElementsByClassName("retweet-credit").length?b.push(!0):b.push(!1);if(!b[e]||
-b[e]&&D)a.push(c[e].getElementsByClassName("e-entry-title")[0]),m.push(c[e].getAttribute("data-tweet-id")),g.push(c[e].getElementsByClassName("p-author")[0]),f.push(c[e].getElementsByClassName("dt-updated")[0]),t.push(c[e].getElementsByClassName("permalink")[0]),void 0!==c[e].getElementsByClassName("inline-media")[0]?h.push(c[e].getElementsByClassName("inline-media")[0]):h.push(void 0);e++}else for(c=n(c,"tweet");e<c.length;)a.push(n(c[e],"e-entry-title")[0]),m.push(c[e].getAttribute("data-tweet-id")),
-g.push(n(c[e],"p-author")[0]),f.push(n(c[e],"dt-updated")[0]),t.push(n(c[e],"permalink")[0]),void 0!==n(c[e],"inline-media")[0]?h.push(n(c[e],"inline-media")[0]):h.push(void 0),0<n(c[e],"retweet-credit").length?b.push(!0):b.push(!1),e++;a.length>k&&(a.splice(k,a.length-k),g.splice(k,g.length-k),f.splice(k,f.length-k),b.splice(k,b.length-k),h.splice(k,h.length-k),t.splice(k,t.length-k));c=[];e=a.length;for(b=0;b<e;){if("string"!==typeof y){var d=f[b].getAttribute("datetime"),l=new Date(f[b].getAttribute("datetime").replace(/-/g,
-"/").replace("T"," ").split("+")[0]),d=y(l,d);f[b].setAttribute("aria-label",d);if(a[b].innerText)if(z)f[b].innerText=d;else{var l=document.createElement("p"),I=document.createTextNode(d);l.appendChild(I);l.setAttribute("aria-label",d);f[b]=l}else f[b].textContent=d}d="";C?(r&&(p(a[b]),q&&p(g[b])),q&&(d+='<div class="user">'+w(g[b].innerHTML)+"</div>"),d+='<p class="tweet">'+w(a[b].innerHTML)+"</p>",v&&(d=G?d+('<p class="timePosted"><a href="'+t[b]+'">'+f[b].getAttribute("aria-label")+"</a></p>"):
-d+('<p class="timePosted">'+f[b].getAttribute("aria-label")+"</p>"))):a[b].innerText?(q&&(d+='<p class="user">'+g[b].innerText+"</p>"),d+='<p class="tweet">'+a[b].innerText+"</p>",v&&(d+='<p class="timePosted">'+f[b].innerText+"</p>")):(q&&(d+='<p class="user">'+g[b].textContent+"</p>"),d+='<p class="tweet">'+a[b].textContent+"</p>",v&&(d+='<p class="timePosted">'+f[b].textContent+"</p>"));E&&(d+='<p class="interact"><a href="https://twitter.com/intent/tweet?in_reply_to='+m[b]+'" class="twitter_reply_icon"'+
-(r?' target="_blank">':">")+'Reply</a><a href="https://twitter.com/intent/retweet?tweet_id='+m[b]+'" class="twitter_retweet_icon"'+(r?' target="_blank">':">")+'Retweet</a><a href="https://twitter.com/intent/favorite?tweet_id='+m[b]+'" class="twitter_fav_icon"'+(r?' target="_blank">':">")+"Favorite</a></p>");F&&void 0!==h[b]&&(l=h[b],void 0!==l?(l=l.innerHTML.match(/data-srcset="([A-z0-9%_\.-]+)/i)[0],l=decodeURIComponent(l).split('"')[1]):l=void 0,d+='<div class="media"><img src="'+l+'" alt="Image from tweet" /></div>');
-c.push(d);b++}if(null===A){a=c.length;g=0;f=document.getElementById(B);for(h="<ul>";g<a;)h+="<li>"+c[g]+"</li>",g++;f.innerHTML=h+"</ul>"}else A(c);x=!1;0<u.length&&(H.fetch(u[0]),u.splice(0,1))}};return window.twitterFetcher=H});
+(function(root, factory) {
+  if (typeof define === 'function' && define.amd) {
+    // AMD. Register as an anonymous module.
+    define([], factory);
+  } else if (typeof exports === 'object') {
+    // Node. Does not work with strict CommonJS, but
+    // only CommonJS-like environments that support module.exports,
+    // like Node.
+    module.exports = factory();
+  } else {
+    // Browser globals.
+    factory();
+  }
+}(this, function() {
+  var domNode = '';
+  var maxTweets = 20;
+  var parseLinks = true;
+  var queue = [];
+  var inProgress = false;
+  var printTime = true;
+  var printUser = true;
+  var formatterFunction = null;
+  var supportsClassName = true;
+  var showRts = true;
+  var customCallbackFunction = null;
+  var showInteractionLinks = true;
+  var showImages = false;
+  var targetBlank = true;
+  var lang = 'en';
+  var permalinks = true;
+  var dataOnly = false;
+  var script = null;
+  var scriptAdded = false;
+
+  function handleTweets(tweets){
+    if (customCallbackFunction === null) {
+      var x = tweets.length;
+      var n = 0;
+      var element = document.getElementById(domNode);
+      var html = '<ul>';
+      while(n < x) {
+        html += '<li>' + tweets[n] + '</li>';
+        n++;
+      }
+      html += '</ul>';
+      element.innerHTML = html;
+    } else {
+      customCallbackFunction(tweets);
+    }
+  }
+
+  function strip(data) {
+    return data.replace(/<b[^>]*>(.*?)<\/b>/gi, function(a,s){return s;})
+        .replace(/class="(?!(tco-hidden|tco-display|tco-ellipsis))+.*?"|data-query-source=".*?"|dir=".*?"|rel=".*?"/gi,
+        '');
+  }
+
+  function targetLinksToNewWindow(el) {
+    var links = el.getElementsByTagName('a');
+    for (var i = links.length - 1; i >= 0; i--) {
+      links[i].setAttribute('target', '_blank');
+    }
+  }
+
+  function getElementsByClassName (node, classname) {
+    var a = [];
+    var regex = new RegExp('(^| )' + classname + '( |$)');
+    var elems = node.getElementsByTagName('*');
+    for (var i = 0, j = elems.length; i < j; i++) {
+        if(regex.test(elems[i].className)){
+          a.push(elems[i]);
+        }
+    }
+    return a;
+  }
+
+  function extractImageUrl(image_data) {
+    if (image_data !== undefined && image_data.innerHTML.indexOf('data-srcset') >= 0) {
+      var data_src = image_data.innerHTML
+          .match(/data-srcset="([A-z0-9%_\.-]+)/i)[0];
+      return decodeURIComponent(data_src).split('"')[1];
+    }
+  }
+
+  var twitterFetcher = {
+    fetch: function(config) {
+      if (config.maxTweets === undefined) {
+        config.maxTweets = 20;
+      }
+      if (config.enableLinks === undefined) {
+        config.enableLinks = true;
+      }
+      if (config.showUser === undefined) {
+        config.showUser = true;
+      }
+      if (config.showTime === undefined) {
+        config.showTime = true;
+      }
+      if (config.dateFunction === undefined) {
+        config.dateFunction = 'default';
+      }
+      if (config.showRetweet === undefined) {
+        config.showRetweet = true;
+      }
+      if (config.customCallback === undefined) {
+        config.customCallback = null;
+      }
+      if (config.showInteraction === undefined) {
+        config.showInteraction = true;
+      }
+      if (config.showImages === undefined) {
+        config.showImages = false;
+      }
+      if (config.linksInNewWindow === undefined) {
+        config.linksInNewWindow = true;
+      }
+      if (config.showPermalinks === undefined) {
+        config.showPermalinks = true;
+      }
+      if (config.dataOnly === undefined) {
+        config.dataOnly = false;
+      }
+
+      if (inProgress) {
+        queue.push(config);
+      } else {
+        inProgress = true;
+
+        domNode = config.domId;
+        maxTweets = config.maxTweets;
+        parseLinks = config.enableLinks;
+        printUser = config.showUser;
+        printTime = config.showTime;
+        showRts = config.showRetweet;
+        formatterFunction = config.dateFunction;
+        customCallbackFunction = config.customCallback;
+        showInteractionLinks = config.showInteraction;
+        showImages = config.showImages;
+        targetBlank = config.linksInNewWindow;
+        permalinks = config.showPermalinks;
+        dataOnly = config.dataOnly;
+
+        var head = document.getElementsByTagName('head')[0];
+        if (script !== null) {
+          head.removeChild(script);
+        }
+        script = document.createElement('script');
+        script.type = 'text/javascript';
+        script.src = 'https://cdn.syndication.twimg.com/widgets/timelines/' +
+            config.id + '?&lang=' + (config.lang || lang) +
+            '&callback=twitterFetcher.callback&' +
+            'suppress_response_codes=true&rnd=' + Math.random();
+        head.appendChild(script);
+      }
+    },
+    callback: function(data) {
+      var div = document.createElement('div');
+      div.innerHTML = data.body;
+      if (typeof(div.getElementsByClassName) === 'undefined') {
+         supportsClassName = false;
+      }
+
+      function swapDataSrc(element) {
+        var avatarImg = element.getElementsByTagName('img')[0];
+        avatarImg.src = avatarImg.getAttribute('data-src-2x');
+        return element;
+      };
+
+      var tweets = [];
+      var authors = [];
+      var times = [];
+      var images = [];
+      var rts = [];
+      var tids = [];
+      var permalinksURL = [];
+      var x = 0;
+
+      if (supportsClassName) {
+        var tmp = div.getElementsByClassName('timeline-Tweet');
+        while (x < tmp.length) {
+          if (tmp[x].getElementsByClassName('timeline-Tweet-retweetCredit').length > 0) {
+            rts.push(true);
+          } else {
+            rts.push(false);
+          }
+          if (!rts[x] || rts[x] && showRts) {
+            tweets.push(tmp[x].getElementsByClassName('timeline-Tweet-text')[0]);
+            tids.push(tmp[x].getAttribute('data-tweet-id'));
+            authors.push(swapDataSrc(tmp[x]
+                .getElementsByClassName('timeline-Tweet-author')[0]));
+            times.push(tmp[x].getElementsByClassName('dt-updated')[0]);
+            permalinksURL.push(tmp[x].getElementsByClassName('timeline-Tweet-timestamp')[0]);
+            if (tmp[x].getElementsByClassName('timeline-Tweet-media')[0] !==
+                undefined) {
+              images.push(tmp[x].getElementsByClassName('timeline-Tweet-media')[0]);
+            } else {
+              images.push(undefined);
+            }
+          }
+          x++;
+        }
+      } else {
+        var tmp = getElementsByClassName(div, 'timeline-Tweet');
+        while (x < tmp.length) {
+          if (getElementsByClassName(tmp[x], 'timeline-Tweet-retweetCredit').length > 0) {
+            rts.push(true);
+          } else {
+            rts.push(false);
+          }
+          if (!rts[x] || rts[x] && showRts) {
+            tweets.push(getElementsByClassName(tmp[x], 'timeline-Tweet-text')[0]);
+            tids.push(tmp[x].getAttribute('data-tweet-id'));
+            authors.push(swapDataSrc(getElementsByClassName(tmp[x],
+                'timeline-Tweet-author')[0]));
+            times.push(getElementsByClassName(tmp[x], 'dt-updated')[0]);
+            permalinksURL.push(getElementsByClassName(tmp[x], 'timeline-Tweet-timestamp')[0]);
+            if (getElementsByClassName(tmp[x], 'timeline-Tweet-media')[0] !== undefined) {
+              images.push(getElementsByClassName(tmp[x], 'timeline-Tweet-media')[0]);
+            } else {
+              images.push(undefined);
+            }
+          }
+          x++;
+        }
+      }
+
+      if (tweets.length > maxTweets) {
+        tweets.splice(maxTweets, (tweets.length - maxTweets));
+        authors.splice(maxTweets, (authors.length - maxTweets));
+        times.splice(maxTweets, (times.length - maxTweets));
+        rts.splice(maxTweets, (rts.length - maxTweets));
+        images.splice(maxTweets, (images.length - maxTweets));
+        permalinksURL.splice(maxTweets, (permalinksURL.length - maxTweets));
+      }
+
+      var arrayTweets = [];
+      var x = tweets.length;
+      var n = 0;
+      if (dataOnly) {
+        while (n < x) {
+          arrayTweets.push({
+            tweet: tweets[n].innerHTML,
+            author: authors[n].innerHTML,
+            time: times[n].textContent,
+            image: extractImageUrl(images[n]),
+            rt: rts[n],
+            tid: tids[n],
+            permalinkURL: (permalinksURL[n] === undefined) ?
+                '' : permalinksURL[n].href 
+          });
+          n++;
+        }
+      } else {
+        while (n < x) {
+          if (typeof(formatterFunction) !== 'string') {
+            var datetimeText = times[n].getAttribute('datetime');
+            var newDate = new Date(times[n].getAttribute('datetime')
+                .replace(/-/g,'/').replace('T', ' ').split('+')[0]);
+            var dateString = formatterFunction(newDate, datetimeText);
+            times[n].setAttribute('aria-label', dateString);
+
+            if (tweets[n].textContent) {
+              // IE hack.
+              if (supportsClassName) {
+                times[n].textContent = dateString;
+              } else {
+                var h = document.createElement('p');
+                var t = document.createTextNode(dateString);
+                h.appendChild(t);
+                h.setAttribute('aria-label', dateString);
+                times[n] = h;
+              }
+            } else {
+              times[n].textContent = dateString;
+            }
+          }
+          var op = '';
+          if (parseLinks) {
+            if (targetBlank) {
+              targetLinksToNewWindow(tweets[n]);
+              if (printUser) {
+                targetLinksToNewWindow(authors[n]);
+              }
+            }
+            if (printUser) {
+              op += '<div class="user">' + strip(authors[n].innerHTML) +
+                  '</div>';
+            }
+            op += '<p class="tweet">' + strip(tweets[n].innerHTML) + '</p>';
+            if (printTime) {
+              if (permalinks) {
+                op += '<p class="timePosted"><a href="' + permalinksURL[n] +
+                   '">' + times[n].getAttribute('aria-label') + '</a></p>';
+              } else {
+                op += '<p class="timePosted">' +
+                    times[n].getAttribute('aria-label') + '</p>';
+              }
+            }
+          } else {
+            if (tweets[n].textContent) {
+              if (printUser) {
+                op += '<p class="user">' + authors[n].textContent + '</p>';
+              }
+              op += '<p class="tweet">' +  tweets[n].textContent + '</p>';
+              if (printTime) {
+                op += '<p class="timePosted">' + times[n].textContent + '</p>';
+              }
+
+            } else {
+              if (printUser) {
+                op += '<p class="user">' + authors[n].textContent + '</p>';
+              }
+              op += '<p class="tweet">' +  tweets[n].textContent + '</p>';
+              if (printTime) {
+                op += '<p class="timePosted">' + times[n].textContent + '</p>';
+              }
+            }
+          }
+          if (showInteractionLinks) {
+            op += '<p class="interact"><a href="https://twitter.com/intent/' +
+                'tweet?in_reply_to=' + tids[n] +
+                '" class="twitter_reply_icon"' +
+                (targetBlank ? ' target="_blank">' : '>') +
+                'Reply</a><a href="https://twitter.com/intent/retweet?' +
+                'tweet_id=' + tids[n] + '" class="twitter_retweet_icon"' +
+                (targetBlank ? ' target="_blank">' : '>') + 'Retweet</a>' +
+                '<a href="https://twitter.com/intent/favorite?tweet_id=' +
+                tids[n] + '" class="twitter_fav_icon"' +
+                (targetBlank ? ' target="_blank">' : '>') + 'Favorite</a></p>';
+          }
+
+          if (showImages && images[n] !== undefined) {
+            op += '<div class="media">' +
+                '<img src="' + extractImageUrl(images[n]) +
+                '" alt="Image from tweet" />' + '</div>';
+          }
+
+          arrayTweets.push(op);
+          n++;
+        }
+      }
+
+      handleTweets(arrayTweets);
+      inProgress = false;
+
+      if (queue.length > 0) {
+        twitterFetcher.fetch(queue[0]);
+        queue.splice(0,1);
+      }
+    }
+  };
+
+  // It must be a global variable because it will be called by JSONP.
+  window.twitterFetcher = twitterFetcher;
+  return twitterFetcher;
+}));
 // Generated by CoffeeScript 1.6.2
 /*!
 jQuery Waypoints - v2.0.5
@@ -43,6 +389,34 @@ https://github.com/imakewebthings/jquery-waypoints/blob/master/licenses.txt
 */
 
 (function(){var t=[].indexOf||function(t){for(var e=0,n=this.length;e<n;e++){if(e in this&&this[e]===t)return e}return-1},e=[].slice;(function(t,e){if(typeof define==="function"&&define.amd){return define("waypoints",["jquery"],function(n){return e(n,t)})}else{return e(t.jQuery,t)}})(window,function(n,r){var i,o,l,s,f,u,c,a,h,d,p,y,v,w,g,m;i=n(r);a=t.call(r,"ontouchstart")>=0;s={horizontal:{},vertical:{}};f=1;c={};u="waypoints-context-id";p="resize.waypoints";y="scroll.waypoints";v=1;w="waypoints-waypoint-ids";g="waypoint";m="waypoints";o=function(){function t(t){var e=this;this.$element=t;this.element=t[0];this.didResize=false;this.didScroll=false;this.id="context"+f++;this.oldScroll={x:t.scrollLeft(),y:t.scrollTop()};this.waypoints={horizontal:{},vertical:{}};this.element[u]=this.id;c[this.id]=this;t.bind(y,function(){var t;if(!(e.didScroll||a)){e.didScroll=true;t=function(){e.doScroll();return e.didScroll=false};return r.setTimeout(t,n[m].settings.scrollThrottle)}});t.bind(p,function(){var t;if(!e.didResize){e.didResize=true;t=function(){n[m]("refresh");return e.didResize=false};return r.setTimeout(t,n[m].settings.resizeThrottle)}})}t.prototype.doScroll=function(){var t,e=this;t={horizontal:{newScroll:this.$element.scrollLeft(),oldScroll:this.oldScroll.x,forward:"right",backward:"left"},vertical:{newScroll:this.$element.scrollTop(),oldScroll:this.oldScroll.y,forward:"down",backward:"up"}};if(a&&(!t.vertical.oldScroll||!t.vertical.newScroll)){n[m]("refresh")}n.each(t,function(t,r){var i,o,l;l=[];o=r.newScroll>r.oldScroll;i=o?r.forward:r.backward;n.each(e.waypoints[t],function(t,e){var n,i;if(r.oldScroll<(n=e.offset)&&n<=r.newScroll){return l.push(e)}else if(r.newScroll<(i=e.offset)&&i<=r.oldScroll){return l.push(e)}});l.sort(function(t,e){return t.offset-e.offset});if(!o){l.reverse()}return n.each(l,function(t,e){if(e.options.continuous||t===l.length-1){return e.trigger([i])}})});return this.oldScroll={x:t.horizontal.newScroll,y:t.vertical.newScroll}};t.prototype.refresh=function(){var t,e,r,i=this;r=n.isWindow(this.element);e=this.$element.offset();this.doScroll();t={horizontal:{contextOffset:r?0:e.left,contextScroll:r?0:this.oldScroll.x,contextDimension:this.$element.width(),oldScroll:this.oldScroll.x,forward:"right",backward:"left",offsetProp:"left"},vertical:{contextOffset:r?0:e.top,contextScroll:r?0:this.oldScroll.y,contextDimension:r?n[m]("viewportHeight"):this.$element.height(),oldScroll:this.oldScroll.y,forward:"down",backward:"up",offsetProp:"top"}};return n.each(t,function(t,e){return n.each(i.waypoints[t],function(t,r){var i,o,l,s,f;i=r.options.offset;l=r.offset;o=n.isWindow(r.element)?0:r.$element.offset()[e.offsetProp];if(n.isFunction(i)){i=i.apply(r.element)}else if(typeof i==="string"){i=parseFloat(i);if(r.options.offset.indexOf("%")>-1){i=Math.ceil(e.contextDimension*i/100)}}r.offset=o-e.contextOffset+e.contextScroll-i;if(r.options.onlyOnScroll&&l!=null||!r.enabled){return}if(l!==null&&l<(s=e.oldScroll)&&s<=r.offset){return r.trigger([e.backward])}else if(l!==null&&l>(f=e.oldScroll)&&f>=r.offset){return r.trigger([e.forward])}else if(l===null&&e.oldScroll>=r.offset){return r.trigger([e.forward])}})})};t.prototype.checkEmpty=function(){if(n.isEmptyObject(this.waypoints.horizontal)&&n.isEmptyObject(this.waypoints.vertical)){this.$element.unbind([p,y].join(" "));return delete c[this.id]}};return t}();l=function(){function t(t,e,r){var i,o;if(r.offset==="bottom-in-view"){r.offset=function(){var t;t=n[m]("viewportHeight");if(!n.isWindow(e.element)){t=e.$element.height()}return t-n(this).outerHeight()}}this.$element=t;this.element=t[0];this.axis=r.horizontal?"horizontal":"vertical";this.callback=r.handler;this.context=e;this.enabled=r.enabled;this.id="waypoints"+v++;this.offset=null;this.options=r;e.waypoints[this.axis][this.id]=this;s[this.axis][this.id]=this;i=(o=this.element[w])!=null?o:[];i.push(this.id);this.element[w]=i}t.prototype.trigger=function(t){if(!this.enabled){return}if(this.callback!=null){this.callback.apply(this.element,t)}if(this.options.triggerOnce){return this.destroy()}};t.prototype.disable=function(){return this.enabled=false};t.prototype.enable=function(){this.context.refresh();return this.enabled=true};t.prototype.destroy=function(){delete s[this.axis][this.id];delete this.context.waypoints[this.axis][this.id];return this.context.checkEmpty()};t.getWaypointsByElement=function(t){var e,r;r=t[w];if(!r){return[]}e=n.extend({},s.horizontal,s.vertical);return n.map(r,function(t){return e[t]})};return t}();d={init:function(t,e){var r;e=n.extend({},n.fn[g].defaults,e);if((r=e.handler)==null){e.handler=t}this.each(function(){var t,r,i,s;t=n(this);i=(s=e.context)!=null?s:n.fn[g].defaults.context;if(!n.isWindow(i)){i=t.closest(i)}i=n(i);r=c[i[0][u]];if(!r){r=new o(i)}return new l(t,r,e)});n[m]("refresh");return this},disable:function(){return d._invoke.call(this,"disable")},enable:function(){return d._invoke.call(this,"enable")},destroy:function(){return d._invoke.call(this,"destroy")},prev:function(t,e){return d._traverse.call(this,t,e,function(t,e,n){if(e>0){return t.push(n[e-1])}})},next:function(t,e){return d._traverse.call(this,t,e,function(t,e,n){if(e<n.length-1){return t.push(n[e+1])}})},_traverse:function(t,e,i){var o,l;if(t==null){t="vertical"}if(e==null){e=r}l=h.aggregate(e);o=[];this.each(function(){var e;e=n.inArray(this,l[t]);return i(o,e,l[t])});return this.pushStack(o)},_invoke:function(t){this.each(function(){var e;e=l.getWaypointsByElement(this);return n.each(e,function(e,n){n[t]();return true})});return this}};n.fn[g]=function(){var t,r;r=arguments[0],t=2<=arguments.length?e.call(arguments,1):[];if(d[r]){return d[r].apply(this,t)}else if(n.isFunction(r)){return d.init.apply(this,arguments)}else if(n.isPlainObject(r)){return d.init.apply(this,[null,r])}else if(!r){return n.error("jQuery Waypoints needs a callback function or handler option.")}else{return n.error("The "+r+" method does not exist in jQuery Waypoints.")}};n.fn[g].defaults={context:r,continuous:true,enabled:true,horizontal:false,offset:0,triggerOnce:false};h={refresh:function(){return n.each(c,function(t,e){return e.refresh()})},viewportHeight:function(){var t;return(t=r.innerHeight)!=null?t:i.height()},aggregate:function(t){var e,r,i;e=s;if(t){e=(i=c[n(t)[0][u]])!=null?i.waypoints:void 0}if(!e){return[]}r={horizontal:[],vertical:[]};n.each(r,function(t,i){n.each(e[t],function(t,e){return i.push(e)});i.sort(function(t,e){return t.offset-e.offset});r[t]=n.map(i,function(t){return t.element});return r[t]=n.unique(r[t])});return r},above:function(t){if(t==null){t=r}return h._filter(t,"vertical",function(t,e){return e.offset<=t.oldScroll.y})},below:function(t){if(t==null){t=r}return h._filter(t,"vertical",function(t,e){return e.offset>t.oldScroll.y})},left:function(t){if(t==null){t=r}return h._filter(t,"horizontal",function(t,e){return e.offset<=t.oldScroll.x})},right:function(t){if(t==null){t=r}return h._filter(t,"horizontal",function(t,e){return e.offset>t.oldScroll.x})},enable:function(){return h._invoke("enable")},disable:function(){return h._invoke("disable")},destroy:function(){return h._invoke("destroy")},extendFn:function(t,e){return d[t]=e},_invoke:function(t){var e;e=n.extend({},s.vertical,s.horizontal);return n.each(e,function(e,n){n[t]();return true})},_filter:function(t,e,r){var i,o;i=c[n(t)[0][u]];if(!i){return[]}o=[];n.each(i.waypoints[e],function(t,e){if(r(i,e)){return o.push(e)}});o.sort(function(t,e){return t.offset-e.offset});return n.map(o,function(t){return t.element})}};n[m]=function(){var t,n;n=arguments[0],t=2<=arguments.length?e.call(arguments,1):[];if(h[n]){return h[n].apply(null,t)}else{return h.aggregate.call(null,n)}};n[m].settings={resizeThrottle:100,scrollThrottle:30};return i.on("load.waypoints",function(){return n[m]("refresh")})})}).call(this);
+jQuery(document).ready(function($){
+
+  // Set div etc to match the height of another and adjust on window resize
+  // TODO: Replace with CSS solution
+  
+  $(window).on('load resize', function() {
+    if ($(window).width() > 500) {
+      $.fn.setAllToMaxHeight = function() {
+        return this.height(Math.max.apply(this, $.map(this, function(e) {
+          return $(e).height();
+        })));
+      };
+      
+      $('.box-container p').setAllToMaxHeight();
+    }
+    if ($(window).width() > 768) {
+      $.fn.setAllToMaxHeight = function() {
+        return this.height(Math.max.apply(this, $.map(this, function(e) {
+          return $(e).height();
+        })));
+      };
+
+      $('.latest-posts article .panel').setAllToMaxHeight();
+      $('.projects article .panel').setAllToMaxHeight();
+    }
+  });
+
+});
 var feed = new Instafeed({
     get: 'user',
     userId: 27813987,
@@ -52,74 +426,55 @@ var feed = new Instafeed({
     template: '<a href="{{link}}"><img src="{{image}}" /></a>'
 });
 feed.run();
+jQuery(document).ready(function($){
+
+  $('.scroll-down, .about-link').click(function(e) {
+    // Prevent the jump and the #hash from appearing on the address bar
+    e.preventDefault();
+    // Scroll the window, stop any previous animation, stop on user manual scroll
+    // Check https://github.com/flesler/jquery.scrollTo for more customizability
+    $(window).stop(true).scrollTo(this.hash, {duration:1000, offset:-82, interrupt:true});
+  });
+
+  $(".menu-contact").click(function() {
+    $('#contact').ScrollTo({
+      duration: 1000,
+      easing: 'linear'
+    });
+  }); 
+
+  $(".menu-toggle").click(function() {
+    $("body").toggleClass("menu-toggled");
+    $('.menu-toggle i').toggleClass('fa-bars fa-times');
+  });  
+
+  $(document).on('click', ".menu-primary-menu-container ul li a.anchor", function() {
+    $('body').removeClass('menu-toggled');
+    $('.menu-toggle i').toggleClass('fa-times fa-bars');
+  });
+
+  // Contacts toggle
+
+  $(".contact-toggle").click(function() {
+    $('.contact-details').toggleClass('show-contacts');
+  }); 
+
+});
 $('.article iframe.responsive').wrap('<div class="embed-responsive embed-responsive-16by9"/>');
 $('.article iframe.responsive').addClass('embed-responsive-item');
 jQuery(document).ready(function($){
 
-    $(".contact").click(function() {
-      $('.contact-details').toggleClass('show-contacts');
-    }); 
-
-    $(".thumbs:not(.selected)").hover()
+  $(".thumbs:not(.selected)").hover()
 
 
-    // Set div etc to match the height of another and adjust on window resize
-  
-    $(window).on('load resize', function() {
-      if ($(window).width() > 500) {
-        $.fn.setAllToMaxHeight = function() {
-          return this.height(Math.max.apply(this, $.map(this, function(e) {
-            return $(e).height();
-          })));
-        };
-        
-        $('.box-container p').setAllToMaxHeight();
-      }
-      if ($(window).width() > 768) {
-        $.fn.setAllToMaxHeight = function() {
-          return this.height(Math.max.apply(this, $.map(this, function(e) {
-            return $(e).height();
-          })));
-        };
-  
-        $('.latest-posts article .panel').setAllToMaxHeight();
-        $('.projects article .panel').setAllToMaxHeight();
-      }
-    });
+  $(window).on('load', function() {
 
-    $(window).on('load', function() {
+    if ($(window).width() < 769) {
+      
+      $('.work-list img').slice(-3).remove();
+    }
 
-      if ($(window).width() < 769) {
-        
-        $('.work-list img').slice(-3).remove();
-      }
-
-    });
-
-    $('.scroll-down, .about-link').click(function(e) {
-      // Prevent the jump and the #hash from appearing on the address bar
-      e.preventDefault();
-      // Scroll the window, stop any previous animation, stop on user manual scroll
-      // Check https://github.com/flesler/jquery.scrollTo for more customizability
-      $(window).stop(true).scrollTo(this.hash, {duration:1000, offset:-82, interrupt:true});
-    });
-
-    $(".menu-contact").click(function() {
-      $('#contact').ScrollTo({
-          duration: 1000,
-          easing: 'linear'
-      });
-    }); 
-
-    $(".menu-toggle").click(function() {
-        $("body").toggleClass("menu-toggled");
-        $('.menu-toggle i').toggleClass('fa-bars fa-times');
-    });  
-
-    $(document).on('click', ".menu-primary-menu-container ul li a.anchor", function() {
-      $('body').removeClass('menu-toggled');
-      $('.menu-toggle i').toggleClass('fa-times fa-bars');
-    });
+  });
   
   $(window).scroll(function() {
     
@@ -145,6 +500,11 @@ jQuery(document).ready(function($){
       offset: '103'
   });
 
+}); 
+
+
+jQuery(document).ready(function($){
+
   // Twitter Feed config
 
   $('body.index').each(function(){
@@ -159,9 +519,7 @@ jQuery(document).ready(function($){
   
   });
 
-}); 
-
-
+});
 (function() {
 
 

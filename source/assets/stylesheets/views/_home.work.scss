@@ -1,7 +1,13 @@
 .work {
 
   .section-title  {
-    background-image: url(image-path('section-title-3.jpg'));
+    background-color: #ffffff;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+
+    h2 {
+      background: #333;
+    }
+    
   }
 
   h3 {
