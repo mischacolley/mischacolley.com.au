@@ -8,10 +8,16 @@ title: Test
 
 .section.about-summary#about
   .about-copy-intro
-    = partial "intro"
+    :kramdown
+      Hi I’m **Mischa Colley**. I work with **HTML**, **CSS** and **JavaScript** to bring designs to life in the browser.
+  .about-copy-main
+    :kramdown
+      I’ve been building for the web since **2006**. In that time I’ve worked for companies such as **[Netengine](http://www.netengine.com.au){:target="_blank"}{: .netengine}** and **[Orange Digital](http://www.orangedigital.com.au){:target="_blank"}{: .orangedigital}**, along with my own clients through **[Exposé Creative](http://www.exposecreative.com){:target="_blank"}{: .exposecreative}**. Most recently I worked at **[Brand New Media](http://www.brandnewmedia.com.au){:target="_blank"}{: .bnm}** and I'm currently in-house at **[Coronis](http://www.coronis.com.au){:target="_blank"}{: .coronis}** as their **Lead Web Developer**. 
+
+      I host **[Byron Web](http://www.meetup.com/byronweb){:target="_blank"}{: .byronweb}**, a monthly meetup for web professionals in the **Byron Shire**. **Byron Bay** is a special part of the **Northern Rivers** region of **NSW, Australia** which I'm lucky enough to call home along with my wife and son.
 
     .cta-container
-      %button.cta.highlight.contact-toggle Contact Me
+      %button.cta.contact-toggle Contact Me
 
     %span.employment-status 
 
@@ -24,28 +30,23 @@ title: Test
 
   .about-detail-inner
 
-    .intro-text I love writing HTML & CSS and I am passionate about building great user experiences
+    .intro-text I love writing HTML, CSS and JavaScript. I am passionate about building great user experiences upon responsive, progressively enhanced foundations that deliver fast, easy to use sites and services. 
 
     .box-container
       .box
         %h3 For Agencies
         %p As a Front-End Developer the work I do in teams lies at the crossroads between design and development. I pride myself on my ability to work collaboratively with designers to bring designs to life in the browser and engineers to apply those designs to the underlying functionality and logic that makes websites and apps do what they do. I've done a lot of work with WordPress, Drupal and Ruby on Rails.
-        = link_to "Hire Me", "#contact", class: "cta highlight contact-toggle"
+        = link_to "Hire Me", "#contact", class: "cta contact-toggle"
       
-      -# .box
-      -#   -# %h3 Life
-      -#   %p I'm very passionate about the web work I do but I also have a life outside of work. I have a young son and love spending time with him, his mum and our network of friends and family. I love to travel and I have a passion for Education, Technology and the Creative Arts. Starting a family has brought a lot of my youthful desires for making the world a better place to the surface. 
-      -#   -# %button.cta.highlight.contact 
-      -#   -#   = link_to "Say Hi", "https://twitter.com/mischacolley", target: "_blank"
-
       .box
-        %h3 For Small Business
+        %h3.ec For Small Business
         %p The time I've spent building for the web has given me a diverse set of skills that enable me to help small business owners. Through my business, Exposé Creative, I help businesses interact and transact with their customers by providing knowledge and simple tools to make the web work for them. I pride myself on delivering simple solutions where people come before technology.
 
-        = link_to "Hire EC", "http://www.exposecreative.com", target: "_blank", class: "cta ec highlight"
+        = link_to "Hire EC", "http://www.exposecreative.com", target: "_blank", class: "cta ec"
 
-
-    .intro-text I believe strongly in the enabling power of the web, that being what drew me to it in the first place.
+    .box-full
+      %h3.ec For Myself
+      %p I'm very passionate about the web work I do but I also have a life and interests outside of FED. I have a young son and love spending time with him, his mum and our network of friends and family. I love to Travel and I have a passion for Education, Technology and the Creative Arts. Starting a family has brought a lot of my youthful desires for making the world a better place to the surface. That is something I'd like to more actively be working towards. I believe strongly in the enabling power of the web, that being what drew me to it in the first place.
 
 .section.work
 

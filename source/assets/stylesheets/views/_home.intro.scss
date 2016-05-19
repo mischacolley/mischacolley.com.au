@@ -2,19 +2,19 @@
 
   .intro {
 
-    height: 100vh; 
+    height: 80vh; 
     background: url(image-path('bg-intro.jpg'));
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;
-    background-attachment: fixed;
+    // background-attachment: fixed;
     padding: 0; 
 
     .scroll-down {
       display: block;
       position: absolute;
       z-index: 100;
-      bottom: 45px;
+      bottom: 165px;
       left: 50%;
       margin-left: -16px;
       width: 34px;
