@@ -1,6 +1,7 @@
 // Typography
 $base-font-family: $helvetica;
 $heading-font-family: $base-font-family;
+$body-font-family: "open-sans",sans-serif;
 
 // Font Sizes
 $base-font-size: rem(16);
@@ -20,9 +21,10 @@ $blue: #6699CC;
 $dark-gray: #333;
 $medium-gray: #999;
 $light-gray: #ddd;
+$white: #ffffff;
 
 // Font Colors
-$base-background-color: #fff;
+$base-background-color: $white;
 $base-font-color: $dark-gray;
 $action-color: $blue;
 

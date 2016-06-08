@@ -31,7 +31,7 @@ button,
   }
 
   a {
-    color: #ffffff;
+    color: $white;
   }
 }
 
@@ -54,7 +54,7 @@ button {
 .read-more {
   background: #6699CC;
   border: 1px solid rgba(0, 0, 0, 0.1);
-  color: #ffffff;
+  color: $white;
   text-transform: uppercase;
   padding: 0.6em 0.8em 0.5em 0.8em;
   border-radius: 0.1em;
@@ -64,7 +64,7 @@ button {
 
 .cta.highlight {
   background: #6699CC;
-  color: #ffffff; 
+  color: $white; 
 }
 
 .cta:hover {
@@ -81,7 +81,7 @@ button {
     background-color: #6699CC;
     display: inline-block;
     margin-bottom: 30px;
-    color: #ffffff;
+    color: $white;
     text-transform: uppercase;
 
     &:hover,

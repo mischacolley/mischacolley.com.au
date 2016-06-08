@@ -2,7 +2,7 @@ footer {
   clear: both;
   border-top: 1px solid #ddd;
   padding: 0.5em 2em;
-  background-color: #ffffff;
+  background-color: $white;
   color: #797878;
   width: 100%;
   bottom: 0;
@@ -22,7 +22,7 @@ footer {
 
   position: absolute;
   z-index: 4;
-  color: #ffffff;
+  color: $white;
   width: 65%;
   left: 32.5%;
   margin-left: -14.5%;
@@ -49,7 +49,7 @@ footer {
   }
 
   .timePosted a {
-    color: #ffffff;
+    color: $white;
     font-weight: 500;
   }
 

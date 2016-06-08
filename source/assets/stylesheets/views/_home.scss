@@ -1,7 +1,7 @@
 .index {
 
   p {
-    font-family: "open-sans",sans-serif;
+    font-family: $body-font-family;
     font-weight: 300; 
   }
 
@@ -18,7 +18,7 @@
     padding: 2em 1em;
 
     h2 {
-      color: #ffffff;
+      color: $white;
       font-size: 1.5em;
       text-align: center;
       border: 1px solid;
@@ -52,7 +52,7 @@
 
   .panel {
 
-    background-color: #ffffff;
+    background-color: $white;
     display: inline-block;
 
     h1 {
@@ -63,18 +63,20 @@
     }
 
     .post-meta {
+
       display: inline-block;
       width: 100%;
       background-color: #eee;
       padding: 0.75em;
-    }
 
-    .post-meta ul {
-      float: right;
-    }
+      ul {
+        float: right;
+      }
 
-    .post-meta ul li {
-      display: inline;
+      li {
+        display: inline;
+      }
+
     }
 
     .summary {
@@ -83,9 +85,10 @@
 
   }
 
+  // TODO: Move to buttons or something
   a.read-more {
     padding: 8px 15px;
-    color: #ffffff;
+    color: $white;
     background-color: #6699CC;
     float: right;
   }

@@ -82,10 +82,6 @@
 
   .about-detail {
 
-    // .section-title {
-    //   background-image: url(image-path('section-title-1.jpg'));
-    // }
-
     .about-detail-inner {
       padding: 30px 15px;
       @media (min-width: 768px) { 
@@ -107,7 +103,7 @@
       }
 
       p {
-        background-color: #ffffff;
+        background-color: $white;
         border: 1px solid #eee;
         padding: 1em;
         font-size: 1.27rem;
@@ -136,12 +132,12 @@
       font-weight: 600;
 
       a {
-        color: #ffffff;
+        color: $white;
       }
 
       &:hover {
         color: #6699CC;
-        background-color: #ffffff;
+        background-color: $white;
       }
 
     }
@@ -149,7 +145,7 @@
     .box .cta.ec {
       color: #90132f;
       &:hover {
-        background-color: #ffffff;
+        background-color: $white;
       }
     }
 
@@ -180,7 +176,7 @@
     }
 
     p {
-      background-color: #ffffff;
+      background-color: $white;
       border: 1px solid #eee;
       padding: 1em;
       font-size: 1.27rem;
