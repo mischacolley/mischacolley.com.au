@@ -38,7 +38,7 @@ Edward Harran's presentation was a strange and quirky stream of consciousness th
 
 <small>Edward Harran shares his story into the 'knowmad' movement: an emerging generation that has the capacity to work, learn, move, and play - with anybody, anytime, and anywhere. In his energetic talk, Edward gives us a compelling case to what is coming and highlights what the knowmads may represent: the beginning of the next renaissance.</small>
  
-When I latter tracked down Kundavi, which he talked about in his presentation, I got even more excited. Kundavi is building a global hub for creativity and innovation in Los Cabos, Mexico which is the realisation of some ideas I have had for ages. When finished the center at Los Cabos will be sort of like a super charged version of [The Edge](http://edgeqld.org.au/) and very much like an idea of mine which I have taken to calling an Open Learning Center.
+When I later tracked down Kundavi, which he talked about in his presentation, I got even more excited. Kundavi is building a global hub for creativity and innovation in Los Cabos, Mexico which is the realisation of some ideas I have had for ages. When finished the center at Los Cabos will be sort of like a super charged version of [The Edge](http://edgeqld.org.au/) and very much like an idea of mine which I have taken to calling an Open Learning Center. A thought provoking talk.
 
 ## Jeff Waldman
 
@@ -48,7 +48,7 @@ I just love this idea! How cool to be able to do good fulfilling work with somet
 
 <iframe class="responsive" src="//www.youtube.com/embed/mJIgAWu_MJ8" frameborder="0" allowfullscreen></iframe>
  
-## The After Party? 
+## The After Party and a New Plan
  
 Though I would have liked to stay and talk I left early and skipped the drinks. Trying to be alcohol free I knew I couldn't resist a free drink if I stayed. I got home from the conference early, started telling my wife Sandra about the day and promptly welled up with tears. Not really out of sadness but more out of stress release and some intellectual, spiritual and emotional overload. 
 
@@ -72,12 +72,6 @@ If I had to summaries my feelings its:
 - If all you need is to be Open then uni has landed me flat out of luck there too. 
 - I have barely spent anytime on campus this semester except for my activities as Marketing Director of ITSA and Founder and co-host of the QUT Web Design Meetup which are the only activities that give me Hope and offer the potential for Change.
 
----
-
-Some #TEDxBrisbane comments on Twitter struck a chord with me and it was people talking about how there was a lot of great ideas and energy but considerable less action.  
-
----
- 
 In January 2012 my wife Sandra was planing on starting her own Family Day Care business and I was going to kick it to a new level and final start taking more clients.
  
 When Sandra and I talked about this that night we realised we where both locking ourselves into more responsibility then we actually wanted.
@@ -88,11 +82,11 @@ It was the first thing in ages that I could point to something and say [HELL YES
 
 > I am not going to settle and I am going to stay hungry and stay foolish.  
  
-Though I spent two years living in Germany and traveled Europe I still have a hunger to see more of the world and experience other places. When I returned from Germany intent on studying I was full of purpose and clarity. I was very aware that my chosen course would not address all my personal interests, however I felt confident that it would provide a solid foundation which self-directed study could compliment. I was wrong. The last two years of uni have robed me of my clarity and direction and I want it back.
+Though I spent two years living in Germany and traveling Europe I still have a hunger to see more of the world and experience other places. When I returned from Germany intent on studying I was full of purpose and clarity. I was very aware that my chosen course would not address all my personal interests, however I felt confident that it would provide a solid foundation which self-directed study could compliment. I was wrong. The last two years of Uni have robed me of my clarity and direction and I want it back.
 
----
+An important thing that I have come to realise over the last few months, and that Edward Harran finally helped me “articulate”, is that it is ok to be “undefined”. Its ok to have a lot of interests and as Paul Boag and others points out, there are ways to still be successful as a generalist. It turns out I am not the only one who has a billion interests and cannot focus.
  
-An important thing that I have come to realise over the last few months, and that Edward Harran finally helped me “articulate”, is that it is ok to be “undefined”. Its ok to have a lot of interests and as Paul Boag points out, there are ways to still be successful as a generalist. It turns out I am not the only one who has a billion interests and cannot focus.
+**Edit:** Another thing is it is ok to “fail”. Upon completing this semester at QUT I found I had failed a unit. I have never failed at anything in my life not least of which something I am actually interested in. I see failure as a warning sign that something isn’t right and I'm very glad the Sandra and I read the signals and are setting out to follow whatever it is we need to follow.
  
 **Edit:** Another thing is it is ok to “fail”. Upon completing this semester at QUT I found I had failed a unit. I have never failed at anything in my life not least of which something I am actually interested in. I see failure as a warning sign that something isn’t right and it's time to make a **change**.
  
