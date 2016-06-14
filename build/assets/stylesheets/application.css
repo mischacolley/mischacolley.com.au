@@ -3548,18 +3548,14 @@ header.scrolled {
   padding: 2px 8px;
   border: 1px solid rgba(255, 255, 255, 0.6);
   line-height: inherit;
-  background: #6699cc;
+  background: rgba(0, 0, 0, 0.1);
   border-radius: 0.1em; }
   @media (min-width: 500px) {
     /* line 48, /Users/mischacolley/Sandbox/mischacolley/source/assets/stylesheets/components/header/_header.scss */
     .logo {
       font-size: 2em; } }
-  @media (min-width: 769px) {
-    /* line 48, /Users/mischacolley/Sandbox/mischacolley/source/assets/stylesheets/components/header/_header.scss */
-    .logo {
-      background: rgba(0, 0, 0, 0.1); } }
 
-/* line 69, /Users/mischacolley/Sandbox/mischacolley/source/assets/stylesheets/components/header/_header.scss */
+/* line 65, /Users/mischacolley/Sandbox/mischacolley/source/assets/stylesheets/components/header/_header.scss */
 .description {
   color: rgba(255, 255, 255, 0.9);
   font-size: 13px;
@@ -3567,43 +3563,43 @@ header.scrolled {
   font-weight: 100;
   margin: 0.3em 0 0 0.6em; }
   @media (min-width: 500px) {
-    /* line 69, /Users/mischacolley/Sandbox/mischacolley/source/assets/stylesheets/components/header/_header.scss */
+    /* line 65, /Users/mischacolley/Sandbox/mischacolley/source/assets/stylesheets/components/header/_header.scss */
     .description {
       font-size: 17px; } }
 
-/* line 83, /Users/mischacolley/Sandbox/mischacolley/source/assets/stylesheets/components/header/_header.scss */
+/* line 79, /Users/mischacolley/Sandbox/mischacolley/source/assets/stylesheets/components/header/_header.scss */
 .m,
 .c {
   letter-spacing: -6px; }
 
-/* line 88, /Users/mischacolley/Sandbox/mischacolley/source/assets/stylesheets/components/header/_header.scss */
+/* line 84, /Users/mischacolley/Sandbox/mischacolley/source/assets/stylesheets/components/header/_header.scss */
 .m,
 .ischa,
 .mischa {
   font-weight: 700; }
 
-/* line 93, /Users/mischacolley/Sandbox/mischacolley/source/assets/stylesheets/components/header/_header.scss */
+/* line 89, /Users/mischacolley/Sandbox/mischacolley/source/assets/stylesheets/components/header/_header.scss */
 .c,
 .olley,
 .colley {
   font-weight: 300; }
 
-/* line 98, /Users/mischacolley/Sandbox/mischacolley/source/assets/stylesheets/components/header/_header.scss */
+/* line 94, /Users/mischacolley/Sandbox/mischacolley/source/assets/stylesheets/components/header/_header.scss */
 .logo .ischa {
   padding-right: 0.3em; }
 
-/* line 101, /Users/mischacolley/Sandbox/mischacolley/source/assets/stylesheets/components/header/_header.scss */
+/* line 97, /Users/mischacolley/Sandbox/mischacolley/source/assets/stylesheets/components/header/_header.scss */
 header .btn {
   position: absolute;
   right: 2em;
   top: 2em; }
 
-/* line 106, /Users/mischacolley/Sandbox/mischacolley/source/assets/stylesheets/components/header/_header.scss */
+/* line 102, /Users/mischacolley/Sandbox/mischacolley/source/assets/stylesheets/components/header/_header.scss */
 a.btn-filled {
   background: #ffffff; }
 
 /* Navigation */
-/* line 112, /Users/mischacolley/Sandbox/mischacolley/source/assets/stylesheets/components/header/_header.scss */
+/* line 108, /Users/mischacolley/Sandbox/mischacolley/source/assets/stylesheets/components/header/_header.scss */
 .menu-primary-menu-container {
   visibility: hidden;
   opacity: 0;
@@ -3611,7 +3607,7 @@ a.btn-filled {
   top: 0.8em;
   transition: visibility 0s linear 0.5s,opacity 0.5s linear; }
 
-/* line 120, /Users/mischacolley/Sandbox/mischacolley/source/assets/stylesheets/components/header/_header.scss */
+/* line 116, /Users/mischacolley/Sandbox/mischacolley/source/assets/stylesheets/components/header/_header.scss */
 .menu-toggled .menu-primary-menu-container {
   visibility: visible;
   opacity: 1;
@@ -3623,45 +3619,45 @@ a.btn-filled {
   left: 0;
   background: rgba(102, 153, 204, 0.9);
   z-index: 1; }
-  /* line 131, /Users/mischacolley/Sandbox/mischacolley/source/assets/stylesheets/components/header/_header.scss */
+  /* line 127, /Users/mischacolley/Sandbox/mischacolley/source/assets/stylesheets/components/header/_header.scss */
   .menu-toggled .menu-primary-menu-container .menu {
     display: block;
     text-align: center;
     position: relative;
     top: 50%;
     transform: translateY(-50%); }
-  /* line 138, /Users/mischacolley/Sandbox/mischacolley/source/assets/stylesheets/components/header/_header.scss */
+  /* line 134, /Users/mischacolley/Sandbox/mischacolley/source/assets/stylesheets/components/header/_header.scss */
   .menu-toggled .menu-primary-menu-container ul li {
     float: none;
     font-size: 2.5em; }
 
-/* line 144, /Users/mischacolley/Sandbox/mischacolley/source/assets/stylesheets/components/header/_header.scss */
+/* line 140, /Users/mischacolley/Sandbox/mischacolley/source/assets/stylesheets/components/header/_header.scss */
 body.index.menu-toggled .menu-toggle {
   z-index: 2;
   position: relative; }
-  /* line 147, /Users/mischacolley/Sandbox/mischacolley/source/assets/stylesheets/components/header/_header.scss */
+  /* line 143, /Users/mischacolley/Sandbox/mischacolley/source/assets/stylesheets/components/header/_header.scss */
   body.index.menu-toggled .menu-toggle i {
     top: -2px;
     position: inherit; }
 
-/* line 153, /Users/mischacolley/Sandbox/mischacolley/source/assets/stylesheets/components/header/_header.scss */
+/* line 149, /Users/mischacolley/Sandbox/mischacolley/source/assets/stylesheets/components/header/_header.scss */
 nav ul li {
   list-style: none;
   text-align: center;
   float: left;
   margin: 0 1em; }
 
-/* line 159, /Users/mischacolley/Sandbox/mischacolley/source/assets/stylesheets/components/header/_header.scss */
+/* line 155, /Users/mischacolley/Sandbox/mischacolley/source/assets/stylesheets/components/header/_header.scss */
 nav ul li a {
   color: #ffffff; }
 
-/* line 162, /Users/mischacolley/Sandbox/mischacolley/source/assets/stylesheets/components/header/_header.scss */
+/* line 158, /Users/mischacolley/Sandbox/mischacolley/source/assets/stylesheets/components/header/_header.scss */
 .main-navigation {
   padding: 1em 1em 0.7em 1em;
   display: inline-block;
   width: 100%; }
 
-/* line 176, /Users/mischacolley/Sandbox/mischacolley/source/assets/stylesheets/components/header/_header.scss */
+/* line 172, /Users/mischacolley/Sandbox/mischacolley/source/assets/stylesheets/components/header/_header.scss */
 .blog header,
 .work header,
 .projects header,
@@ -3669,14 +3665,14 @@ nav ul li a {
 .at-panel-two header {
   background: #6699cc; }
   @media (max-width: 400px) {
-    /* line 180, /Users/mischacolley/Sandbox/mischacolley/source/assets/stylesheets/components/header/_header.scss */
+    /* line 176, /Users/mischacolley/Sandbox/mischacolley/source/assets/stylesheets/components/header/_header.scss */
     .blog header .main-navigation,
     .work header .main-navigation,
     .projects header .main-navigation,
     .labs header .main-navigation,
     .at-panel-two header .main-navigation {
       height: 68px; } }
-/* line 187, /Users/mischacolley/Sandbox/mischacolley/source/assets/stylesheets/components/header/_header.scss */
+/* line 183, /Users/mischacolley/Sandbox/mischacolley/source/assets/stylesheets/components/header/_header.scss */
 .blog .logo,
 .work .logo,
 .projects .logo,
@@ -3684,7 +3680,7 @@ nav ul li a {
 .at-panel-two .logo {
   display: inline-block;
   padding-right: 12px; }
-  /* line 192, /Users/mischacolley/Sandbox/mischacolley/source/assets/stylesheets/components/header/_header.scss */
+  /* line 188, /Users/mischacolley/Sandbox/mischacolley/source/assets/stylesheets/components/header/_header.scss */
   .blog .logo .ischa,
   .blog .logo .olley,
   .work .logo .ischa,
@@ -3696,7 +3692,7 @@ nav ul li a {
   .at-panel-two .logo .ischa,
   .at-panel-two .logo .olley {
     display: none; }
-/* line 199, /Users/mischacolley/Sandbox/mischacolley/source/assets/stylesheets/components/header/_header.scss */
+/* line 195, /Users/mischacolley/Sandbox/mischacolley/source/assets/stylesheets/components/header/_header.scss */
 .blog .description,
 .work .description,
 .projects .description,
@@ -3707,21 +3703,21 @@ nav ul li a {
   left: 60px; }
 
 /* Temporary */
-/* line 208, /Users/mischacolley/Sandbox/mischacolley/source/assets/stylesheets/components/header/_header.scss */
+/* line 204, /Users/mischacolley/Sandbox/mischacolley/source/assets/stylesheets/components/header/_header.scss */
 .menu-blog a,
 .menu-work a,
 .menu-projects a {
   text-decoration: line-through;
   opacity: 0.5; }
 
-/* line 216, /Users/mischacolley/Sandbox/mischacolley/source/assets/stylesheets/components/header/_header.scss */
+/* line 212, /Users/mischacolley/Sandbox/mischacolley/source/assets/stylesheets/components/header/_header.scss */
 .btn {
   padding: 0.5em 1em;
   text-align: center;
   border: 1px solid #eeeeee;
   font-size: 3vh; }
 
-/* line 223, /Users/mischacolley/Sandbox/mischacolley/source/assets/stylesheets/components/header/_header.scss */
+/* line 219, /Users/mischacolley/Sandbox/mischacolley/source/assets/stylesheets/components/header/_header.scss */
 .menu-toggle {
   box-sizing: border-box;
   display: inline-block;
@@ -3738,7 +3734,7 @@ nav ul li a {
   font-family: 'Oswald', sans-serif;
   font-weight: 100; }
   @media (min-width: 500px) {
-    /* line 223, /Users/mischacolley/Sandbox/mischacolley/source/assets/stylesheets/components/header/_header.scss */
+    /* line 219, /Users/mischacolley/Sandbox/mischacolley/source/assets/stylesheets/components/header/_header.scss */
     .menu-toggle {
       font-size: 2em;
       background: rgba(0, 0, 0, 0.1); } }
@@ -4149,7 +4145,11 @@ body.labs aside {
   background-size: cover;
   background-position: center center;
   padding: 0; }
-  /* line 12, /Users/mischacolley/Sandbox/mischacolley/source/assets/stylesheets/views/_home.intro.scss */
+  @media (min-width: 1190px) {
+    /* line 3, /Users/mischacolley/Sandbox/mischacolley/source/assets/stylesheets/views/_home.intro.scss */
+    .index .intro {
+      background-position: center -500px; } }
+  /* line 16, /Users/mischacolley/Sandbox/mischacolley/source/assets/stylesheets/views/_home.intro.scss */
   .index .intro .scroll-down {
     display: block;
     position: absolute;
@@ -4165,7 +4165,7 @@ body.labs aside {
     color: rgba(255, 255, 255, 0.7);
     transform: rotate(-90deg);
     animation: bounce 4s 2s infinite; }
-  /* line 29, /Users/mischacolley/Sandbox/mischacolley/source/assets/stylesheets/views/_home.intro.scss */
+  /* line 33, /Users/mischacolley/Sandbox/mischacolley/source/assets/stylesheets/views/_home.intro.scss */
   .index .intro .icon-arrow-left:before {
     content: "\f605"; }
 
