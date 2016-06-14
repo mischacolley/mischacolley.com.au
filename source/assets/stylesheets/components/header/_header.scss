@@ -52,15 +52,11 @@ header.scrolled {
   padding: 2px 8px;
   border: 1px solid rgba(255, 255, 255, 0.6);
   line-height: inherit;
-  background: rgb(102, 153, 204);
+  background: rgba(0, 0, 0, 0.1); 
   border-radius: 0.1em; 
 
   @media (min-width: 500px) { 
     font-size: 2em;
-  }
-
-  @media (min-width: 769px) {
-    background: rgba(0, 0, 0, 0.1); 
   }
 
 }

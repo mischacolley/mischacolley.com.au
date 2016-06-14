@@ -2770,7 +2770,7 @@ main {
     .panel {
       padding: 2em; } }
 
-/* line 45, /Users/mischacolley/Sandbox/mischacolley/source/assets/stylesheets/base/_global.scss */
+/* line 44, /Users/mischacolley/Sandbox/mischacolley/source/assets/stylesheets/base/_global.scss */
 img {
   max-width: 100%; }
 
@@ -2897,7 +2897,7 @@ label {
 input[type="color"], input[type="date"], input[type="datetime"], input[type="datetime-local"], input[type="email"], input[type="month"], input[type="number"], input[type="password"], input[type="search"], input[type="tel"], input[type="text"], input[type="time"], input[type="url"], input[type="week"], textarea,
 select[multiple=multiple],
 textarea {
-  background-color: #fff;
+  background-color: #ffffff;
   border: 1px solid #ddd;
   border-radius: 3px;
   box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.06);
@@ -3269,43 +3269,43 @@ h6 {
   font-family: "brandon-grotesque", helvetica, arial;
   color: #6699CC; }
 
-/* line 26, /Users/mischacolley/Sandbox/mischacolley/source/assets/stylesheets/base/_typography.scss */
+/* line 28, /Users/mischacolley/Sandbox/mischacolley/source/assets/stylesheets/base/_typography.scss */
 .article h1, .article .h1 {
   font-size: 1.625rem; }
-/* line 30, /Users/mischacolley/Sandbox/mischacolley/source/assets/stylesheets/base/_typography.scss */
+/* line 32, /Users/mischacolley/Sandbox/mischacolley/source/assets/stylesheets/base/_typography.scss */
 .article h2, .article .h2 {
   font-size: 1.5rem; }
-/* line 34, /Users/mischacolley/Sandbox/mischacolley/source/assets/stylesheets/base/_typography.scss */
+/* line 36, /Users/mischacolley/Sandbox/mischacolley/source/assets/stylesheets/base/_typography.scss */
 .article h3, .article .h3 {
   font-size: 1.375rem; }
-/* line 38, /Users/mischacolley/Sandbox/mischacolley/source/assets/stylesheets/base/_typography.scss */
+/* line 40, /Users/mischacolley/Sandbox/mischacolley/source/assets/stylesheets/base/_typography.scss */
 .article h4, .article .h4 {
   font-size: 1.25rem; }
-/* line 42, /Users/mischacolley/Sandbox/mischacolley/source/assets/stylesheets/base/_typography.scss */
+/* line 44, /Users/mischacolley/Sandbox/mischacolley/source/assets/stylesheets/base/_typography.scss */
 .article h5, .article .h5 {
   font-size: 1.125rem; }
-/* line 46, /Users/mischacolley/Sandbox/mischacolley/source/assets/stylesheets/base/_typography.scss */
+/* line 48, /Users/mischacolley/Sandbox/mischacolley/source/assets/stylesheets/base/_typography.scss */
 .article h6, .article .h6 {
   font-size: 1rem; }
 
-/* line 52, /Users/mischacolley/Sandbox/mischacolley/source/assets/stylesheets/base/_typography.scss */
+/* line 54, /Users/mischacolley/Sandbox/mischacolley/source/assets/stylesheets/base/_typography.scss */
 p {
   font-size: 1rem;
   margin: 0 0 0.75em; }
 
-/* line 57, /Users/mischacolley/Sandbox/mischacolley/source/assets/stylesheets/base/_typography.scss */
+/* line 59, /Users/mischacolley/Sandbox/mischacolley/source/assets/stylesheets/base/_typography.scss */
 a {
   color: #6699CC;
   text-decoration: none;
   transition: color 0.1s linear; }
-  /* line 62, /Users/mischacolley/Sandbox/mischacolley/source/assets/stylesheets/base/_typography.scss */
+  /* line 64, /Users/mischacolley/Sandbox/mischacolley/source/assets/stylesheets/base/_typography.scss */
   a:active, a:focus, a:hover {
     color: #3973ac; }
-  /* line 68, /Users/mischacolley/Sandbox/mischacolley/source/assets/stylesheets/base/_typography.scss */
+  /* line 70, /Users/mischacolley/Sandbox/mischacolley/source/assets/stylesheets/base/_typography.scss */
   a:active, a:focus {
     outline: none; }
 
-/* line 74, /Users/mischacolley/Sandbox/mischacolley/source/assets/stylesheets/base/_typography.scss */
+/* line 76, /Users/mischacolley/Sandbox/mischacolley/source/assets/stylesheets/base/_typography.scss */
 hr {
   border-bottom: 1px solid #ddd;
   border-left: none;
@@ -3313,7 +3313,7 @@ hr {
   border-top: none;
   margin: 1.5em 0; }
 
-/* line 82, /Users/mischacolley/Sandbox/mischacolley/source/assets/stylesheets/base/_typography.scss */
+/* line 84, /Users/mischacolley/Sandbox/mischacolley/source/assets/stylesheets/base/_typography.scss */
 img,
 picture {
   margin: 0;
@@ -3714,14 +3714,14 @@ nav ul li a {
   text-decoration: line-through;
   opacity: 0.5; }
 
-/* line 215, /Users/mischacolley/Sandbox/mischacolley/source/assets/stylesheets/components/header/_header.scss */
+/* line 216, /Users/mischacolley/Sandbox/mischacolley/source/assets/stylesheets/components/header/_header.scss */
 .btn {
   padding: 0.5em 1em;
   text-align: center;
   border: 1px solid #eeeeee;
   font-size: 3vh; }
 
-/* line 222, /Users/mischacolley/Sandbox/mischacolley/source/assets/stylesheets/components/header/_header.scss */
+/* line 223, /Users/mischacolley/Sandbox/mischacolley/source/assets/stylesheets/components/header/_header.scss */
 .menu-toggle {
   box-sizing: border-box;
   display: inline-block;
@@ -3738,7 +3738,7 @@ nav ul li a {
   font-family: 'Oswald', sans-serif;
   font-weight: 100; }
   @media (min-width: 500px) {
-    /* line 222, /Users/mischacolley/Sandbox/mischacolley/source/assets/stylesheets/components/header/_header.scss */
+    /* line 223, /Users/mischacolley/Sandbox/mischacolley/source/assets/stylesheets/components/header/_header.scss */
     .menu-toggle {
       font-size: 2em;
       background: rgba(0, 0, 0, 0.1); } }
@@ -4033,14 +4033,14 @@ body.labs aside {
   .index .about-summary .about-copy-intro .cta-container {
     float: left;
     margin-right: 2%; }
-/* line 89, /Users/mischacolley/Sandbox/mischacolley/source/assets/stylesheets/views/_home.about.scss */
+/* line 85, /Users/mischacolley/Sandbox/mischacolley/source/assets/stylesheets/views/_home.about.scss */
 .index .about-detail .about-detail-inner {
   padding: 30px 15px; }
   @media (min-width: 768px) {
-    /* line 89, /Users/mischacolley/Sandbox/mischacolley/source/assets/stylesheets/views/_home.about.scss */
+    /* line 85, /Users/mischacolley/Sandbox/mischacolley/source/assets/stylesheets/views/_home.about.scss */
     .index .about-detail .about-detail-inner {
       padding: 60px 30px; } }
-/* line 96, /Users/mischacolley/Sandbox/mischacolley/source/assets/stylesheets/views/_home.about.scss */
+/* line 92, /Users/mischacolley/Sandbox/mischacolley/source/assets/stylesheets/views/_home.about.scss */
 .index .about-detail .box-container {
   max-width: 68em;
   margin-left: auto;
@@ -4051,7 +4051,7 @@ body.labs aside {
     clear: both;
     content: "";
     display: table; }
-/* line 101, /Users/mischacolley/Sandbox/mischacolley/source/assets/stylesheets/views/_home.about.scss */
+/* line 97, /Users/mischacolley/Sandbox/mischacolley/source/assets/stylesheets/views/_home.about.scss */
 .index .about-detail .box {
   float: left;
   display: block;
@@ -4061,7 +4061,7 @@ body.labs aside {
   .index .about-detail .box:last-child {
     margin-right: 0; }
   @media (min-width: 768px) {
-    /* line 101, /Users/mischacolley/Sandbox/mischacolley/source/assets/stylesheets/views/_home.about.scss */
+    /* line 97, /Users/mischacolley/Sandbox/mischacolley/source/assets/stylesheets/views/_home.about.scss */
     .index .about-detail .box {
       float: left;
       display: block;
@@ -4070,45 +4070,45 @@ body.labs aside {
       /* line 89, /Users/mischacolley/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/neat-1.7.2/app/assets/stylesheets/grid/_span-columns.scss */
       .index .about-detail .box:last-child {
         margin-right: 0; } }
-  /* line 109, /Users/mischacolley/Sandbox/mischacolley/source/assets/stylesheets/views/_home.about.scss */
+  /* line 105, /Users/mischacolley/Sandbox/mischacolley/source/assets/stylesheets/views/_home.about.scss */
   .index .about-detail .box p {
     background-color: #ffffff;
     border: 1px solid #eee;
     padding: 1em;
     font-size: 1.27rem; }
     @media (min-width: 768px) {
-      /* line 109, /Users/mischacolley/Sandbox/mischacolley/source/assets/stylesheets/views/_home.about.scss */
+      /* line 105, /Users/mischacolley/Sandbox/mischacolley/source/assets/stylesheets/views/_home.about.scss */
       .index .about-detail .box p {
         font-size: 1.37rem; } }
-  /* line 119, /Users/mischacolley/Sandbox/mischacolley/source/assets/stylesheets/views/_home.about.scss */
+  /* line 115, /Users/mischacolley/Sandbox/mischacolley/source/assets/stylesheets/views/_home.about.scss */
   .index .about-detail .box h3 {
     text-align: center;
     font-size: 1.5rem;
     margin-top: 1rem; }
-  /* line 125, /Users/mischacolley/Sandbox/mischacolley/source/assets/stylesheets/views/_home.about.scss */
+  /* line 121, /Users/mischacolley/Sandbox/mischacolley/source/assets/stylesheets/views/_home.about.scss */
   .index .about-detail .box h3.ec {
     color: #90132f; }
-/* line 131, /Users/mischacolley/Sandbox/mischacolley/source/assets/stylesheets/views/_home.about.scss */
+/* line 127, /Users/mischacolley/Sandbox/mischacolley/source/assets/stylesheets/views/_home.about.scss */
 .index .about-detail .box .cta {
   width: 100%;
   padding: 15px;
   display: block;
   text-align: center;
   font-weight: 600; }
-  /* line 138, /Users/mischacolley/Sandbox/mischacolley/source/assets/stylesheets/views/_home.about.scss */
+  /* line 134, /Users/mischacolley/Sandbox/mischacolley/source/assets/stylesheets/views/_home.about.scss */
   .index .about-detail .box .cta a {
     color: #ffffff; }
-  /* line 142, /Users/mischacolley/Sandbox/mischacolley/source/assets/stylesheets/views/_home.about.scss */
+  /* line 138, /Users/mischacolley/Sandbox/mischacolley/source/assets/stylesheets/views/_home.about.scss */
   .index .about-detail .box .cta:hover {
     color: #6699CC;
     background-color: #ffffff; }
-/* line 149, /Users/mischacolley/Sandbox/mischacolley/source/assets/stylesheets/views/_home.about.scss */
+/* line 145, /Users/mischacolley/Sandbox/mischacolley/source/assets/stylesheets/views/_home.about.scss */
 .index .about-detail .box .cta.ec {
   color: #90132f; }
-  /* line 151, /Users/mischacolley/Sandbox/mischacolley/source/assets/stylesheets/views/_home.about.scss */
+  /* line 147, /Users/mischacolley/Sandbox/mischacolley/source/assets/stylesheets/views/_home.about.scss */
   .index .about-detail .box .cta.ec:hover {
     background-color: #ffffff; }
-/* line 156, /Users/mischacolley/Sandbox/mischacolley/source/assets/stylesheets/views/_home.about.scss */
+/* line 152, /Users/mischacolley/Sandbox/mischacolley/source/assets/stylesheets/views/_home.about.scss */
 .index .about-detail .intro-text {
   text-align: center;
   width: 80%;
@@ -4116,28 +4116,28 @@ body.labs aside {
   font-size: 35px;
   line-height: 45px;
   clear: both; }
-/* line 167, /Users/mischacolley/Sandbox/mischacolley/source/assets/stylesheets/views/_home.about.scss */
+/* line 163, /Users/mischacolley/Sandbox/mischacolley/source/assets/stylesheets/views/_home.about.scss */
 .index .box-full {
   width: 100%;
   margin-left: auto;
   margin-right: auto; }
   @media (min-width: 768px) {
-    /* line 167, /Users/mischacolley/Sandbox/mischacolley/source/assets/stylesheets/views/_home.about.scss */
+    /* line 163, /Users/mischacolley/Sandbox/mischacolley/source/assets/stylesheets/views/_home.about.scss */
     .index .box-full {
       width: 48.82117%; } }
-  /* line 176, /Users/mischacolley/Sandbox/mischacolley/source/assets/stylesheets/views/_home.about.scss */
+  /* line 172, /Users/mischacolley/Sandbox/mischacolley/source/assets/stylesheets/views/_home.about.scss */
   .index .box-full h3 {
     text-align: center;
     font-size: 1.5rem;
     margin-top: 1rem; }
-  /* line 182, /Users/mischacolley/Sandbox/mischacolley/source/assets/stylesheets/views/_home.about.scss */
+  /* line 178, /Users/mischacolley/Sandbox/mischacolley/source/assets/stylesheets/views/_home.about.scss */
   .index .box-full p {
     background-color: #ffffff;
     border: 1px solid #eee;
     padding: 1em;
     font-size: 1.27rem; }
     @media (min-width: 768px) {
-      /* line 182, /Users/mischacolley/Sandbox/mischacolley/source/assets/stylesheets/views/_home.about.scss */
+      /* line 178, /Users/mischacolley/Sandbox/mischacolley/source/assets/stylesheets/views/_home.about.scss */
       .index .box-full p {
         font-size: 1.37rem; } }
 
@@ -4149,7 +4149,7 @@ body.labs aside {
   background-size: cover;
   background-position: center center;
   padding: 0; }
-  /* line 13, /Users/mischacolley/Sandbox/mischacolley/source/assets/stylesheets/views/_home.intro.scss */
+  /* line 12, /Users/mischacolley/Sandbox/mischacolley/source/assets/stylesheets/views/_home.intro.scss */
   .index .intro .scroll-down {
     display: block;
     position: absolute;
@@ -4165,7 +4165,7 @@ body.labs aside {
     color: rgba(255, 255, 255, 0.7);
     transform: rotate(-90deg);
     animation: bounce 4s 2s infinite; }
-  /* line 30, /Users/mischacolley/Sandbox/mischacolley/source/assets/stylesheets/views/_home.intro.scss */
+  /* line 29, /Users/mischacolley/Sandbox/mischacolley/source/assets/stylesheets/views/_home.intro.scss */
   .index .intro .icon-arrow-left:before {
     content: "\f605"; }
 
@@ -4173,13 +4173,13 @@ body.labs aside {
 .latest-posts .section-title {
   background-color: #ffffff !important;
   border-bottom: 1px solid rgba(0, 0, 0, 0.1); }
-  /* line 7, /Users/mischacolley/Sandbox/mischacolley/source/assets/stylesheets/views/_home.latest_posts.scss */
+  /* line 8, /Users/mischacolley/Sandbox/mischacolley/source/assets/stylesheets/views/_home.latest_posts.scss */
   .latest-posts .section-title h2 {
     background: #333 !important; }
 
 /* line 3, /Users/mischacolley/Sandbox/mischacolley/source/assets/stylesheets/views/_home.scss */
 .index p {
-  font-family: "open-sans",sans-serif;
+  font-family: "open-sans", sans-serif;
   font-weight: 300; }
 /* line 10, /Users/mischacolley/Sandbox/mischacolley/source/assets/stylesheets/views/_home.scss */
 .index .section-title {
@@ -4239,16 +4239,16 @@ body.labs aside {
     width: 100%;
     background-color: #eee;
     padding: 0.75em; }
-  /* line 72, /Users/mischacolley/Sandbox/mischacolley/source/assets/stylesheets/views/_home.scss */
-  .index .panel .post-meta ul {
-    float: right; }
-  /* line 76, /Users/mischacolley/Sandbox/mischacolley/source/assets/stylesheets/views/_home.scss */
-  .index .panel .post-meta ul li {
-    display: inline; }
-  /* line 80, /Users/mischacolley/Sandbox/mischacolley/source/assets/stylesheets/views/_home.scss */
+    /* line 72, /Users/mischacolley/Sandbox/mischacolley/source/assets/stylesheets/views/_home.scss */
+    .index .panel .post-meta ul {
+      float: right; }
+    /* line 76, /Users/mischacolley/Sandbox/mischacolley/source/assets/stylesheets/views/_home.scss */
+    .index .panel .post-meta li {
+      display: inline; }
+  /* line 82, /Users/mischacolley/Sandbox/mischacolley/source/assets/stylesheets/views/_home.scss */
   .index .panel .summary {
     margin: 0.75em; }
-/* line 86, /Users/mischacolley/Sandbox/mischacolley/source/assets/stylesheets/views/_home.scss */
+/* line 89, /Users/mischacolley/Sandbox/mischacolley/source/assets/stylesheets/views/_home.scss */
 .index a.read-more {
   padding: 8px 15px;
   color: #ffffff;
