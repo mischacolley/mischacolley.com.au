@@ -1,4 +1,8 @@
 projects:
+- title: "Labs"
+  permalink: "/labs"
+  summary: "Labs is a place for learning and experimenting. "
+  image: "byronweb.jpg"
 - title: "Byron Web"
   permalink: "http://www.meetup.com/byronweb/"
   summary: "Byron Web is a monthly social gathering for web designers and developers in the Byron Bay area to meet and share knowledge with like-minded people."

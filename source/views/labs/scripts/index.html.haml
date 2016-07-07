@@ -1,0 +1,23 @@
+---
+title: Scripts
+---
+
+%section
+
+  %h1 Scripts
+  %p.section-desc a place for learning, experimentation and documenting all things JavaScript
+
+  %section.read
+    %ul
+      %li
+
+  .articles
+    -# - data.read.read.each_with_index do |read, index|
+    - data.read.read.select { |a| a.tags.include? 'scripts' }.each_with_index do |read, index|
+
+      %article.read
+        -# = image_tag "read/#{read.image}", resize_to: '960x378', class: 'thumbnail'
+        .article-inner
+          %h3
+            = link_to "#{read.title}", "#{read.permalink}"
+          %p=read.notes

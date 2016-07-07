@@ -1,0 +1,18 @@
+labs:
+- title: "Code Snippets"
+  permalink: "https://gist.github.com/mischacolley/public"
+  summary: "I use Github Gists for storing code snippets. I usually create them via <a href='https://packagecontrol.io/packages/Gist'>Sublime Gist</a> and view them with <a href='http://www.gistboxapp.com/'>Gist Box</a>. This is a link to my public Gists."
+  # image: "manyyesses.jpg"
+- title: "Scripts"
+  permalink: "labs/scripts"
+  summary: "You will find everything JavaScript here."
+  # image: "byronweb.jpg"
+- title: "Styles"
+  permalink: "labs/styles"
+  summary: "You will find everything Style related here."
+  # image: "manyyesses.jpg"
+- title: "Markup"
+  permalink: "labs/markup"
+  summary: "You will find everything markup related here."
+  # image: "manyyesses.jpg"
+

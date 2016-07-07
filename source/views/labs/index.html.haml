@@ -1,0 +1,17 @@
+---
+title: labs
+---
+
+%section
+
+  %h1 Labs
+  %p.section-desc a place for learning, experimentation and documentation
+
+  .articles
+    - data.labs.labs.each_with_index do |labs, index|
+      %article.labs
+        -# = image_tag "labs/#{labs.image}", resize_to: '960x378', class: 'thumbnail'
+        .article-inner
+          %h3
+            = link_to "#{labs.title}", "#{labs.permalink}"
+          %p=labs.summary

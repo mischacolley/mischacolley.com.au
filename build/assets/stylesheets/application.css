@@ -3357,6 +3357,10 @@ picture {
 .coronis {
   color: #fdd01e; }
 
+/* line 39, /Users/mischacolley/Sites/mischacolley/source/assets/stylesheets/base/_utility.scss */
+.bwired {
+  color: #FA051E; }
+
 /* line 4, /Users/mischacolley/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/neat-1.7.2/app/assets/stylesheets/grid/_box-sizing.scss */
 html {
   box-sizing: border-box; }
