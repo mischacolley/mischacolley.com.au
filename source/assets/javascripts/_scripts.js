@@ -11,16 +11,6 @@ jQuery(document).ready(function($){
     }
 
   });
-  
-  $(window).scroll(function() {
-    
-    if ($(window).scrollTop() > 50) {
-      $('header').addClass('scrolled');
-    } else {
-      $('header').removeClass('scrolled');
-    };
-  });
-
 
   $('.about-summary').waypoint(function(direction) {
     if (direction === 'down') {
