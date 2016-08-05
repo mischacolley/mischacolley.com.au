@@ -1,6 +1,6 @@
 jQuery(document).ready(function($){
 
-  $('.scroll-down, .about-link').click(function(e) {
+  $('.about-link').click(function(e) {
     // Prevent the jump and the #hash from appearing on the address bar
     e.preventDefault();
     // Scroll the window, stop any previous animation, stop on user manual scroll
