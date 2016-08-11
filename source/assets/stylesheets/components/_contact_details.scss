@@ -24,3 +24,13 @@
   }
 
 }
+
+.contact main .contact-details {
+  display: block;
+  z-index: 0;
+
+  .contact-toggle {
+    display: none;
+  }
+
+}

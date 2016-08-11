@@ -27,8 +27,9 @@ jQuery(document).ready(function($){
 
   // Contacts toggle
 
-  $(".contact-toggle").click(function() {
+  $(".contact-toggle").click(function(e) {
     $('.contact-details').toggleClass('show-contacts');
+    e.preventDefault();
   }); 
 
 });
