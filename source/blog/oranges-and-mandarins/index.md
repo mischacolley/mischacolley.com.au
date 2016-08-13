@@ -7,7 +7,7 @@ published: true
 featured_image: true
 ---
 
-In early 2013 I interviewed at [Orange Digital](http://www.orangedigital.com.au) and soon after began working there part time. Sandra and I were recently back from four and a half months in Europe and I was struggling to get myself reengaged with uni. I'd all but decided I was dropping out when we left to go traveling. 
+In early 2013 I interviewed at [Orange Digital](http://www.orangedigital.com.au) and soon after began working there part time. Sandra and I were recently back from four and a half months in Europe and I was struggling to get myself reengaged with uni. I'd all but [decided I was dropping out](/blog/dont-settle-stay-hungry-stay-foolish/) when we left to go traveling. 
 
 In the early days I was freelancing on the side and still working hospitality on the weekends but part-time quickly turned to full-time and then I never enrolled for my next semester. I was having a great time earning and learning in the industry again.. 
 
