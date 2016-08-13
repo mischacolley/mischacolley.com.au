@@ -4,6 +4,7 @@ date: 05/11/2014
 category: Development
 tags: work
 published: true
+featured_image: true
 ---
 
 In early 2013 I interviewed at [Orange Digital](http://www.orangedigital.com.au) and soon after began working there part time. Sandra and I were recently back from four and a half months in Europe and I was struggling to get myself reengaged with uni. I'd all but decided I was dropping out when we left to go traveling. 

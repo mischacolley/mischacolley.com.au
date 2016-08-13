@@ -1,8 +1,10 @@
 ---
 title: Arrival and first few weeks in Germany
 date: 18/07/2007
-category: travel
+category: Personal
+tags: travel
 published: false
+featured_image: true
 ---
 
 # Taipei Thoughts

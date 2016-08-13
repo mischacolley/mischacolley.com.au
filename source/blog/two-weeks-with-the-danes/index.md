@@ -1,8 +1,10 @@
 ---
 title: Two weeks with the Danes
 date: 06/11/2007
-category: travel
+category: Personal
+tags: travel
 published: false
+featured_image: true
 ---
 
 In October Sandra had two weeks off from work and study so along with her sister Meike and Meik's boyfriend Sven we headed to Denmark for two weeks. We rented a nice little house nestled in amongst the windblown Danish sand dunes. 

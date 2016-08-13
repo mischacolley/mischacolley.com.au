@@ -2774,6 +2774,10 @@ main {
 img {
   max-width: 100%; }
 
+/* line 48, /Users/mischacolley/Sites/mischacolley/source/assets/stylesheets/base/_global.scss */
+.thumbnail {
+  border: 1px solid #eee; }
+
 /* line 1, /Users/mischacolley/Sites/mischacolley/source/assets/stylesheets/base/_buttons.scss */
 button, input[type="button"], input[type="reset"], input[type="submit"],
 button,
@@ -2836,25 +2840,29 @@ button {
   border: 1px solid rgba(0, 0, 0, 0.1);
   color: #ffffff;
   text-transform: uppercase;
-  padding: 0.6em 0.8em 0.5em 0.8em;
+  padding: 0.5em 0.8em;
   border-radius: 0.1em;
   margin-top: 0.3rem;
   display: inline-block; }
+  /* line 64, /Users/mischacolley/Sites/mischacolley/source/assets/stylesheets/base/_buttons.scss */
+  .read-more:hover {
+    color: #ffffff;
+    opacity: 0.9; }
 
-/* line 65, /Users/mischacolley/Sites/mischacolley/source/assets/stylesheets/base/_buttons.scss */
+/* line 71, /Users/mischacolley/Sites/mischacolley/source/assets/stylesheets/base/_buttons.scss */
 .cta.highlight {
   background: #6699CC;
   color: #ffffff; }
 
-/* line 70, /Users/mischacolley/Sites/mischacolley/source/assets/stylesheets/base/_buttons.scss */
+/* line 76, /Users/mischacolley/Sites/mischacolley/source/assets/stylesheets/base/_buttons.scss */
 .cta:hover {
   background: none;
   color: #6699CC; }
 
-/* line 75, /Users/mischacolley/Sites/mischacolley/source/assets/stylesheets/base/_buttons.scss */
+/* line 81, /Users/mischacolley/Sites/mischacolley/source/assets/stylesheets/base/_buttons.scss */
 .section-cta {
   text-align: center; }
-  /* line 79, /Users/mischacolley/Sites/mischacolley/source/assets/stylesheets/base/_buttons.scss */
+  /* line 85, /Users/mischacolley/Sites/mischacolley/source/assets/stylesheets/base/_buttons.scss */
   .section-cta a {
     padding: 8px 30px;
     background-color: #6699CC;
@@ -2862,7 +2870,7 @@ button {
     margin-bottom: 30px;
     color: #ffffff;
     text-transform: uppercase; }
-    /* line 87, /Users/mischacolley/Sites/mischacolley/source/assets/stylesheets/base/_buttons.scss */
+    /* line 93, /Users/mischacolley/Sites/mischacolley/source/assets/stylesheets/base/_buttons.scss */
     .section-cta a:hover, .section-cta a:focus {
       background-color: #3973ac;
       color: #fff; }
@@ -3215,7 +3223,7 @@ These styles should, if need be, override global heading/typography styles etc
 .embed-responsive-4by3 {
   padding-bottom: 75%; }
 
-/* line 1, /Users/mischacolley/Sites/mischacolley/source/assets/stylesheets/base/_tags.scss */
+/* line 2, /Users/mischacolley/Sites/mischacolley/source/assets/stylesheets/base/_tags.scss */
 .category a {
   background: #6699CC;
   color: #ffffff;
@@ -3225,23 +3233,30 @@ These styles should, if need be, override global heading/typography styles etc
   float: left;
   margin-right: 1%;
   border-right: 5px solid #6390BD; }
+  /* line 12, /Users/mischacolley/Sites/mischacolley/source/assets/stylesheets/base/_tags.scss */
+  .category a:hover {
+    color: #ffffff;
+    opacity: 0.9; }
 
-/* line 12, /Users/mischacolley/Sites/mischacolley/source/assets/stylesheets/base/_tags.scss */
-.tags a {
-  background: #eee;
-  color: #333;
-  font-size: 0.7rem;
-  padding: 3px 10px 4px 10px;
-  border-bottom: none;
-  border-radius: 3px; }
+/* line 19, /Users/mischacolley/Sites/mischacolley/source/assets/stylesheets/base/_tags.scss */
+.tags {
+  min-height: 1.5em; }
+  /* line 22, /Users/mischacolley/Sites/mischacolley/source/assets/stylesheets/base/_tags.scss */
+  .tags a {
+    background: #eee;
+    color: #333;
+    font-size: 0.7rem;
+    padding: 3px 10px 4px 10px;
+    border-bottom: none;
+    border-radius: 3px; }
 
-/* line 21, /Users/mischacolley/Sites/mischacolley/source/assets/stylesheets/base/_tags.scss */
+/* line 33, /Users/mischacolley/Sites/mischacolley/source/assets/stylesheets/base/_tags.scss */
 .article-meta {
   border-bottom: 1px solid #6699CC;
   padding: 5px 0;
   margin-bottom: 2rem; }
 
-/* line 27, /Users/mischacolley/Sites/mischacolley/source/assets/stylesheets/base/_tags.scss */
+/* line 39, /Users/mischacolley/Sites/mischacolley/source/assets/stylesheets/base/_tags.scss */
 .summary {
   clear: both; }
 
@@ -4054,45 +4069,48 @@ body.contact aside {
         max-width: 50%; } }
   /* line 36, /Users/mischacolley/Sites/mischacolley/source/assets/stylesheets/views/_home.about.scss */
   .index .about-summary .about-copy-intro {
-    margin: 0 auto;
-    width: 80%; }
-  /* line 41, /Users/mischacolley/Sites/mischacolley/source/assets/stylesheets/views/_home.about.scss */
+    margin: 0 auto; }
+    @media (min-width: 960px) {
+      /* line 36, /Users/mischacolley/Sites/mischacolley/source/assets/stylesheets/views/_home.about.scss */
+      .index .about-summary .about-copy-intro {
+        width: 80%; } }
+  /* line 45, /Users/mischacolley/Sites/mischacolley/source/assets/stylesheets/views/_home.about.scss */
   .index .about-summary .about-copy-intro p {
     font-size: 35px;
     line-height: 45px; }
-  /* line 46, /Users/mischacolley/Sites/mischacolley/source/assets/stylesheets/views/_home.about.scss */
+  /* line 50, /Users/mischacolley/Sites/mischacolley/source/assets/stylesheets/views/_home.about.scss */
   .index .about-summary .about-copy-main {
     width: 100%;
     display: inline-block; }
-  /* line 51, /Users/mischacolley/Sites/mischacolley/source/assets/stylesheets/views/_home.about.scss */
+  /* line 55, /Users/mischacolley/Sites/mischacolley/source/assets/stylesheets/views/_home.about.scss */
   .index .about-summary .about-copy-main p {
     font-size: 25px;
     line-height: 35px; }
   @media (min-width: 960px) {
-    /* line 58, /Users/mischacolley/Sites/mischacolley/source/assets/stylesheets/views/_home.about.scss */
+    /* line 62, /Users/mischacolley/Sites/mischacolley/source/assets/stylesheets/views/_home.about.scss */
     .index .about-summary .about-copy-main {
       width: 75%;
       float: right;
       padding: 1em; }
-    /* line 64, /Users/mischacolley/Sites/mischacolley/source/assets/stylesheets/views/_home.about.scss */
+    /* line 68, /Users/mischacolley/Sites/mischacolley/source/assets/stylesheets/views/_home.about.scss */
     .index .about-summary .profile-shot {
       width: 25%;
       float: left;
       padding-left: 0.83333%;
       padding-right: 0.83333%;
       padding: 1em; } }
-  /* line 74, /Users/mischacolley/Sites/mischacolley/source/assets/stylesheets/views/_home.about.scss */
+  /* line 78, /Users/mischacolley/Sites/mischacolley/source/assets/stylesheets/views/_home.about.scss */
   .index .about-summary .about-copy-intro .cta-container {
     float: left;
     margin-right: 2%; }
-/* line 85, /Users/mischacolley/Sites/mischacolley/source/assets/stylesheets/views/_home.about.scss */
+/* line 89, /Users/mischacolley/Sites/mischacolley/source/assets/stylesheets/views/_home.about.scss */
 .index .about-detail .about-detail-inner {
   padding: 30px 15px; }
   @media (min-width: 768px) {
-    /* line 85, /Users/mischacolley/Sites/mischacolley/source/assets/stylesheets/views/_home.about.scss */
+    /* line 89, /Users/mischacolley/Sites/mischacolley/source/assets/stylesheets/views/_home.about.scss */
     .index .about-detail .about-detail-inner {
       padding: 60px 30px; } }
-/* line 92, /Users/mischacolley/Sites/mischacolley/source/assets/stylesheets/views/_home.about.scss */
+/* line 96, /Users/mischacolley/Sites/mischacolley/source/assets/stylesheets/views/_home.about.scss */
 .index .about-detail .box-container {
   max-width: 68em;
   margin-left: auto;
@@ -4103,7 +4121,7 @@ body.contact aside {
     clear: both;
     content: "";
     display: table; }
-/* line 97, /Users/mischacolley/Sites/mischacolley/source/assets/stylesheets/views/_home.about.scss */
+/* line 101, /Users/mischacolley/Sites/mischacolley/source/assets/stylesheets/views/_home.about.scss */
 .index .about-detail .box {
   float: left;
   display: block;
@@ -4113,7 +4131,7 @@ body.contact aside {
   .index .about-detail .box:last-child {
     margin-right: 0; }
   @media (min-width: 768px) {
-    /* line 97, /Users/mischacolley/Sites/mischacolley/source/assets/stylesheets/views/_home.about.scss */
+    /* line 101, /Users/mischacolley/Sites/mischacolley/source/assets/stylesheets/views/_home.about.scss */
     .index .about-detail .box {
       float: left;
       display: block;
@@ -4122,74 +4140,77 @@ body.contact aside {
       /* line 89, /Users/mischacolley/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/neat-1.7.2/app/assets/stylesheets/grid/_span-columns.scss */
       .index .about-detail .box:last-child {
         margin-right: 0; } }
-  /* line 105, /Users/mischacolley/Sites/mischacolley/source/assets/stylesheets/views/_home.about.scss */
+  /* line 109, /Users/mischacolley/Sites/mischacolley/source/assets/stylesheets/views/_home.about.scss */
   .index .about-detail .box p {
     background-color: #ffffff;
     border: 1px solid #eee;
     padding: 1em;
     font-size: 1.27rem; }
     @media (min-width: 768px) {
-      /* line 105, /Users/mischacolley/Sites/mischacolley/source/assets/stylesheets/views/_home.about.scss */
+      /* line 109, /Users/mischacolley/Sites/mischacolley/source/assets/stylesheets/views/_home.about.scss */
       .index .about-detail .box p {
         font-size: 1.37rem; } }
-  /* line 115, /Users/mischacolley/Sites/mischacolley/source/assets/stylesheets/views/_home.about.scss */
+  /* line 119, /Users/mischacolley/Sites/mischacolley/source/assets/stylesheets/views/_home.about.scss */
   .index .about-detail .box h3 {
     text-align: center;
     font-size: 1.5rem;
     margin-top: 1rem; }
-  /* line 121, /Users/mischacolley/Sites/mischacolley/source/assets/stylesheets/views/_home.about.scss */
+  /* line 125, /Users/mischacolley/Sites/mischacolley/source/assets/stylesheets/views/_home.about.scss */
   .index .about-detail .box h3.ec {
     color: #90132f; }
-/* line 127, /Users/mischacolley/Sites/mischacolley/source/assets/stylesheets/views/_home.about.scss */
+/* line 131, /Users/mischacolley/Sites/mischacolley/source/assets/stylesheets/views/_home.about.scss */
 .index .about-detail .box .cta {
   width: 100%;
   padding: 15px;
   display: block;
   text-align: center;
   font-weight: 600; }
-  /* line 134, /Users/mischacolley/Sites/mischacolley/source/assets/stylesheets/views/_home.about.scss */
+  /* line 138, /Users/mischacolley/Sites/mischacolley/source/assets/stylesheets/views/_home.about.scss */
   .index .about-detail .box .cta a {
     color: #ffffff; }
-  /* line 138, /Users/mischacolley/Sites/mischacolley/source/assets/stylesheets/views/_home.about.scss */
+  /* line 142, /Users/mischacolley/Sites/mischacolley/source/assets/stylesheets/views/_home.about.scss */
   .index .about-detail .box .cta:hover {
     color: #6699CC;
     background-color: #ffffff; }
-/* line 145, /Users/mischacolley/Sites/mischacolley/source/assets/stylesheets/views/_home.about.scss */
+/* line 149, /Users/mischacolley/Sites/mischacolley/source/assets/stylesheets/views/_home.about.scss */
 .index .about-detail .box .cta.ec {
   color: #90132f; }
-  /* line 147, /Users/mischacolley/Sites/mischacolley/source/assets/stylesheets/views/_home.about.scss */
+  /* line 151, /Users/mischacolley/Sites/mischacolley/source/assets/stylesheets/views/_home.about.scss */
   .index .about-detail .box .cta.ec:hover {
     background-color: #ffffff; }
-/* line 152, /Users/mischacolley/Sites/mischacolley/source/assets/stylesheets/views/_home.about.scss */
+/* line 156, /Users/mischacolley/Sites/mischacolley/source/assets/stylesheets/views/_home.about.scss */
 .index .about-detail .intro-text {
   text-align: center;
-  width: 80%;
   margin: 0 auto;
   font-size: 35px;
   line-height: 45px;
   clear: both; }
-/* line 163, /Users/mischacolley/Sites/mischacolley/source/assets/stylesheets/views/_home.about.scss */
+  @media (min-width: 960px) {
+    /* line 156, /Users/mischacolley/Sites/mischacolley/source/assets/stylesheets/views/_home.about.scss */
+    .index .about-detail .intro-text {
+      width: 80%; } }
+/* line 171, /Users/mischacolley/Sites/mischacolley/source/assets/stylesheets/views/_home.about.scss */
 .index .box-full {
   width: 100%;
   margin-left: auto;
   margin-right: auto; }
   @media (min-width: 768px) {
-    /* line 163, /Users/mischacolley/Sites/mischacolley/source/assets/stylesheets/views/_home.about.scss */
+    /* line 171, /Users/mischacolley/Sites/mischacolley/source/assets/stylesheets/views/_home.about.scss */
     .index .box-full {
       width: 48.82117%; } }
-  /* line 172, /Users/mischacolley/Sites/mischacolley/source/assets/stylesheets/views/_home.about.scss */
+  /* line 180, /Users/mischacolley/Sites/mischacolley/source/assets/stylesheets/views/_home.about.scss */
   .index .box-full h3 {
     text-align: center;
     font-size: 1.5rem;
     margin-top: 1rem; }
-  /* line 178, /Users/mischacolley/Sites/mischacolley/source/assets/stylesheets/views/_home.about.scss */
+  /* line 186, /Users/mischacolley/Sites/mischacolley/source/assets/stylesheets/views/_home.about.scss */
   .index .box-full p {
     background-color: #ffffff;
     border: 1px solid #eee;
     padding: 1em;
     font-size: 1.27rem; }
     @media (min-width: 768px) {
-      /* line 178, /Users/mischacolley/Sites/mischacolley/source/assets/stylesheets/views/_home.about.scss */
+      /* line 186, /Users/mischacolley/Sites/mischacolley/source/assets/stylesheets/views/_home.about.scss */
       .index .box-full p {
         font-size: 1.37rem; } }
 

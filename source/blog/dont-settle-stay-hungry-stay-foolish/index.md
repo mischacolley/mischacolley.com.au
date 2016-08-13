@@ -1,7 +1,10 @@
 ---
 title: Don't Settle, Stay Hungary, Stay Foolish
 date: 27/05/2012
-published: false
+published: true
+featured_image: true
+category: Personal
+tags: 
 ---
 
 A few days ago I was fortunate enough to be one of the lucky attendees at **TEDxBrisbane 2011**. All the speakers were amazing, some resonated with me more than others, but everyone had something valuable to offer. Even Steve Jobs. 
@@ -14,12 +17,14 @@ As a group we revisited Steve Jobs' Stanford Commencement Speech and to me it se
 
 ## Reflections on TEDx Brisbane 2011
  
-What follows is an account of the presentations I found most engaging, and why, and how I walked into **TEDx** an active full-time student and walked out planning to dropping out of Uni to work on my own projects and set out on a traveling adventure with my wife.
+What follows is a list of the presentations given at the event and some reflections on how they influenced me. 
+
+For instance, I walked into **TEDx** an active full-time student and walked out planning to dropping out of Uni to work on my own projects and set out on a traveling adventure with my wife.
  
 This year the **TEDx Brisbane** theme was:
  
-*And all you need is ...... to Connect*
-                                        to be Open.
+*And all you need is ...... to Connect.*
+                                        To be Open.
                                         Hope.
                                         Change.
  
@@ -37,17 +42,17 @@ When I latter tracked down Kundavi, which he talked about in his presentation, I
 
 ## Jeff Waldman
 
-Jeff Waldman is 29 and uses his self-proclaimed love of "projects" as validation for a constantly shifting job title and set of interests that can best be described as eclectic. His hobbies include writing on dated navigation techniques, falconry, electromagnet experimentation, emulating Ernest Hemingway, studying time travel and carpentry, in that order. He’s been invited to speak at 3 TEDx events, awarded 2 Awesome Foundation Grants and secured $11k in funding via Kickstarter to continue his work in Bolivia. All for the simplistic act of illicitly installing public swings. And yes, he’s as surprised by this as you are.
+*"Jeff Waldman is 29 and uses his self-proclaimed love of "projects" as validation for a constantly shifting job title and set of interests that can best be described as eclectic. His hobbies include writing on dated navigation techniques, falconry, electromagnet experimentation, emulating Ernest Hemingway, studying time travel and carpentry, in that order. He’s been invited to speak at 3 TEDx events, awarded 2 Awesome Foundation Grants and secured $11k in funding via Kickstarter to continue his work in Bolivia. All for the simplistic act of illicitly installing public swings. And yes, he’s as surprised by this as you are."*
+
+I just love this idea! How cool to be able to do good fulfilling work with something as simple as hanging a swing.
 
 <iframe class="responsive" src="//www.youtube.com/embed/mJIgAWu_MJ8" frameborder="0" allowfullscreen></iframe>
  
 ## The After Party? 
  
-Though I would have liked to stay and talk I left early and skipped the drinks, trying to be alcohol free I knew I couldn't resist a free drink if I stayed. I got home from the conference early, started telling my wife Sandra about the day and promptly welled up with tears. Not really out of sadness but more out of intellectual, spiritual and emotional overload. 
+Though I would have liked to stay and talk I left early and skipped the drinks. Trying to be alcohol free I knew I couldn't resist a free drink if I stayed. I got home from the conference early, started telling my wife Sandra about the day and promptly welled up with tears. Not really out of sadness but more out of stress release and some intellectual, spiritual and emotional overload. 
 
-I got home from the conference, SIEV-X
- 
-You see there have been a lot of things weighing on my for a while now.
+I got home from the conference with a lot on my mind. You see there have been a lot of things weighing on my for a while now.
  
 - I’m constantly frustrated with how uninspiring and downright disappointing most of my learning experience at Uni are.
 
@@ -55,13 +60,13 @@ You see there have been a lot of things weighing on my for a while now.
 
 - I want to travel but feel the pressure to establish a career path.
 
-- I love music but really haven't played for ages due to my focus on building a career as a Design, Developer and Entrepreneur.
+- I love music but really haven't played for ages due to my focus on building a career as a Designer, Developer and Entrepreneur.
 
 - My wife is ready to have a baby and I am not yet ready for various reasons related to the above.
  
 So as you can see there is a bit on my mind.
 
-If I had to summeries my feelings its: 
+If I had to summaries my feelings its: 
  
 - If all you need is to Connect then Uni really hasn't been doing it for me.
 - If all you need is to be Open then uni has landed me flat out of luck there too. 
@@ -75,7 +80,7 @@ Some #TEDxBrisbane comments on Twitter struck a chord with me and it was people 
  
 In January 2012 my wife Sandra was planing on starting her own Family Day Care business and I was going to kick it to a new level and final start taking more clients.
  
-When Sandra and I talked about this we realised we where both locking ourselves into more responsibility then we actually wanted.
+When Sandra and I talked about this that night we realised we where both locking ourselves into more responsibility then we actually wanted.
  
 When we both unanimously decided we would change our plans it felt like a giant weight had lifted from my shoulders and I could breathe again.
  
@@ -89,9 +94,9 @@ Though I spent two years living in Germany and traveled Europe I still have a hu
  
 An important thing that I have come to realise over the last few months, and that Edward Harran finally helped me “articulate”, is that it is ok to be “undefined”. Its ok to have a lot of interests and as Paul Boag points out, there are ways to still be successful as a generalist. It turns out I am not the only one who has a billion interests and cannot focus.
  
-**Edit:** Another thing is it is ok to “fail”. Upon completing this semester at QUT I found I had failed a unit. I have never failed at anything in my life not least of which something I am actually interested in. I see failure as a warning sign that something isn’t right.
+**Edit:** Another thing is it is ok to “fail”. Upon completing this semester at QUT I found I had failed a unit. I have never failed at anything in my life not least of which something I am actually interested in. I see failure as a warning sign that something isn’t right and it's time to make a **change**.
  
-TEDx Brisbane 2011 - Speaker List (with videos)
+## TEDx Brisbane 2011 - Speaker List (with videos)
  
 ## Frank Ansell
 Frank Ansell is a traditional indigenous healer (nungkari) and lawman from the Eastern Arrernte desert country in Central Australia. He offers nungkari aboriginal healings and wisdom teachings from aboriginal dreamtime and culture to support individuals, leaders and workplaces to open to altjerre or spirit.

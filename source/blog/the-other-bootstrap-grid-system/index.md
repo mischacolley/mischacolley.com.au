@@ -4,6 +4,7 @@ date: 27/09/2015
 category: Development
 tags: frontend
 published: true
+featured_image: true
 ---
 
 Bootstrap. Some love it. Some hate it. Who cares.
@@ -74,6 +75,6 @@ But this is not inherently a problem with Bootstrap, it's a problem with your im
 
 Grid systems like [Bourbon Neat](http://neat.bourbon.io/) and [Susy](http://susy.oddbird.net/) have long used Mixins to define layout in css rather then with presentational classes. You can easily work with Bootstrap this way too. Just refer to my [pen](http://codepen.io/mischacolley/pen/bdeoop)
 
-## Tiny Bootstraps, for Every Client
+## [Tiny Bootstraps, for Every Client](http://daverupert.com/2013/04/responsive-deliverables/){:target="_blank"}
 
 If you customize Bootstrap enough, eventually you might find that you start to develop a reusable codebase. One that takes the best Bootstrap has to offer but leaves out all the junk.

@@ -74,7 +74,9 @@ title: Test
       .panel
         %h1
           %a{:href => article.url}= article.title
-        = image_tag article.url+"featured_image.jpg", resize_to: '960x378', class: 'thumbnail'
+        - if article.data.featured_image
+          = image_tag article.url+"featured_image.jpg", resize_to: '960x378', class: 'thumbnail'
+        - else
         .summary
           %p= Nokogiri::HTML(article.summary).text
           = link_to "Read more", "#{article.url}", class: 'read-more'

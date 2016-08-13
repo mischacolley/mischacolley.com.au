@@ -6,7 +6,10 @@
         .post-heading
           %h1= current_article.title
         .featured-image
-          = image_tag current_article.url+"featured_image.jpg", resize_to: '960x378', class: 'thumbnail'
+          - if current_article.data.featured_image
+            = image_tag current_article.url+"featured_image.jpg", resize_to: '960x378', class: 'thumbnail'
+          - else
+          
         .article-inner.article
           = yield
       = link_to "Back to Blog", "/blog", :class => 'back-bottom'

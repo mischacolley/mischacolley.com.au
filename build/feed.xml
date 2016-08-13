@@ -14,7 +14,7 @@
     <link rel="alternate" href="http://blog.url.com/blog/the-other-bootstrap-grid-system/"/>
     <id>http://blog.url.com/blog/the-other-bootstrap-grid-system/</id>
     <published>2015-09-27T00:00:00+10:00</published>
-    <updated>2016-02-05T14:00:04+11:00</updated>
+    <updated>2016-08-13T13:58:29+10:00</updated>
     <author>
       <name>Article Author</name>
     </author>
@@ -94,7 +94,7 @@
 
 &lt;p&gt;Grid systems like &lt;a href="http://neat.bourbon.io/"&gt;Bourbon Neat&lt;/a&gt; and &lt;a href="http://susy.oddbird.net/"&gt;Susy&lt;/a&gt; have long used Mixins to define layout in css rather then with presentational classes. You can easily work with Bootstrap this way too. Just refer to my &lt;a href="http://codepen.io/mischacolley/pen/bdeoop"&gt;pen&lt;/a&gt;&lt;/p&gt;
 
-&lt;h2 id="tiny-bootstraps-for-every-client"&gt;Tiny Bootstraps, for Every Client&lt;/h2&gt;
+&lt;h2 id="tiny-bootstraps-for-every-clienthttpdaverupertcom201304responsive-deliverablestargetblank"&gt;&lt;a target="_blank" href="http://daverupert.com/2013/04/responsive-deliverables/"&gt;Tiny Bootstraps, for Every Client&lt;/a&gt;&lt;/h2&gt;
 
 &lt;p&gt;If you customize Bootstrap enough, eventually you might find that you start to develop a reusable codebase. One that takes the best Bootstrap has to offer but leaves out all the junk.&lt;/p&gt;
 </content>
@@ -104,7 +104,7 @@
     <link rel="alternate" href="http://blog.url.com/blog/oranges-and-mandarins/"/>
     <id>http://blog.url.com/blog/oranges-and-mandarins/</id>
     <published>2014-11-05T00:00:00+11:00</published>
-    <updated>2016-02-08T21:49:24+11:00</updated>
+    <updated>2016-08-12T21:46:01+10:00</updated>
     <author>
       <name>Article Author</name>
     </author>
@@ -240,6 +240,193 @@
 &lt;p&gt;I learn't a lot both personally and professional in my time at Orange and ThinkDo. I left in 2014 to spend time with my newborn son Finn and move our family back to Byron.&lt;/p&gt;
 
 &lt;p&gt;Since I left Orange, the ThinkDo teams have continued to do wonderful things like &lt;a href="http://www.sendyourfriendapenisdrawing.com/"&gt;sendyourfriendapenisdrawing.com&lt;/a&gt;.&lt;/p&gt;
+
+</content>
+  </entry>
+  <entry>
+    <title>Don't Settle, Stay Hungary, Stay Foolish</title>
+    <link rel="alternate" href="http://blog.url.com/blog/dont-settle-stay-hungry-stay-foolish/"/>
+    <id>http://blog.url.com/blog/dont-settle-stay-hungry-stay-foolish/</id>
+    <published>2012-05-27T00:00:00+10:00</published>
+    <updated>2016-08-13T14:13:45+10:00</updated>
+    <author>
+      <name>Article Author</name>
+    </author>
+    <content type="html">&lt;p&gt;A few days ago I was fortunate enough to be one of the lucky attendees at &lt;strong&gt;TEDxBrisbane 2011&lt;/strong&gt;. All the speakers were amazing, some resonated with me more than others, but everyone had something valuable to offer. Even Steve Jobs.&lt;/p&gt;
+
+&lt;p&gt;As a group we revisited Steve Jobs' Stanford Commencement Speech and to me it seemed very appropriate to pay tribute to a man who meant a great deal to many of the people in the room. As it did many years ago, his speech once again had a profound impact on me. An impact which continued to grow over the day and into the evening.&lt;/p&gt;
+
+&lt;iframe class="responsive" src="//www.youtube.com/embed/D1R-jKKp3NA" frameborder="0" allowfullscreen=""&gt;&lt;/iframe&gt;
+
+&lt;p&gt;&lt;small&gt; Here we see Steve Jobs delivering his commencement speech to the graduates of Stanford University in 2005. In it he talks about getting fired from Apple in 1985, life &amp;amp; death and a bunch of things between.&lt;/small&gt;&lt;/p&gt;
+
+&lt;h2 id="reflections-on-tedx-brisbane-2011"&gt;Reflections on TEDx Brisbane 2011&lt;/h2&gt;
+
+&lt;p&gt;What follows is a list of the presentations given at the event and some reflections on how they influenced me.&lt;/p&gt;
+
+&lt;p&gt;For instance, I walked into &lt;strong&gt;TEDx&lt;/strong&gt; an active full-time student and walked out planning to dropping out of Uni to work on my own projects and set out on a traveling adventure with my wife.&lt;/p&gt;
+
+&lt;p&gt;This year the &lt;strong&gt;TEDx Brisbane&lt;/strong&gt; theme was:&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;And all you need is …… to Connect.&lt;/em&gt;
+                                        To be Open.
+                                        Hope.
+                                        Change.&lt;/p&gt;
+
+&lt;p&gt;The two presentations that had the most impact on me where &lt;em&gt;Edward Harran&lt;/em&gt; and &lt;em&gt;Jeff Waldman&lt;/em&gt;.&lt;/p&gt;
+
+&lt;h2 id="edward-harran"&gt;Edward Harran&lt;/h2&gt;
+
+&lt;p&gt;Edward Harran's presentation was a strange and quirky stream of consciousness that I found myself smiling at and nodding along to everything he said. He described so many thoughts and feelings that I was having trouble &lt;em&gt;“articulating”&lt;/em&gt; and when I heard him start talking about &lt;em&gt;nomadic knowledge workers&lt;/em&gt;, creative &lt;em&gt;Basecamps&lt;/em&gt; and what he referred to as the &lt;em&gt;"inner Internet"&lt;/em&gt; I got really excited.&lt;/p&gt;
+
+&lt;iframe class="responsive" src="//www.youtube.com/embed/RBXTPPDjvIE" frameborder="0" allowfullscreen=""&gt;&lt;/iframe&gt;
+
+&lt;p&gt;&lt;small&gt;Edward Harran shares his story into the 'knowmad' movement: an emerging generation that has the capacity to work, learn, move, and play - with anybody, anytime, and anywhere. In his energetic talk, Edward gives us a compelling case to what is coming and highlights what the knowmads may represent: the beginning of the next renaissance.&lt;/small&gt;&lt;/p&gt;
+
+&lt;p&gt;When I latter tracked down Kundavi, which he talked about in his presentation, I got even more excited. Kundavi is building a global hub for creativity and innovation in Los Cabos, Mexico which is the realisation of some ideas I have had for ages. When finished the center at Los Cabos will be sort of like a super charged version of &lt;a href="http://edgeqld.org.au/"&gt;The Edge&lt;/a&gt; and very much like an idea of mine which I have taken to calling an Open Learning Center.&lt;/p&gt;
+
+&lt;h2 id="jeff-waldman"&gt;Jeff Waldman&lt;/h2&gt;
+
+&lt;p&gt;&lt;em&gt;"Jeff Waldman is 29 and uses his self-proclaimed love of "projects" as validation for a constantly shifting job title and set of interests that can best be described as eclectic. His hobbies include writing on dated navigation techniques, falconry, electromagnet experimentation, emulating Ernest Hemingway, studying time travel and carpentry, in that order. He’s been invited to speak at 3 TEDx events, awarded 2 Awesome Foundation Grants and secured $11k in funding via Kickstarter to continue his work in Bolivia. All for the simplistic act of illicitly installing public swings. And yes, he’s as surprised by this as you are."&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;I just love this idea! How cool to be able to do good fulfilling work with something as simple as hanging a swing.&lt;/p&gt;
+
+&lt;iframe class="responsive" src="//www.youtube.com/embed/mJIgAWu_MJ8" frameborder="0" allowfullscreen=""&gt;&lt;/iframe&gt;
+
+&lt;h2 id="the-after-party"&gt;The After Party?&lt;/h2&gt;
+
+&lt;p&gt;Though I would have liked to stay and talk I left early and skipped the drinks. Trying to be alcohol free I knew I couldn't resist a free drink if I stayed. I got home from the conference early, started telling my wife Sandra about the day and promptly welled up with tears. Not really out of sadness but more out of stress release and some intellectual, spiritual and emotional overload.&lt;/p&gt;
+
+&lt;p&gt;I got home from the conference with a lot on my mind. You see there have been a lot of things weighing on my for a while now.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;I’m constantly frustrated with how uninspiring and downright disappointing most of my learning experience at Uni are.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;I have so many interests that I find it hard to focus on any one thing. I am never bored but often scatty.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;I want to travel but feel the pressure to establish a career path.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;I love music but really haven't played for ages due to my focus on building a career as a Designer, Developer and Entrepreneur.&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;My wife is ready to have a baby and I am not yet ready for various reasons related to the above.&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;So as you can see there is a bit on my mind.&lt;/p&gt;
+
+&lt;p&gt;If I had to summaries my feelings its:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;If all you need is to Connect then Uni really hasn't been doing it for me.&lt;/li&gt;
+  &lt;li&gt;If all you need is to be Open then uni has landed me flat out of luck there too.&lt;/li&gt;
+  &lt;li&gt;I have barely spent anytime on campus this semester except for my activities as Marketing Director of ITSA and Founder and co-host of the QUT Web Design Meetup which are the only activities that give me Hope and offer the potential for Change.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;Some #TEDxBrisbane comments on Twitter struck a chord with me and it was people talking about how there was a lot of great ideas and energy but considerable less action.&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;In January 2012 my wife Sandra was planing on starting her own Family Day Care business and I was going to kick it to a new level and final start taking more clients.&lt;/p&gt;
+
+&lt;p&gt;When Sandra and I talked about this that night we realised we where both locking ourselves into more responsibility then we actually wanted.&lt;/p&gt;
+
+&lt;p&gt;When we both unanimously decided we would change our plans it felt like a giant weight had lifted from my shoulders and I could breathe again.&lt;/p&gt;
+
+&lt;p&gt;It was the first thing in ages that I could point to something and say &lt;a href="http://bjeanes.com/2011/07/hell-yes"&gt;HELL YES&lt;/a&gt;.&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;I am not going to settle and I am going to stay hungry and stay foolish.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Though I spent two years living in Germany and traveled Europe I still have a hunger to see more of the world and experience other places. When I returned from Germany intent on studying I was full of purpose and clarity. I was very aware that my chosen course would not address all my personal interests, however I felt confident that it would provide a solid foundation which self-directed study could compliment. I was wrong. The last two years of uni have robed me of my clarity and direction and I want it back.&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;An important thing that I have come to realise over the last few months, and that Edward Harran finally helped me “articulate”, is that it is ok to be “undefined”. Its ok to have a lot of interests and as Paul Boag points out, there are ways to still be successful as a generalist. It turns out I am not the only one who has a billion interests and cannot focus.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Edit:&lt;/strong&gt; Another thing is it is ok to “fail”. Upon completing this semester at QUT I found I had failed a unit. I have never failed at anything in my life not least of which something I am actually interested in. I see failure as a warning sign that something isn’t right and it's time to make a &lt;strong&gt;change&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;h2 id="tedx-brisbane-2011---speaker-list-with-videos"&gt;TEDx Brisbane 2011 - Speaker List (with videos)&lt;/h2&gt;
+
+&lt;h2 id="frank-ansell"&gt;Frank Ansell&lt;/h2&gt;
+&lt;p&gt;Frank Ansell is a traditional indigenous healer (nungkari) and lawman from the Eastern Arrernte desert country in Central Australia. He offers nungkari aboriginal healings and wisdom teachings from aboriginal dreamtime and culture to support individuals, leaders and workplaces to open to altjerre or spirit.&lt;/p&gt;
+
+&lt;iframe class="responsive" src="//www.youtube.com/embed/1gsnyNV4kFM" frameborder="0" allowfullscreen=""&gt;&lt;/iframe&gt;
+
+&lt;h2 id="paul-osuch"&gt;Paul Osuch&lt;/h2&gt;
+&lt;p&gt;Paul is the Director of the Anywhere Theater Festival, A brand spanking new Brisbane festival for theatre anywhere but traditional theaters.&lt;/p&gt;
+
+&lt;iframe class="responsive" src="//www.youtube.com/embed/mavk3RPPCmw" frameborder="0" allowfullscreen=""&gt;&lt;/iframe&gt;
+
+&lt;h2 id="hazel-dooney"&gt;Hazel Dooney&lt;/h2&gt;
+&lt;p&gt;In the first half of 2011, the Australian Art Auction Record listed Hazel Dooney among the top 50 most traded artists by value across Australian and New Zealand: at no. 41, she was just below the late Lloyd Rees, and one of very few women – and one of very few artists under 35 – included.&lt;/p&gt;
+
+&lt;iframe class="responsive" src="//www.youtube.com/embed/Y0jEPn7UDxg" frameborder="0" allowfullscreen=""&gt;&lt;/iframe&gt;
+
+&lt;h2 id="gordon-hamilton"&gt;Gordon Hamilton&lt;/h2&gt;
+
+&lt;p&gt;Conductor of The Australian Voices.&lt;/p&gt;
+
+&lt;iframe class="responsive" src="//www.youtube.com/embed/aa2y0QyuWq0" frameborder="0" allowfullscreen=""&gt;&lt;/iframe&gt;
+
+&lt;h2 id="ross-cunnington"&gt;Ross Cunnington&lt;/h2&gt;
+
+&lt;p&gt;Ross is a Principal Research Fellow in the Queensland Brain Institute and School of Psychology, University of Queensland. His major research interests include understanding the brain processes involved in attention and the preparation and readiness for voluntary action, the "mirror neuron" system and how we perceive and understand the actions of others!&lt;/p&gt;
+
+&lt;iframe class="responsive" src="//www.youtube.com/embed/Tz1bzZxEIFw" frameborder="0" allowfullscreen=""&gt;&lt;/iframe&gt;
+
+&lt;h2 id="andrew-bartlett"&gt;Andrew Bartlett&lt;/h2&gt;
+
+&lt;p&gt;Andrew Bartlett has lived his entire life in Brisbane, currently living in the suburb of Windsor. He has enormous experience in the political arena, having represented Queensland as a Democrats Senator in the Australian Parliament from 1997 to 2008.&lt;/p&gt;
+
+&lt;iframe class="responsive" src="//www.youtube.com/embed/k1HRFXCH4o4" frameborder="0" allowfullscreen=""&gt;&lt;/iframe&gt;
+
+&lt;h2 id="andrew-wilford"&gt;Andrew Wilford&lt;/h2&gt;
+
+&lt;p&gt;Wilf is a Director of “Be The Change” Australia, President of Quest 2025 (an organisation illuminating the illusory nature of current economic systems) and a Director of Best Futures (a global research organisation focusing on biosocial system transformation). Wilf also works with the Kokoda Foundation developing National Resource Security Immersive Scenarios examining climate, energy, water, food, ecosystem and economic futures.&lt;/p&gt;
+
+&lt;iframe class="responsive" src="//www.youtube.com/embed/dqa05CGSDrQ" frameborder="0" allowfullscreen=""&gt;&lt;/iframe&gt;
+
+&lt;h2 id="mara-bun"&gt;Mara Bun&lt;/h2&gt;
+&lt;p&gt;"I am currently working on an NGO start-up in the environmental area that has a powerful humanitarian focus also called Green Cross. It is a labor of love and the international founder is one of my heroes Mikhail Gorbachev which makes it all the more inspiring"&lt;/p&gt;
+
+&lt;iframe class="responsive" src="//www.youtube.com/embed/xBsBh6ny3ns" frameborder="0" allowfullscreen=""&gt;&lt;/iframe&gt;
+
+&lt;h2 id="simon-dylan"&gt;Simon Dylan&lt;/h2&gt;
+
+&lt;p&gt;Brisbane-based singer/songwriter Simon Dylan is no ordinary musician. Apart from penning and recording a debut EP of five outstanding tracks, two major life circumstances set Simon apart from the pack. 1. He is an organ transplant recipient 2. He is profoundly deaf&lt;/p&gt;
+
+&lt;iframe class="responsive" src="//www.youtube.com/embed/VpoMqCUPt08" frameborder="0" allowfullscreen=""&gt;&lt;/iframe&gt;
+
+&lt;h2 id="cathy-henkel"&gt;Cathy Henkel&lt;/h2&gt;
+
+&lt;p&gt;Cathy Henkel works as a producer, writer and director of documentaries, online and interactive content. Her Brisbane-based company, Virgo Productions, produced the award-winning cinema version of The Burning Season&lt;/p&gt;
+
+&lt;iframe class="responsive" src="//www.youtube.com/embed/RgSfVjnHO-M" frameborder="0" allowfullscreen=""&gt;&lt;/iframe&gt;
+
+&lt;h2 id="linsey-pollak"&gt;Linsey Pollak&lt;/h2&gt;
+
+&lt;p&gt;His work as Community Music advocate has taken him all over the country for the last 20 years working as Musician-in-residence in communities from Hobart to Broome. He has worked as Musical Director &amp;amp; Composer for Companies such as Doppio Teatro and Dance North and performed with groups too numerous to mention.&lt;/p&gt;
+
+&lt;iframe class="responsive" src="//www.youtube.com/embed/L6RRHQvCIyw" frameborder="0" allowfullscreen=""&gt;&lt;/iframe&gt;
+
+&lt;h2 id="eva-cox"&gt;Eva Cox&lt;/h2&gt;
+
+&lt;p&gt;"Acknowledging that ‘making a difference’ through political activism, is what consistently makes me happy doesn’t deny my pleasures in motherhood and cooking. I get a long term buzz from being a political activist. From student politics in the fifties when we took over another group, through seventies feminism and broader political activism, there were many rushes of pleasure that came from my being responsible for making social changes.&lt;/p&gt;
+
+&lt;iframe class="responsive" src="//www.youtube.com/embed/66YKiGYwoUY" frameborder="0" allowfullscreen=""&gt;&lt;/iframe&gt;
+
+&lt;h2 id="jean-madden"&gt;Jean Madden&lt;/h2&gt;
+&lt;p&gt;In August Jean Madden the designer behind all of this won the INDEX Award 2009: People's Choice Award, the largest design award in the world. She has also won QLD Young Australian of the Year 2010.&lt;/p&gt;
+
+&lt;iframe class="responsive" src="//www.youtube.com/embed/bKraW7dCPE0" frameborder="0" allowfullscreen=""&gt;&lt;/iframe&gt;
 
 </content>
   </entry>

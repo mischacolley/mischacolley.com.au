@@ -35,7 +35,11 @@
 
     .about-copy-intro {
       margin: 0 auto;
-      width: 80%;  
+
+      @media (min-width: 960px) {
+        width: 80%;  
+      }
+
     }
 
     .about-copy-intro p {
@@ -151,11 +155,15 @@
 
     .intro-text {
       text-align: center;
-      width: 80%;
       margin: 0 auto;
       font-size: 35px;
       line-height: 45px;
       clear: both;
+
+      @media (min-width: 960px) {
+        width: 80%;
+      }
+
     }
 
   }
