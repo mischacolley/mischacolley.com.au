@@ -1,10 +1,10 @@
 ---
 title: What to do when Uni is less then you expected
-date: 03/02/2011
-published: false
+date: 03/02/2012
+published: true
 category: Personal
 tags: thoughts
-featured_image: true
+featured_image: false
 ---
 
 I have always been one to expect a lot and my dad always tells me that I shouldn’t waste time on things I can’t change. I’ve always had a bit of a problem with that. 

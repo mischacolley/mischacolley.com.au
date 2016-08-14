@@ -77,6 +77,7 @@ title: Test
         - if article.data.featured_image
           = image_tag article.url+"featured_image.jpg", resize_to: '960x378', class: 'thumbnail'
         - else
+          = image_tag "/assets/svg/featured_image.svg", class: 'thumbnail'
         .summary
           %p= Nokogiri::HTML(article.summary).text
           = link_to "Read more", "#{article.url}", class: 'read-more'

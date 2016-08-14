@@ -20,6 +20,7 @@ per_page: 10
       - if article.data.featured_image
         = image_tag article.url+"featured_image.jpg", resize_to: '960x378', class: 'thumbnail'
       - else
+        = image_tag "/assets/svg/featured_image.svg", class: 'thumbnail'
 
     .article-inner.article
       .article-meta

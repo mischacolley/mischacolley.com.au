@@ -9,6 +9,7 @@
           - if current_article.data.featured_image
             = image_tag current_article.url+"featured_image.jpg", resize_to: '960x378', class: 'thumbnail'
           - else
+            = image_tag "/assets/svg/featured_image.svg", class: 'thumbnail'
           
         .article-inner.article
           = yield
