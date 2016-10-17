@@ -394,6 +394,91 @@ td,
 th {
   padding: 0; }
 
+/* 
+ *  Core Owl Carousel CSS File
+ *  v1.3.3
+ */
+/* clearfix */
+/* line 8, /Users/mischacolley/Sites/mischacolley/source/assets/stylesheets/vendor/owl.carousel.scss */
+.owl-carousel .owl-wrapper:after {
+  content: ".";
+  display: block;
+  clear: both;
+  visibility: hidden;
+  line-height: 0;
+  height: 0; }
+
+/* display none until init */
+/* line 17, /Users/mischacolley/Sites/mischacolley/source/assets/stylesheets/vendor/owl.carousel.scss */
+.owl-carousel {
+  display: none;
+  position: relative;
+  width: 100%;
+  -ms-touch-action: pan-y; }
+
+/* line 23, /Users/mischacolley/Sites/mischacolley/source/assets/stylesheets/vendor/owl.carousel.scss */
+.owl-carousel .owl-wrapper {
+  display: none;
+  position: relative;
+  -webkit-transform: translate3d(0px, 0px, 0px); }
+
+/* line 28, /Users/mischacolley/Sites/mischacolley/source/assets/stylesheets/vendor/owl.carousel.scss */
+.owl-carousel .owl-wrapper-outer {
+  overflow: hidden;
+  position: relative;
+  width: 100%; }
+
+/* line 33, /Users/mischacolley/Sites/mischacolley/source/assets/stylesheets/vendor/owl.carousel.scss */
+.owl-carousel .owl-wrapper-outer.autoHeight {
+  transition: height 500ms ease-in-out; }
+
+/* line 41, /Users/mischacolley/Sites/mischacolley/source/assets/stylesheets/vendor/owl.carousel.scss */
+.owl-carousel .owl-item {
+  float: left; }
+
+/* line 44, /Users/mischacolley/Sites/mischacolley/source/assets/stylesheets/vendor/owl.carousel.scss */
+.owl-controls .owl-page,
+.owl-controls .owl-buttons div {
+  cursor: pointer; }
+
+/* line 48, /Users/mischacolley/Sites/mischacolley/source/assets/stylesheets/vendor/owl.carousel.scss */
+.owl-controls {
+  user-select: none;
+  -webkit-tap-highlight-color: transparent; }
+
+/* mouse grab icon */
+/* line 58, /Users/mischacolley/Sites/mischacolley/source/assets/stylesheets/vendor/owl.carousel.scss */
+.grabbing {
+  cursor: url(grabbing.png) 8 8, move; }
+
+/* fix */
+/* line 63, /Users/mischacolley/Sites/mischacolley/source/assets/stylesheets/vendor/owl.carousel.scss */
+.owl-carousel .owl-wrapper,
+.owl-carousel .owl-item {
+  -webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+  -ms-backface-visibility: hidden;
+  -webkit-transform: translate3d(0, 0, 0);
+  -moz-transform: translate3d(0, 0, 0);
+  -ms-transform: translate3d(0, 0, 0); }
+
+/* line 73, /Users/mischacolley/Sites/mischacolley/source/assets/stylesheets/vendor/owl.carousel.scss */
+.owl-page {
+  width: 13px;
+  height: 13px;
+  background: white;
+  float: left;
+  margin: 0 2px;
+  border-radius: 50%; }
+  /* line 81, /Users/mischacolley/Sites/mischacolley/source/assets/stylesheets/vendor/owl.carousel.scss */
+  .owl-page.active {
+    background: #6699CC; }
+
+/* line 86, /Users/mischacolley/Sites/mischacolley/source/assets/stylesheets/vendor/owl.carousel.scss */
+.owl-pagination {
+  display: inline-block;
+  margin: 1.5em; }
+
 /*!
  *  Font Awesome 4.3.0 by @davegandy - http://fontawesome.io - @fontawesome
  *  License - http://fontawesome.io/license (Font: SIL OFL 1.1, CSS: MIT License)
@@ -3376,6 +3461,10 @@ picture {
 .bwired {
   color: #FA051E; }
 
+/* line 43, /Users/mischacolley/Sites/mischacolley/source/assets/stylesheets/base/_utility.scss */
+.aime-col {
+  color: #0071bc; }
+
 /* line 4, /Users/mischacolley/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/neat-1.7.2/app/assets/stylesheets/grid/_box-sizing.scss */
 html {
   box-sizing: border-box; }
@@ -3440,16 +3529,19 @@ html {
 
 /* line 25, /Users/mischacolley/Sites/mischacolley/source/assets/stylesheets/components/_instagram.scss */
 .work-list {
-  height: 90vh;
   overflow: hidden; }
+  @media (min-width: 768px) {
+    /* line 25, /Users/mischacolley/Sites/mischacolley/source/assets/stylesheets/components/_instagram.scss */
+    .work-list {
+      height: 90vh; } }
 
-/* line 30, /Users/mischacolley/Sites/mischacolley/source/assets/stylesheets/components/_instagram.scss */
+/* line 34, /Users/mischacolley/Sites/mischacolley/source/assets/stylesheets/components/_instagram.scss */
 .instagram,
 .work-list {
   position: relative;
   float: left;
   width: 100%; }
-  /* line 37, /Users/mischacolley/Sites/mischacolley/source/assets/stylesheets/components/_instagram.scss */
+  /* line 41, /Users/mischacolley/Sites/mischacolley/source/assets/stylesheets/components/_instagram.scss */
   .instagram:after,
   .work-list:after {
     position: absolute;
@@ -3460,11 +3552,11 @@ html {
     height: 100%;
     z-index: 2; }
 
-/* line 50, /Users/mischacolley/Sites/mischacolley/source/assets/stylesheets/components/_instagram.scss */
+/* line 54, /Users/mischacolley/Sites/mischacolley/source/assets/stylesheets/components/_instagram.scss */
 .work-list:after {
-  background-color: rgba(0, 0, 0, 0.8); }
+  background-color: rgba(0, 0, 0, 0.6); }
 
-/* line 56, /Users/mischacolley/Sites/mischacolley/source/assets/stylesheets/components/_instagram.scss */
+/* line 60, /Users/mischacolley/Sites/mischacolley/source/assets/stylesheets/components/_instagram.scss */
 .instagram:after {
   background-color: rgba(0, 0, 0, 0.6); }
 
@@ -3770,7 +3862,9 @@ nav ul li a {
     color: #fff;
     border: 1px solid rgba(255, 255, 255, 0.6);
     border-radius: .1em;
-    background: rgba(0, 0, 0, 0.2); }
+    background: rgba(0, 0, 0, 0.2);
+    position: relative;
+    z-index: 2; }
     @media (min-width: 500px) {
       /* line 244, /Users/mischacolley/Sites/mischacolley/source/assets/stylesheets/components/header/_header.scss */
       .js .menu-toggle {
@@ -4327,6 +4421,356 @@ body.contact aside {
 /* line 18, /Users/mischacolley/Sites/mischacolley/source/assets/stylesheets/views/_home.work.scss */
 .work p {
   font-size: 1.3rem; }
+
+/* line 5, /Users/mischacolley/Sites/mischacolley/source/assets/stylesheets/views/_jobapps.scss */
+.aime .section-title {
+  clear: both;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  background-color: #b1353b;
+  padding: 0;
+  padding: 2em 1em; }
+  /* line 15, /Users/mischacolley/Sites/mischacolley/source/assets/stylesheets/views/_jobapps.scss */
+  .aime .section-title h2 {
+    color: #ffffff;
+    font-size: 1.5em;
+    text-align: center;
+    border: 1px solid;
+    display: block;
+    margin: 0 auto;
+    padding: 0.5em;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.1); }
+    @media (min-width: 600px) {
+      /* line 15, /Users/mischacolley/Sites/mischacolley/source/assets/stylesheets/views/_jobapps.scss */
+      .aime .section-title h2 {
+        width: 20%; } }
+/* line 34, /Users/mischacolley/Sites/mischacolley/source/assets/stylesheets/views/_jobapps.scss */
+.aime .intro {
+  height: 80vh;
+  background: url("../images/bg-intro-aime.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  padding: 0; }
+  @media (min-width: 1190px) {
+    /* line 34, /Users/mischacolley/Sites/mischacolley/source/assets/stylesheets/views/_jobapps.scss */
+    .aime .intro {
+      background-position: center -372px; } }
+/* line 49, /Users/mischacolley/Sites/mischacolley/source/assets/stylesheets/views/_jobapps.scss */
+.aime main {
+  padding: 0;
+  margin-top: 0; }
+
+/* line 60, /Users/mischacolley/Sites/mischacolley/source/assets/stylesheets/views/_jobapps.scss */
+.aime .employment-status {
+  font-size: 18px; }
+  @media (max-width: 660px) {
+    /* line 60, /Users/mischacolley/Sites/mischacolley/source/assets/stylesheets/views/_jobapps.scss */
+    .aime .employment-status {
+      float: left;
+      clear: both;
+      margin: 1.5rem 0; } }
+  @media (min-width: 661px) {
+    /* line 60, /Users/mischacolley/Sites/mischacolley/source/assets/stylesheets/views/_jobapps.scss */
+    .aime .employment-status {
+      position: relative;
+      top: 5px; } }
+/* line 76, /Users/mischacolley/Sites/mischacolley/source/assets/stylesheets/views/_jobapps.scss */
+.aime .about-summary {
+  height: auto;
+  float: left;
+  padding: 30px; }
+  /* line 82, /Users/mischacolley/Sites/mischacolley/source/assets/stylesheets/views/_jobapps.scss */
+  .aime .about-summary img {
+    margin: 1em auto;
+    display: block;
+    border-radius: 50%;
+    border: 1px solid #eee; }
+    @media (min-width: 550px) and (max-width: 960px) {
+      /* line 82, /Users/mischacolley/Sites/mischacolley/source/assets/stylesheets/views/_jobapps.scss */
+      .aime .about-summary img {
+        max-width: 50%; } }
+  /* line 93, /Users/mischacolley/Sites/mischacolley/source/assets/stylesheets/views/_jobapps.scss */
+  .aime .about-summary .about-copy-intro {
+    margin: 0 auto; }
+    @media (min-width: 960px) {
+      /* line 93, /Users/mischacolley/Sites/mischacolley/source/assets/stylesheets/views/_jobapps.scss */
+      .aime .about-summary .about-copy-intro {
+        width: 80%; } }
+  /* line 102, /Users/mischacolley/Sites/mischacolley/source/assets/stylesheets/views/_jobapps.scss */
+  .aime .about-summary .about-copy-intro p,
+  .aime .about-summary .about-copy-main p {
+    color: #333; }
+  /* line 107, /Users/mischacolley/Sites/mischacolley/source/assets/stylesheets/views/_jobapps.scss */
+  .aime .about-summary .about-copy-intro p {
+    font-size: 35px;
+    line-height: 45px; }
+  /* line 112, /Users/mischacolley/Sites/mischacolley/source/assets/stylesheets/views/_jobapps.scss */
+  .aime .about-summary .about-copy-main {
+    width: 100%;
+    display: inline-block; }
+  /* line 117, /Users/mischacolley/Sites/mischacolley/source/assets/stylesheets/views/_jobapps.scss */
+  .aime .about-summary .about-copy-main p {
+    font-size: 25px;
+    line-height: 35px; }
+  @media (min-width: 960px) {
+    /* line 124, /Users/mischacolley/Sites/mischacolley/source/assets/stylesheets/views/_jobapps.scss */
+    .aime .about-summary .about-copy-main {
+      width: 75%;
+      float: right;
+      padding: 1em; }
+    /* line 130, /Users/mischacolley/Sites/mischacolley/source/assets/stylesheets/views/_jobapps.scss */
+    .aime .about-summary .profile-shot {
+      width: 25%;
+      float: left;
+      padding-left: 0.83333%;
+      padding-right: 0.83333%;
+      padding: 1em; } }
+  /* line 140, /Users/mischacolley/Sites/mischacolley/source/assets/stylesheets/views/_jobapps.scss */
+  .aime .about-summary .about-copy-intro .cta-container {
+    float: left;
+    margin-right: 2%; }
+/* line 151, /Users/mischacolley/Sites/mischacolley/source/assets/stylesheets/views/_jobapps.scss */
+.aime .about-detail .about-detail-inner {
+  padding: 30px 15px; }
+  @media (min-width: 768px) {
+    /* line 151, /Users/mischacolley/Sites/mischacolley/source/assets/stylesheets/views/_jobapps.scss */
+    .aime .about-detail .about-detail-inner {
+      padding: 60px 30px; } }
+/* line 158, /Users/mischacolley/Sites/mischacolley/source/assets/stylesheets/views/_jobapps.scss */
+.aime .about-detail .box-container {
+  max-width: 68em;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 60px 0; }
+  /* line 20, /Users/mischacolley/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/bourbon-4.2.3/app/assets/stylesheets/addons/_clearfix.scss */
+  .aime .about-detail .box-container::after {
+    clear: both;
+    content: "";
+    display: table; }
+/* line 163, /Users/mischacolley/Sites/mischacolley/source/assets/stylesheets/views/_jobapps.scss */
+.aime .about-detail .box {
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 100%; }
+  /* line 89, /Users/mischacolley/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/neat-1.7.2/app/assets/stylesheets/grid/_span-columns.scss */
+  .aime .about-detail .box:last-child {
+    margin-right: 0; }
+  @media (min-width: 768px) {
+    /* line 163, /Users/mischacolley/Sites/mischacolley/source/assets/stylesheets/views/_jobapps.scss */
+    .aime .about-detail .box {
+      float: left;
+      display: block;
+      margin-right: 2.35765%;
+      width: 48.82117%; }
+      /* line 89, /Users/mischacolley/.rbenv/versions/2.2.2/lib/ruby/gems/2.2.0/gems/neat-1.7.2/app/assets/stylesheets/grid/_span-columns.scss */
+      .aime .about-detail .box:last-child {
+        margin-right: 0; } }
+  /* line 171, /Users/mischacolley/Sites/mischacolley/source/assets/stylesheets/views/_jobapps.scss */
+  .aime .about-detail .box p {
+    background-color: #ffffff;
+    border: 1px solid #eee;
+    padding: 1em;
+    font-size: 1.27rem; }
+    @media (min-width: 768px) {
+      /* line 171, /Users/mischacolley/Sites/mischacolley/source/assets/stylesheets/views/_jobapps.scss */
+      .aime .about-detail .box p {
+        font-size: 1.37rem; } }
+  /* line 181, /Users/mischacolley/Sites/mischacolley/source/assets/stylesheets/views/_jobapps.scss */
+  .aime .about-detail .box h3 {
+    text-align: center;
+    font-size: 1.5rem;
+    margin-top: 1rem; }
+  /* line 187, /Users/mischacolley/Sites/mischacolley/source/assets/stylesheets/views/_jobapps.scss */
+  .aime .about-detail .box h3.ec {
+    color: #90132f; }
+/* line 193, /Users/mischacolley/Sites/mischacolley/source/assets/stylesheets/views/_jobapps.scss */
+.aime .about-detail .box .cta {
+  width: 100%;
+  padding: 15px;
+  display: block;
+  text-align: center;
+  font-weight: 600; }
+  /* line 200, /Users/mischacolley/Sites/mischacolley/source/assets/stylesheets/views/_jobapps.scss */
+  .aime .about-detail .box .cta a {
+    color: #ffffff; }
+  /* line 204, /Users/mischacolley/Sites/mischacolley/source/assets/stylesheets/views/_jobapps.scss */
+  .aime .about-detail .box .cta:hover {
+    color: #6699CC;
+    background-color: #ffffff; }
+/* line 211, /Users/mischacolley/Sites/mischacolley/source/assets/stylesheets/views/_jobapps.scss */
+.aime .about-detail .box .cta.ec {
+  color: #90132f; }
+  /* line 213, /Users/mischacolley/Sites/mischacolley/source/assets/stylesheets/views/_jobapps.scss */
+  .aime .about-detail .box .cta.ec:hover {
+    background-color: #ffffff; }
+/* line 218, /Users/mischacolley/Sites/mischacolley/source/assets/stylesheets/views/_jobapps.scss */
+.aime .about-detail .intro-text {
+  text-align: center;
+  margin: 0 auto;
+  font-size: 35px;
+  line-height: 45px;
+  clear: both; }
+  @media (min-width: 960px) {
+    /* line 218, /Users/mischacolley/Sites/mischacolley/source/assets/stylesheets/views/_jobapps.scss */
+    .aime .about-detail .intro-text {
+      width: 80%; } }
+/* line 233, /Users/mischacolley/Sites/mischacolley/source/assets/stylesheets/views/_jobapps.scss */
+.aime .box-full {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto; }
+  @media (min-width: 768px) {
+    /* line 233, /Users/mischacolley/Sites/mischacolley/source/assets/stylesheets/views/_jobapps.scss */
+    .aime .box-full {
+      width: 48.82117%; } }
+  /* line 242, /Users/mischacolley/Sites/mischacolley/source/assets/stylesheets/views/_jobapps.scss */
+  .aime .box-full h3 {
+    text-align: center;
+    font-size: 1.5rem;
+    margin-top: 1rem; }
+  /* line 248, /Users/mischacolley/Sites/mischacolley/source/assets/stylesheets/views/_jobapps.scss */
+  .aime .box-full p {
+    background-color: #ffffff;
+    border: 1px solid #eee;
+    padding: 1em;
+    font-size: 1.27rem; }
+    @media (min-width: 768px) {
+      /* line 248, /Users/mischacolley/Sites/mischacolley/source/assets/stylesheets/views/_jobapps.scss */
+      .aime .box-full p {
+        font-size: 1.37rem; } }
+/* line 260, /Users/mischacolley/Sites/mischacolley/source/assets/stylesheets/views/_jobapps.scss */
+.aime .section.work {
+  clear: both; }
+
+/* line 272, /Users/mischacolley/Sites/mischacolley/source/assets/stylesheets/views/_jobapps.scss */
+.aime .positions .position-list,
+.aime .positions .activity-list,
+.aime .positions .skills-list,
+.aime .professional-development .position-list,
+.aime .professional-development .activity-list,
+.aime .professional-development .skills-list,
+.aime .skills .position-list,
+.aime .skills .activity-list,
+.aime .skills .skills-list {
+  padding: 1%; }
+  @media (min-width: 768px) {
+    /* line 272, /Users/mischacolley/Sites/mischacolley/source/assets/stylesheets/views/_jobapps.scss */
+    .aime .positions .position-list,
+    .aime .positions .activity-list,
+    .aime .positions .skills-list,
+    .aime .professional-development .position-list,
+    .aime .professional-development .activity-list,
+    .aime .professional-development .skills-list,
+    .aime .skills .position-list,
+    .aime .skills .activity-list,
+    .aime .skills .skills-list {
+      display: flex; } }
+  /* line 281, /Users/mischacolley/Sites/mischacolley/source/assets/stylesheets/views/_jobapps.scss */
+  .aime .positions .position-list article,
+  .aime .positions .position-list li,
+  .aime .positions .activity-list article,
+  .aime .positions .activity-list li,
+  .aime .positions .skills-list article,
+  .aime .positions .skills-list li,
+  .aime .professional-development .position-list article,
+  .aime .professional-development .position-list li,
+  .aime .professional-development .activity-list article,
+  .aime .professional-development .activity-list li,
+  .aime .professional-development .skills-list article,
+  .aime .professional-development .skills-list li,
+  .aime .skills .position-list article,
+  .aime .skills .position-list li,
+  .aime .skills .activity-list article,
+  .aime .skills .activity-list li,
+  .aime .skills .skills-list article,
+  .aime .skills .skills-list li {
+    width: 100%;
+    text-align: center;
+    padding: 1.5em;
+    margin: 1% 0;
+    border: 1px solid #ccc;
+    background: #ffffff; }
+    @media (min-width: 768px) {
+      /* line 281, /Users/mischacolley/Sites/mischacolley/source/assets/stylesheets/views/_jobapps.scss */
+      .aime .positions .position-list article,
+      .aime .positions .position-list li,
+      .aime .positions .activity-list article,
+      .aime .positions .activity-list li,
+      .aime .positions .skills-list article,
+      .aime .positions .skills-list li,
+      .aime .professional-development .position-list article,
+      .aime .professional-development .position-list li,
+      .aime .professional-development .activity-list article,
+      .aime .professional-development .activity-list li,
+      .aime .professional-development .skills-list article,
+      .aime .professional-development .skills-list li,
+      .aime .skills .position-list article,
+      .aime .skills .position-list li,
+      .aime .skills .activity-list article,
+      .aime .skills .activity-list li,
+      .aime .skills .skills-list article,
+      .aime .skills .skills-list li {
+        margin: 1%;
+        flex-basis: 33.33%;
+        float: left; } }
+/* line 300, /Users/mischacolley/Sites/mischacolley/source/assets/stylesheets/views/_jobapps.scss */
+.aime .positions .skills-list,
+.aime .professional-development .skills-list,
+.aime .skills .skills-list {
+  flex-wrap: wrap; }
+/* line 308, /Users/mischacolley/Sites/mischacolley/source/assets/stylesheets/views/_jobapps.scss */
+.aime .skill {
+  display: block;
+  margin-bottom: 0.5em; }
+/* line 313, /Users/mischacolley/Sites/mischacolley/source/assets/stylesheets/views/_jobapps.scss */
+.aime .skill-point {
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  display: inline-block;
+  margin: 0 2%;
+  background: #6699CC; }
+/* line 322, /Users/mischacolley/Sites/mischacolley/source/assets/stylesheets/views/_jobapps.scss */
+.aime ul.skills-list li {
+  width: 50%; }
+  @media (min-width: 768px) {
+    /* line 322, /Users/mischacolley/Sites/mischacolley/source/assets/stylesheets/views/_jobapps.scss */
+    .aime ul.skills-list li {
+      flex-basis: 14.66% !important; } }
+/* line 329, /Users/mischacolley/Sites/mischacolley/source/assets/stylesheets/views/_jobapps.scss */
+.aime .twitter-feed p {
+  font-size: 19px; }
+
+/* line 335, /Users/mischacolley/Sites/mischacolley/source/assets/stylesheets/views/_jobapps.scss */
+.owl-item a {
+  color: #ffffff;
+  font-weight: bold;
+  text-decoration: underline; }
+
+/* line 341, /Users/mischacolley/Sites/mischacolley/source/assets/stylesheets/views/_jobapps.scss */
+.progressbar-text {
+  display: none; }
+
+/* line 345, /Users/mischacolley/Sites/mischacolley/source/assets/stylesheets/views/_jobapps.scss */
+.leadtext {
+  font-size: 25px;
+  line-height: 35px;
+  padding: 1em 2em 0 2em;
+  text-align: center; }
+  @media (min-width: 768px) {
+    /* line 345, /Users/mischacolley/Sites/mischacolley/source/assets/stylesheets/views/_jobapps.scss */
+    .leadtext {
+      font-size: 30px;
+      padding: 1.5em 3em 0 3em; } }
+  @media (min-width: 960px) {
+    /* line 345, /Users/mischacolley/Sites/mischacolley/source/assets/stylesheets/views/_jobapps.scss */
+    .leadtext {
+      font-size: 35px;
+      padding: 1.5em 5em 0 5em; } }
 
 /* line 3, /Users/mischacolley/Sites/mischacolley/source/assets/stylesheets/views/_labs.scss */
 .labs .articles {

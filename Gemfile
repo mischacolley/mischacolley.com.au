@@ -20,3 +20,4 @@ gem 'middleman-simple-thumbnailer'
 gem "neat"
 gem "nokogiri"
 gem "middleman-syntax"
+gem 'middleman-robots'

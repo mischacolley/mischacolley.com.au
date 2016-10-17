@@ -1,0 +1,66 @@
+work:
+- title: "Surfing Australia"
+  summary: "I spent 11 months at Brand New Media (BNM) working as the Front-End Developer on this Ruby on Rails project and a number of other related web properties. My focus was on responsive design, performance and authoring modular interfaces with Haml, Sass and CoffeeScript. This was a remote position on a distributed team requiring collaboration via Git, self direction and a proactive approach to task completion."
+  permalink: "https://www.surfingaustralia.com"
+  image: "surfingaustralia.jpg"
+
+- title: "The Barrel"
+  summary: "Another BNM project. This was an internal data analysis system we built for Surfing Australia. I built a UI for them to be able to display and filter data captured by their systems in tables and graphs. You obviously can't see a live example but I've linked to some screenshots of the interfaces."
+  permalink: "/assets/images/work/the-barrel.jpg"
+  image: "learn_to_surf.jpg"
+
+- title: "SurfCoach"
+  summary: "Another BNM project. Pretty much the same tech stack as the main Surfing Australia site but I learn't a few lessons on that project that I applied in this one. These sites were both built on <a href='http://getbootstrap.com/' target='_blank'>Bootstrap </a> but the latter has a much clearer separation of styles and markup making it easier to maintain. I wrote about this issue <a href='/blog/the-other-bootstrap-grid-system/' target='_blank'>here</a>."
+  permalink: "https://www.surfcoach.com/"
+  image: "surfcoach.jpg"
+
+- title: "IHPA"
+  summary: "This was a Drupal 7 build I completed as a freelancer. Though I was hired as a Front-End Developer I coded the theme and also did all the Drupal CMS integration as well. Being a Government site this project had some accessibility requirements (WCAG 2.0) that I had to meet."
+  permalink: "https://www.ihpa.gov.au/"
+  image: "ihpa.jpg"
+
+- title: "More Gold Coast"
+  summary: "I spent nearly 2 years at <a href='http://www.orangedigital.com.au/' target='_blank'>Orange Digital</a> and this was one of the last projects I completed while there. I was the lead developer on this project and though code wise I was mostly responsible for the Front-End I also oversaw contractors and other team members to bring this project to completion. Probably one of the more complex sites I've ever built on WordPress."
+  permalink: "http://www.moregoldcoast.com.au/"
+  image: "more_gold_coast.jpg"
+
+- title: "Coronis"
+  summary: "While at Coronis I was responsible for leading development and maintenance on a number of different web properties including this, their main site. I was one of the original developers of this site while at Orange. Most of the work I did on this site while with Coronis was maintance and I also did a lot of work around marketing automation with Facebook ads."
+  image: "coronis.jpg"
+
+- title: "Willow Magazine"
+  summary: "This is a recent probono project I did for my wife and her two business partners. Built on WordPress. A lot of the work on this project was consulting on what and how to use tech to meet their business goals."
+  permalink: "http://willowmagazine.org/"
+  image: "willow.jpg"
+
+
+- title: "Learn to Surf"
+  image: "learn_to_surf.jpg"
+
+- title: "Bass"
+  image: "bass.jpg"
+- title: "Billards"
+  image: "billards.jpg"
+- title: "Boewillams"
+  image: "boewilliams.jpg"
+- title: "Car Search"
+  image: "car_search.jpg"
+
+
+- title: "Mitchel Equipment"
+  image: "mitchel_equipment.jpg"
+- title: "More Gold Coast"
+  image: "more_gold_coast.jpg"
+- title: "Peachey Civil"
+  image: "peachey_civil.jpg"
+- title: "Peachey Heavy haulage"
+  image: "peachey_heavy_haulage.jpg"
+- title: "Peachey Group"
+  image: "peachey_group.jpg"
+- title: "Peachey Plant Hire"
+  image: "peachey_plant_hire.jpg"
+- title: "Peachey Workshops"
+  image: "peachey_workshops.jpg"
+
+
+  

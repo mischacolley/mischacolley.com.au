@@ -1,0 +1,360 @@
+
+// Intro section
+.aime {
+
+  .section-title  {
+
+    clear: both;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    background-color: #b1353b;
+    padding: 0;
+    padding: 2em 1em;
+
+    h2 {
+      color: $white;
+      font-size: 1.5em;
+      text-align: center;
+      border: 1px solid;
+      display: block;
+      margin: 0 auto;
+      padding: 0.5em;
+      width: 100%;
+      background: rgba(0, 0, 0, 0.1);
+
+      @media (min-width: 600px) { 
+        width: 20%;
+      }
+
+    }
+
+  }
+
+  .intro {
+
+    height: 80vh; 
+    background: url(image-path('bg-intro-aime.jpg'));
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;  
+    padding: 0; 
+
+    @media (min-width: 1190px) { 
+      background-position: center -372px;
+    }
+
+  }
+
+  main {
+    padding: 0;
+    margin-top: 0;
+  }
+
+}
+
+// About section
+
+.aime {
+
+  .employment-status {
+    font-size: 18px;
+
+    @media (max-width: 660px) {
+      float: left;
+      clear: both;
+      margin: 1.5rem 0;
+    }
+
+    @media (min-width: 661px) { 
+      position: relative;
+      top: 5px;
+    }
+    
+  }
+
+  .about-summary {
+
+    height: auto;
+    float: left; 
+    padding: 30px;
+
+    img {
+      margin: 1em auto;
+      display: block; 
+      border-radius: 50%;
+      border: 1px solid #eee;
+      @media (min-width: 550px) and (max-width: 960px) { 
+        max-width: 50%;
+      }
+
+    }
+
+    .about-copy-intro {
+      margin: 0 auto;
+
+      @media (min-width: 960px) {
+        width: 80%;  
+      }
+
+    }
+
+    .about-copy-intro p,
+    .about-copy-main p {
+      color: #333;
+    }
+
+    .about-copy-intro p {
+      font-size: 35px;
+      line-height: 45px; 
+    }
+
+    .about-copy-main {
+      width: 100%;
+      display: inline-block;
+    }
+
+    .about-copy-main p {
+      font-size: 25px;
+      line-height: 35px;
+    }
+
+    @media (min-width: 960px) {
+
+      .about-copy-main {
+        width: 75%;
+        float: right;
+        padding: 1em; 
+      }
+
+      .profile-shot {
+        width: 25%;
+        float: left;
+        padding-left: 0.83333%;
+        padding-right: 0.83333%;
+        padding: 1em; 
+      } 
+
+    }
+
+    .about-copy-intro .cta-container {
+      float: left;
+      margin-right: 2%;
+    }  
+
+  }
+
+  // About Detail
+
+  .about-detail {
+
+    .about-detail-inner {
+      padding: 30px 15px;
+      @media (min-width: 768px) { 
+        padding: 60px 30px;
+      }
+    }
+
+    .box-container {
+      @include outer-container;
+      padding: 60px 0;
+    }
+
+    .box {
+
+      @include span-columns(12);
+
+      @media (min-width: 768px) {
+        @include span-columns(6);
+      }
+
+      p {
+        background-color: $white;
+        border: 1px solid #eee;
+        padding: 1em;
+        font-size: 1.27rem;
+        @media (min-width: 768px) {
+          font-size: 1.37rem;
+        }
+      }
+
+      h3 {
+        text-align: center;
+        font-size: 1.5rem;
+        margin-top: 1rem;
+      }
+
+      h3.ec {
+        color: #90132f;
+      }
+
+    }
+
+    .box .cta {
+      width: 100%;
+      padding: 15px;
+      display: block;
+      text-align: center;
+      font-weight: 600;
+
+      a {
+        color: $white;
+      }
+
+      &:hover {
+        color: #6699CC;
+        background-color: $white;
+      }
+
+    }
+
+    .box .cta.ec {
+      color: #90132f;
+      &:hover {
+        background-color: $white;
+      }
+    }
+
+    .intro-text {
+      text-align: center;
+      margin: 0 auto;
+      font-size: 35px;
+      line-height: 45px;
+      clear: both;
+
+      @media (min-width: 960px) {
+        width: 80%;
+      }
+
+    }
+
+  }
+
+  .box-full {
+
+    width: 100%;
+    @media (min-width: 768px) {
+      width: 48.82117%;
+    }
+    margin-left: auto;
+    margin-right: auto;
+
+    h3 {
+      text-align: center;
+      font-size: 1.5rem;
+      margin-top: 1rem;
+    }
+
+    p {
+      background-color: $white;
+      border: 1px solid #eee;
+      padding: 1em;
+      font-size: 1.27rem;
+      @media (min-width: 768px) {
+        font-size: 1.37rem;
+      }
+    }
+    
+  }
+
+  .section.work {
+      clear: both;
+  }
+
+}
+
+.aime {
+
+  .positions,
+  .professional-development,
+  .skills {
+
+    .position-list,
+    .activity-list,
+    .skills-list {
+
+      @media (min-width: 768px) {
+        display: flex;
+      }
+      padding: 1%;
+
+      article,
+      li {
+        width: 100%;
+        text-align: center;
+        padding: 1.5em;
+        margin: 1% 0;
+        border: 1px solid #ccc;
+        background: #ffffff;
+
+        @media (min-width: 768px) {
+          margin: 1%;
+          flex-basis: 33.33%;
+          float: left;
+        }
+
+      }
+
+    }
+
+    .skills-list {
+      flex-wrap: wrap;
+    }
+
+  }
+
+  // Skills
+
+  .skill {
+    display: block;
+    margin-bottom: 0.5em;
+  }
+
+  .skill-point {
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    display: inline-block;
+    margin: 0 2%;
+    background: #6699CC;
+  }
+
+  ul.skills-list li {
+    width: 50%;
+    @media (min-width: 768px) {
+      flex-basis: 14.66% !important;
+    }
+  }
+
+  .twitter-feed p {
+    font-size: 19px;
+  }
+
+}
+
+.owl-item a {
+  color: #ffffff;
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+.progressbar-text {
+  display: none;
+}
+
+.leadtext {
+  font-size: 25px;
+  line-height: 35px;
+  padding: 1em 2em 0 2em;
+  text-align: center;
+
+  @media (min-width: 768px) { 
+    font-size: 30px;
+    padding: 1.5em 3em 0 3em;
+  }
+
+  @media (min-width: 960px) {
+    font-size: 35px;
+    padding: 1.5em 5em 0 5em;
+  }
+}

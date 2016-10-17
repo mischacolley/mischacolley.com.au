@@ -23,8 +23,12 @@
 }
 
 .work-list {
-  height: 90vh;
   overflow: hidden;
+  
+  @media (min-width: 768px) { 
+    height: 90vh;
+  }
+
 }
 
 .instagram,
@@ -48,7 +52,7 @@
 
 .work-list {
   &:after {
-    background-color: rgba(0,0,0,0.8);
+    background-color: rgba(0,0,0,0.6);
   }
 }
 

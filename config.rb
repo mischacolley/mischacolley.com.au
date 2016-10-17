@@ -21,6 +21,18 @@ activate :blog do |blog|
 
 end
 
+## Robots
+
+configure :build do
+  activate :robots,
+    :rules => [
+      {
+        :user_agent => '*',
+        :disallow =>  %w(/aime),
+      }
+    ]
+end
+
 activate :directory_indexes
 activate :relative_assets
 activate :meta_tags
@@ -70,6 +82,7 @@ page "/feed.xml", :layout => false
 page "blog/*", :layout => :blog
 page "projects/*/*", :layout => :projects
 page "work/*/*", :layout => :work
+page "aime", :layout => :jobapp
 
 # Custom Helpers
 
