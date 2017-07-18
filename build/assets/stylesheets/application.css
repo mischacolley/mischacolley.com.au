@@ -4319,7 +4319,7 @@ body.contact aside {
   @media (min-width: 1190px) {
     /* line 3, /Users/mischacolley/Sites/mischacolley/source/assets/stylesheets/views/_home.intro.scss */
     .index .intro {
-      background-position: center -500px; } }
+      background-position: center -372px; } }
 
 /* line 3, /Users/mischacolley/Sites/mischacolley/source/assets/stylesheets/views/_home.latest_posts.scss */
 .latest-posts .section-title {
@@ -4449,7 +4449,7 @@ body.contact aside {
 /* line 34, /Users/mischacolley/Sites/mischacolley/source/assets/stylesheets/views/_jobapps.scss */
 .aime .intro {
   height: 80vh;
-  background: url("../images/bg-intro-aime.jpg");
+  background: url("../images/bg-intro.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
