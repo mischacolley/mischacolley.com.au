@@ -5,6 +5,8 @@ import get from 'lodash/get'
 import Helmet from 'react-helmet'
 
 import Bio from '../components/Bio'
+import Intro from '../components/Intro'
+import WhatIDo from '../components/WhatIDo'
 import Layout from '../components/Layout'
 import { rhythm } from '../utils/typography'
 
@@ -26,6 +28,8 @@ class BlogIndex extends React.Component {
           title={siteTitle}
         />
         <Bio />
+        <Intro />
+        <WhatIDo />
         <div className="latest-posts">
           {posts.map(({ node }) => {
             const title = get(node, 'frontmatter.title') || node.fields.slug

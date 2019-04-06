@@ -27,10 +27,7 @@ class Bio extends React.Component {
           }}
         />
         <p>
-          Written by <strong>Mischa Colley</strong> who lives and works in Byron Bay, Australia.{' '}
-          <a href="https://twitter.com/mischacolley">
-            You should follow him on Twitter
-          </a>
+          Written by <strong>Mischa Colley</strong> who lives and works in Byron Bay, Australia.
         </p>
       </div>
     )
