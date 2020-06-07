@@ -42,6 +42,14 @@ module.exports = {
         ],
       },
     },
+    {
+      resolve: "gatsby-source-goodreads",
+      options: {
+        developerKey: "2K5NTIt6vqguFzaswiuR5w",
+        goodReadsUserId: "4755105-mischa",
+        userShelf: "read" //optional
+      }
+    },
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     {

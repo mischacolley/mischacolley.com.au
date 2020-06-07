@@ -19,6 +19,7 @@ class BlogIndex extends React.Component {
     )
     const posts = get(this, 'props.data.allMarkdownRemark.edges')
     const instagram = get(this, 'props.data.allInstaNode.edges')
+    const goodreads = get(this, 'props.data.allGoodreadsShelf.edges')
 
     return (
       <Layout location={this.props.location} title={siteTitle}>
