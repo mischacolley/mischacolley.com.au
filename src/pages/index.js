@@ -8,7 +8,7 @@ export default function Home() {
   return (
     <Layout>
       <SEO 
-        title="Mischa Colley | Creative Problem Solver" 
+        title="Mischa Colley" 
         description="Believing in the enabling power of the web and digital technologies I lead teams in tech, design & code to make the world a better place."
       />
       <div css={css`${tw`container mx-auto`}`}>
@@ -22,7 +22,7 @@ export default function Home() {
 
         <article css={css`${tw`px-8 sm:px-16 md:px-24 lg:px-48`}`}>
           <p css={css`${tw`text-3xl mb-5`}`}>
-            Hi, I'm <strong>Mischa Colley</strong>. Believing in the enabling power of the web and digital technologies I lead teams in tech, design & code to make the world a better place. 
+            Hi, I'm <strong>Mischa Colley</strong>. Believing in the enabling power of the web and digital technologies I lead teams in tech, design & code to make the world a better place. <a href="mailto:me@mischacolley.com.au" css={css`${tw`underline text-blue-500`}`}>Get in touch</a>.
           </p>
           <p css={css`${tw`text-xl mb-5`}`}>
             For me that work starts with being human-centred in everything I do. In my roles I serve as a bridge between atoms and bits and with my background as a front-end developer I’m able to connect the dots between disciplines and individuals and enable the teams I lead to deliver their best work.
