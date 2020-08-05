@@ -5,6 +5,10 @@ import Layout from "../components/layout"
 import SEO from "../components/seo"
 import Header from "../components/header"
 
+const paragraph = css`
+  ${tw`text-lg mb-5`}
+`
+
 export default function Home({ data }) {
   return (
     <Layout>
@@ -14,37 +18,32 @@ export default function Home({ data }) {
         description="Believing in the enabling power of the web & digital tech I specialise in frontend design & lead teams in tech/design/code to make the world a better place."
       />
 
-      <div css={css`${tw`container mx-auto`}`}>
+      <Header />
 
-        <Header />
+      <section>
 
-        <section>
+        <h1 css={css`${tw`font-sans font-bold text-3xl mb-5`}`}>
+          Posts
+        </h1>
 
-          <h1>
-            Posts
-          </h1>
+        {data.allMarkdownRemark.edges.map(({ node }) => (
+          <article key={node.id} >
+            <Link
+              to={node.fields.slug}
+            >
+              <h1 css={css`${tw`font-sans font-bold text-2xl mb-1`}`}>
+                {node.frontmatter.title}{" "}
+              </h1>
+              <div css={css`${tw`font-sans text-base mb-3`}`}>
+                {node.frontmatter.date}
+              </div>
+              <p css={[paragraph]}>{node.excerpt}</p>
+            </Link>
+          </article>
+        ))}
 
-          <h4>{data.allMarkdownRemark.totalCount} Posts</h4>
+      </section>
 
-          {data.allMarkdownRemark.edges.map(({ node }) => (
-            <div key={node.id}>
-              <Link
-                to={node.fields.slug}
-              >
-                <h3>
-                  {node.frontmatter.title}{" "}
-                  <span>
-                    — {node.frontmatter.date}
-                  </span>
-                </h3>
-                <p>{node.excerpt}</p>
-              </Link>
-            </div>
-          ))}
-
-        </section>
-
-      </div>
     </Layout>
   )
 }

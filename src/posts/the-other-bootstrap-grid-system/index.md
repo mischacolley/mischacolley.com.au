@@ -13,8 +13,10 @@ There have been far too many posts written about the pros and cons of Bootstrap.
 
 There are a few tutorials out there but no easy Sass reference I could use and point my team to so I made a [pen](http://codepen.io/mischacolley/pen/bdeoop). 
 
-<p data-height="268" data-theme-id="14405" data-slug-hash="bdeoop" data-default-tab="result" data-user="mischacolley" class='codepen'>See the Pen <a href='http://codepen.io/mischacolley/pen/bdeoop/'>Bootstrap Sass grid Mixin examples</a> by Mischa Colley (<a href='http://codepen.io/mischacolley'>@mischacolley</a>) on <a href='http://codepen.io'>CodePen</a>.</p>
-<script async src="//assets.codepen.io/assets/embed/ei.js"></script>
+<iframe height="265" style="width: 100%;" scrolling="no" title="Bootstrap Sass grid Mixin examples" src="https://codepen.io/mischacolley/embed/bdeoop?height=265&theme-id=light&default-tab=css,result" frameborder="no" loading="lazy" allowtransparency="true" allowfullscreen="true">
+  See the Pen <a href='https://codepen.io/mischacolley/pen/bdeoop'>Bootstrap Sass grid Mixin examples</a> by Mischa Colley
+  (<a href='https://codepen.io/mischacolley'>@mischacolley</a>) on <a href='https://codepen.io'>CodePen</a>.
+</iframe>
 
 <small>**Note:** This may become obsolete for new projects when [Bootstrap moves to Sass in version 4](http://blog.getbootstrap.com/2015/08/19/bootstrap-4-alpha/).</small>
 
@@ -73,8 +75,8 @@ The commonly used prebuilt grid classes might serve you well on smaller projects
 
 But this is not inherently a problem with Bootstrap, it's a problem with your implementation. 
 
-Grid systems like [Bourbon Neat](http://neat.bourbon.io/) and [Susy](http://susy.oddbird.net/) have long used Mixins to define layout in css rather then with presentational classes. You can easily work with Bootstrap this way too. Just refer to my [pen](http://codepen.io/mischacolley/pen/bdeoop)
+Grid systems like [Bourbon Neat](http://neat.bourbon.io/) and [Susy](http://susy.oddbird.net/) have long used Mixins to define layout in css rather then with presentational classes. You can easily work with Bootstrap this way too. Just refer to my [pen](http://codepen.io/mischacolley/pen/bdeoop).
 
-## [Tiny Bootstraps, for Every Client](http://daverupert.com/2013/04/responsive-deliverables/){:target="_blank"}
+## [Tiny Bootstraps, for Every Client](http://daverupert.com/2013/04/responsive-deliverables/)
 
 If you customize Bootstrap enough, eventually you might find that you start to develop a reusable codebase. One that takes the best Bootstrap has to offer but leaves out all the junk.
