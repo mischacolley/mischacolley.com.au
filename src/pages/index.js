@@ -2,7 +2,8 @@ import React from "react"
 import tw, { css } from "twin.macro"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
-import logo from '../assets/images/site-icon.png'
+import Header from "../components/header"
+import { Link } from "gatsby"
 
 export default function Home() {
   return (
@@ -12,18 +13,20 @@ export default function Home() {
         description="Believing in the enabling power of the web & digital tech I specialise in frontend design & lead teams in tech/design/code to make the world a better place."
       />
       <div css={css`${tw`container mx-auto`}`}>
-        <div css={css`${tw`p-10`}`}>
-          <img
-            src={logo}
-            alt={`Mischa Colley`}
-            css={css`${tw`w-16 mx-auto`}`}
-          />
-        </div>
+
+        <Header />
 
         <article css={css`${tw`px-8 sm:px-16 md:px-24 lg:px-48`}`}>
           <p css={css`${tw`text-3xl mb-5`}`}>
-            Hi, I'm <strong>Mischa Colley</strong>. Believing in the enabling power of the web & digital tech I specialise in frontend design & lead teams in tech/design/code to make the world a better place. <a href="mailto:me@mischacolley.com.au" css={css`${tw`underline text-blue-500`}`}>Get in touch</a>.
+            Hi, I'm <strong>Mischa Colley</strong>. Believing in the enabling power of the web & digital tech I specialise in frontend design & lead teams in tech/design/code to make the world a better place.
           </p>
+
+          <nav css={css`${tw`text-3xl mb-5`}`}>
+            <a href="mailto:me@mischacolley.com.au" css={css`${tw`underline text-blue-500`}`}>Get in touch</a>
+            <Link to="/posts">Posts</Link>
+            <Link to="/work">Work</Link>
+          </nav>
+
           <p css={css`${tw`text-xl mb-5`}`}>
             For me that work starts with being human-centred in everything I do. In my roles I serve as a bridge between atoms and bits and building on my frontend experience I’m able to connect the dots between disciplines and individuals and enable the teams I lead to deliver their best work.
           </p>
