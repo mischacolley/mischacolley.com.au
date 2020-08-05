@@ -8,7 +8,7 @@ const paragraph = css`
   ${tw`text-xl mb-5`}
 `
 
-export default function Home() {
+export default function Work() {
   return (
     <Layout>
       
@@ -29,7 +29,7 @@ export default function Home() {
           Due to a COVID restructure I'll be moving on from my current CTO gig in the next few months. 
         </p>
 
-        <h2 css={css`${tw`text-3xl mb-5`}`}>
+        <h2 css={css`${tw`text-3xl mb-5`}`} id="what">
           What I'm looking for
         </h2>
 
