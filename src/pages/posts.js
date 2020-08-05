@@ -1,6 +1,7 @@
 import React from "react"
 import tw, { css } from "twin.macro"
 import { Link, graphql } from "gatsby"
+import Img from "gatsby-image"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import Header from "../components/header"
@@ -9,7 +10,12 @@ const paragraph = css`
   ${tw`text-lg mb-5`}
 `
 
-export default function Home({ data }) {
+export default function Posts({ data }) {
+
+  // let post = data.markdownRemark
+
+  // let featuredImgFluid = post.frontmatter.featuredImage.childImageSharp.fluid
+
   return (
     <Layout>
 
@@ -34,6 +40,7 @@ export default function Home({ data }) {
               <h1 css={css`${tw`font-sans font-bold text-2xl mb-1`}`}>
                 {node.frontmatter.title}{" "}
               </h1>
+              <Img fluid={node.frontmatter.featuredImage.childImageSharp.fluid} />
               <div css={css`${tw`font-sans text-base mb-3`}`}>
                 {node.frontmatter.date}
               </div>
@@ -58,6 +65,13 @@ export const query = graphql`
           frontmatter {
             title
             date(formatString: "DD MMMM, YYYY")
+            featuredImage {
+              childImageSharp {
+                fluid(maxWidth: 800) {
+                  ...GatsbyImageSharpFluid
+                }
+              }
+            }
           }
           fields {
             slug

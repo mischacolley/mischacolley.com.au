@@ -4,7 +4,7 @@ date: "2007-07-18"
 category: Personal
 tags: travel
 published: true
-featured_image: true
+featuredImage: "./featured_image.jpg"
 ---
 
 After my first intercontinental flight I find my self emerge from the cramped air-conditioned cold of the aircraft into a comparatively hot hall. 

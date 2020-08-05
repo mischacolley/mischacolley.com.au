@@ -4,14 +4,14 @@ date: "2007-11-06"
 category: Personal
 tags: travel
 published: true
-featured_image: true
+featuredImage: "./featured_image.jpg"
 ---
 
 In October Sandra had two weeks off from work and study so along with her sister Meike and Meike's boyfriend Sven we headed to Denmark for two weeks. We rented a nice little house nestled in amongst the windblown Danish sand dunes. 
 
 We got up early in the dark freezing cold and drove for about 4 hours till we reached a small fishing/tourist town called [Hvide Sande](http://en.wikipedia.org/wiki/Hvide_Sande). We had to wait around a few hours for the key so we had a bit of a look around the place. 
 
-![alt Sandra and Mischa on a beach in Denmark](denmark_sandra_mischa.jpg "Sandra and Mischa on a beach in Denmark")
+![alt Sandra and Mischa on a beach in Denmark](./denmark_sandra_mischa.jpg)
 
 The most interesting thing for me was we found an old WWII bunker in the middle of the town....was pretty strange after reading lots of WWII history and than all of a sudden be standing on a real live bunker. 
 
@@ -19,7 +19,7 @@ This one never saw any fighting though .... must have been pretty bloody cold, l
 
 The part of Denmark we where in is pretty cool country.....just all rolling sand dunes as far as the eye can see....thatched and new black roofed house (black to keep the heat in) nestled in amongst them and the whole country side is littered by flag polls flying the red an white Danish flag...... very patriotic. 
 
-![alt Sandra sitting in Dunes in Denmark](denmark_sandra_in_dunes.jpg "Sandra sitting in Dunes in Denmark")
+![alt Sandra sitting in Dunes in Denmark](./denmark_sandra_in_dunes.jpg)
 
 I can see why though because that stretch of coast is a German holiday area and the whole time we where there we didn't come across anyone who didn't speak German.....if they weren't German themselves. That was the only thing that was not so good for me because it didn't really feel like being in another country. 
 

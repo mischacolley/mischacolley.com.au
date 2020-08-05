@@ -9,6 +9,22 @@ module.exports = {
     `gatsby-plugin-emotion`,
     `gatsby-plugin-postcss`,
     `gatsby-plugin-react-helmet`,
+    `gatsby-plugin-sharp`,
+    {
+      resolve: `gatsby-transformer-remark`,
+      options: {
+        plugins: [
+          {
+            resolve: `gatsby-remark-images`,
+            options: {
+              maxWidth: 800,
+            },
+          },
+        ],
+      },
+    },
+    `gatsby-transformer-sharp`,
+    `gatsby-remark-images`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -22,6 +38,5 @@ module.exports = {
         username: `mischacolley`,
       },
     },
-    `gatsby-transformer-remark`,
   ],
 }

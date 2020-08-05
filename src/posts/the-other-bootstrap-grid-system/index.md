@@ -4,7 +4,7 @@ date: "2015-09-27"
 category: Development
 tags: frontend
 published: true
-featured_image: true
+featuredImage: "./featured_image.jpg"
 ---
 
 Bootstrap. Some love it. Some hate it. Who cares.

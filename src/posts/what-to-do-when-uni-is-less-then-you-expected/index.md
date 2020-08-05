@@ -4,7 +4,7 @@ date: "2012-02-03"
 published: true
 category: Personal
 tags: thoughts
-featured_image: false
+featuredImage: "./featured_image.jpg"
 ---
 
 I have always been one to expect a lot and my dad always tells me that I shouldn’t waste time on things I can’t change. I’ve always had a bit of a problem with that. 
