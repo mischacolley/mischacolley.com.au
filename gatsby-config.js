@@ -6,6 +6,7 @@ module.exports = {
     siteUrl: 'https://mischacolley.com.au',
   },
   plugins: [
+    `gatsby-plugin-svg-sprite`,
     `gatsby-plugin-emotion`,
     `gatsby-plugin-postcss`,
     `gatsby-plugin-react-helmet`,

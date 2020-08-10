@@ -1,5 +1,5 @@
 import React from "react"
-import logo from '../assets/images/site-icon.png'
+import logo from '../assets/images/profile.jpg'
 import tw, { css, styled  } from "twin.macro"
 import { Link } from "gatsby"
 
@@ -10,7 +10,7 @@ export default function Header() {
         <img
           src={logo}
           alt={`Mischa Colley`}
-          css={css`${tw`w-16 mx-auto`}`}
+          css={css`${tw`w-32 mx-auto rounded-full`}`}
         />
       </Link>
     </div>

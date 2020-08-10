@@ -13,7 +13,7 @@ const postStyles = css`
   }
 
   a {
-    ${tw`text-blue-600 underline`}
+    ${tw`text-brand underline`}
   }
 
   p {

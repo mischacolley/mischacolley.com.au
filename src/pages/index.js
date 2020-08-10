@@ -11,9 +11,6 @@ const article = css`
 const lead = css`
   ${tw`text-3xl mb-5`}
 `
-const button = css`
-  ${tw`bg-transparent hover:bg-blue-500 text-blue-700 font-semibold hover:text-white py-2 px-4 border border-blue-500 hover:border-transparent rounded mx-2`}
-`
 const paragraph = css`
   ${tw`text-xl mb-5`}
 `
@@ -43,27 +40,23 @@ export default function Home() {
 
         <p css={[paragraph]}>
           See what I'm doing&nbsp;
-          <Link css={css`${tw`text-blue-600 underline`}`} to="/now">now</Link>.
-          // I'm currently looking for&nbsp;
-          <Link css={css`${tw`text-blue-600 underline`}`} to="/work">work</Link>.
+          <Link css={css`${tw`text-brand underline`}`} to="/now">now</Link>.
+          // FYI I'm currently looking for&nbsp;
+          <Link css={css`${tw`text-brand underline`}`} to="/work">work</Link>.
         </p>
 
-        <p css={[paragraph]}>
+        {/* <p css={[paragraph]}>
           Checkout my&nbsp; 
-          <Link css={css`${tw`text-blue-600 underline`}`} to="/history">history</Link>.
+          <Link css={css`${tw`text-brand underline`}`} to="/history">history</Link>.
         </p>
 
         <p css={[paragraph]}>
           See my&nbsp;  
-          <Link css={css`${tw`text-blue-600 underline`}`} to="/posts">posts</Link>.
-        </p>
-
-        <p css={[paragraph]}>
-          If you like what you see, get in&nbsp;
-          <a css={css`${tw`text-blue-600 underline`}`} href="mailto:me@mischacolley.com.au">contact</a>.
-        </p>
-
+          <Link css={css`${tw`text-brand underline`}`} to="/posts">posts</Link>.
+        </p> */}
+        
       </article>
+
     </Layout>
   );
 }

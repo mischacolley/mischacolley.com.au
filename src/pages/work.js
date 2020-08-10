@@ -13,8 +13,8 @@ export default function Work() {
     <Layout>
       
       <SEO
-        title="Mischa Colley"
-        description="Believing in the enabling power of the web & digital tech I specialise in frontend design & lead teams in tech/design/code to make the world a better place."
+        title="Tech Leader looking for work | "
+        description="I specialise in frontend design & I'm an experienced remote worker and remote team lead in tech, design and code."
       />
         
       <Header />
@@ -26,7 +26,7 @@ export default function Work() {
         </h1>
 
         <p css={[paragraph]}>
-          Due to a COVID restructure I'll be moving on from my current CTO gig in the next few months. 
+          Due to a COVID restructure my team was recently made redudant so I'll be moving on from my role as CTO at AIME Mentoring by September 30th.
         </p>
 
         <h2 css={css`${tw`text-3xl mb-5`}`} id="what">
@@ -50,10 +50,8 @@ export default function Work() {
         </p>
 
         <p css={[paragraph]}>
-          I keen to do this in house with the right organisations AND I've just co-founded ulak, a small collective of designers, developers & technologist using our expertise in technology & UX design in balance with the needs of people, planet & profit. 
+          I keen to do this in house with the right organisations AND I've just co-founded <a href="https://ulak.design" css={css`${tw`underline text-brand`}`}>ulak</a>, a small collective of designers, developers & technologist using our expertise in technology & UX design in balance with the needs of people, planet & profit. 
         </p>
-
-        <a href="mailto:me@mischacolley.com.au" css={css`${tw`underline text-blue-500`}`}>Lets chat :)</a>
 
       </article>
 
