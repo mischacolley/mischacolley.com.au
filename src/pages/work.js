@@ -37,7 +37,7 @@ export default function Work() {
       
       <SEO
         title="Tech Leader looking for work in the for purpose space"
-        description="I specialise in frontend design & I'm an experienced remote worker and remote team lead in tech, design and code."
+        description="I specialise in frontend design & I'm an experienced remote worker and remote team leader in tech, design & code."
         image={socialShare}
       />
         

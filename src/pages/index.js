@@ -21,7 +21,7 @@ export default function Home() {
     <Layout>
       <SEO 
         title="Mischa Colley | Creative Technologist, Tech Leader, FED" 
-        description="Believing in the enabling power of the web & digital tech I specialise in frontend design & lead teams in tech/design/code to make the world a better place."
+        description="Believing in the enabling power of the web & digital tech I specialise in frontend design & lead teams in tech, design & code to make the world a better place."
         image={socialShare}
       />
 
@@ -29,7 +29,7 @@ export default function Home() {
 
       <article css={[article]}>
         <p css={[lead]}>
-          Hi, I'm <strong>Mischa Colley</strong>. Believing in the enabling power of the web & digital tech I specialise in frontend design & lead teams in tech/design/code to make the world a better place.
+          Hi, I'm <strong>Mischa Colley</strong>. Believing in the enabling power of the web & digital tech I specialise in frontend design & lead teams in tech, design & code to make the world a better place.
         </p>
 {/* 
         <nav css={css`${tw`text-3xl mb-5 text-center`}`}>
