@@ -3,3 +3,11 @@
   the rest of Tailwind's classes in the project
 */
 @tailwind base;
+
+body {
+  @apply font-mono;
+}
+
+svg path {
+  fill: inherit;
+}
