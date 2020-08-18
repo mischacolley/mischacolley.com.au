@@ -1,10 +1,10 @@
 module.exports = {
   siteMetadata: {
-    title: 'Mischa Colley',
+    title: 'Mischa Colley | Creative Technologist, Tech Leader, FED',
     author: 'Mischa Colley',
-    description: 'Hi, I\'m Mischa Colley. Believing in the enabling power of the web I lead people in design & code to make the world a better place.',
+    description: 'Believing in the enabling power of the web & digital tech I specialise in frontend design & lead teams in tech/design/code to make the world a better place.',
     siteUrl: 'https://mischacolley.com.au',
-    image: "/images/social-share.jpg",
+    image: "/images/social-share.png",
   },
   plugins: [
     `gatsby-plugin-svg-sprite`,

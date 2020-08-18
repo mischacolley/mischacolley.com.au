@@ -26,7 +26,7 @@ export default function History() {
         </h1>
 
         <p css={[paragraph]}>
-          Coming soon ...
+          It's currently being written ...
         </p>
 
       </article>
