@@ -2,6 +2,7 @@ import React from "react"
 import tw, { css } from "twin.macro"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
+import socialShare from '../assets/images/social-share-work.png'
 import Header from "../components/header"
 
 const paragraph = css`
@@ -13,8 +14,9 @@ export default function Work() {
     <Layout>
       
       <SEO
-        title="Tech Leader looking for work | "
+        title="Tech Leader looking for work in the for purpose space"
         description="I specialise in frontend design & I'm an experienced remote worker and remote team lead in tech, design and code."
+        image={socialShare}
       />
         
       <Header />

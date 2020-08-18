@@ -4,6 +4,7 @@ module.exports = {
     author: 'Mischa Colley',
     description: 'Hi, I\'m Mischa Colley. Believing in the enabling power of the web I lead people in design & code to make the world a better place.',
     siteUrl: 'https://mischacolley.com.au',
+    image: "/images/social-share.jpg",
   },
   plugins: [
     `gatsby-plugin-svg-sprite`,

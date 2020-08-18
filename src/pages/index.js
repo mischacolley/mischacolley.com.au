@@ -3,6 +3,7 @@ import tw, { css } from "twin.macro"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import Header from "../components/header"
+import socialShare from '../assets/images/social-share.jpg'
 import { Link } from "gatsby"
 
 const article = css`
@@ -21,6 +22,7 @@ export default function Home() {
       <SEO 
         title="Mischa Colley" 
         description="Believing in the enabling power of the web & digital tech I specialise in frontend design & lead teams in tech/design/code to make the world a better place."
+        image={socialShare}
       />
 
       <Header />
