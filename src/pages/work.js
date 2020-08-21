@@ -46,11 +46,15 @@ export default function Work() {
       <article css={[postStyles, css`${tw`px-8 sm:px-16 md:px-24 lg:px-48`}`]}>
 
         <h1 css={css`${tw`font-sans font-bold text-3xl mb-5`}`}>
-          I'm looking for remote work as a Tech Leader in the for purpose space
+          I'm a Creative Technologist looking for my next remote for purpose gig
         </h1>
 
         <p>
           I'm the outgoing CTO at <a href="https://aimementoring.com" target="_blank">AIME Mentoring</a> where I grew the internal tech team there from just me to a fully remote team of 11+ across 5 time zones and professional practices covering Design, Engineering, IT and Data. Due to a COVID restructure I'll be moving on by September 30th.
+        </p>
+
+        <p css={css`${tw`bg-gray-200 p-5`}`}>
+          I'm partner to <a href="https://sandracolley.com.au" target="_blank">Sandra</a> and dad to a 3 and 5 year old. We live just north of Byron Bay in the beautiful Northern Rivers region of NSW, Australia. Bundjalung and Yugambeh country. I’ve been working remotely from our home here for 5+ years and don't intend to relocate. 
         </p>
 
         <h2 id="what">
@@ -62,11 +66,11 @@ export default function Work() {
         </p>
 
         <p>
-          I'm looking for opportunities as an in house technology leader (CTO, IT/Tech/Digital Director or equiv.) or external consultant. 
+          I'm looking for opportunities where I can continue to use my expertise applying the enabling power of web and digital technologies in for purpose settings.
         </p>
 
         <p>
-          I'm preferably looking to work with organisations like B Corps, Social Enterprises or NFPs where I can continue to use my expertise applying the enabling power of web and digital technologies in for purpose settings.
+          So that might be as an in house technology leader (CTO, IT/Tech/Digital Director or equiv.) or external consultant. 
         </p>
 
         <p css={css`${tw`bg-gray-200 p-5`}`}>
@@ -74,17 +78,18 @@ export default function Work() {
         </p>
 
         <p>
-          I'm particularly interested in providing assistance with:
+          I'm preferably looking to work with organisations like B Corps, Social Enterprises or NFPs and I'm particularly interested in working on:
         </p>
 
         <ul>
-          <li>Digital transformation</li>
+          <li>Digital transformation, particularly solving real problems that deliver measurable and lasting value</li>
+          <li>The sustainable and human application of technology</li>
           <li>Developing and curating remote team culture</li>
           <li>Applying a systems and design thinking framework to help leverage the transformative power of design + technology</li>
         </ul>
 
         <p>
-          I keen to do this in house with the right organisations AND I've just co-founded <a href="https://ulak.design" css={css`${tw`underline text-brand`}`} target="_blank">ulak</a>.
+          I keen to do this in house with the right organisations OR I've just co-founded <a href="https://ulak.design" css={css`${tw`underline text-brand`}`} target="_blank">ulak</a>.
         </p>
 
         <a href="https://ulak.design" css={css`${tw`underline text-brand`}`} target="_blank">
@@ -97,6 +102,10 @@ export default function Work() {
         
         <p>
           We are a small collective of designers, developers & technologist and we are looking for clients where we can use our expertise in technology & UX design in balance with the needs of people, planet & profit. 
+        </p>
+
+        <p>
+          Lets chat <a href="mailto:me@mischacolley.com.au">me@mischacolley.com.au</a> :) 
         </p>
 
       </article>
