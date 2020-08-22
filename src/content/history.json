@@ -7,7 +7,13 @@
       "itemDates": "July 2020 - present",
       "itemLocation": "Remote",
       "itemDescription": "I co-founded a collective of UX, UI & Frontend Designers, Developers, Software Engineers, Creative Technologists and more that create good digital experiences that put people and planet first."
-      
+    },
+    {
+      "itemTitle": "CEO",
+      "itemCompany": "AIME Mentoring",
+      "itemDates": "Oct 2017 - present",
+      "itemLocation": "Remote",
+      "itemDescription": "I managed the outsourcing of the MVP project and then grew the internal tech team from just me to a fully remote team of 11+ across 5 time zones and professional practices covering Design, Engineering, IT and Data."
     }
   ]
 }

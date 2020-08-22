@@ -34,6 +34,13 @@ module.exports = {
         name: 'posts',
       },
     },
+    `gatsby-transformer-json`,
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        path: `${__dirname}/src/content/`,
+      },
+    },
     {
       resolve: `gatsby-source-instagram`,
       options: {
