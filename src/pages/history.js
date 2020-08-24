@@ -27,7 +27,7 @@ export default function History() {
         </h1>
 
         <article css={[paragraph]}>
-          {JSONData.content.map((data, index) => {
+          {JSONData.history.map((data, index) => {
             return (
               <div>
                 <h1 key={`content_item_${index}`}>{data.itemTitle}</h1>

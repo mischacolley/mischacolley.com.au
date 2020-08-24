@@ -9,7 +9,8 @@ const paragraph = css`
   ${tw`text-xl mb-5`}
 `
 
-export default function Links() {
+export default function Links({ data }) {
+
   return (
     <Layout>
 
@@ -23,11 +24,11 @@ export default function Links() {
       <section css={css`${tw`px-8 sm:px-16 md:px-24 lg:px-48`}`}>
 
         <h1 css={css`${tw`text-3xl mb-5`}`}>
-          {JSONData.title}
+          Links
         </h1>
 
         <article css={[paragraph]}>
-          {JSONData.content.map((data, index) => {
+          {JSONData.links.map((data, index) => {
 
             const tags = data.itemTags
             const listTags = tags.map((tag) =>
@@ -50,8 +51,37 @@ export default function Links() {
           })}
         </article>
 
+        {/* {data.allContentJson.edges.map(({ node, index }) => (
+          <article key={`content_item_${index}`} >
+            <h1 css={css`${tw`font-sans font-bold text-3xl mb-1`}`}>
+              {node.links.itemTitle}
+            </h1>
+          </article>
+        ))} */}
+
       </section>
 
     </Layout>
   );
 }
+
+export const query = graphql`
+  query {
+    allContentJson {
+      edges {
+        node {
+          links {
+            itemTitle
+            itemType
+            itemLink
+            itemImage
+            itemEmbed
+            itemDescription
+            itemTags
+          }
+        }
+      }
+    }
+  }
+`
+
