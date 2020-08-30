@@ -2,8 +2,7 @@
 title: What to do when Uni is less then you expected
 date: "2012-02-03"
 published: true
-category: Personal
-tags: thoughts
+tags: ["Personal", "learning", "brisbane"]
 featuredImage: "./featured_image.jpg"
 ---
 

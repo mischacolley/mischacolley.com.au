@@ -1,5 +1,4 @@
 {
-  "title": "Links",
   "links": [
     {
       "itemTitle": "Title",
@@ -16,6 +15,17 @@
     {
       "itemTitle": "Title2",
       "itemType": "ulak2",
+      "itemTags": [
+        "tag2"
+      ],
+      "itemLink": "https://example.com",
+      "itemImage": "../assets/images/profile.jpg",
+      "itemEmbed": "/exmaple.jpg",
+      "itemDescription": "Test I co-founded a collective of UX, UI & Frontend Designers, Developers, Software Engineers, Creative Technologists and more that create good digital experiences that put people and planet first."
+    },
+    {
+      "itemTitle": "Title3",
+      "itemType": "ulak4",
       "itemTags": [
         "tag2"
       ],

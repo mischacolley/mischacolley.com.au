@@ -1,8 +1,7 @@
 ---
 title: Two weeks with the Danes
 date: "2007-11-06"
-category: Personal
-tags: travel
+tags: ["Personal", "travel"]
 published: true
 featuredImage: "./featured_image.jpg"
 ---

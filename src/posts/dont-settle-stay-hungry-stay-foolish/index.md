@@ -1,6 +1,7 @@
 ---
 title: Don't Settle, Stay Hungary, Stay Foolish
 date: "2012-05-27"
+tags: ["Personal", "TED", "brisbane"]
 featuredImage: "./featured_image.jpg"
 ---
 

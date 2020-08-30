@@ -1,8 +1,7 @@
 ---
 title: Taipei Thoughts
 date: "2007-07-18"
-category: Personal
-tags: travel
+tags: ["Personal", "travel"]
 published: true
 featuredImage: "./featured_image.jpg"
 ---

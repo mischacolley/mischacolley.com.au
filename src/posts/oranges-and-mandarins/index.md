@@ -1,8 +1,7 @@
 ---
 title: Oranges & Mandarins
 date: "2014-11-05"
-category: Development
-tags: work
+tags: ["Work", "brisbane"]
 published: true
 featuredImage: "./featured_image.jpg"
 ---

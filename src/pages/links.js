@@ -3,7 +3,7 @@ import tw, { css } from "twin.macro"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import Header from "../components/header"
-import JSONData from "../content/links.json"
+// import JSONData from "../content/links.json"
 
 const paragraph = css`
   ${tw`text-xl mb-5`}
@@ -27,7 +27,7 @@ export default function Links({ data }) {
           Links
         </h1>
 
-        <article css={[paragraph]}>
+        {/* <article css={[paragraph]}>
           {JSONData.links.map((data, index) => {
 
             const tags = data.itemTags
@@ -49,15 +49,22 @@ export default function Links({ data }) {
               </div>
             );
           })}
-        </article>
+        </article> */}
 
-        {/* {data.allContentJson.edges.map(({ node, index }) => (
-          <article key={`content_item_${index}`} >
-            <h1 css={css`${tw`font-sans font-bold text-3xl mb-1`}`}>
-              {node.links.itemTitle}
-            </h1>
-          </article>
-        ))} */}
+        {data.allFile.edges.map(({ node }) => (
+          <div>
+            {
+              node.childContentJson.links.map(links =>
+                <article css={[paragraph]}>
+                  <h1 css={css`${tw`font-sans font-bold text-3xl mb-1`}`}>
+                    {links.itemTitle}
+                  </h1>
+                  <p>{links.itemDescription}</p>
+                </article>
+              )
+            }
+          </div>
+        ))}
 
       </section>
 
@@ -67,21 +74,43 @@ export default function Links({ data }) {
 
 export const query = graphql`
   query {
-    allContentJson {
+    allFile(filter: {name: {eq: "links"}}) {
       edges {
         node {
-          links {
-            itemTitle
-            itemType
-            itemLink
-            itemImage
-            itemEmbed
-            itemDescription
-            itemTags
+          childContentJson {
+            links {
+              itemDescription
+              itemEmbed
+              itemImage
+              itemLink
+              itemTags
+              itemTitle
+              itemType
+            }
           }
         }
       }
     }
   }
 `
+
+// export const query = graphql`
+//   query {
+//     allContentJson {
+//       edges {
+//         node {
+//           links {
+//             itemTitle
+//             itemType
+//             itemLink
+//             itemImage
+//             itemEmbed
+//             itemDescription
+//             itemTags
+//           }
+//         }
+//       }
+//     }
+//   }
+// `
 

@@ -1,8 +1,7 @@
 ---
 title: The Other Bootstrap Grid System
 date: "2015-09-27"
-category: Development
-tags: frontend
+tags: ["Professional", "frontend"]
 published: true
 featuredImage: "./featured_image.jpg"
 ---
