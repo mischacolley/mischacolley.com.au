@@ -3,7 +3,6 @@ import tw, { css } from "twin.macro"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import Header from "../components/header"
-// import JSONData from "../content/links.json"
 
 const paragraph = css`
   ${tw`text-xl mb-5`}
@@ -27,38 +26,21 @@ export default function Links({ data }) {
           Links
         </h1>
 
-        {/* <article css={[paragraph]}>
-          {JSONData.links.map((data, index) => {
-
-            const tags = data.itemTags
-            const listTags = tags.map((tag) =>
-              <li>{tag}</li>
-            );
-
-            return (
-              <div>
-                <h1 key={`content_item_${index}`}>{data.itemTitle}</h1>
-                <ul>
-                  {listTags}
-                </ul>
-                <img
-                  src={data.itemImage}
-                />
-                <p>{data.itemDescription}</p>
-                <a href="itemLink">View</a>
-              </div>
-            );
-          })}
-        </article> */}
-
         {data.allFile.edges.map(({ node }) => (
           <div>
             {
               node.childContentJson.links.map(links =>
-                <article css={[paragraph]}>
+                <article css={[paragraph]} key={links.id}>
                   <h1 css={css`${tw`font-sans font-bold text-3xl mb-1`}`}>
                     {links.itemTitle}
                   </h1>
+                  <ul>
+                    {
+                      links.itemTags.map(tags =>
+                        <li>{tags}</li> 
+                      )
+                    }
+                  </ul>
                   <p>{links.itemDescription}</p>
                 </article>
               )
@@ -93,24 +75,4 @@ export const query = graphql`
     }
   }
 `
-
-// export const query = graphql`
-//   query {
-//     allContentJson {
-//       edges {
-//         node {
-//           links {
-//             itemTitle
-//             itemType
-//             itemLink
-//             itemImage
-//             itemEmbed
-//             itemDescription
-//             itemTags
-//           }
-//         }
-//       }
-//     }
-//   }
-// `
 
