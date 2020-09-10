@@ -60,12 +60,16 @@ export default function Now() {
           <Link to="/work#what">See what I'm looking for</Link>. 
         </p>
 
+        <p>
+          Starting in September I’ll be taking part in a <a href="https://sbp.org.au/sourdough-startupnr/" target="_blank">pre-accelerator program</a> with a focus on embedding purpose, sustainability & circular economy principles in <a href="https://ulak.design/" target="_blank">ulak</a>, a digital collective I've recently co-founded.
+        </p>
+
         <h2>
           More
         </h2>
 
         <p>
-          As I've been transitioning from the Frontend role as an individule contributor to that of a Tech leader I've been reading widely on business, leadership, mental models and Systems & Design Thinking. I'm also facinated about alternative learning models, B Corp and social enterprise business models and what a sustainable economic future could look like if we focus on supporting the next economy to meet the needs of all within the means of the planet.
+          As I've been transitioning from the Frontend role as an individule contributor to that of a Tech leader I've been reading widely on business, leadership, parenting, mental models and Systems & Design Thinking. I'm interested in the itersection of digital and living systems and I'm also facinated about alternative learning models, B Corp and social enterprise business models and what a sustainable economic future could look like if we focus on supporting the next economy to meet the needs of all within the means of the planet.
         </p>
 
         {/* <p>

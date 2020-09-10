@@ -46,7 +46,7 @@ export default function Work() {
       <article css={[postStyles, css`${tw`px-8 sm:px-16 md:px-24 lg:px-48`}`]}>
 
         <h1 css={css`${tw`font-sans font-bold text-3xl mb-5`}`}>
-          I'm a Creative Technologist looking for my next remote for purpose gig
+          I'm a Creative Technologist looking for work in the for purpose space
         </h1>
 
         <p>
@@ -62,31 +62,12 @@ export default function Work() {
         </p>
 
         <p>
-          I'm looking for opportunities where I can continue to use my expertise applying the enabling power of web and digital technologies in for purpose settings.
+          I'm looking for opportunities where I can continue to use my expertise applying the enabling power of web and digital technologies in for purpose settings. I'm spesifically looking to work with organisations like B Corps, Social Enterprises and NFPs.
         </p>
 
-        <p>
-          That might be as an in house technology leader (think CTO or digital director) or external consultant. Essentially the ideal gig is more strategy, problem solving, project and people management than necessarily writing code.
-        </p>
+        <p><strong>That might be through <a href="https://ulak.design" css={css`${tw`underline text-brand`}`} target="_blank">ulak</a></strong></p>
 
-        <p css={css`${tw`bg-gray-200 p-5`}`}>
-          While I'm not actively searching for a frontend gig writing code for website & apps, I've been building for the web since 2010 and I'd be happy to discuss and pickup my tool belt if it was the right fit.
-        </p>
-
-        <p>
-          I'm preferably looking to work with organisations like B Corps, Social Enterprises or NFPs and I'm particularly interested in working on:
-        </p>
-
-        <ul>
-          <li>Digital transformation, particularly solving real problems that deliver measurable and lasting value</li>
-          <li>The sustainable and human application of technology</li>
-          <li>Developing and curating remote team culture</li>
-          <li>Applying a systems and design thinking framework to help leverage the transformative power of design + technology</li>
-        </ul>
-
-        <p>
-          I'm keen to do this in house with the right organisations OR I've just co-founded <a href="https://ulak.design" css={css`${tw`underline text-brand`}`} target="_blank">ulak</a>.
-        </p>
+        <p>I’m co-founder of a collective who create digital experiences that put people & planet first.</p>
 
         <a href="https://ulak.design" css={css`${tw`underline text-brand`}`} target="_blank">
           <img
@@ -95,11 +76,22 @@ export default function Work() {
             css={css`${tw`mx-auto`}`}
           />
         </a>
-        
-        <p>
-          We are a small collective of designers, developers & technologist and we are looking for clients where we can use our expertise in technology & UX design in balance with the needs of people, planet & profit. 
-        </p>
 
+        <p>What ulak, we just might have as UX, UI & Frontend Designers, Developers, Software Engineers, Creative Technologists & more …</p>
+
+        <p>Chat with me about what you are trying to create or shoot a message through to <a href="mailto:team@ulak.design">team@ulak.design</a>.</p>
+
+        <p><strong>Or just with me</strong></p>
+
+        <p>While I’m working to establish ulak, I’m also interested in part-time contract positions where I’d be working as a creative technologist (business consultant) or frontend designer/developer, supporting things like:</p>
+
+        <ul>
+          <li>Digital transformation, particularly solving real problems that deliver measurable and lasting value</li>
+          <li>The sustainable and human application of technology</li>
+          <li>Developing and curating remote team culture</li>
+          <li>Applying a systems and design thinking framework to help leverage the transformative power of design + technology</li>
+        </ul>
+  
         <p>
           Lets chat <a href="mailto:me@mischacolley.com.au">me@mischacolley.com.au</a> :) 
         </p>
