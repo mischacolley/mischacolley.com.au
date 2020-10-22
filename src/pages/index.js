@@ -37,7 +37,7 @@ export default function Home() {
           <Link css={[button]} to="/history">History</Link>
           <Link css={[button]} to="/posts">Posts</Link>
           <Link css={[button]} to="/links">Links</Link>
-          <a css={[button]} href="mailto:me@mischacolley.com.au">Contact</a>
+          <a css={[button]} href="mailto:mischacolley@gmail.com">Contact</a>
         </nav> */}
 
         <p css={[paragraph]}>

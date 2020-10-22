@@ -93,7 +93,7 @@ export default function Work() {
         </ul>
   
         <p>
-          Lets chat <a href="mailto:me@mischacolley.com.au">me@mischacolley.com.au</a> :) 
+          Lets chat <a href="mailto:mischacolley@gmail.com">mischacolley@gmail.com</a> :) 
         </p>
 
         <p css={css`${tw`bg-gray-200 p-5`}`}>

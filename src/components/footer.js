@@ -48,7 +48,7 @@ const use = css`
 export default function Footer() {
   return (
     <nav css={[footer]}>
-      <a css={[button]} href="mailto:me@mischacolley.com.au">
+      <a css={[button]} href="mailto:mischacolley@gmail.com">
         <Email />
       </a>
       <a css={[button]} href="https://www.linkedin.com/in/mischacolley/" target="_blank">
