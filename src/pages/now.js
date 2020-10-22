@@ -56,12 +56,12 @@ export default function Now() {
         </h2>
 
         <p>
-          I’ve been working remotely from our home here for 5+ years and the last 4 have been with <a href="https://aimementoring.com" target="_blank">AIME Mentoring</a>. At AIME I grew things from just me to leading a fully remote team of 11+ across 5 time zones and professional practices covering Design, Engineering, IT and Data. Due to a COVID restructure I'll be moving on from my role as CTO by September 30th.&nbsp;
+          I’ve been working remotely from our home here for 5+ years and the last 4 have been with <a href="https://aimementoring.com" target="_blank">AIME Mentoring</a>. At AIME I grew things from just me to leading a fully remote team of 11+ across 5 time zones and professional practices covering Design, Engineering, IT and Data. I wrapped up my role as CTO in Septmeber.&nbsp;
           <Link to="/work#what">See what I'm looking for</Link>. 
         </p>
 
         <p>
-          Starting in September I’ll be taking part in a <a href="https://sbp.org.au/sourdough-startupnr/" target="_blank">pre-accelerator program</a> with a focus on embedding purpose, sustainability & circular economy principles in <a href="https://ulak.design/" target="_blank">ulak</a>, a digital collective I've recently co-founded.
+          I'm currently taking part in a <a href="https://sbp.org.au/sourdough-startupnr/" target="_blank">pre-accelerator program</a> with a focus on embedding purpose, sustainability & circular economy principles in <a href="https://ulak.design/" target="_blank">ulak</a>, a digital collective I've recently co-founded.
         </p>
 
         <h2>

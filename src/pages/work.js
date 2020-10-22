@@ -50,7 +50,7 @@ export default function Work() {
         </h1>
 
         <p>
-          I'm the outgoing CTO at <a href="https://aimementoring.com" target="_blank">AIME Mentoring</a>, where I grew the internal tech team from just me, to a fully remote team of 11+ across 5 time zones and professional practices, covering Design, Engineering, IT and Data. Due to a COVID restructure I'll be moving on by September 30th.
+          I'm the former CTO at <a href="https://aimementoring.com" target="_blank">AIME Mentoring</a>, where I grew the internal tech team from just me, to a fully remote team of 11+ across 5 time zones and professional practices, covering Design, Engineering, IT and Data. Due to a COVID restructure I'll be moving on by September 30th.
         </p>
 
         <h2 id="what">
