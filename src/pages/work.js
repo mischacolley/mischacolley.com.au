@@ -50,7 +50,7 @@ export default function Work() {
         </h1>
 
         <p>
-          I'm the former CTO at <a href="https://aimementoring.com" target="_blank">AIME Mentoring</a>, where I grew the internal tech team from just me, to a fully remote team of 11+ across 5 time zones and professional practices, covering Design, Engineering, IT and Data. Due to a COVID restructure I'll be moving on by September 30th.
+          I'm the former CTO of <a href="https://aimementoring.com" target="_blank">AIME Mentoring</a>, where I grew the internal digital team from just me, to a fully remote team of 11+ across 5 time zones and professional practices, covering Design, Engineering, IT and Data. I wrapped up my role as CTO in Septmeber 2020. 
         </p>
 
         <h2 id="what">
@@ -86,6 +86,7 @@ export default function Work() {
         <p>While I’m working to establish ulak, I’m also interested in part-time contract positions where I’d be working as a creative technologist (business consultant) or frontend designer/developer, supporting things like:</p>
 
         <ul>
+          <li>Designing & building Website & Apps</li>
           <li>Digital transformation, particularly solving real problems that deliver measurable and lasting value</li>
           <li>The sustainable and human application of technology</li>
           <li>Developing and curating remote team culture</li>
@@ -93,11 +94,15 @@ export default function Work() {
         </ul>
   
         <p>
-          Lets chat <a href="mailto:mischacolley@gmail.com">mischacolley@gmail.com</a> :) 
+          Lets chat <a href="mailto:me@mischacolley.com.au">me@mischacolley.com.au</a> :) 
         </p>
 
         <p css={css`${tw`bg-gray-200 p-5`}`}>
-          PS. I'm partner to <a href="https://sandracolley.com.au" target="_blank">Sandra</a> and dad to a 3 and 5 year old. We live just north of Byron Bay in the beautiful Northern Rivers region of NSW, Australia. Bundjalung and Yugambeh country. I’ve been working remotely from our home here for 5+ years and don't intend to relocate.
+          PS. While I LOVE working in digital I also love to spend time in nature and get my hands dirty doing physical work with atoms not bits :) In 2021 I'm trying to find more balance away from the screen. That might be general labouring work, gardening or ...  
+        </p>
+
+        <p css={css`${tw`bg-gray-200 p-5`}`}>
+          PPS. I'm partner to <a href="https://sandracolley.com.au" target="_blank">Sandra</a> and dad to a 3 and 6 year old. We live just north of Byron Bay in the beautiful Northern Rivers region of NSW, Australia. Bundjalung and Yugambeh country. I’ve been working remotely from our home here for 5+ years and don't intend to relocate.
         </p>
 
       </article>

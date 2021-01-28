@@ -36,7 +36,7 @@ export default function Now() {
 
       <SEO
         title="Mischa Colley | Partner, Dad, Creative Technologist, Tech Leader, FED"
-        description="I'm partner to Sandra and dad to a 3 and 5 year old. We live just north of Byron Bay in the beautiful Northern Rivers region of NSW, Australia. "
+        description="I'm partner to Sandra and dad to a 3 and 6 year old. We live just north of Byron Bay in the beautiful Northern Rivers region of NSW, Australia. "
       />
 
       <Header />
@@ -48,7 +48,7 @@ export default function Now() {
         </h1>
 
         <p>
-          I'm partner to <a href="https://sandracolley.com.au" target="_blank">Sandra</a> and dad to a 3 and 5 year old. We live just north of Byron Bay in the beautiful Northern Rivers region of NSW, Australia. Bundjalung and Yugambeh country. We unschool our kids so they are part of our everyday lives in between work and everything else we do. 
+          I'm partner to <a href="https://sandracolley.com.au" target="_blank">Sandra</a> and dad to a 3 and 6 year old. We live just north of Byron Bay in the beautiful Northern Rivers region of NSW, Australia. Bundjalung and Yugambeh country. We unschool our kids so they are part of our everyday lives in between work and everything else we do. 
         </p>
 
         <h2>
@@ -56,12 +56,12 @@ export default function Now() {
         </h2>
 
         <p>
-          I’ve been working remotely from our home here for 5+ years and the last 4 have been with <a href="https://aimementoring.com" target="_blank">AIME Mentoring</a>. At AIME I grew things from just me to leading a fully remote team of 11+ across 5 time zones and professional practices covering Design, Engineering, IT and Data. I wrapped up my role as CTO in Septmeber.&nbsp;
+          I’ve been working remotely from our home here for 5+ years and the last 4 have been with <a href="https://aimementoring.com" target="_blank">AIME Mentoring</a>. At AIME I grew the digital team from just me to leading a fully remote team of 11+ across 5 time zones and professional practices covering Design, Engineering, IT and Data. I wrapped up my role as CTO in Septmeber 2020.&nbsp;
           <Link to="/work#what">See what I'm looking for</Link>. 
         </p>
 
         <p>
-          I'm currently taking part in a <a href="https://sbp.org.au/sourdough-startupnr/" target="_blank">pre-accelerator program</a> with a focus on embedding purpose, sustainability & circular economy principles in <a href="https://ulak.design/" target="_blank">ulak</a>, a digital collective I've recently co-founded.
+          In December 2020 I compleated a <a href="https://sbp.org.au/sourdough-startupnr/" target="_blank">pre-accelerator program</a> with a focus on embedding purpose, sustainability & circular economy principles in <a href="https://ulak.design/" target="_blank">ulak</a>, a digital collective I've recently co-founded.
         </p>
 
         <h2>
