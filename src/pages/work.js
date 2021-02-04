@@ -50,7 +50,7 @@ export default function Work() {
         </h1>
 
         <p>
-          I'm the former CTO of <a href="https://aimementoring.com" target="_blank">AIME Mentoring</a>, where I grew the internal digital team from just me, to a fully remote team of 11+ across 5 time zones and professional practices, covering Design, Engineering, IT and Data. I wrapped up my role as CTO in Septmeber 2020. 
+          I'm the former CTO of <a href="https://aimementoring.com" target="_blank">AIME Mentoring</a>, where I grew the internal digital team from just me, to a fully remote team of 11+ across 5 time zones and professional practices, covering Design, Engineering, IT and Data. I wrapped up my role as CTO in Septmeber 2020 and have begun a new journey into entrepreneurship ...  
         </p>
 
         <h2 id="what">
@@ -62,7 +62,7 @@ export default function Work() {
         </p>
 
         <p>
-          I'm looking for opportunities where I can continue to use my expertise applying the enabling power of web and digital technologies in for purpose settings. I'm spesifically looking to work with organisations like B Corps, Social Enterprises and NFPs.
+          I'm looking for opportunities where I can continue to use my expertise applying the enabling power of web and digital technologies in for purpose settings. I'm looking to work with organisations like B Corps, Social Enterprises and NFPs. Specifically in the social and environmental impact space.
         </p>
 
         <p><strong>That might be through <a href="https://ulak.design" css={css`${tw`underline text-brand`}`} target="_blank">ulak</a></strong></p>
@@ -78,6 +78,8 @@ export default function Work() {
         </a>
 
         <p>What ulak, we just might have as UX, UI & Frontend Designers, Developers, Software Engineers, Creative Technologists & more …</p>
+
+        <p>We don’t just build Websites and Apps... We help design & impliment Digital Strategy.</p>
 
         <p>Chat with me about what you are trying to create or shoot a message through to <a href="mailto:team@ulak.design">team@ulak.design</a>.</p>
 
@@ -98,7 +100,7 @@ export default function Work() {
         </p>
 
         <p css={css`${tw`bg-gray-200 p-5`}`}>
-          PS. While I LOVE working in digital I also love to spend time in nature and get my hands dirty doing physical work with atoms not bits :) In 2021 I'm trying to find more balance away from the screen. That might be general labouring work, gardening or ...  
+          PS. While I LOVE working in digital I also love to spend time in nature and get my hands dirty doing physical work with atoms not bits :) In 2021 I'm trying to find more balance away from the screen. That might be general labouring work, gardening or something else centred around Byron Bay (30-60min radius).  
         </p>
 
         <p css={css`${tw`bg-gray-200 p-5`}`}>
