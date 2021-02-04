@@ -56,7 +56,7 @@ export default function Now() {
         </h2>
 
         <p>
-          I’ve been working remotely from our home here for 5+ years and the last 4 have been with <a href="https://aimementoring.com" target="_blank">AIME Mentoring</a>. At AIME I grew the digital team from just me to leading a fully remote team of 11+ across 5 time zones and professional practices covering Design, Engineering, IT and Data. I wrapped up my role as CTO in Septmeber 2020.&nbsp;
+          I’ve been working remotely from our home here for 5+ years and the last 4 have been with <a href="https://aimementoring.com" target="_blank">AIME Mentoring</a>. At AIME I grew the digital team from just me to leading a fully remote team of 11+ across 5 time zones and professional practices covering Design, Engineering, IT and Data. I wrapped up my role as CTO in Septmeber 2020 and have begun a new journey into entrepreneurship ... &nbsp;
           <Link to="/work#what">See what I'm looking for</Link>. 
         </p>
 
