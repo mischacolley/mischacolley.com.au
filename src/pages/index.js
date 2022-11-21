@@ -29,8 +29,9 @@ export default function Home() {
 
       <article css={[article]}>
         <p css={[lead]}>
-          Hi, I'm <strong>Mischa Colley</strong>. Believing in the enabling power of the web & digital tech I specialise in frontend design & lead teams in tech, design & code to make the world a better place.
+          Hi, I'm <strong>Mischa Colley</strong>. As a <em>Creative Technologist</em> I help purposeful organisations with digital technology. I’ve worked in digital for more than a decade, as both a front of the frontend Developer and CTO.
         </p>
+
 {/* 
         <nav css={css`${tw`text-3xl mb-5 text-center`}`}>
           <Link css={[button]} to="/now">Now</Link>
@@ -42,9 +43,7 @@ export default function Home() {
 
         <p css={[paragraph]}>
           See what I'm doing&nbsp;
-          <Link css={css`${tw`text-brand underline`}`} to="/now">now</Link>.
-          // FYI I'm currently looking for&nbsp;
-          <Link css={css`${tw`text-brand underline`}`} to="/work">work</Link>.
+          <Link css={css`${tw`text-brand underline`}`} to="/now">now</Link> and how we could <Link css={css`${tw`text-brand underline`}`} to="/work">work togeather</Link>.
         </p>
 
         {/* <p css={[paragraph]}>

@@ -35,8 +35,8 @@ export default function Now() {
     <Layout>
 
       <SEO
-        title="Mischa Colley | Partner, Dad, Creative Technologist, Tech Leader, FED"
-        description="I'm partner to Sandra and dad to a 3 and 6 year old. We live just north of Byron Bay in the beautiful Northern Rivers region of NSW, Australia. "
+        title="Mischa Colley | Dad, Creative Technologist, Tech Leader, FED"
+        description="I'm dad to a 5 and 8 year old. When we're not traveling we live just north of Byron Bay in the beautiful Northern Rivers region of NSW, Australia. "
       />
 
       <Header />
@@ -48,36 +48,16 @@ export default function Now() {
         </h1>
 
         <p>
-          I'm partner to <a href="https://sandracolley.com.au" target="_blank">Sandra</a> and dad to a 3 and 6 year old. We live just north of Byron Bay in the beautiful Northern Rivers region of NSW, Australia. Bundjalung and Yugambeh country. We unschool our kids so they are part of our everyday lives in between work and everything else we do. 
+          I've spent the last 4 months working and traveling QLD with my family (I'm dad to a 5 and 8 year old) in a caravan. When were not traveling we live just north of Byron Bay in the beautiful Northern Rivers region of NSW, Australia. Bundjalung and Yugambeh country. My kids are unschooled so they are part of our everyday lives in between work and everything else we do. 
         </p>
 
         <h2>
-          Work
-        </h2>
-
-        <p>
-          I’ve been working remotely from our home here for 5+ years and the last 4 have been with <a href="https://aimementoring.com" target="_blank">AIME Mentoring</a>. At AIME I grew the digital team from just me to leading a fully remote team of 11+ across 5 time zones and professional practices covering Design, Engineering, IT and Data. I wrapped up my role as CTO in Septmeber 2020 and have begun a new journey into entrepreneurship ... &nbsp;
-          <Link to="/work#what">See what I'm looking for</Link>. 
-        </p>
-
-        <p>
-          In December 2020 I compleated a <a href="https://sbp.org.au/sourdough-startupnr/" target="_blank">pre-accelerator program</a> with a focus on embedding purpose, sustainability & circular economy principles in <a href="https://ulak.design/" target="_blank">ulak</a>, a digital collective I've recently co-founded.
-        </p>
-
-        <h2>
-          More
+          Biger picture ...
         </h2>
 
         <p>
           As I've been transitioning from the Frontend role as an individule contributor to that of a Tech leader I've been reading widely on business, leadership, parenting, mental models and Systems & Design Thinking. I'm interested in the itersection of digital and living systems and I'm also facinated about alternative learning models, B Corp and social enterprise business models and what a sustainable economic future could look like if we focus on supporting the next economy to meet the needs of all within the means of the planet.
         </p>
-
-        {/* <p>
-          Checkout my&nbsp;
-          <Link to="/history">history</Link>
-          &nbsp;and my&nbsp;
-          <Link to="/links">links</Link>.
-        </p> */}
 
       </article>
 
