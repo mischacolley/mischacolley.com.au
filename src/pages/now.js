@@ -48,7 +48,7 @@ export default function Now() {
         </h1>
 
         <p>
-          I've spent the last 4 months working and traveling QLD with my family (I'm dad to a 5 and 8 year old) in a caravan. When were not traveling we live just north of Byron Bay in the beautiful Northern Rivers region of NSW, Australia. Bundjalung and Yugambeh country. My kids are unschooled so they are part of our everyday lives in between work and everything else we do. 
+          I spent the last half of 2022 working and traveling QLD with my family (I'm dad to a 5 and 8 year old) in a caravan. When not traveling we live just north of Byron Bay in the beautiful Northern Rivers region of NSW, Australia. Bundjalung and Yugambeh country. My kids are unschooled and I co-parent with their mum Sandra so they are part of our everyday lives in between work and everything else we do.
         </p>
 
         <h2>
@@ -56,7 +56,22 @@ export default function Now() {
         </h2>
 
         <p>
-          As I've been transitioning from the Frontend role as an individule contributor to that of a Tech leader I've been reading widely on business, leadership, parenting, mental models and Systems & Design Thinking. I'm interested in the itersection of digital and living systems and I'm also facinated about alternative learning models, B Corp and social enterprise business models and what a sustainable economic future could look like if we focus on supporting the next economy to meet the needs of all within the means of the planet.
+          Over the last 2 years as I've delivered projects for many of my NFP, Social Enterprises and B Corp clients I've been experimenting with new ways of working together with other digital specialists. How to bring together purpose driven clients with values aligned with digital professionals in formats that feel less like a freelance/agency relationship and more like a cooperative. 
+        </p>
+        <p>
+          While I don’t want to “freelance” forever, I don’t want to create just another digital agency, or necessarily build a product business (unless it’s the right thing).  
+        </p>
+        <p>
+          I do want to build fulfilling relationships with humans doing their best work on projects that really matter. 
+        </p>
+        <p>
+          If you're one of those people, let's chat. And if you're a UX/UI Designer, Developer, Software Engineer, Technologists, [insert related profession here] I'd love to speak to you about getting together intentionally as a community within the for purpose space.
+        </p>
+        <p>
+          When I'm not building websites or providing technical leadership and digital strategy you'll find me barefoot and as far away from any screen or signal as I can get.
+        </p>
+        <p>
+          Somewhere in between you might find me daydreaming about alternative learning models and exploring how learning takes place outside of traditional educational institutions and how we might make that sustainable for all involved. 
         </p>
 
       </article>

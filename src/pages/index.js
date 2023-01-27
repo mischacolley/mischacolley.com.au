@@ -29,7 +29,7 @@ export default function Home() {
 
       <article css={[article]}>
         <p css={[lead]}>
-          Hi, I'm <strong>Mischa Colley</strong>. As a <em>Creative Technologist</em> I help purposeful organisations with digital technology. I’ve worked in digital for more than a decade, as both a front of the frontend Developer and CTO.
+          Hi, I'm <strong>Mischa Colley</strong>. As a <em>Creative Technologist</em> I help purposeful organisations with digital technology. I’ve worked in digital for more than a decade, as both a front-of-the-frontend Developer and CTO.
         </p>
 
 {/* 
@@ -43,7 +43,7 @@ export default function Home() {
 
         <p css={[paragraph]}>
           See what I'm doing&nbsp;
-          <Link css={css`${tw`text-brand underline`}`} to="/now">now</Link> and how we could <Link css={css`${tw`text-brand underline`}`} to="/work">work togeather</Link>.
+          <Link css={css`${tw`text-brand underline`}`} to="/now">now</Link> and how we could <Link css={css`${tw`text-brand underline`}`} to="/work">work together</Link>.
         </p>
 
         {/* <p css={[paragraph]}>

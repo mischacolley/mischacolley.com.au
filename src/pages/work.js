@@ -37,7 +37,7 @@ export default function Work() {
       
       <SEO
         title="Creative Technologist helping purposeful orgs with digital technology"
-        description="I specialise in frontend design & I'm an experienced remote worker and remote team leader in tech, design & code."
+        description="I work on web development projects, provide technical leadership (think fractional CTO) & digital strategy (both consulting & implementation)"
         image={socialShare}
       />
         
@@ -50,11 +50,19 @@ export default function Work() {
         </h1>
 
         <p>
-          I’ve worked in digital for more than a decade, as both a front of the frontend Developer and CTO.
+          I've worked in digital for more than a decade, as both a front-of-the-frontend Developer and CTO.
         </p>
 
         <p>
-          Over the last few years I've been <s>freelancing</s> experementing with creating <em>not another digital agency</em>. Along with working with my own clients, i've compleated a series of collaborative projects with values aligned businesses like Today, Populares and most recently Digital Village.
+          Becoming a dad made it really clear to me that if I was to remain in tech then it would have to be exclusively working on purposeful projects. So that's what I do. My two kids (5 & 8), and the world I want for them, provide the filter for the type of projects I chose to work on.
+        </p>
+
+        <p>
+          Over the last few years I've been <s>freelancing</s> experimenting with new ways of working together with other digital specialists. Working to bring together purpose driven clients with values aligned digital professionals in formats that feel less like an agency and more like a cooperative.
+        </p>
+
+        <p>
+          Along with working with my own NFP, Social Enterprises and B Corp clients, I've collaborated on projects with values aligned businesses like Today, Populares, Digital Village and soon We are Explorers. 
         </p>
 
         <h2 id="what">
@@ -62,9 +70,9 @@ export default function Work() {
         </h2>
 
         <ul>
-          <li>A development project - Where I leverage my skills and expereince as a frontend developer and help you build/ update websites and apps. Either on my own, or as part of a team</li>
-          <li>Technical leadership - Can't afford a full time CTO? On-demand I can help you translate the technical into something tangabile you can work with</li>
-          <li>Digital strategy - Where I lead a discovery workshop that may become a digital transformation project capable of impacting your whole organisation</li>
+          <li><strong>A development project</strong> - Where I leverage my skills and experience as a developer and help you build/ update websites and apps. Either on my own, using my generalist dev skills, or as part of a team where I'll zero in on the front-of-the-frontend</li>
+          <li><strong>Technical leadership</strong> - Can't afford a full time CTO? Hire me on-demand or as a fractional CTO and I can help you translate the technical into something tangible and get what you need done</li>
+          <li><strong>Digital strategy</strong> - Where I lead a discovery workshop that may become a digital transformation project capable of impacting your whole organisation. I'll consult and I'll implement as well if I'm the right person for the job</li>
         </ul>
   
         <p>
