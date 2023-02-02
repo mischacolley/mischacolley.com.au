@@ -16,6 +16,10 @@ const paragraph = css`
   ${tw`text-xl mb-5`}
 `
 
+const btn = css`
+  ${tw`bg-brand hover:bg-blue-700 text-white font-bold py-4 px-4 rounded mt-2 inline-block`}
+`
+
 export default function Home() {
   return (
     <Layout>
@@ -45,6 +49,8 @@ export default function Home() {
           See what I'm doing&nbsp;
           <Link css={css`${tw`text-brand underline`}`} to="/now">now</Link> and how we could <Link css={css`${tw`text-brand underline`}`} to="/work">work together</Link>.
         </p>
+
+        <a css={[btn]} href="https://calendly.com/mischacolley/catchup" target="_blank">Book a chat</a>
 
         {/* <p css={[paragraph]}>
           Checkout my&nbsp; 
