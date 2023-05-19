@@ -54,7 +54,7 @@ export default function Work() {
         </p>
 
         <p>
-          Becoming a dad made it really clear to me that if I was to remain in tech then it would have to be exclusively working on purposeful projects. So that's what I do. My two kids (5 & 8), and the world I want for them, provide the filter for the type of projects I chose to work on.
+          Becoming a dad made it really clear to me that if I was to remain in tech then it would have to be exclusively working on purposeful projects. So that's what I do. My two kids (6 & 8), and the world I want for them, provide the filter for the type of projects I chose to work on.
         </p>
 
         <p>
@@ -62,7 +62,7 @@ export default function Work() {
         </p>
 
         <p>
-          Along with working with my own NFP, Social Enterprises and B Corp clients, I've collaborated on projects with values aligned businesses like Today, Populares, Digital Village and soon We are Explorers. 
+          Along with working with my own NFP, Social Enterprises and B Corp clients, I've collaborated on projects with values aligned businesses like Today, Populares, Digital Village, StartSomeGood and We are Explorers. 
         </p>
 
         <h2 id="what">
@@ -71,9 +71,11 @@ export default function Work() {
 
         <ul>
           <li><strong>A development project</strong> - Where I leverage my skills and experience as a developer and help you build/ update websites and apps. Either on my own, using my generalist dev skills, or as part of a team where I'll zero in on the front-of-the-frontend</li>
-          <li><strong>Technical leadership</strong> - Can't afford a full time CTO? Hire me on-demand or as a fractional CTO and I can help you translate the technical into something tangible and get what you need done</li>
-          <li><strong>Digital strategy</strong> - Where I lead a discovery workshop that may become a digital transformation project capable of impacting your whole organisation. I'll consult and I'll implement as well if I'm the right person for the job</li>
+          <li><strong>Technical leadership</strong> - Can't afford a full time CTO? Hire me as a fractional CTO and I can help you translate the technical into something tangible and get what you need done</li>
+          <li><strong>Digital strategy</strong> - Where I lead a discovery workshop that may become a digital transformation project capable of impacting your whole organisation. I'll consult AND I'll implement as well if I'm the right person for the job</li>
         </ul>
+
+        <p>PS. I'm also just begining to consult in the <a href="http://opencampusproject.com/" target="_blank">EdTech</a> space as well.</p>
   
         <p>
           Lets chat <a href="mailto:me@mischacolley.com.au">me@mischacolley.com.au</a> :) 
