@@ -33,7 +33,7 @@ export default function Home() {
 
       <article css={[article]}>
         <p css={[lead]}>
-          Hi, I'm <strong>Mischa Colley</strong>. As a <em>Creative Technologist</em> I help purposeful organisations with digital technology. I’ve worked in digital for more than a decade, as both a front-of-the-frontend Developer and CTO.
+          Hi, I'm <strong>Mischa Colley</strong>. As a <em>Creative Technologist</em> I help purposeful organisations with digital technology. I’ve worked in digital for more than a decade, as both a Developer and CTO.
         </p>
 
 {/* 
@@ -44,6 +44,8 @@ export default function Home() {
           <Link css={[button]} to="/links">Links</Link>
           <a css={[button]} href="mailto:mischacolley@gmail.com">Contact</a>
         </nav> */}
+
+        <p css={[paragraph]}>Recently someone referred to me as a Swiss Army knife — an adaptable, multi-skilled problem solver, ready for anything. Being a proud generalist I took it as the highest compliment :)</p>
 
         <p css={[paragraph]}>
           See what I'm doing&nbsp;

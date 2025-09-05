@@ -50,27 +50,25 @@ export default function Work() {
         </h1>
 
         <p>
-          I've worked in digital for more than a decade, as both a front-of-the-frontend Developer and CTO.
+          I've worked in digital for more than a decade, as both a Developer and CTO.
         </p>
 
         <p>
-          Becoming a dad made it really clear to me that if I was to remain in tech then it would have to be exclusively working on purposeful projects. So that's what I do. My two kids (6 & 8), and the world I want for them, provide the filter for the type of projects I chose to work on.
+          Becoming a dad made it really clear to me that if I was to remain in tech then it would have to be exclusively working on purposeful projects. So that's what I do. My two kids (8 & 10), and the world I want for them, provide the filter for the type of projects I chose to work on.
         </p>
 
         <p>
-          Over the last few years I've been <s>freelancing</s> experimenting with new ways of working together with other digital specialists. Working to bring together purpose driven clients with values aligned digital professionals in formats that feel less like an agency and more like a cooperative.
+          Over the last few years I've been working with my own NFP, Social Enterprises and B Corp clients, as well as collaborating on projects with values aligned businesses like Populares, Digital Village, StartSomeGood, Verve Super,Rainbow Power Company, We are Explorers and Today.  
         </p>
 
-        <p>
-          Along with working with my own NFP, Social Enterprises and B Corp clients, I've collaborated on projects with values aligned businesses like Today, Populares, Digital Village, StartSomeGood and We are Explorers. 
-        </p>
+        <p>Recently someone referred to me as a Swiss Army knife — an adaptable, multi-skilled problem solver, ready for anything. Being a proud generalist I took it as the highest compliment :) </p>
 
         <h2 id="what">
           Here are some of the things I can help you with:
         </h2>
 
         <ul>
-          <li><strong>A development project</strong> - Where I leverage my skills and experience as a developer and help you build/ update websites and apps. Either on my own, using my generalist dev skills, or as part of a team where I'll zero in on the front-of-the-frontend</li>
+          <li><strong>A development project</strong> - Where I leverage my skills and experience as a developer and help you build/ update websites and apps. Either on my own, using my generalist developer skills, or as part of a team where I'll zero in on the frontend</li>
           <li><strong>Technical leadership</strong> - Can't afford a full time CTO? Hire me as a fractional CTO and I can help you translate the technical into something tangible and get what you need done</li>
           <li><strong>Digital strategy</strong> - Where I lead a discovery workshop that may become a digital transformation project capable of impacting your whole organisation. I'll consult AND I'll implement as well if I'm the right person for the job</li>
         </ul>

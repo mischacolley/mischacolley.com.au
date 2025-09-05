@@ -44,7 +44,9 @@ export default function BlogPost({ data }) {
       <article>
         <h1 css={css`${tw`font-sans font-bold text-3xl mb-5`}`}>{post.frontmatter.title}</h1>
         <Img fluid={post.frontmatter.featuredImage.childImageSharp.fluid} />
-        <div css={[postStyles]} dangerouslySetInnerHTML={{ __html: post.html }} />
+        <div css={[postStyles]}>
+          {post.rawMarkdownBody}
+        </div>
       </article>
 
     </Layout>
@@ -54,7 +56,7 @@ export default function BlogPost({ data }) {
 export const query = graphql`
   query($slug: String!) {
     markdownRemark(fields: { slug: { eq: $slug } }) {
-      html
+      rawMarkdownBody
       frontmatter {
         title
         featuredImage {

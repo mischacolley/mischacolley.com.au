@@ -48,7 +48,7 @@ export default function Now() {
         </h1>
 
         <p>
-          I've spent the last few months working and traveling Europe (I'm in Barcelona currently) and prior to that I spent the last half of 2022 working and traveling QLD with my family (I'm dad to a 6 and 8 year old) in a caravan. When not traveling we live just north of Byron Bay in the beautiful Northern Rivers region of NSW, Australia. Bundjalung and Yugambeh country. My kids are unschooled and I co-parent with their mum Sandra so they are part of our everyday lives in between work and everything else we do.
+          I'm dad to a 8 and 10 year old. We live just north of Byron Bay in the beautiful Northern Rivers region of NSW, Australia. Bundjalung and Yugambeh country. My kids are unschooled and I co-parent with their mum so they are with me about 50% of the time.
         </p>
 
         <h2>
@@ -56,13 +56,10 @@ export default function Now() {
         </h2>
 
         <p>
-          Over the last few years as I've delivered projects for many of my NFP, Social Enterprises and B Corp clients I've been working on balancing my need to work with the life I want to live. Experimenting with how to bring together purpose driven clients with values aligned digital professionals in formats that feel less like a freelance/agency relationship and more like a cooperative. 
+          Over the last few years as I've delivered projects for many of my NFP, Social Enterprises and B Corp clients I've been working on balancing my need to work with the life I want to live. Those that have worked with me will no that sometimes means I'm delivering projects from my 4WD and Starlink is only on while were working :) 
         </p>
         <p>
-          While I don’t want to “freelance” forever, I don’t want to create just another digital agency, or necessarily build a product business (unless it’s the right thing).  
-        </p>
-        <p>
-          I do want to build fulfilling relationships with humans doing their best work on projects that really matter. 
+          I want to build fulfilling relationships with humans doing their best work on projects that really matter. 
         </p>
         <p>
           If you're one of those people, let's chat. And if you're a UX/UI Designer, Developer, Software Engineer, Technologists, [insert related profession here] I'd love to speak to you about getting together intentionally as a community within the for purpose space.
