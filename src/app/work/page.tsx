@@ -3,14 +3,14 @@ import Header from "@/components/Header";
 
 export const metadata: Metadata = {
   title:
-    "Creative Technologist helping purposeful orgs with digital technology",
+    "Mischa Colley — Creative Technologist & Fractional CTO for purposeful organisations",
   description:
-    "I work on web development projects, provide technical leadership (think fractional CTO) & digital strategy (both consulting & implementation)",
+    "Creative Technologist and Fractional CTO helping purposeful organisations use digital technology for good. Blending strategy, leadership, and hands-on development with empathy and clarity.",
   openGraph: {
     title:
-      "Creative Technologist helping purposeful orgs with digital technology",
+      "Mischa Colley — Creative Technologist & Fractional CTO for purposeful organisations",
     description:
-      "I work on web development projects, provide technical leadership (think fractional CTO) & digital strategy (both consulting & implementation)",
+      "Creative Technologist and Fractional CTO helping purposeful organisations use digital technology for good. Blending strategy, leadership, and hands-on development with empathy and clarity.",
     url: "https://mischacolley.com.au/work",
     images: [
       {
@@ -23,9 +23,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     title:
-      "Creative Technologist helping purposeful orgs with digital technology",
+      "Mischa Colley — Creative Technologist & Fractional CTO for purposeful organisations",
     description:
-      "I work on web development projects, provide technical leadership (think fractional CTO) & digital strategy (both consulting & implementation)",
+      "Creative Technologist and Fractional CTO helping purposeful organisations use digital technology for good. Blending strategy, leadership, and hands-on development with empathy and clarity.",
     images: ["/images/social-share-work.png"],
   },
 };
@@ -35,64 +35,71 @@ export default function Work() {
     <>
       <Header />
 
-      <article className="max-w-5xl mx-auto px-16">
+      <article className="max-w-5xl mx-auto px-6 sm:px-16">
         <h1 className="font-sans font-bold text-3xl mb-5">
-          I help purposeful organisations with digital technology.
+          I’m a Creative Technologist. As a Fractional CTO I help purposeful
+          organisations use digital technology for good.
         </h1>
 
         <p className="text-lg mb-5">
-          I've worked in digital for more than a decade, as both a Developer and
-          CTO.
-        </p>
-
-        <p className="text-lg mb-5">
-          Becoming a dad made it really clear to me that if I was to remain in
-          tech then it would have to be exclusively working on purposeful
-          projects. So that's what I do. My two kids (8 & 10), and the world I
-          want for them, provide the filter for the type of projects I chose to
-          work on.
-        </p>
-
-        <p className="text-lg mb-5">
-          Over the last few years I've been working with my own NFP, Social
-          Enterprises and B Corp clients, as well as collaborating on projects
-          with values aligned businesses like Populares, Digital Village,
-          StartSomeGood, Verve Super,Rainbow Power Company, We are Explorers and
-          Today.
-        </p>
-
-        <p className="text-lg mb-5">
-          Recently someone referred to me as a Swiss Army knife — an adaptable,
-          multi-skilled problem solver, ready for anything. Being a proud
-          generalist I took it as the highest compliment :)
+          With more than a decade in digital, from development to leadership, I
+          help teams bring clarity and purpose to their technical decisions and
+          digital projects.
         </p>
 
         <h2 id="what" className="font-sans font-bold text-2xl mb-5">
-          Here are some of the things I can help you with:
+          Here’s how I can help:
         </h2>
 
-        <ul className="text-lg mb-5">
-          <li className="list-disc list-inside mb-2">
-            <strong>A development project</strong> - Where I leverage my skills
-            and experience as a developer and help you build/ update websites
-            and apps. Either on my own, using my generalist developer skills, or
-            as part of a team where I'll zero in on the frontend
+        <ul className="text-lg mb-5 space-y-4">
+          <li className="list-disc list-inside">
+            <strong>🧭 Fractional CTO / Technical Leadership</strong> — Can’t
+            justify a full-time CTO? I can help translate technical complexity
+            into clear, actionable plans so you can make confident decisions and
+            get things done. From mentoring teams to overseeing delivery, I
+            bridge the gap between vision and implementation.
           </li>
-          <li className="list-disc list-inside mb-2">
-            <strong>Technical leadership</strong> - Can't afford a full time
-            CTO? Hire me as a fractional CTO and I can help you translate the
-            technical into something tangible and get what you need done
+
+          <li className="list-disc list-inside">
+            <strong>💡 Digital Strategy</strong> — From discovery workshops to
+            digital transformation, I help you map where technology can have the
+            biggest impact. I combine consulting with hands-on implementation
+            when it makes sense, ensuring strategy becomes reality.
           </li>
-          <li className="list-disc list-inside mb-2">
-            <strong>Digital strategy</strong> - Where I lead a discovery
-            workshop that may become a digital transformation project capable of
-            impacting your whole organisation. I'll consult AND I'll implement
-            as well if I'm the right person for the job
+
+          <li className="list-disc list-inside">
+            <strong>🧑🏼‍💻 Development Projects</strong> — I still love to build.
+            Whether it’s crafting a new site or refining an existing product, I
+            bring a full-stack understanding with a frontend focus, working solo
+            or as part of a team.
           </li>
         </ul>
 
+        <h2 id="why" className="font-sans font-bold text-2xl mb-5">
+          Why I do it:
+        </h2>
+
         <p className="text-lg mb-5">
-          PS. I'm also just begining to consult in the{" "}
+          Becoming a dad made one thing clear: if I was going to stay in tech,
+          it had to be for work that truly mattered. My two kids (8 and 10), and
+          the world I want for them, are the filter for every project I choose.
+        </p>
+
+        <p className="text-lg mb-5">
+          Over the years, I’ve partnered with NFPs, social enterprises, and B
+          Corps, as well as collaborated with values-aligned teams like
+          Populares, Digital Village, StartSomeGood, Verve Super, Rainbow Power
+          Company, We Are Explorers and Today.
+        </p>
+
+        <p className="text-lg mb-5">
+          Someone once called me a Swiss Army knife. An adaptable, multi-skilled
+          problem solver, ready for anything. As a proud generalist, I took it
+          as the highest compliment :)
+        </p>
+
+        <p className="text-lg mb-5">
+          I’m also beginning to consult in the{" "}
           <a
             href="http://opencampusproject.com/"
             target="_blank"
@@ -101,11 +108,12 @@ export default function Work() {
           >
             EdTech
           </a>{" "}
-          space as well.
+          space — exploring how learning happens beyond traditional education
+          and how technology can help make that more sustainable.
         </p>
 
         <p className="text-lg mb-5">
-          Lets chat{" "}
+          Let’s chat{" "}
           <a
             href="mailto:me@mischacolley.com.au"
             className="text-brand underline"
