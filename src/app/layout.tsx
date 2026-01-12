@@ -3,9 +3,9 @@ import "./globals.css";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://mischacolley.com.au"),
-  title: "Mischa Colley | Creative Technologist, Tech Leader, FED",
+  title: "Mischa Colley | Creative Technologist, Fractional CTO, FED, Tech Edu",
   description:
-    "Believing in the enabling power of the web & digital tech I specialise in frontend design & lead teams in tech, design & code to make the world a better place.",
+    "I help purpose-driven business and young people with digital technology",
   authors: [{ name: "Mischa Colley" }],
   icons: {
     icon: [
@@ -16,9 +16,10 @@ export const metadata: Metadata = {
     apple: "/site-icon.png",
   },
   openGraph: {
-    title: "Mischa Colley | Creative Technologist, Tech Leader, FED",
+    title:
+      "Mischa Colley | Creative Technologist, Fractional CTO, FED, Tech Edu",
     description:
-      "Believing in the enabling power of the web & digital tech I specialise in frontend design & lead teams in tech, design & code to make the world a better place.",
+      "I help purpose-driven business and young people with digital technology",
     url: "https://mischacolley.com.au",
     siteName: "Mischa Colley",
     images: [
@@ -34,9 +35,10 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Mischa Colley | Creative Technologist, Tech Leader, FED",
+    title:
+      "Mischa Colley | Creative Technologist, Fractional CTO, FED, Tech Edu",
     description:
-      "Believing in the enabling power of the web & digital tech I specialise in frontend design & lead teams in tech, design & code to make the world a better place.",
+      "I help purpose-driven business and young people with digital technology",
     images: ["/images/social-share.png"],
   },
 };
