@@ -1,22 +1,26 @@
 import type { Metadata } from "next";
 import Header from "@/components/Header";
+import { kidsSentence } from "@/lib/kids";
 
-export const metadata: Metadata = {
-  title: "Mischa Colley | Dad, Creative Technologist, Tech Leader, FED",
-  description:
-    "I'm dad to a 8 and 10 year old. We live just north of Byron Bay in the beautiful Northern Rivers region of NSW, Australia. Bundjalung and Yugambeh country.",
-  openGraph: {
-    title: "Mischa Colley | Dad, Creative Technologist, Tech Leader, FED",
-    description:
-      "I'm dad to a 8 and 10 year old. We live just north of Byron Bay in the beautiful Northern Rivers region of NSW, Australia. Bundjalung and Yugambeh country.",
-    url: "https://mischacolley.com.au/now",
-  },
-  twitter: {
-    title: "Mischa Colley | Dad, Creative Technologist, Tech Leader, FED",
-    description:
-      "I'm dad to a 8 and 10 year old. We live just north of Byron Bay in the beautiful Northern Rivers region of NSW, Australia. Bundjalung and Yugambeh country.",
-  },
-};
+const TITLE = "Mischa Colley | Dad, Creative Technologist, Tech Leader, FED";
+
+export function generateMetadata(): Metadata {
+  const description = `${kidsSentence()}. We live just north of Byron Bay in the beautiful Northern Rivers region of NSW, Australia. Bundjalung and Yugambeh country.`;
+
+  return {
+    title: TITLE,
+    description,
+    openGraph: {
+      title: TITLE,
+      description,
+      url: "https://mischacolley.com.au/now",
+    },
+    twitter: {
+      title: TITLE,
+      description,
+    },
+  };
+}
 
 export default function Now() {
   return (
@@ -27,10 +31,10 @@ export default function Now() {
         <h1 className="font-sans font-bold text-3xl mb-5">Now</h1>
 
         <p className="text-lg mb-5">
-          I'm dad to a 8 and 10 year old. We live just north of Byron Bay in the
-          beautiful Northern Rivers region of NSW, Australia. Bundjalung and
-          Yugambeh country. My kids are unschooled and I co-parent with their
-          mum so they are with me about 50% of the time.
+          {kidsSentence()}. We live just north of Byron Bay in the beautiful
+          Northern Rivers region of NSW, Australia. Bundjalung and Yugambeh
+          country. My kids are unschooled and I co-parent with their mum so they
+          are with me about 50% of the time.
         </p>
 
         <h2 className="font-sans font-bold text-2xl mb-5">Biger picture ...</h2>
