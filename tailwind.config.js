@@ -13,6 +13,15 @@ module.exports = {
       colors: {
         brand: '#6699cc', // Same as your original Gatsby site
       },
+      keyframes: {
+        blink: {
+          '0%, 49%': { opacity: '1' },
+          '50%, 100%': { opacity: '0' },
+        },
+      },
+      animation: {
+        blink: 'blink 1s steps(1, end) infinite',
+      },
     },
   },
   plugins: [],
