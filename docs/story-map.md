@@ -150,6 +150,9 @@ The hub. Answers "who is this person?" and should sound like Mischa talking.
 - **Changing:** rewrite for a contributor or hire audience, after the services
   copy has been moved to FbN. **Move first, rewrite second**, or the copy is
   lost.
+- **Watch for duplication:** the Swiss Army knife line now leads the
+  generalist item on the FbN About. It is still on this page too. When this
+  page is rewritten, take it out here rather than running it on both sites.
 - **Adds:** separates "hire me as a person" from "engage my business", which is
   the distinction the whole two-site split exists to make.
 
@@ -237,7 +240,7 @@ solve my problem, and what is different about them?"
 
 | Section | Words |
 | --- | --- |
-| Headline and scan strip | 116 |
+| Headline and scan strip | 138 |
 | Why I only work with who I do | 85 |
 | How I got here | 182 |
 | What that means for your organisation | 194 |
