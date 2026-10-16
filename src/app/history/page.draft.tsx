@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 
+import DraftBanner from "@/components/DraftBanner";
 import Header from "@/components/Header";
 import { CHAPTERS, type Chapter, type Photo } from "@/content/history/chapters";
 
@@ -155,16 +156,12 @@ export default function History() {
       <Header />
 
       <article className="mx-auto max-w-3xl px-6 sm:px-16">
-        {/* Only ever rendered in a drafts build, so it cannot leak. It is here
-            so a screenshot of this page is never mistaken for the live one. */}
-        <p className="mb-8 rounded border border-amber-400 bg-amber-50 p-4 text-sm text-amber-900">
-          <strong>Draft.</strong> This page only exists when you run{" "}
-          <code>npm run dev:drafts</code>. It is not in the navigation and a
-          normal build does not emit it. {counts.ready ?? 0} of{" "}
-          {CHAPTERS.length} chapters done, {counts.drafted ?? 0} drafted,{" "}
-          {counts.blank ?? 0} not started, {missingCaptions} photo
-          {missingCaptions === 1 ? "" : "s"} still needing a real caption.
-        </p>
+        <DraftBanner>
+          {counts.ready ?? 0} of {CHAPTERS.length} chapters done,{" "}
+          {counts.drafted ?? 0} drafted, {counts.blank ?? 0} not started,{" "}
+          {missingCaptions} photo{missingCaptions === 1 ? "" : "s"} still
+          needing a real caption.
+        </DraftBanner>
 
         <h1 className="mb-5 font-sans text-3xl font-bold">History</h1>
 

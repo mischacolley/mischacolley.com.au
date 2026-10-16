@@ -11,13 +11,28 @@ import {
 } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import { SHOW_DRAFTS } from "@/lib/drafts";
 import { ProjectsList } from "./ProjectsList";
 
-const NAV = [
+/**
+ * `draft: true` means the page behind it is a `page.draft.tsx`, so the link
+ * has to disappear whenever the route does. Filtered rather than hidden with
+ * CSS: a link in the markup pointing at a route a static export never wrote
+ * is a 404 waiting to be crawled.
+ *
+ * SHOW_DRAFTS is inlined at build time, so the filter runs once during the
+ * export and the dropped links are absent from the shipped HTML entirely,
+ * not hidden in it. The same flag decides which pages exist at all, which is
+ * what keeps the two from disagreeing. See src/lib/drafts.ts.
+ */
+const NAV: { name: string; href: string; draft?: boolean }[] = [
   { name: "Now", href: "/now" },
   { name: "Work", href: "/work" },
-  { name: "Posts", href: "/posts" },
+  { name: "History", href: "/history", draft: true },
+  { name: "Posts", href: "/posts", draft: true },
 ];
+
+const VISIBLE_NAV = NAV.filter((item) => SHOW_DRAFTS || !item.draft);
 
 /**
  * "default" means nobody has touched the drawer on this page yet, so the page
@@ -222,7 +237,7 @@ export function SiteDrawer() {
             className="mt-8 border-t border-gray-200 pt-6"
           >
             <ul className="space-y-3">
-              {NAV.map((item) => {
+              {VISIBLE_NAV.map((item) => {
                 const current = pathname === item.href;
 
                 return (

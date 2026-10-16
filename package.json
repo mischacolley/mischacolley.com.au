@@ -4,10 +4,10 @@
   "description": "Mischa Colley personal website migrated to Next.js",
   "private": true,
   "scripts": {
-    "dev": "next dev",
-    "dev:drafts": "SHOW_DRAFTS=1 next dev",
-    "build": "next build",
-    "build:drafts": "SHOW_DRAFTS=1 next build",
+    "dev": "node scripts/stage-draft-assets.mjs && next dev",
+    "dev:drafts": "SHOW_DRAFTS=1 node scripts/stage-draft-assets.mjs && SHOW_DRAFTS=1 next dev",
+    "build": "node scripts/stage-draft-assets.mjs && next build",
+    "build:drafts": "SHOW_DRAFTS=1 node scripts/stage-draft-assets.mjs && SHOW_DRAFTS=1 next build",
     "export": "next build && next export",
     "start": "next start",
     "lint": "next lint"

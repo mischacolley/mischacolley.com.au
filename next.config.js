@@ -12,6 +12,11 @@
  *
  * The defaults have to be listed too: setting pageExtensions replaces the
  * built-in list rather than adding to it.
+ *
+ * The same flag is re-exported through `env` so the app can read it. The
+ * nav lives in a client component, which has no environment to read, so
+ * without this a drafts build would render links to pages it has, and a
+ * normal build would render links to pages it does not. See src/lib/drafts.ts.
  */
 const showDrafts = process.env.SHOW_DRAFTS === "1";
 
@@ -21,6 +26,9 @@ const nextConfig = {
   trailingSlash: true,
   images: {
     unoptimized: true,
+  },
+  env: {
+    SHOW_DRAFTS: showDrafts ? '1' : '',
   },
   pageExtensions: showDrafts
     ? ['draft.tsx', 'tsx', 'ts', 'jsx', 'js']

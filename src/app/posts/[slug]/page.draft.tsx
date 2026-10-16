@@ -1,7 +1,9 @@
+import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import Link from "next/link";
 import Image from "next/image";
 import Header from "@/components/Header";
+import DraftBanner from "@/components/DraftBanner";
 import { getAllPostSlugs, getPostData } from "@/lib/posts";
 
 interface PostPageProps {
@@ -9,6 +11,13 @@ interface PostPageProps {
     slug: string;
   }>;
 }
+
+// Belt and braces, matching the posts index and History. The route should
+// never reach a production build at all; if it ever does, it should not be
+// indexed on the way out.
+export const metadata: Metadata = {
+  robots: { index: false, follow: false },
+};
 
 export function generateStaticParams() {
   const slugs = getAllPostSlugs();
@@ -30,6 +39,8 @@ export default async function PostPage({ params }: PostPageProps) {
       <Header />
 
       <article className="max-w-5xl mx-auto px-16">
+        <DraftBanner />
+
         <Link href="/posts" className="text-brand underline mb-4 inline-block">
           ← Back to Posts
         </Link>

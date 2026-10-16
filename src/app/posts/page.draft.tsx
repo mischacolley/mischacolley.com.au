@@ -2,12 +2,16 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import Image from "next/image";
 import Header from "@/components/Header";
+import DraftBanner from "@/components/DraftBanner";
 import { getAllPostsData } from "@/lib/posts";
 
 export const metadata: Metadata = {
   title: "Mischa Colley | Posts",
   description:
     "Believing in the enabling power of the web & digital tech I specialise in frontend design & lead teams in tech/design/code to make the world a better place.",
+  // The route should never reach a production build. If it ever does, it
+  // should not be indexed on the way out.
+  robots: { index: false, follow: false },
   openGraph: {
     title: "Mischa Colley | Posts",
     description:
@@ -29,6 +33,11 @@ export default function Posts() {
       <Header />
 
       <section className="max-w-5xl mx-auto px-16">
+        <DraftBanner>
+          {posts.length} post{posts.length === 1 ? "" : "s"}, all of them
+          from the old site and none rewritten yet.
+        </DraftBanner>
+
         <h1 className="font-sans font-bold text-3xl mb-5">Posts</h1>
 
         {posts.map((post) => (

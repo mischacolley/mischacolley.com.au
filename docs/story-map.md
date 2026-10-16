@@ -62,6 +62,9 @@ These were open questions in `copy-brief.md`. The code answered them.
 - **HelloMaker and Kindred are live and linkable.** Their cards in
   `src/lib/projects.ts` have hrefs now.
 - **Only one Open Campus repo exists locally.** Use `opencampus`.
+- **The call to action is "Let's yarn", not "Let's Chat".** Confirmed by
+  Mischa, and already how `ContactFab` and the chat widget read on the
+  personal site. Use it on every surface.
 - **The stale GitHub issue and PR on the personal site are not relevant.** A
   2020 todo list and a 2023 Dependabot bump for Gatsby, which the site no
   longer uses. Nothing to work around.
@@ -127,8 +130,9 @@ The hub. Answers "who is this person?" and should sound like Mischa talking.
 - **Waiting on:** the interview answers in each chapter's `questions` array,
   real photo captions, and how much of the relationship chapter Mischa wants.
   The page prints its own progress at the top, so run it to see where it is.
-- **To publish:** rename `page.draft.tsx` to `page.tsx` and add History to the
-  `NAV` array in `src/components/SiteDrawer.tsx`. Nothing else.
+- **To publish:** rename `page.draft.tsx` to `page.tsx` and drop
+  `draft: true` from its `NAV` entry in `src/components/SiteDrawer.tsx`. Both,
+  or the link and the route disagree.
 
 ### `/work`
 
@@ -141,11 +145,18 @@ The hub. Answers "who is this person?" and should sound like Mischa talking.
 - **Adds:** separates "hire me as a person" from "engage my business", which is
   the distinction the whole two-site split exists to make.
 
-### `/posts`
+### `/posts` — behind the draft gate
 
-- **Now:** six old posts, live, working. Navigation calls it *Posts*.
-- **Changing:** the brief calls it *Writing*. Pick one name and use it
-  everywhere. Not yet decided.
+- **Now:** six posts, all from the old site, none rewritten. Gated the same
+  way as History: `page.draft.tsx` for both the index and `[slug]`, and the
+  nav link filtered out. **No longer published.**
+- **Changing:** rewrite, with new posts that connect to the History chapters.
+- **Adds:** History is the story in order; posts are the thinking that comes
+  out of it. Reworking them together is why both are gated at once.
+- **Note:** this removed six live URLs. If any of them turn out to matter,
+  they will need redirects when the section comes back.
+- **Still undecided:** the brief calls the section *Writing*; the nav says
+  *Posts*.
 
 ### Site-wide
 
@@ -163,6 +174,8 @@ The hub. Answers "who is this person?" and should sound like Mischa talking.
 | 2026-10-16 | Yarn widget origin moved to `NEXT_PUBLIC_YARN_ORIGIN`, defaulting to the deployed Worker | A hand-edited `http://127.0.0.1:8787` literal had been committed. On an HTTPS page the browser blocks it as mixed content, so the widget would silently never have appeared. An env var means a local override cannot be committed. |
 | 2026-10-16 | Stopped tracking `.DS_Store` | In `.gitignore` twice, but already in the index, so the ignore never applied. |
 | 2026-10-16 | Dropped `netlify.toml`, retargeted docs at Vercel | The deploy moved. Two comments still told you to set `KIDS_BIRTHDATES` in Netlify. |
+| 2026-10-16 | Gated `/posts` behind the same draft gate, and the nav links with it | The writing is all old and is being reworked alongside History. One flag now decides both which pages exist and which nav links render, so the two cannot disagree — a link to a route a static export never wrote is a 404 waiting to be crawled. |
+| 2026-10-16 | `public/posts` is generated, not committed | It was a byte-for-byte duplicate of `src/posts`, images **and** `index.md`, and `public/` ships verbatim. Every post's full text was being served as raw markdown at `/posts/<slug>/index.md` whichever way the routes were set — a pre-existing bug that would have made the posts gate look like it worked when it had not. Now staged by `scripts/stage-draft-assets.mjs`, images only, drafts builds only. |
 | 2026-10-16 | Scaffolded `/history` behind the draft gate; removed the live stub | The stub promised a page that did not exist. Verified both ways: a normal build emits no `/history` and no chapter prose anywhere in `out/`; `build:drafts` emits it with `noindex`. |
 
 ### The draft gate
@@ -174,6 +187,22 @@ The route has to not exist in the production build.
 `SHOW_DRAFTS=1`. A page named `page.draft.tsx` therefore resolves as a route in
 `npm run dev:drafts` and `npm run build:drafts`, and not at all in a plain
 build — no stub, no 404 entry, nothing in `out/`.
+
+Three things have to move together, or the gate only looks like it works:
+
+1. **The routes.** `page.draft.tsx`. Currently `/history`, `/posts` and
+   `/posts/[slug]`.
+2. **The nav.** `NAV` entries in `src/components/SiteDrawer.tsx` carry
+   `draft: true` and are filtered out. The drawer is a client component and
+   cannot read the environment, so `next.config.js` re-exports the flag
+   through its `env` key; `src/lib/drafts.ts` is the one place the app reads
+   it.
+3. **`public/`.** Copied into the export verbatim and ungateable by any page
+   extension, so anything draft-only has to be staged into it at build time
+   rather than committed. See `scripts/stage-draft-assets.mjs`.
+
+Verify a change to any of them by building both ways and grepping `out/` for
+text that should not be there. A passing typecheck proves nothing here.
 
 Chapters live in `src/content/history/` as data, each with a `status`. A
 chapter marked `draft` renders its real heading and photos, then a visible
