@@ -335,6 +335,13 @@ arrives, recognises the situation, and trusts the person behind it.
 
 - **Now:** the story works nearly word for word. A privacy page and the stories
   section exist. No link back to the personal site.
+- **Parked, may revisit:** the five unfinished comparison pages sit under
+  `app/compare/_drafts/`, a Next private folder, so nothing under it becomes
+  a route. Same intent as the draft gate on the personal site, but not the
+  same capability: a private folder is invisible in dev too, so these cannot
+  be previewed while being worked on. When these features get close to
+  landing and need reading in situ, convert them to the `page.draft.tsx`
+  mechanism instead. Left as is for now, deliberately.
 - **Changing:** link back so the person behind it is findable; a line saying
   where Kindred actually is and what a reader can do; one concrete AI example
   instead of "uses AI to help you communicate more clearly"; ages from a single
