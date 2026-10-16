@@ -2,6 +2,14 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Read by the Yarn chat widget across its shadow boundary, so the panel
+   follows the brand rather than its own configured accent. Literal because
+   Tailwind 3 keeps `brand` in tailwind.config.js and emits no variable for
+   it — keep the two in step by hand. */
+:root {
+  --yarn-accent: #6699cc;
+}
+
 body {
   @apply font-mono;
 }

@@ -1,3 +1,5 @@
+"use client";
+
 import Image from "next/image";
 import profileImage from "@/assets/images/profile.jpg";
 
@@ -7,9 +9,12 @@ import profileImage from "@/assets/images/profile.jpg";
  * affordance now — the footer nav it replaced is gone, along with its email
  * link.
  *
- * The avatar opens a mail client for now. Kept as its own component so the
- * trigger stays independent of what it opens — swapping the mailto for a real
- * chat widget later shouldn't mean rebuilding the button.
+ * The avatar opens the Yarn Chat widget, falling back to a mail client.
+ *
+ * The fallback is the point, not politeness: the href is a real `mailto:` and
+ * the handler only prevents it once `window.Yarn.ready()` is true. So a
+ * blocked script, a failed fetch, or a backend that is down all leave a
+ * working contact link rather than a button that does nothing.
  */
 
 /**
@@ -71,7 +76,14 @@ export default function ContactFab() {
 
       <a
         href="mailto:me@mischacolley.com.au"
-        aria-label="Send me a message"
+        aria-label="Let&apos;s yarn"
+        onClick={(event) => {
+          // Let modified clicks through, same as the social links above.
+          if (event.metaKey || event.ctrlKey || event.shiftKey) return;
+          if (!window.Yarn?.ready()) return; // the mailto happens instead
+          event.preventDefault();
+          window.Yarn.toggle();
+        }}
         className="group block h-full w-full rounded-full focus:outline-none focus-visible:ring-2 focus-visible:ring-brand focus-visible:ring-offset-2"
       >
         {/* Absolutely positioned so the label never widens the hit area. */}
@@ -79,7 +91,7 @@ export default function ContactFab() {
           aria-hidden="true"
           className="pointer-events-none absolute right-full top-1/2 mr-3 hidden -translate-y-1/2 whitespace-nowrap rounded-full bg-white/95 px-4 py-2 text-sm font-medium opacity-0 shadow-lg backdrop-blur-sm transition-opacity duration-200 group-hover:opacity-100 group-focus-visible:opacity-100 sm:block"
         >
-          Let&rsquo;s chat
+          Let&rsquo;s yarn
         </span>
 
         <Image
