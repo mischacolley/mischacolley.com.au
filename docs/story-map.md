@@ -237,6 +237,11 @@ solve my problem, and what is different about them?"
 - **Adds:** a prospective client gets the answer from the strip in about ten
   seconds, and the story now ends by converting itself into something they
   can buy rather than changing the subject to a services list.
+- **Reading order**, settled by Mischa: scan strip, "Why I only work with
+  who I do", "What that means for your organisation", then "How I got here"
+  last and behind a read-more toggle. The biography is the long bit only the
+  very interested read, so it sits last and collapsed. `CollapsibleStory`
+  holds the mechanics.
 - **Open:** whether the biography should come down further still. 182 words
   is already the tightest version that keeps all three claims proved.
 
@@ -272,6 +277,28 @@ on a business site at all.
 **Structural note:** the "Continue reading" expander exists to manage a story
 that is too long. If the cut works, delete it rather than keeping a collapsed
 thing no longer long enough to need collapsing.
+
+### Clients and case studies
+
+- **Naming the clients is fine.** Confirmed by Mischa — the logo carousel
+  and the case studies already do it. That question is closed.
+- **But six of the nine case studies are lorem ipsum.** The launch audit
+  found four; EPIC Pathways and Human Nature have been added since. It was
+  not confined to the detail pages — `Portfolio.tsx` renders `impact` in the
+  card hover overlay, so placeholder Latin was visible on the homepage.
+- **Now:** each project in `src/data/projects.ts` carries a `status`. The
+  grid reads `publishedProjects`, and `getProjectBySlug` resolves published
+  entries only, so a draft slug behaves like one that does not exist. Three
+  case studies are live: We Are Explorers, Rainbow Power Company, AIME
+  Mentoring. Write the copy, flip the status, and the card returns.
+- **Worth knowing:** the draft entries still import their images, so roughly
+  **22.8 MB** of PNGs ship for case studies that are not shown — `fok.png`
+  alone is 8.8 MB. That is the launch audit's P0 #8 image-weight item, now
+  with a concrete number attached. Compressing or lazily importing those is
+  separate work.
+- **Also worth checking:** AIME sits in the client logo strip, but AIME was
+  employment, not a client. Nobody has questioned it; flagging it as an
+  accuracy question rather than a permission one.
 
 ### Services, home, contact
 
