@@ -117,7 +117,7 @@ export const CHAPTERS: Chapter[] = [
   {
     slug: "first-jobs-and-aime-mentoring",
     title: "First jobs, and mentoring with AIME",
-    period: "from 2010",
+    period: "2010 to 2016",
     status: "blank",
     body: [],
     photos: [],
@@ -125,16 +125,17 @@ export const CHAPTERS: Chapter[] = [
       "What was mentoring with AIME like, and why did it stay with you?",
       "The brief says it kept you in your degree. How?",
       "Which agencies and in-house teams, and what did you learn by doing the work rather than studying it?",
+      "Six years is a long chapter. What were you actually doing between 2010 and joining AIME in 2016?",
     ],
-    note: "The 2010 date comes from the working doc. Confirm it before this ships.",
+    note: "Confirmed: mentoring from 2010, AIME proper from 2016. That makes this the longest gap in the story and currently the emptiest chapter.",
   },
   {
     slug: "becoming-a-dad-and-aime",
     title: "Becoming a dad, and AIME",
-    period: "2014 onward",
+    period: "from 2014",
     status: "drafted",
     body: [
-      "When my son was born in 2014, and after a couple of redundancies, I got a job with AIME as a Web Wizard and never looked back. I had been a mentor with them while at uni, so for me joining AIME was a real coming home.",
+      "My son was born in 2014. After a couple of redundancies I joined AIME as their Web Wizard in 2016, and never looked back. I had been a mentor with them while at uni, so for me joining AIME was a real coming home.",
       "At AIME I went from solo Web Wizard to CTO. Over three years we grew into a fully remote team of eleven across five time zones, covering design, engineering, IT and data, as AIME expanded from Australia into Africa and the USA. My job changed from writing code to enabling teams to do their best work: strategy, hiring, mentoring, and working with agencies and contractors.",
       "Then COVID forced a redundancy, and I had to let go of the team I had built, overnight. It taught me how easy it is to tangle purpose and identity up in our work, especially when you care as deeply as I did, and when the Indigenous Australian story is so rooted in my country and who I am.",
     ],
@@ -149,6 +150,8 @@ export const CHAPTERS: Chapter[] = [
     questions: [
       "What did the job teach you about leading people?",
       'The brief flags "I was devastated" — keep it only if that is true as written.',
+      "What happened between your son being born in 2014 and joining AIME in 2016? Two redundancies is the only thing on record.",
+      "When did AIME end? COVID points at 2020 but I have not assumed it, so the chapter has no end date.",
       "Confirm the wording of the Indigenous Australian line. It matters and it should be yours exactly.",
     ],
   },
