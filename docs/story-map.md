@@ -62,6 +62,16 @@ These were open questions in `copy-brief.md`. The code answered them.
 - **HelloMaker and Kindred are live and linkable.** Their cards in
   `src/lib/projects.ts` have hrefs now.
 - **Only one Open Campus repo exists locally.** Use `opencampus`.
+- **Open Campus Project is the umbrella.** Confirmed by Mischa. HelloMaker is
+  the first thing under it; Learning Prompts and Spaces In-Between may
+  follow. Kindred stands alone. All three surfaces now agree: the personal
+  site's drawer nests it, HelloMaker's footer says so, and Open Campus lists
+  it. This was the last "proposed, not confirmed" row in the brief's
+  decision log.
+- **Sub-brand logos are badges, not wordmarks.** Open Campus already is, and
+  the others are heading that way. `src/lib/projects.ts` carries a
+  `logoKind`; a badge gets its name rendered as text beside the mark,
+  because the artwork does not say it.
 - **The SDG block names focus areas, not numbered goals.** Confirmed by
   Mischa. The brief wanted three named goals each tied to a client as proof;
   a list of goal names with nothing behind it is what got them moved off
@@ -112,7 +122,11 @@ The hub. Answers "who is this person?" and should sound like Mischa talking.
   where I think out loud" draft in `copy-drafts.md`.
 - **Adds:** permission for the rest of the site to be unfinished. The Now page
   and History both depend on the reader arriving expecting work in progress.
-- **Do not:** rewrite the rotating title or the drawer. They are settled.
+- **Do not:** rewrite the rotating title. It is settled.
+- **The drawer's project list is a hierarchy now.** Children live in a
+  `children` array on the parent in `src/lib/projects.ts` and render indented
+  behind a hairline rule, inside the parent's own list item. Adding a sibling
+  under Open Campus is one entry in one place.
 
 ### `/now`
 
