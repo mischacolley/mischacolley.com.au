@@ -27,7 +27,7 @@ There is one story. Each surface is a different-length cut of it, and
 | `mischacolley.com.au/history` | Where has this person come from? | 1,500–2,500 w | Everything, in order. The source text. |
 | `mischacolley.com.au/now` | What is he up to this month? | ~500 w | Dated, unfinished, honest. |
 | `mischacolley.com.au/work` | Should I hire or collaborate with him? | ~400 w | Three roles, who he has worked with. |
-| Fractional by Nature `/#about` | Can this person solve my problem? | ~350 w | Scan strip, then only the story that proves it. |
+| Fractional by Nature `/#about` | Can this person solve my problem? | ~490 w | Scan strip, the story that proves it, then what it means for them. |
 | HelloMaker `/about` | Can I trust this person with my child? | ~250 w | Unschool dad, plus credentials. |
 | Open Campus Project | What is this body of work? | ~250 w | The umbrella, and what sits under it. |
 | Kindred `/stories` | Does this person understand my situation? | ~900 w | One family's separation, in full. |
@@ -216,16 +216,29 @@ pacing before the prose exists.
 The business site. The reader is a founder or leader asking "can this person
 solve my problem, and what is different about them?"
 
-### `/#about`
+### `/#about` — restructured
 
-- **Now:** one long story in `src/components/About.tsx`, behind a
-  "Continue reading" expander, with all three photos already placed and
-  placeholder captions reading "somewhere, some year".
-- **Changing:** cut hard. Scan strip first, then only the story beats that
-  prove one of the three claims, then a new closing section converting the
-  story into capability. Everything cut moves to `/history` — nothing is lost.
-- **Adds:** a prospective client can scan it in ten seconds and read the story
-  if they want it. Right now they must read it to find out whether they care.
+- **Now:** scan strip, then "Why I only work with who I do", then a shortened
+  "How I got here", then "What that means for your organisation". The
+  expander is gone. Placeholder captions are gone — a photo with no known
+  caption renders none, per the brief's "real captions, or none".
+- **Where the words went.** The page is longer than the 277 it was, because
+  the biography was never the problem — the missing capability section was.
+  Biography down 182 from 277; 194 words of new capability content; 116
+  scannable rather than read.
+
+| Section | Words |
+| --- | --- |
+| Headline and scan strip | 116 |
+| Why I only work with who I do | 85 |
+| How I got here | 182 |
+| What that means for your organisation | 194 |
+
+- **Adds:** a prospective client gets the answer from the strip in about ten
+  seconds, and the story now ends by converting itself into something they
+  can buy rather than changing the subject to a services list.
+- **Open:** whether the biography should come down further still. 182 words
+  is already the tightest version that keeps all three claims proved.
 
 The test for keeping a line is whether it proves one of these three claims:
 
