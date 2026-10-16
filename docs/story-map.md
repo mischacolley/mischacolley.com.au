@@ -62,6 +62,14 @@ These were open questions in `copy-brief.md`. The code answered them.
 - **HelloMaker and Kindred are live and linkable.** Their cards in
   `src/lib/projects.ts` have hrefs now.
 - **Only one Open Campus repo exists locally.** Use `opencampus`.
+- **The SDG block names focus areas, not numbered goals.** Confirmed by
+  Mischa. The brief wanted three named goals each tied to a client as proof;
+  a list of goal names with nothing behind it is what got them moved off
+  LinkedIn in the first place, and only three case studies are published to
+  link to anyway.
+- **Naming clients is fine.** Confirmed by Mischa.
+- **Son born 2014, AIME from 2016, mentoring from 2010.** Confirmed. The
+  sites previously had the birth and the job in the same year.
 - **The call to action is "Let's yarn", not "Let's Chat".** Confirmed by
   Mischa, and already how `ContactFab` and the chat widget read on the
   personal site. Use it on every surface.
