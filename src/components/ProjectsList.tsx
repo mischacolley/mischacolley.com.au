@@ -38,32 +38,25 @@ function ProjectCard({ project }: { project: Project }) {
   );
 }
 
-export default function ProjectsAside() {
+/**
+ * Heading plus the project cards. Rendered inside the site drawer — the
+ * drawer owns the panel chrome, this owns the list.
+ */
+export function ProjectsList() {
   return (
-    // From lg up this leaves the page flow entirely and pins itself to the
-    // left edge of the viewport, full height. Below lg it is an ordinary
-    // rounded card sitting in the stack.
-    <aside
-      className="w-full rounded-lg bg-gray-50 p-6 lg:fixed lg:inset-y-0 lg:left-0 lg:z-10 lg:flex lg:w-64 lg:flex-col lg:overflow-y-auto lg:rounded-none lg:border-r lg:border-gray-200 lg:p-8"
-      aria-label="Projects I'm working on"
-    >
-      {/* my-auto rather than justify-center on the parent: it centres the
-          same way but still scrolls from the top if the list ever outgrows a
-          short viewport. */}
-      <div className="lg:my-auto">
-        <h2 className="text-xs uppercase tracking-widest text-gray-400">
-          Projects
-        </h2>
-        {/* Divided rather than gapped so each project reads as its own row at
-            every width. */}
-        <ul className="mt-4 divide-y divide-gray-200">
-          {PROJECTS.map((project) => (
-            <li key={project.name} className="py-4 first:pt-0 last:pb-0">
-              <ProjectCard project={project} />
-            </li>
-          ))}
-        </ul>
-      </div>
-    </aside>
+    <div>
+      <h2 className="text-xs uppercase tracking-widest text-gray-400">
+        Projects
+      </h2>
+      {/* Divided rather than gapped so each project reads as its own row at
+          every width. */}
+      <ul className="mt-4 divide-y divide-gray-200">
+        {PROJECTS.map((project) => (
+          <li key={project.name} className="py-4 first:pt-0 last:pb-0">
+            <ProjectCard project={project} />
+          </li>
+        ))}
+      </ul>
+    </div>
   );
 }

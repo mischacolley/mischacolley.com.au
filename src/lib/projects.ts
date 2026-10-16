@@ -19,7 +19,7 @@ export const PROJECTS: Project[] = [
     name: "Fractional by Nature",
     tagline: "Purpose-driven technology support ",
     logo: fractionalByNature,
-    href: "https://fractionalbynature.com",
+    href: "https://fractionalbynature.com.au",
   },
   {
     name: "Open Campus Project",
@@ -31,12 +31,12 @@ export const PROJECTS: Project[] = [
     name: "HelloMaker",
     tagline: "Tech learning for young people",
     logo: helloMaker,
-    href: null,
+    href: "https://hellomaker.org",
   },
   {
     name: "Kindred",
     tagline: "The co-parenting app for the whole journey",
     logo: kindred,
-    href: null,
+    href: "https://getkindred.com.au",
   },
 ];
