@@ -9,7 +9,7 @@
  *   KIDS_BIRTHDATES="2016-07-14,2014-3-2"
  *
  * Set it in .env.local at the PROJECT ROOT for dev (Next.js only reads env
- * files from the root, not from src/) and in the Netlify site's env vars
+ * files from the root, not from src/) and in the Vercel project's env vars
  * for deploys. Do NOT prefix it with NEXT_PUBLIC_ — that would ship it to the
  * browser.
  */

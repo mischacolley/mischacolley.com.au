@@ -77,13 +77,28 @@ Blog posts are written in Markdown and stored in `src/posts/`. Each post directo
 - ✅ TypeScript for type safety
 - ✅ Modern Next.js App Router
 
+## 🪝 Git hooks
+
+Run this once per clone:
+
+```bash
+git config core.hooksPath .githooks
+```
+
+`.githooks/pre-commit` stamps "last updated" dates into
+`src/content/last-updated.json` for the pages listed in
+`scripts/stamp-last-updated.mjs`, and stages the JSON with your commit.
+
+The stamp happens at commit time rather than build time because Vercel builds
+from a shallow clone (`git clone --depth=10`), so `git log -- <page>` is blind
+to any page that has not changed in the last ten commits — which is the normal
+state of the now page. Without the hook configured the dates simply go stale;
+nothing breaks.
+
 ## 🚀 Deployment
 
-This site is ready for deployment on platforms like:
-
-- Vercel (recommended for Next.js)
-- Netlify
-- Any Node.js hosting platform
+Deployed on Vercel. `next.config.js` sets `output: 'export'`, so the build is a
+plain static site and any static host would serve it.
 
 ## 📄 License
 
