@@ -245,11 +245,14 @@ solve my problem, and what is different about them?"
 - **Adds:** a prospective client gets the answer from the strip in about ten
   seconds, and the story now ends by converting itself into something they
   can buy rather than changing the subject to a services list.
-- **Reading order**, settled by Mischa: scan strip, "Why I only work with
-  who I do", "What that means for your organisation", then "How I got here"
-  last and behind a read-more toggle. The biography is the long bit only the
-  very interested read, so it sits last and collapsed. `CollapsibleStory`
-  holds the mechanics.
+- **Reading order**, settled by Mischa. The scan strip is the whole
+  always-visible page, 116 words. "Continue reading" starts immediately
+  below it, and everything past it is opt-in depth in increasing order of
+  how much the reader has to care: "Why I only work with who I do", "What
+  that means for your organisation", then "How I got here" last. The closing
+  line and the call to action sit outside the toggle so they show either
+  way. `CollapsibleStory` holds the mechanics and takes a `contentClassName`
+  for the section rhythm.
 - **Open:** whether the biography should come down further still. 182 words
   is already the tightest version that keeps all three claims proved.
 
@@ -400,6 +403,18 @@ arrives, recognises the situation, and trusts the person behind it.
   is not the same as agreeing to be written about. Show her the page,
   especially "we're not best mates (we're not)". Run the court process and the
   $80,000 figure past a solicitor in case the consent orders say anything.
+- **Done, 2026-10-16:** the brand now has a portable lockup, mark plus the name,
+  in `public/assets/`. It existed nowhere before, so anything referencing
+  Kindred off the site showed only the abstract monogram, which says nothing to
+  a reader who does not already know it. The projects list on the personal site
+  was the case that forced it. Generated from `app/icon.svg` by
+  `scripts/build-logo-lockup.py`, not drawn, so it cannot drift from the
+  favicon. See the README's Brand assets section.
+- **Done, 2026-10-16:** the header wordmark moved from DM Sans semibold in
+  near-black to DM Serif Display in the mark's green, which is what the app's
+  sign-in screen and the auth emails already use. The header was the only place
+  in the brand setting the name in sans, and it was the odd one out on its own
+  site, where every heading is already `font-serif`.
 
 ---
 
