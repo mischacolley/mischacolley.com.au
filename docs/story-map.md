@@ -1,8 +1,18 @@
 # Story map
 
-Mirrored, identical, into all five repos. The canonical copy lives in
-`mischacolley.com.au/docs/story-map.md`; edit it there and copy outward, so the
-five never drift.
+Mirrored into all five repos. The canonical copy lives in
+`mischacolley.com.au/docs/story-map.md`.
+
+**Do not `cp` it outward.** Run `node scripts/sync-story-map.mjs` from the
+personal site, which reports drift, and `--write` to apply. It refuses to
+overwrite any copy that has been edited in its own repo.
+
+That guard exists because a blind copy already destroyed another session's
+work once: the Open Campus session recorded how it fixed the build, a sync
+from here overwrote the file, and the only surviving record was the commit it
+had already made. With several sessions running at once, assume a sibling
+copy is ahead of this one until the script says otherwise. When it reports
+drift, read their version, merge what is theirs into this file, then sync.
 
 Last reviewed against working trees: **2026-10-16**.
 
@@ -49,7 +59,7 @@ at the top; re-check `git status` before trusting it.
 | `mischacolley.com.au` | `site-refresh` | Next 14.2, static export (`output: 'export'`), Tailwind 3 | The hub. README claims Next 15; it is 14.2. |
 | `fractionalbynature` | `feat/launch-prep` | Vite + React 18 + shadcn, SPA, Vercel | Password-gated via `proxy.ts`. Gate comes off last, at launch. |
 | `hellomaker` | `main` | Next 16.1, React 19, Tailwind 3 | `relaunch/merge-design` was merged and is identical; work on `main`. |
-| `opencampus` | `main` | Next, tailwind-nextjs-starter-blog | Only one Open Campus repo exists. The `opencampus-new` question is closed. |
+| `opencampus` | `main` | Next 14.2, contentlayer2, Tailwind 3 | Only one Open Campus repo exists. The `opencampus-new` question is closed. Build was unblocked on 2026-10-16; see below. |
 | `kindred-website` | `main` | Next, pnpm | Publishing blocked on Sandra and a solicitor, not on code. |
 
 ### Decisions settled by reading the code
@@ -93,13 +103,13 @@ These were open questions in `copy-brief.md`. The code answered them.
   `tailwind-nextjs-starter-blog.vercel.app` and `siteRepo` still points at the
   template author. Canonicals, sitemap, robots and every Open Graph tag derive
   from it. **Fix this before any other Open Campus work.**
-- **`opencampus` cannot build.** `contentlayer@0.3.4` uses the old
-  `import ... assert { type: 'json' }` syntax, which Node 22 removed, so
-  `next build` dies before it renders anything. This is pre-existing — the
-  committed tree fails the same way — and it means no Open Campus change can
-  deploy until it is dealt with. Options: pin Node 20 (deprecated on Vercel
-  since 1 October 2026, so a stopgap at best), move to the maintained
-  `contentlayer2` fork, or migrate off contentlayer. Needs a decision.
+- `opencampus` has no ESLint config file, so `yarn lint` drops into the
+  interactive "how would you like to configure ESLint?" setup and never lints.
+  Pre-existing, and it means lint has never run here.
+- `opencampus` is now two majors behind the starter it came from. It sits on
+  Next 14.2 / React 18 / Tailwind 3; upstream `tailwind-nextjs-starter-blog`
+  2.4.0 is Next 15 / React 19 / Tailwind 4. Not urgent, but the gap widens
+  every time upstream ships, and Tailwind 4 is the expensive half.
 - Kids' ages: fixed on `kindred-website`, which now has its own `lib/kids.ts`
   ported from the personal site. **`KIDS_BIRTHDATES` still needs setting in
   that Vercel project** — until it is, the copy reads "two kids" with no ages,
@@ -397,8 +407,20 @@ prominent.
   craft whose entry level is being automated away.
 - **Not done:** "more about me" should point at the personal site's History
   page, but that is behind the draft gate, so linking it would 404. Noted in
-  `app/Main.tsx`. **And none of this can deploy until the build is fixed** —
-  see hazards.
+  `app/Main.tsx`.
+- **The build is fixed, so all of this can deploy.** `contentlayer@0.3.4`
+  generated `import ... assert { type: 'json' }`, which Node 22 removed, and
+  the site could not build on any Node version Vercel still offers. The fix
+  was the maintained fork: `contentlayer2`/`next-contentlayer2` 0.5.8 and
+  `pliny` 0.4.1, with the remark and rehype plugins moved up to the
+  unified 11 generation that `contentlayer2` requires. Two knock-ons: the
+  fork emits the modern `with { type: 'json' }`, which Next 13.4's compiler
+  could not parse either, so Next went to 14.2.35; and `github-slugger` 2
+  dropped the static `GithubSlugger.slug`, so both call sites use the named
+  `slug` export. `scripts/rss.mjs` had its own `assert` import, unrelated
+  to contentlayer, and would have broken the RSS build straight after.
+  Verified on Node 24: build, type check, all 15 routes, RSS, sitemap and the
+  kbar search index.
 - **Adds:** one consistent shape across three sites, so a reader moving between
   them is not told three different things about how the work fits together.
 - **The hierarchy**, pending confirmation: Open Campus Project is the umbrella
