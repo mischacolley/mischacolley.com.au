@@ -240,7 +240,7 @@ solve my problem, and what is different about them?"
 
 | Section | Words |
 | --- | --- |
-| Headline and scan strip | 138 |
+| Headline and scan strip | 152 |
 | Why I only work with who I do | 85 |
 | How I got here | 182 |
 | What that means for your organisation | 194 |
