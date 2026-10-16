@@ -5,7 +5,9 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
+    "dev:drafts": "SHOW_DRAFTS=1 next dev",
     "build": "next build",
+    "build:drafts": "SHOW_DRAFTS=1 next build",
     "export": "next build && next export",
     "start": "next start",
     "lint": "next lint"

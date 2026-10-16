@@ -113,18 +113,22 @@ The hub. Answers "who is this person?" and should sound like Mischa talking.
 - **Waiting on:** availability, what he does with the other half of his time,
   the line about days with his kids, what the community would look like.
 
-### `/history` — new
+### `/history` — new, behind the draft gate
 
-- **Now:** exists as a committed stub at `src/app/history/page.tsx`, rendering
-  "It's currently being written ...". Not in the navigation.
-- **Changing:** becomes the eight-chapter life story. Built behind a draft
-  gate so Mischa can read it in situ while it is unfinished, and nobody else
-  can. See "The draft gate" below.
+- **Now:** scaffolded. Eight chapters in `src/content/history/chapters.ts`,
+  rendered by `src/app/history/page.draft.tsx`. Five chapters carry Mischa's
+  own prose, moved across from the FbN About; three are empty and carry only
+  their interview questions. Three photos are placed, all three still needing
+  real captions. **Not published** — see "The draft gate" below.
+- **Changing:** fill it. Chapter by chapter, from Mischa's answers.
 - **Adds:** the source text. Until it exists, the FbN About has nowhere to send
   a reader, Open Campus has nothing to point "more about me" at, and the long
   version keeps sprawling into pages that were never meant to carry it.
-- **Waiting on:** the interview answers, real photo captions, and how much of
-  the relationship chapter Mischa wants.
+- **Waiting on:** the interview answers in each chapter's `questions` array,
+  real photo captions, and how much of the relationship chapter Mischa wants.
+  The page prints its own progress at the top, so run it to see where it is.
+- **To publish:** rename `page.draft.tsx` to `page.tsx` and add History to the
+  `NAV` array in `src/components/SiteDrawer.tsx`. Nothing else.
 
 ### `/work`
 
@@ -159,6 +163,7 @@ The hub. Answers "who is this person?" and should sound like Mischa talking.
 | 2026-10-16 | Yarn widget origin moved to `NEXT_PUBLIC_YARN_ORIGIN`, defaulting to the deployed Worker | A hand-edited `http://127.0.0.1:8787` literal had been committed. On an HTTPS page the browser blocks it as mixed content, so the widget would silently never have appeared. An env var means a local override cannot be committed. |
 | 2026-10-16 | Stopped tracking `.DS_Store` | In `.gitignore` twice, but already in the index, so the ignore never applied. |
 | 2026-10-16 | Dropped `netlify.toml`, retargeted docs at Vercel | The deploy moved. Two comments still told you to set `KIDS_BIRTHDATES` in Netlify. |
+| 2026-10-16 | Scaffolded `/history` behind the draft gate; removed the live stub | The stub promised a page that did not exist. Verified both ways: a normal build emits no `/history` and no chapter prose anywhere in `out/`; `build:drafts` emits it with `noindex`. |
 
 ### The draft gate
 
