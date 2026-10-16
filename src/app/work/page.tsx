@@ -174,7 +174,7 @@ export default function Work() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          Book a chat
+          Let’s yarn
         </a>
       </article>
     </>

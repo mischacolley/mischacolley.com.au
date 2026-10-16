@@ -64,7 +64,7 @@ export default function Now() {
         </p>
 
         <p className="text-lg mb-5">
-          If you're one of those people, let's chat. And if you're a UX/UI
+          If you're one of those people, let’s yarn. And if you're a UX/UI
           Designer, Developer, Software Engineer, Technologists, [insert related
           profession here] I'd love to speak to you about getting together
           intentionally as a community within the for purpose space.
