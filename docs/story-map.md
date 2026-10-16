@@ -83,15 +83,17 @@ These were open questions in `copy-brief.md`. The code answered them.
   `tailwind-nextjs-starter-blog.vercel.app` and `siteRepo` still points at the
   template author. Canonicals, sitemap, robots and every Open Graph tag derive
   from it. **Fix this before any other Open Campus work.**
-- `hellomaker/app/layout.tsx` — the Yarn `<Script>` src is
-  `http://127.0.0.1:8787/widget.js`. Uncommitted as of this writing, so it has
-  not shipped. On an HTTPS page the browser blocks it as mixed content, and the
-  production CSP in `next.config.js` would block it again. The same bug was
-  already committed and fixed on the personal site; see the entry below.
-- Kids' ages are hardcoded in `kindred-website/components/story-section.tsx`
-  and in the FbN and HelloMaker copy. The personal site solves this properly in
-  `src/lib/kids.ts`, deriving them from a server-only env var so the birthdates
-  never enter the repo. Port it or drop the ages; do not maintain four copies.
+- **`opencampus` cannot build.** `contentlayer@0.3.4` uses the old
+  `import ... assert { type: 'json' }` syntax, which Node 22 removed, so
+  `next build` dies before it renders anything. This is pre-existing — the
+  committed tree fails the same way — and it means no Open Campus change can
+  deploy until it is dealt with. Options: pin Node 20 (deprecated on Vercel
+  since 1 October 2026, so a stopgap at best), move to the maintained
+  `contentlayer2` fork, or migrate off contentlayer. Needs a decision.
+- Kids' ages: fixed on `kindred-website`, which now has its own `lib/kids.ts`
+  ported from the personal site. **`KIDS_BIRTHDATES` still needs setting in
+  that Vercel project** — until it is, the copy reads "two kids" with no ages,
+  which is true but less warm than intended.
 
 ---
 
@@ -339,13 +341,15 @@ existing intro is the strongest copy in the set. Light touches only.
 - **Now:** honest, specific, sounds like him. Already links back to the
   personal site via `authorSite` in `data/siteMetadata.js`. No mention of Open
   Campus anywhere.
-- **Changing:** one sentence after "I'm first and foremost an unschool dad"
-  connecting to the bigger why; a status line opening "What I'm still working
-  on"; the canonical HelloMaker sentence; a line saying it is part of the Open
-  Campus Project.
-- **Adds:** places HelloMaker inside the larger body of work instead of leaving
-  it as an orphan project, and makes the "early" honesty explicit rather than
-  implied.
+- **Done:** the why sentence after the unschool dad line (left with a TODO —
+  it has to sound like him, and it is the one sentence on the page that might
+  not); "HelloMaker is early" opening the still-working-on list; the footer
+  now says it is part of the Open Campus Project.
+- **Adds:** places HelloMaker inside the larger body of work instead of
+  leaving it as an orphan, and makes the "early" honesty a choice rather than
+  something a reader has to infer.
+- **Waiting on:** whether to publish the Working with Children Check number
+  or offer it on request, and Mischa's pass on the why sentence.
 - **Keep, do not touch:** the line about HelloMaker being an excuse to keep his
   own interest in technology alive; "I read everything that comes in myself";
   the credentials block.
@@ -369,9 +373,18 @@ prominent.
   hierarchy disagrees with the personal site: the homepage lists Open Campus
   and HelloMaker as peers, this site treats HelloMaker as one of three
   offerings, and HelloMaker does not mention Open Campus at all.
-- **Changing:** fix `siteUrl` first (see hazards). Then the `for for those`
-  typo in `app/Main.tsx`, the canonical HelloMaker sentence, one agreed
-  hierarchy, a one-sentence why, and "more about me" repointed at `/history`.
+- **Done:** `siteUrl` and `siteRepo` now point at Open Campus rather than the
+  starter template; `language` and `locale` are en-AU; the scaffold's mastodon
+  handle is gone; `siteLogo` no longer points at a file that never existed.
+  The `for for those` typo went with the canonical HelloMaker sentence, which
+  now reads identically here, on hellomaker.org and on the personal site. The
+  podcast says launching soon, matching its own project page. A why paragraph
+  was added: open courseware, and not knowing how the next generation learns a
+  craft whose entry level is being automated away.
+- **Not done:** "more about me" should point at the personal site's History
+  page, but that is behind the draft gate, so linking it would 404. Noted in
+  `app/Main.tsx`. **And none of this can deploy until the build is fixed** —
+  see hazards.
 - **Adds:** one consistent shape across three sites, so a reader moving between
   them is not told three different things about how the work fits together.
 - **The hierarchy**, pending confirmation: Open Campus Project is the umbrella
@@ -396,10 +409,14 @@ arrives, recognises the situation, and trusts the person behind it.
   be previewed while being worked on. When these features get close to
   landing and need reading in situ, convert them to the `page.draft.tsx`
   mechanism instead. Left as is for now, deliberately.
-- **Changing:** link back so the person behind it is findable; a line saying
-  where Kindred actually is and what a reader can do; one concrete AI example
-  instead of "uses AI to help you communicate more clearly"; ages from a single
-  source.
+- **Done:** the footer links back to the personal site, and the ages come
+  from `lib/kids.ts` rather than being written into two files.
+- **Already done by Mischa:** "Kindred is in active development" and the
+  waitlist cover the where-it-is question.
+- **Still to do:** one concrete AI example instead of "uses AI to help you
+  communicate more clearly" — this needs Mischa to say what it actually does
+  today, in two places (`components/story-section.tsx` and
+  `app/stories/my-kindred-story/page.tsx`).
 - **Adds:** the clearest evidence for the whole spine — the same story about
   relationships and separation, at the scale of one family.
 - **Blocked on, before publishing:** Sandra has agreed to trial the app, which
