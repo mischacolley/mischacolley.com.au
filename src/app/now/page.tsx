@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Header from "@/components/Header";
 import { kidsSentence } from "@/lib/kids";
+import { lastUpdated } from "@/lib/lastUpdated";
 
 const TITLE = "Mischa Colley | Dad, Creative Technologist, Tech Leader, FED";
 
@@ -23,12 +24,22 @@ export function generateMetadata(): Metadata {
 }
 
 export default function Now() {
+  const updated = lastUpdated("now");
+
   return (
     <>
       <Header />
 
       <article className="max-w-5xl mx-auto px-16">
-        <h1 className="font-sans font-bold text-3xl mb-5">Now</h1>
+        <h1 className="font-sans font-bold text-3xl mb-2">Now</h1>
+
+        {/* Stamped at commit time; absent rather than wrong if unstamped. */}
+        {updated && (
+          <p className="text-sm text-gray-500 mb-5">
+            Last updated{" "}
+            <time dateTime={updated.iso}>{updated.label}</time>
+          </p>
+        )}
 
         <p className="text-lg mb-5">
           {kidsSentence()}. We live just north of Byron Bay in the beautiful

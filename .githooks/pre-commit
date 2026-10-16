@@ -1,0 +1,10 @@
+#!/bin/sh
+# Stamps "last updated" dates for tracked pages. Enable the hooks directory
+# once per clone with:
+#
+#   git config core.hooksPath .githooks
+#
+# Never blocks a commit: if node is missing the stamp is skipped, because a
+# stale date is a smaller problem than an uncommittable repo.
+command -v node >/dev/null 2>&1 || exit 0
+node scripts/stamp-last-updated.mjs || exit 0
