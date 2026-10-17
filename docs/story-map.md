@@ -59,7 +59,7 @@ at the top; re-check `git status` before trusting it.
 | `mischacolley.com.au` | `site-refresh` | Next 14.2, static export (`output: 'export'`), Tailwind 3 | The hub. README claims Next 15; it is 14.2. |
 | `fractionalbynature` | `feat/launch-prep` | Vite + React 18 + shadcn, SPA, Vercel | Password-gated via `proxy.ts`. Gate comes off last, at launch. |
 | `hellomaker` | `main` | Next 16.1, React 19, Tailwind 3 | `relaunch/merge-design` was merged and is identical; work on `main`. |
-| `opencampus` | `main` | Next 14.2, contentlayer2, Tailwind 3 | Only one Open Campus repo exists. The `opencampus-new` question is closed. Build was unblocked on 2026-10-16; see below. |
+| `opencampus` | `main` | Next 15.5, React 19, contentlayer2, Tailwind 4 | Only one Open Campus repo exists. The `opencampus-new` question is closed. Build was unblocked and the stack brought up to upstream on 2026-10-16; see below. |
 | `kindred-website` | `main` | Next, pnpm | Publishing blocked on Sandra and a solicitor, not on code. |
 
 ### Decisions settled by reading the code
@@ -106,10 +106,11 @@ These were open questions in `copy-brief.md`. The code answered them.
 - `opencampus` has no ESLint config file, so `yarn lint` drops into the
   interactive "how would you like to configure ESLint?" setup and never lints.
   Pre-existing, and it means lint has never run here.
-- `opencampus` is now two majors behind the starter it came from. It sits on
-  Next 14.2 / React 18 / Tailwind 3; upstream `tailwind-nextjs-starter-blog`
-  2.4.0 is Next 15 / React 19 / Tailwind 4. Not urgent, but the gap widens
-  every time upstream ships, and Tailwind 4 is the expensive half.
+- `opencampus` social icons size themselves with `h-${size} w-${size}` in
+  `components/social-icons/index.tsx`. Tailwind has never been able to see
+  classes built by string interpolation, so those utilities are only generated
+  if the same ones happen to be used literally elsewhere. Pre-existing, and it
+  predates the Tailwind 4 move.
 - Kids' ages: fixed on `kindred-website`, which now has its own `lib/kids.ts`
   ported from the personal site. **`KIDS_BIRTHDATES` still needs setting in
   that Vercel project** — until it is, the copy reads "two kids" with no ages,
@@ -405,6 +406,16 @@ prominent.
   podcast says launching soon, matching its own project page. A why paragraph
   was added: open courseware, and not knowing how the next generation learns a
   craft whose entry level is being automated away.
+- **The stack now matches upstream `tailwind-nextjs-starter-blog` 2.4.0**:
+  Next 15.5, React 19, Tailwind 4. Done in three staged commits so each one is
+  revertable on its own. Next 15 needed the async-params codemod on the two
+  dynamic blog routes. Tailwind 4 needed more: its config moved out of
+  `tailwind.config.js` into `@theme` in `css/tailwind.css`, because the old
+  config imported `tailwindcss/defaultTheme` and `tailwindcss/colors`, which
+  v4 removed. `primary` is still sky and `gray` is still Tailwind's default.
+  The two stylesheets stopped being `.scss` — neither contained any SCSS, and
+  `sass` is gone with them. Checked by diffing the generated CSS against the
+  Tailwind 3 build: no class used on any page lost its styling.
 - **Not done:** "more about me" should point at the personal site's History
   page, but that is behind the draft gate, so linking it would 404. Noted in
   `app/Main.tsx`.
