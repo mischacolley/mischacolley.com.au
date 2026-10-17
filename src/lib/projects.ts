@@ -39,7 +39,7 @@ export type Project = {
 export const PROJECTS: Project[] = [
   {
     name: "Fractional by Nature",
-    tagline: "Purpose-driven technology support",
+    tagline: "Technology strategy and hands-on delivery for purpose-driven organisations",
     logo: fractionalByNature,
     logoKind: "wordmark",
     href: "https://fractionalbynature.com.au",
