@@ -14,7 +14,34 @@ had already made. With several sessions running at once, assume a sibling
 copy is ahead of this one until the script says otherwise. When it reports
 drift, read their version, merge what is theirs into this file, then sync.
 
-Last reviewed against working trees: **2026-10-16**.
+**Outstanding as of 2026-10-18: two copies have diverged and need a hand
+merge.** `node scripts/sync-story-map.mjs` reports `fractionalbynature` and
+`kindred-website` as UNKNOWN — never synced by the script, so it cannot tell
+whose version is newer, and it refuses to touch them. Both were diffed rather
+than guessed at:
+
+- `fractionalbynature/docs/story-map.md` is **ahead of this file for its own
+  sections**, by roughly 110 lines of another session's notes: the quote
+  band's measured contrast ratios and focal point, the three independent
+  checks on the 2003 protest photo's date, the lorem ipsum audit and its 18
+  occurrences, the `VITE_SHOW_DRAFTS` preview flag, and the `index.html`
+  noindex bug. None of that is in this file. It must be merged *into here*
+  before any sync, or it is destroyed — which is the exact failure this guard
+  was added for, twice.
+- `kindred-website/docs/story-map.md` also predates the manifest.
+
+Until that merge happens, those two copies are the better record for their own
+sites and this file is the better record for everything else. `hellomaker` and
+`opencampus` are tracked by the manifest and were synced on 2026-10-18.
+
+Last reviewed against working trees: **2026-10-18**.
+
+**Nothing in any of the five repos is pushed.** `mischacolley.com.au` is on a
+local-only `site-refresh` with no remote branch; `hellomaker`, `opencampus`
+and `kindred-website` are all ahead of `origin/main`; `fractionalbynature`'s
+`feat/launch-prep` has no upstream. None of this copy work is deployed
+anywhere, which is deliberate for FbN (the gate comes off last) and simply
+pending for the rest.
 
 Companion files in this same `docs/` folder:
 
@@ -57,10 +84,10 @@ at the top; re-check `git status` before trusting it.
 | Repo | Branch | Stack | Notes |
 | --- | --- | --- | --- |
 | `mischacolley.com.au` | `site-refresh` | Next 14.2, static export (`output: 'export'`), Tailwind 3 | The hub. README claims Next 15; it is 14.2. |
-| `fractionalbynature` | `feat/launch-prep` | Vite + React 18 + shadcn, SPA, Vercel | Password-gated via `proxy.ts`. Gate comes off last, at launch. |
+| `fractionalbynature` | `feat/launch-prep` | Vite + React 18 + shadcn, SPA, Vercel | Password-gated via `proxy.ts`. Gate comes off last, at launch. No upstream branch. |
 | `hellomaker` | `main` | Next 16.1, React 19, Tailwind 3 | `relaunch/merge-design` was merged and is identical; work on `main`. |
 | `opencampus` | `main` | Next 15.5, React 19, contentlayer2, Tailwind 4 | Only one Open Campus repo exists. The `opencampus-new` question is closed. Build was unblocked and the stack brought up to upstream on 2026-10-16; see below. |
-| `kindred-website` | `main` | Next, pnpm | Publishing blocked on Sandra and a solicitor, not on code. |
+| `kindred-website` | `main` | Next, pnpm | Publishing blocked on Sandra and a solicitor, not on code. The material in question is already live. |
 
 ### Decisions settled by reading the code
 
@@ -354,8 +381,51 @@ solve my problem, and what is different about them?"
   line and the call to action sit outside the toggle so they show either
   way. `CollapsibleStory` holds the mechanics and takes a `contentClassName`
   for the section rhythm.
-- **Open:** whether the biography should come down further still. 182 words
-  is already the tightest version that keeps all three claims proved.
+- **Done, 2026-10-18: the biography came down to captions.** "How I got here"
+  is a run of eight captioned cards instead of four paragraphs — the copy
+  plan's "bigger trim". The story's job here is to show he walks the walk, and
+  a reader deciding whether to hire someone skims that. The captions carry the
+  whole story as real text, not baked into images, so nothing on the page is a
+  summary of something else on the page. It moves with a swipe or the arrow
+  keys; every photo has alt text. `StoryTimeline` holds it; `StoryFigure` went
+  with the paragraphs.
+- **Five of the eight photos do not exist**, and 2020 is text-only by design.
+  A card without an image renders its year and caption with a quiet panel
+  naming the photo wanted. Drop a file in and set `image`; nothing else
+  changes. Wanted: early web work or an old site screenshot (2006), something
+  from 2014 with no faces, working with In Good Company or Today, and the
+  front seat of the 4x4.
+- **Done, 2026-10-18: the duplication trims.** Six ideas were each said twice,
+  once in the scan strip and again in "What that means for your organisation",
+  which was most of why that section read long. The strip is now the one place
+  each is stated and the paragraphs are the proof: the eleven across five time
+  zones stays in the story where it has context, the generalist paragraph
+  starts at the part the strip does not say, and "lifestyle business, on
+  purpose" is left to the story.
+- **Done: the ending is the short one** of the three the plan offers. `Services`
+  sits directly above `About` in `Index.tsx`, so listing the three services
+  again would repeat cards the reader has just scrolled past — which is the
+  condition the plan names for choosing this option. The old line, "the
+  friends I work with and I can get you there", was also the only sentence in
+  the section that did not sound like Mischa.
+- **Done: the typos and the ambiguous line.** "has be difficult" to "has
+  been", "the way I'd like them too" to "to", the em dash in "how I lead"
+  replaced. The "my country" phrasing went with the paragraph that carried it:
+  a reader could have taken it as a claim to Country, which is the opposite of
+  what it meant.
+- **Flagged, needs Mischa:** turning the 2020 paragraph into a card dropped two
+  sentences — "I was pretty devastated", and "...especially when you care as
+  deeply as I did, and when the Indigenous Australian story is so rooted in
+  this country and in who I am". The second is the line he asked to *reword*
+  rather than cut, which suggests he wants it kept; it does not fit a
+  one-or-two-line card. The TODO in `StoryTimeline.tsx` offers to put it in
+  the closing prose under the carousel instead.
+- **Also flagged:** the Dan Eldon clause was in the old protest-photo caption
+  and is not in the card. The plan calls it optional and says the card reads
+  well without it. The AIME roll call moved into that card's alt text rather
+  than being dropped, which is the plan's first option.
+- **Open:** whether the biography should come down further still. The cards are
+  already a long way below the 182 words of prose they replaced.
 
 The test for keeping a line is whether it proves one of these three claims:
 
@@ -414,10 +484,22 @@ thing no longer long enough to need collapsing.
 
 ### Services, home, contact
 
-- **Now:** the three service cards live on the personal `/work` page, not here.
-- **Changing:** move them across before the personal Work page is rewritten.
-- **Adds:** nothing new — it is a move. But doing it in the wrong order loses
-  the copy.
+- **Now:** `Services.tsx` carries Fractional CTO, Digital Strategy and
+  Development with their arrow lists. The move is complete in both directions:
+  the cards were already here before the personal `/work` page was rewritten
+  on 2026-10-18, and they came off that page the same day. Verified by reading
+  this file rather than assumed, because doing it in the wrong order loses the
+  copy.
+- **Done, 2026-10-18:** the section heading said "A decade building technology
+  with organisations working for good", directly above an About that opens on
+  "Twenty years in technology". Now twenty. Two different numbers on one page
+  is worse than either being imprecise.
+- **Done, 2026-10-18:** Mischa's rewrite of the four `Process` steps, which was
+  sitting uncommitted in the working tree. Discovery and Strategy lead with
+  impact rather than mission; Strategy says out loud that planning is the step
+  that gets cut under pressure; Implementation draws the distinction that
+  matters, between consultants who tell you what to do and leave, and doing
+  the work in a way that builds internal capability. Four typos fixed with it.
 
 ### Launch
 
@@ -444,13 +526,42 @@ existing intro is the strongest copy in the set. Light touches only.
 - **Adds:** places HelloMaker inside the larger body of work instead of
   leaving it as an orphan, and makes the "early" honesty a choice rather than
   something a reader has to infer.
-- **Waiting on:** whether to publish the Working with Children Check number
-  or offer it on request, and Mischa's pass on the why sentence.
+- **Done, 2026-10-18:** the copy plan's About landed. Twenty years rather than
+  "over a decade"; the honest admission ("I'm still working this out for
+  myself and my family"); "It's early days for HelloMaker" opening the list;
+  the shared call to action in Get in touch. The TODO on the why sentence is
+  gone — it has been reviewed.
+- **The still-working-on list is three HelloMaker things now.** The directory,
+  the personal learning plans and the document-and-share ideas moved to Open
+  Campus, where they belong: they are umbrella-level ideas, not things a
+  parent reading this page can be offered.
+- **Learning Prompts is named as a sister project under Open Campus**, linked
+  to its project page there, per the sub-brand decision. Open Campus lists it
+  as a project of its own; this page does not claim it as a feature.
+- **The "creative technologist" link points at `/work`**, not the personal
+  site root, which is the rotating-title homepage.
+- **`data/trust.ts` said "10+ years, still in the field"** while the copy
+  beside it now says twenty. Fixed: a contradiction inside one screen is
+  worse than either number being imprecise.
 - **Keep, do not touch:** the line about HelloMaker being an excuse to keep his
-  own interest in technology alive; "I read everything that comes in myself";
-  the credentials block.
-- **Waiting on:** whether to publish the Working with Children Check number or
-  offer it on request.
+  own interest in technology alive; "I read everything that comes in myself"
+  (kept alongside the plan's shorter Get in touch sentence, which did not
+  contradict it); the credentials block.
+- **The Working with Children Check question is closed, and was closed in the
+  code.** `data/trust.ts` publishes the number (NSW, WWC1194686E) with a
+  comment explaining why a vague "current and verified" said nothing. Both the
+  brief and the copy plan still list this as open. It is not.
+- **Waiting on:** one making shot — hands, tools, a half-built thing — between
+  the introduction and the still-working-on list, so a parent sees the work
+  before reading what is unfinished about it. The file does not exist, so the
+  position is marked in place. No kids' faces.
+- **Not found:** the copy plan asks for an earlier piece on the whimsical days
+  of the early web, to sit beside the "playful way" sentence. It is in neither
+  repo. All 161 commits across every branch of the personal site and
+  HelloMaker were swept for "whimsical", "Geocities", "view source", "early
+  web", "Angelfire" and "guestbook": no hits. The only early-internet prose is
+  the FbN-derived material already in `copy-drafts.md` and the History chapter
+  scaffold. If it exists, it is outside git.
 
 The canonical sentence, used wherever the product is described anywhere:
 
@@ -503,13 +614,44 @@ prominent.
   to contentlayer, and would have broken the RSS build straight after.
   Verified on Node 24: build, type check, all 15 routes, RSS, sitemap and the
   kbar search index.
+- **Done, 2026-10-18:** the copy plan's homepage landed. HelloMaker leads the
+  list now — it is the one thing under the umbrella a reader can engage with
+  today, and it was third behind a podcast that has not launched. Its sentence
+  is the canonical one, unchanged.
+- **Learning Prompts is listed as a project of its own**, per the sub-brand
+  decision: a sub-brand under this umbrella that shares content with
+  HelloMaker, not a HelloMaker feature. HelloMaker's About links back here and
+  calls it a sister project, so the two surfaces agree. Its project page
+  picked up its tagline, and its component stopped being named
+  `LearningInbetween`.
+- **"Also taking shape under the umbrella"** is four highlights, then a link
+  out to the full running list on `/ideas` rather than a second copy of it.
+  The plan's `[See all my ideas]` bracket is a real link now.
+- **"More about me" points at the personal site's `/now`**, not `/about` here.
+  Open Campus should not keep its own biography. `/history` is the eventual
+  target but is still behind the draft gate on the personal site, so it would
+  404 today. That resolved the TODO in `app/Main.tsx`.
+- **The why paragraph** gained the two things the plan adds: dropping out of
+  uni because industry taught more and paid for it, and that it is AI
+  automating away the entry-level work.
+- **The meta description** was accurate but thin — "Supporting learning beyond
+  traditional educational institutions" named nothing under the umbrella. It
+  now names all four.
 - **Adds:** one consistent shape across three sites, so a reader moving between
   them is not told three different things about how the work fits together.
-- **The hierarchy**, pending confirmation: Open Campus Project is the umbrella
-  (ideas, podcast, consulting); HelloMaker is the offering for families;
-  Kindred sits outside it as its own project.
-- **Waiting on:** whether the Learning In-between podcast has launched, and
-  confirmation of the hierarchy.
+- **The hierarchy is confirmed:** Open Campus Project is the umbrella (ideas,
+  podcast, consulting); HelloMaker is the offering for families; Learning
+  Prompts is a sub-brand sharing content with HelloMaker; Kindred sits outside
+  it as its own project.
+- **Waiting on:** whether the Learning In-between podcast has launched, and one
+  sentence for the EdTech consulting bullet. That bullet still does not say
+  who it helps or how; the plan asks for a sentence or for the bullet to go,
+  and both are Mischa's call, so it carries a TODO rather than an invented
+  sentence.
+- **Left alone, deliberately:** the plan offers the triple threat as an
+  optional addition here, before "Why this matters to me". It is on `/now` and
+  LinkedIn; putting the same three-part statement on a third surface was not
+  asked for, so it is available rather than done.
 
 ---
 
@@ -534,13 +676,47 @@ arrives, recognises the situation, and trusts the person behind it.
 - **Still to do:** one concrete AI example instead of "uses AI to help you
   communicate more clearly" — this needs Mischa to say what it actually does
   today, in two places (`components/story-section.tsx` and
-  `app/stories/my-kindred-story/page.tsx`).
+  `app/stories/my-kindred-story/page.tsx`). The copy plan offers four
+  candidate lines and leans towards the first (a calmer version of a heated
+  message, your choice whether to use it), but leaning is not deciding and
+  nothing here should assert a capability nobody has confirmed.
+- **Done, 2026-10-18: Open Graph and Twitter metadata.** There were none at
+  all, so every link preview fell back to whatever the platform could scrape —
+  and `/now` on the personal site links straight here, so a separated parent
+  sent this link by a friend saw a bare URL. Added with `metadataBase`, which
+  Next needs to resolve the absolute URLs these tags require.
+- **The title and description check out.** The copy plan could not read them
+  because getkindred.com.au blocks automated reading; read from source, both
+  already lead with coordination rather than conflict — "the whole journey" in
+  the title, "meets you where you are" opening the description, conflict named
+  only as the thing this is not. No change needed, so they are now consts
+  referenced by the three blocks that use them.
+- **Still missing: a share card.** A 1200x630 PNG at
+  `public/images/social-share.png` is all that is wanted; the lockup in
+  `public/assets/` and the brand green (#0f8a6b, the `themeColor`) are what it
+  would be built from. Noted in place in `app/layout.tsx`.
+- **The copy plan's homepage story is NOT landed, deliberately.** Its version
+  differs from the live `story-section.tsx` in one material way: the live page
+  says "I want Sandra involved in building this", and the plan's says she said
+  yes and then, when it took too long, no. That is new factual information
+  about an identifiable third party's position, on exactly the page the plan
+  itself says is blocked on showing her. The two typo-level differences are
+  not worth shipping on their own, so the whole section waits.
 - **Adds:** the clearest evidence for the whole spine — the same story about
   relationships and separation, at the scale of one family.
 - **Blocked on, before publishing:** Sandra has agreed to trial the app, which
   is not the same as agreeing to be written about. Show her the page,
   especially "we're not best mates (we're not)". Run the court process and the
   $80,000 figure past a solicitor in case the consent orders say anything.
+  Note that the $80,000, the two-year court process and Sandra's name are
+  **already live** on both the homepage story and
+  `/stories/my-kindred-story` — this is not a question about whether to add
+  them, it is a question about material that is already published.
+- **Also waiting on Mischa:** "I've spent over a decade working in tech" is
+  true but `/work` and HelloMaker now say twenty years. The plan leaves the
+  choice open; it is in both Kindred places too.
+- **Also waiting:** `KIDS_BIRTHDATES` in the Kindred Vercel project, so the
+  ages render.
 - **Done, 2026-10-16:** the brand now has a portable lockup, mark plus the name,
   in `public/assets/`. It existed nowhere before, so anything referencing
   Kindred off the site showed only the abstract monogram, which says nothing to

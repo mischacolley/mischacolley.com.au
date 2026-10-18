@@ -213,9 +213,9 @@ Status: Draft. The existing intro is the strongest copy in the set, so it needs 
 
 **Open questions.**
 
-- Publish the Working with Children Check number, or "verification available on request"?
-- Is the new "why" sentence in his voice, and where exactly does it go?
-- Which images can be used, with consent for any child?
+- ~~Publish the Working with Children Check number, or "verification available on request"?~~ **Closed:** already published. `data/trust.ts` carries NSW, WWC1194686E.
+- ~~Is the new "why" sentence in his voice, and where exactly does it go?~~ **Closed:** reviewed in the copy plan; the TODO is gone.
+- Which images can be used, with consent for any child? Still open, and now blocking one making shot on the About page.
 
 ### Open Campus Project (opencampusproject.com)
 
@@ -290,19 +290,41 @@ LinkedIn is not a repo, so these are profile edits. It carries the shortest, cle
 
 ## Start here: the questions that unblock the most
 
-Each site section above has its full list of open questions. These twelve block the most work, so answering them first clears the way.
+Each site section above has its full list of open questions. **Rewritten
+2026-10-18**, after the copy plan landed across all five repos. Eight of the
+original twelve are closed; what is left is below, with what closed the others
+underneath.
 
-| Question | Unblocks |
+| Still open | Blocks |
 | --- | --- |
-| Call to action: "Let's Chat" or "let's yarn"? | Copy on every site |
-| Is Open Campus confirmed as the umbrella over HelloMaker, with Kindred standing alone? | Personal homepage, Open Campus, HelloMaker |
-| Which photo is the Home and Now share image, and which photos exist for History and the Fractional by Nature About? | Share images, History, Fractional by Nature About |
-| The Now brackets: availability, the other half of his time, a line on days with his kids, what the community would look like, something specific he is into | Now page |
-| Story check: "I was devastated" (only if true), the Indigenous Australian line, and the dates (son born 2014, AIME from 2016) | Fractional by Nature About, History |
-| Which three SDGs to name | Fractional by Nature SDG block |
-| Fractional by Nature domain and launch date | Links from the personal site, LinkedIn and HelloMaker |
-| May each of the seven clients be named? | Fractional by Nature clients |
-| Has Sandra seen the Kindred page, and has a solicitor checked the court details? | Publishing Kindred |
-| Has the Learning In-between podcast launched, and is `opencampus` or `opencampus-new` the current repo? | Open Campus |
-| What is the production domain for `metadataBase`? | Personal site metadata and share images |
-| Publish the Working with Children Check number or offer it on request? | HelloMaker |
+| What Kindred's AI actually does today, in one concrete example | Kindred, in two places |
+| Has Sandra seen the Kindred page, and has a solicitor checked the court details? | Publishing Kindred. Note the $80,000, the court process and her name are **already live** |
+| Which outdoor photo becomes the share image? No kids' faces | Every link preview the personal site generates |
+| The five missing Fractional by Nature timeline photos: early web or an old site (2006), something from 2014 with no faces, working with In Good Company or Today, and the front seat of the 4x4 | Those cards render a quiet panel until the files exist |
+| The two `/now` photos: the 4x4 as an office, and camping with swags | The page's image rhythm. Positions are marked in place |
+| One making shot for HelloMaker: hands, tools, a half-built thing | Same |
+| EdTech consulting: one sentence on who you help and how, or drop the bullet | Open Campus |
+| Kindred: "over a decade" or twenty years? | Kindred, in two places |
+| Keep the Indigenous Australian line? Turning the 2020 paragraph into a card dropped it, and it is the line you asked to reword rather than cut | Fractional by Nature About |
+| Today's URL. It appears nowhere in any of the five repos | A link on `/now` and `/work`. Set `SITES.today` and both pick it up |
+| Has the Learning In-between podcast launched? | Open Campus |
+| Which three SDGs to name, if the focus-area wording is ever replaced | Fractional by Nature SDG block |
+| Are the three contact addresses intentional, and do they reach one inbox? | Nothing, but worth knowing |
+
+**Closed, and by what.**
+
+| Was open | Answer |
+| --- | --- |
+| Call to action: "Let's Chat" or "let's yarn"? | "Let's yarn", confirmed, and now on every surface |
+| Is Open Campus the umbrella over HelloMaker, with Kindred standing alone? | Yes, confirmed. All four surfaces agree, and Learning Prompts is a sub-brand under it sharing content with HelloMaker |
+| Publish the Working with Children Check number or offer it on request? | **Already published.** `hellomaker/data/trust.ts` carries NSW, WWC1194686E, with a comment on why a vague "current and verified" said nothing |
+| Is the new HelloMaker "why" sentence in his voice? | Reviewed in the copy plan. The TODO is gone |
+| The `/now` brackets | Answered by the copy plan's `/now` draft, which is landed |
+| Fractional by Nature domain | `fractionalbynature.com.au`, confirmed |
+| May each of the seven clients be named? | Yes, confirmed. The logo strip is now on `/work` too, fourteen logos |
+| What is the production domain for `metadataBase`? | `https://mischacolley.com.au`, already set. Kindred now has one too |
+| Is `opencampus` or `opencampus-new` the current repo? | Only `opencampus` exists |
+| Story check: the dates | Son born 2014, AIME from 2016, mentoring from 2010. Confirmed |
+| "I was devastated" | Dropped with the paragraph when the story became cards. Nothing to check unless you want it back |
+| Judgement or judgment? | "Judgement", everywhere |
+| Twenty years or a decade? | Twenty. Fixed on `/work`, HelloMaker's copy and credentials block, and the Fractional by Nature Services heading. Kindred is the one place still saying "over a decade" |
