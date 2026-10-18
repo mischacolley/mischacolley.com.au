@@ -188,17 +188,45 @@ The hub. Answers "who is this person?" and should sound like Mischa talking.
 
 ### `/work`
 
-- **Now:** carries the three service cards, the "Can't justify a full-time
-  CTO?" pitch and the AI paragraph. All three are client-facing and belong on
-  Fractional by Nature.
-- **Changing:** rewrite for a contributor or hire audience, after the services
-  copy has been moved to FbN. **Move first, rewrite second**, or the copy is
-  lost.
-- **Watch for duplication:** the Swiss Army knife line now leads the
-  generalist item on the FbN About. It is still on this page too. When this
-  page is rewritten, take it out here rather than running it on both sites.
+- **Now:** rewritten for a contributor or hire audience, in the copy plan's
+  scan order rather than the order the copy was thought through. Hero, What I
+  do as two cards, proof, How I work, Why, the arc, How we can work together,
+  then Let's yarn. The three service cards, the "Can't justify a full-time
+  CTO?" pitch and the Swiss Army knife line are gone — all three were
+  client-facing and all three are on Fractional by Nature.
+- **The move happened first, so nothing was lost.** FbN's `Services.tsx`
+  already carried Fractional CTO, Digital Strategy and Development with the
+  same arrow lists before this page was touched. Verified by reading it, not
+  assumed.
+- **Why the order is inverted.** The copy was written who-I-am, then why, then
+  what. Someone scanning needs what, how I can help, proof, then why, so the
+  arc that used to open the page now sits near the bottom as a scan strip of
+  two runs: how the work was arranged, then what the job was called. Same
+  progression as the FbN scan strip, so the two pages tell one story.
+- **The client strip is a port, not a share.** `ClientLogoCarousel` is FbN's
+  component with two deliberate differences: static imports rather than
+  `/client-logos/*` public paths, so the files are fingerprinted here, and the
+  edge fades painted in white rather than FbN's shadcn `bg-card` token, which
+  this site does not have. `epic-pathways.png` was missing from this repo and
+  has been copied across; the list is fourteen entries and expected to drift
+  as FbN takes on new clients. Duplicated rather than shared because the two
+  repos have no common package.
 - **Adds:** separates "hire me as a person" from "engage my business", which is
   the distinction the whole two-site split exists to make.
+- **Open, deliberately left as the plan has it:** `/work` says what I recommend
+  "follows what fits the context, not what I happen to know" and FbN says
+  "follows what fits your organisation, not what I happen to know". The plan
+  calls that fine as an echo and offers a reword; no decision was taken, so the
+  echo stands.
+- **Still waiting on:** the share image. The plan wants the outdoor photo, but
+  which photo becomes the share image is open, so `/work` keeps its existing
+  card rather than pointing at a file that does not exist. Also Today's URL,
+  as on `/now`.
+- **One thing the plan got wrong about this page.** It says `/work` uses the
+  site-wide default title and description, so the new ones would be an
+  addition. It does not — the page has carried its own `metadata` block, its
+  own description and its own share image all along, so this was an edit. The
+  old title also contained an em dash, which the brief bans.
 
 ### `/posts` — behind the draft gate
 
@@ -226,6 +254,7 @@ The hub. Answers "who is this person?" and should sound like Mischa talking.
 
 | Date | Change | Why |
 | --- | --- | --- |
+| 2026-10-18 | Landed the `/work` copy, ported FbN's client logo strip | The page was selling services to clients on a site whose reader is deciding whether to hire or collaborate with a person. The services already existed on FbN, so this was the safe half of the move. Inverting the order matters as much as the words: the arc was the first thing on the page and is the last thing a scanning reader needs. |
 | 2026-10-18 | Landed the `/now` copy from the copy plan | The page had been carrying four typos and a `[insert related profession here]` placeholder in production while the draft sat in a doc. Landing it also settled two shared-line questions: the triple threat stays in the LinkedIn wording, and the relationships line is now FbN's exact words rather than a paraphrase that was close enough to look like a mistake. |
 | 2026-10-16 | Yarn widget origin moved to `NEXT_PUBLIC_YARN_ORIGIN`, defaulting to the deployed Worker | A hand-edited `http://127.0.0.1:8787` literal had been committed. On an HTTPS page the browser blocks it as mixed content, so the widget would silently never have appeared. An env var means a local override cannot be committed. |
 | 2026-10-16 | Stopped tracking `.DS_Store` | In `.gitignore` twice, but already in the index, so the ignore never applied. |
