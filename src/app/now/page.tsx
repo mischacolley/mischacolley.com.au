@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import Header from "@/components/Header";
+import { EMAIL, SITES } from "@/lib/identity";
 import { kidsAgeList } from "@/lib/kids";
 import { lastUpdated } from "@/lib/lastUpdated";
 
@@ -20,15 +21,6 @@ export const metadata: Metadata = {
     title: TITLE,
     description: DESCRIPTION,
   },
-};
-
-/** Shared with every other surface. Changing one of these changes it everywhere. */
-const LINKS = {
-  fractionalByNature: "https://fractionalbynature.com.au",
-  openCampus: "https://opencampusproject.com",
-  helloMaker: "https://hellomaker.org",
-  kindred: "https://getkindred.com.au",
-  inGoodCompany: "https://ingoodcompany-studio.com/",
 };
 
 function Outbound({ href, children }: { href: string; children: React.ReactNode }) {
@@ -85,7 +77,7 @@ export default function Now() {
           . I co-parent with their mum so they are with me a little less than
           half the time. Living the reality of my children having two homes is
           part of why I started building{" "}
-          <Outbound href={LINKS.kindred}>Kindred</Outbound>.
+          <Outbound href={SITES.kindred}>Kindred</Outbound>.
         </p>
 
         <p className="text-lg mb-5">
@@ -140,11 +132,11 @@ export default function Now() {
             4 day week
           </Link>
           . Through my own clients with{" "}
-          <Outbound href={LINKS.fractionalByNature}>
+          <Outbound href={SITES.fractionalByNature}>
             Fractional by Nature
           </Outbound>{" "}
           and in strategic partnerships with studios like{" "}
-          <Outbound href={LINKS.inGoodCompany}>In Good Company</Outbound> and
+          <Outbound href={SITES.inGoodCompany}>In Good Company</Outbound> and
           Today.
         </p>
 
@@ -178,7 +170,7 @@ export default function Now() {
 
         <p className="text-lg mb-5">
           My other projects all sit under the{" "}
-          <Outbound href={LINKS.openCampus}>Open Campus Project</Outbound>{" "}
+          <Outbound href={SITES.openCampus}>Open Campus Project</Outbound>{" "}
           umbrella where I&rsquo;ve been exploring alternative learning pathways
           and edu tech.
         </p>
@@ -188,7 +180,7 @@ export default function Now() {
               "digital technology" — the shared wording has to match the full
               sentence used on HelloMaker and Open Campus. */}
           The element of that I&rsquo;m putting most energy into at the moment
-          is <Outbound href={LINKS.helloMaker}>HelloMaker</Outbound>. Looking to
+          is <Outbound href={SITES.helloMaker}>HelloMaker</Outbound>. Looking to
           help kids and their parents build a confident, conscious relationship
           with technology.
         </p>
@@ -215,7 +207,7 @@ export default function Now() {
               widget and falls back to this same mailto, so the anchor is the
               honest version of the same destination. */}
           <a
-            href="mailto:me@mischacolley.com.au"
+            href={`mailto:${EMAIL}`}
             className="text-brand underline"
           >
             yarn
@@ -294,7 +286,7 @@ export default function Now() {
 
         <a
           className="bg-brand hover:bg-blue-700 text-white font-bold py-4 px-4 rounded mt-2 mb-5 inline-block"
-          href="mailto:me@mischacolley.com.au"
+          href={`mailto:${EMAIL}`}
         >
           Let&rsquo;s yarn
         </a>

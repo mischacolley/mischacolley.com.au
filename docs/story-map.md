@@ -243,17 +243,41 @@ The hub. Answers "who is this person?" and should sound like Mischa talking.
 
 ### Site-wide
 
-- **Now:** `layout.tsx` metadata still says "FED, Tech Edu" and "purpose-driven
-  business", both superseded. No Elsewhere footer. No `Person` JSON-LD.
-- **Changing:** titles and descriptions from the brief, the Elsewhere footer,
-  and `sameAs` structured data.
+- **Now:** `layout.tsx` carries the brief's home title and description, and
+  `Person` JSON-LD with `sameAs`. "FED", "Tech Edu" and "purpose-driven
+  business" are gone. No Elsewhere footer yet.
+- **One title, one description.** They were three literals each, repeated
+  across `metadata`, `openGraph` and `twitter`, and had gone stale together.
+  Now single consts. Child pages set their own absolute titles rather than
+  filling a `%s | Mischa Colley` template, because the plan's
+  "Work | Mischa Colley, senior technologist" does not fit one.
+- **`src/lib/identity.ts` is the one place the cross-site URLs live.** They
+  were duplicated across `/now`, `/work`, `ContactFab` and `projects.ts` —
+  four chances to update three and miss one. Plain strings, no environment
+  read, so a client component can import it. `SITES.today` is deliberately
+  `null`: the studio is named in the copy on both pages and its address
+  appears nowhere in any of the five repos, so it stays plain text until the
+  real URL turns up. Fill that one field and both pages pick it up.
+- **The JSON-LD is honest about what it claims.** `sameAs` is profiles only
+  (LinkedIn, GitHub, Instagram, all already in `ContactFab`). The project
+  sites are organisations Mischa runs, not other identities of his, so they
+  hang off `worksFor` and `affiliation` where they are actually true.
+  Serialised with `JSON.stringify` from the object in `identity.ts`, so the
+  markup cannot drift from it.
+- **The chat widget greeting was carrying a near-miss of a shared line** —
+  "people living their best lives doing things that really matter to them",
+  against the quote band's "people doing their best work on projects that
+  really matter, however long that lasts". Aligned, along with "barefeet",
+  which `/now` no longer says either.
 - **Adds:** the five sites read as one person to a search engine, not five
   strangers.
+- **Still to do:** the Elsewhere footer.
 
 ### Done
 
 | Date | Change | Why |
 | --- | --- | --- |
+| 2026-10-18 | Site-wide title and description, `Person` JSON-LD, and `src/lib/identity.ts` | The metadata was three copies of a stale literal in one file. The cross-site URLs were four copies across four files, which is the failure the five-sites-one-person goal cannot survive. Both are now single sources. The JSON-LD is the machine-readable half of the same idea. |
 | 2026-10-18 | Landed the `/work` copy, ported FbN's client logo strip | The page was selling services to clients on a site whose reader is deciding whether to hire or collaborate with a person. The services already existed on FbN, so this was the safe half of the move. Inverting the order matters as much as the words: the arc was the first thing on the page and is the last thing a scanning reader needs. |
 | 2026-10-18 | Landed the `/now` copy from the copy plan | The page had been carrying four typos and a `[insert related profession here]` placeholder in production while the draft sat in a doc. Landing it also settled two shared-line questions: the triple threat stays in the LinkedIn wording, and the relationships line is now FbN's exact words rather than a paraphrase that was close enough to look like a mistake. |
 | 2026-10-16 | Yarn widget origin moved to `NEXT_PUBLIC_YARN_ORIGIN`, defaulting to the deployed Worker | A hand-edited `http://127.0.0.1:8787` literal had been committed. On an HTTPS page the browser blocks it as mixed content, so the widget would silently never have appeared. An env var means a local override cannot be committed. |

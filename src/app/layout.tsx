@@ -6,6 +6,7 @@ import {
   SiteDrawerProvider,
   SiteShell,
 } from "@/components/SiteDrawer";
+import { PERSON_JSON_LD } from "@/lib/identity";
 
 /**
  * Where the Yarn Chat widget is served from. The deployed Worker is the
@@ -19,11 +20,23 @@ const YARN_ORIGIN =
   process.env.NEXT_PUBLIC_YARN_ORIGIN ??
   "https://yarn-chat.mischacolley.workers.dev";
 
+/**
+ * One title and one description, referenced three times below. They were
+ * three separate literals and had already drifted out of date together:
+ * "FED" and "Tech Edu" are both superseded, and "purpose-driven business"
+ * was never the audience.
+ *
+ * Child pages set their own absolute titles rather than filling a template,
+ * because "Work | Mischa Colley, senior technologist" does not fit one.
+ */
+const TITLE = "Mischa Colley: dad, creative technologist, fractional CTO";
+const DESCRIPTION =
+  "Dad of two, creative technologist and fractional CTO near Byron Bay. Notes on technology, learning outside school, and building a life that fits.";
+
 export const metadata: Metadata = {
   metadataBase: new URL("https://mischacolley.com.au"),
-  title: "Mischa Colley | Creative Technologist, Fractional CTO, FED, Tech Edu",
-  description:
-    "I help purpose-driven business and young people with digital technology",
+  title: TITLE,
+  description: DESCRIPTION,
   authors: [{ name: "Mischa Colley" }],
   icons: {
     icon: [
@@ -34,10 +47,8 @@ export const metadata: Metadata = {
     apple: "/site-icon.png",
   },
   openGraph: {
-    title:
-      "Mischa Colley | Creative Technologist, Fractional CTO, FED, Tech Edu",
-    description:
-      "I help purpose-driven business and young people with digital technology",
+    title: TITLE,
+    description: DESCRIPTION,
     url: "https://mischacolley.com.au",
     siteName: "Mischa Colley",
     images: [
@@ -53,10 +64,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title:
-      "Mischa Colley | Creative Technologist, Fractional CTO, FED, Tech Edu",
-    description:
-      "I help purpose-driven business and young people with digital technology",
+    title: TITLE,
+    description: DESCRIPTION,
     images: ["/images/social-share.png"],
   },
 };
@@ -75,6 +84,19 @@ export default function RootLayout({
         </SiteDrawerProvider>
         <ContactFab />
         {/*
+          Person structured data, so the five sites read as one person rather
+          than five strangers. `sameAs` is profiles only — the project sites
+          are organisations Mischa runs, not other identities of his, so they
+          sit on worksFor and affiliation where they are actually true.
+
+          Serialised with JSON.stringify rather than hand-written, so the
+          markup cannot disagree with the object in src/lib/identity.ts.
+        */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(PERSON_JSON_LD) }}
+        />
+        {/*
           Yarn Chat. Deferred and failure-tolerant on purpose: ContactFab
           falls back to its mailto if this never loads, so the contact path
           does not depend on it. The widget reads its API origin from this
@@ -89,7 +111,7 @@ export default function RootLayout({
         <script
           src={`${YARN_ORIGIN}/widget.js`}
           data-site="personal"
-          data-greeting="Hi 👋🏻 I want to build fulfilling relationships with people living their best lives doing things that really matter to them. That means as often as I can be I'm off-grid and as far away from screens and signals as my barefeet will take me and my kids. When I'm about you'll get a reply 😊"
+          data-greeting="Hi 👋🏻 I want to build fulfilling relationships with people doing their best work on projects that really matter, however long that lasts. That means as often as I can be I'm off-grid and as far from screens and signals as my 4x4 will get me and my kids. When I'm about you'll get a reply 😊"
           defer
         />
       </body>

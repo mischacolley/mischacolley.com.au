@@ -2,6 +2,7 @@ import fractionalByNature from "@/assets/project-logos/fractional-by-nature.svg"
 import openCampus from "@/assets/project-logos/open-campus.svg";
 import helloMaker from "@/assets/project-logos/hellomaker.svg";
 import kindred from "@/assets/project-logos/kindred.svg";
+import { SITES } from "@/lib/identity";
 
 /**
  * Wordmark logos carry the project's name in the artwork; badges do not.
@@ -42,21 +43,21 @@ export const PROJECTS: Project[] = [
     tagline: "Technology strategy and hands-on delivery for purpose-driven organisations",
     logo: fractionalByNature,
     logoKind: "wordmark",
-    href: "https://fractionalbynature.com.au",
+    href: SITES.fractionalByNature,
   },
   {
     name: "Open Campus Project",
     tagline: "Alternative learning pathways explored",
     logo: openCampus,
     logoKind: "badge",
-    href: "https://opencampusproject.com",
+    href: SITES.openCampus,
     children: [
       {
         name: "HelloMaker",
         tagline: "Tech learning for young people",
         logo: helloMaker,
         logoKind: "wordmark",
-        href: "https://hellomaker.org",
+        href: SITES.helloMaker,
       },
     ],
   },
@@ -65,6 +66,6 @@ export const PROJECTS: Project[] = [
     tagline: "The co-parenting app for the whole journey",
     logo: kindred,
     logoKind: "wordmark",
-    href: "https://getkindred.com.au",
+    href: SITES.kindred,
   },
 ];

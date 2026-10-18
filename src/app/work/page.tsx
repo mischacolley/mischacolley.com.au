@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import ClientLogoCarousel from "@/components/ClientLogoCarousel";
 import Header from "@/components/Header";
+import { EMAIL, SITES } from "@/lib/identity";
 
 const TITLE = "Work | Mischa Colley, senior technologist";
 const DESCRIPTION =
@@ -33,13 +34,6 @@ export const metadata: Metadata = {
     description: DESCRIPTION,
     images: [SHARE_IMAGE.url],
   },
-};
-
-const LINKS = {
-  fractionalByNature: "https://fractionalbynature.com.au",
-  openCampus: "https://opencampusproject.com",
-  helloMaker: "https://hellomaker.org",
-  inGoodCompany: "https://ingoodcompany-studio.com/",
 };
 
 function Outbound({
@@ -168,7 +162,7 @@ export default function Work() {
           organisation&rsquo;s mission and values: digital transformation as
           business as usual, processes built around people rather than tools,
           and technology the team will actually use. This is the heart of{" "}
-          <Outbound href={LINKS.fractionalByNature}>
+          <Outbound href={SITES.fractionalByNature}>
             Fractional by Nature
           </Outbound>
           .
@@ -293,30 +287,30 @@ export default function Work() {
           <li className="list-disc list-inside">
             If you&rsquo;re an organisation looking for a fractional CTO or
             digital strategy, that&rsquo;s{" "}
-            <Outbound href={LINKS.fractionalByNature}>
+            <Outbound href={SITES.fractionalByNature}>
               Fractional by Nature
             </Outbound>
             .
           </li>
           <li className="list-disc list-inside">
             I&rsquo;m taking on EdTech projects through the{" "}
-            <Outbound href={LINKS.openCampus}>Open Campus Project</Outbound>{" "}
+            <Outbound href={SITES.openCampus}>Open Campus Project</Outbound>{" "}
             and helping young people and their parents with tech through{" "}
-            <Outbound href={LINKS.helloMaker}>HelloMaker</Outbound>.
+            <Outbound href={SITES.helloMaker}>HelloMaker</Outbound>.
           </li>
           <li className="list-disc list-inside">
             I&rsquo;m not alone. When a project needs more disciplines or a
             bigger studio you&rsquo;ll find me working with friends like{" "}
             {/* Today is named but not linked: its URL appears nowhere in any
                 of the five repos, and a guessed address is worse than none. */}
-            <Outbound href={LINKS.inGoodCompany}>In Good Company</Outbound> and
+            <Outbound href={SITES.inGoodCompany}>In Good Company</Outbound> and
             Today.
           </li>
         </ul>
 
         <a
           className="bg-brand hover:bg-blue-700 text-white font-bold py-4 px-4 rounded mt-2 mb-5 inline-block"
-          href="mailto:me@mischacolley.com.au"
+          href={`mailto:${EMAIL}`}
         >
           Let&rsquo;s yarn
         </a>
