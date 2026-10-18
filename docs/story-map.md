@@ -141,15 +141,32 @@ The hub. Answers "who is this person?" and should sound like Mischa talking.
 
 ### `/now`
 
-- **Now:** covers family and work. Carries four typos the brief lists
-  (`Biger`, `will no`, `were working`) and a live placeholder,
-  `[insert related profession here]`. Stamped with a real last-updated date by
-  a pre-commit hook.
-- **Changing:** apply the draft, fill the brackets, fix the typos.
+- **Now:** the copy doc's full draft, landed. Home, Me, Work, What I'm
+  building, The bigger picture, Looking for, Away from the screen, then the
+  big idea as a closing visual. The four typos and the
+  `[insert related profession here]` placeholder are gone. Ages come from
+  `KIDS_BIRTHDATES`, never typed. Stamped with a real last-updated date by a
+  pre-commit hook.
+- **The closing treatment** sets the three tensions as a `<dl>` of paired
+  lines, so the shape of the idea reads before the words do, then the
+  Fitzgerald line as a pull quote. "Maybe put it best" is dropped on purpose:
+  the attribution does that job once the quote is styled.
+- **Links are first-mention only**, or the page turns blue. Kindred is linked
+  in Home and deliberately plain in What I'm building; the four day week line
+  carries the link to `/work`.
 - **Adds:** the honest, dated register the whole site leans on. The "Me"
   paragraph about being single is the piece that makes the rest credible.
-- **Waiting on:** availability, what he does with the other half of his time,
-  the line about days with his kids, what the community would look like.
+- **Waiting on:** the two photos. The 4x4-as-office shot belongs between Me
+  and Work, where it bridges the personal and the professional and says "four
+  day week" without words; the camping shot closes Away from the screen.
+  Neither file exists, so both are marked in place as comments with the
+  `<Image>` to drop in. Also waiting on Today's URL — the studio is named in
+  Work and is the only link in the plan with no address anywhere in the five
+  repos, so it is plain text rather than a guess.
+- **Decided, 18 October:** the triple threat stays, in the LinkedIn wording.
+  `/now` also carries FbN's quote-band line word for word now
+  ("...people doing their best work on projects that really matter, however
+  long that lasts"), rather than the looser paraphrase it had.
 
 ### `/history` — new, behind the draft gate
 
@@ -209,6 +226,7 @@ The hub. Answers "who is this person?" and should sound like Mischa talking.
 
 | Date | Change | Why |
 | --- | --- | --- |
+| 2026-10-18 | Landed the `/now` copy from the copy plan | The page had been carrying four typos and a `[insert related profession here]` placeholder in production while the draft sat in a doc. Landing it also settled two shared-line questions: the triple threat stays in the LinkedIn wording, and the relationships line is now FbN's exact words rather than a paraphrase that was close enough to look like a mistake. |
 | 2026-10-16 | Yarn widget origin moved to `NEXT_PUBLIC_YARN_ORIGIN`, defaulting to the deployed Worker | A hand-edited `http://127.0.0.1:8787` literal had been committed. On an HTTPS page the browser blocks it as mixed content, so the widget would silently never have appeared. An env var means a local override cannot be committed. |
 | 2026-10-16 | Stopped tracking `.DS_Store` | In `.gitignore` twice, but already in the index, so the ignore never applied. |
 | 2026-10-16 | Dropped `netlify.toml`, retargeted docs at Vercel | The deploy moved. Two comments still told you to set `KIDS_BIRTHDATES` in Netlify. |
