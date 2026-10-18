@@ -1,7 +1,8 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import Header from "@/components/Header";
-import { EMAIL, SITES } from "@/lib/identity";
+import YarnLink from "@/components/YarnLink";
+import { SITES } from "@/lib/identity";
 import { kidsAgeList } from "@/lib/kids";
 import { lastUpdated } from "@/lib/lastUpdated";
 
@@ -203,15 +204,9 @@ export default function Now() {
           collaboration in my life, and more developers, designers and
           technologists in the for-purpose space getting together intentionally.
           In Good Company is part of that. I&rsquo;m always up for a{" "}
-          {/* The invitation needs somewhere to go. ContactFab opens the Yarn
-              widget and falls back to this same mailto, so the anchor is the
-              honest version of the same destination. */}
-          <a
-            href={`mailto:${EMAIL}`}
-            className="text-brand underline"
-          >
-            yarn
-          </a>{" "}
+          {/* The invitation needs somewhere to go, and it should go where the
+              button at the foot of the page goes. */}
+          <YarnLink className="text-brand underline">yarn</YarnLink>{" "}
           with values-aligned people over good beer and good food, and maybe a
           cool project if that&rsquo;s where the conversation goes.
         </p>
@@ -284,12 +279,11 @@ export default function Now() {
           </blockquote>
         </section>
 
-        <a
-          className="bg-brand hover:bg-blue-700 text-white font-bold py-4 px-4 rounded mt-2 mb-5 inline-block"
-          href={`mailto:${EMAIL}`}
-        >
+        {/* Opens the Yarn widget, same as the floating avatar, and falls
+            back to the mailto when the widget has not loaded. */}
+        <YarnLink className="bg-brand hover:bg-brand-dark transition-colors text-white font-bold py-4 px-4 rounded mt-2 mb-5 inline-block">
           Let&rsquo;s yarn
-        </a>
+        </YarnLink>
       </article>
     </>
   );

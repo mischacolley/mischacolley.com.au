@@ -119,7 +119,9 @@ These were open questions in `copy-brief.md`. The code answered them.
   sites previously had the birth and the job in the same year.
 - **The call to action is "Let's yarn", not "Let's Chat".** Confirmed by
   Mischa, and already how `ContactFab` and the chat widget read on the
-  personal site. Use it on every surface.
+  personal site. Use it on every surface. On the personal site every surface
+  of it opens the same widget: `src/lib/yarn.ts` is the one handler, and
+  `YarnLink` is how a server-rendered page reaches it.
 - **The stale GitHub issue and PR on the personal site are not relevant.** A
   2020 todo list and a 2023 Dependabot bump for Gatsby, which the site no
   longer uses. Nothing to work around.
@@ -304,6 +306,7 @@ The hub. Answers "who is this person?" and should sound like Mischa talking.
 
 | Date | Change | Why |
 | --- | --- | --- |
+| 2026-10-18 | One Yarn handler behind every "Let's yarn", and an on-brand hover | The buttons at the foot of `/now` and `/work` were plain `mailto:` anchors, so the site's own CTA was the one thing on the page that did not open the chat widget. `src/lib/yarn.ts` now holds the single handler and `YarnLink` carries it into the server-rendered pages, mailto fallback intact. The hover was Tailwind's `blue-700`, a different and far more saturated blue than `#6699cc`; `brand-dark` is one step down in the same family. |
 | 2026-10-18 | Site-wide title and description, `Person` JSON-LD, and `src/lib/identity.ts` | The metadata was three copies of a stale literal in one file. The cross-site URLs were four copies across four files, which is the failure the five-sites-one-person goal cannot survive. Both are now single sources. The JSON-LD is the machine-readable half of the same idea. |
 | 2026-10-18 | Landed the `/work` copy, ported FbN's client logo strip | The page was selling services to clients on a site whose reader is deciding whether to hire or collaborate with a person. The services already existed on FbN, so this was the safe half of the move. Inverting the order matters as much as the words: the arc was the first thing on the page and is the last thing a scanning reader needs. |
 | 2026-10-18 | Landed the `/now` copy from the copy plan | The page had been carrying four typos and a `[insert related profession here]` placeholder in production while the draft sat in a doc. Landing it also settled two shared-line questions: the triple threat stays in the LinkedIn wording, and the relationships line is now FbN's exact words rather than a paraphrase that was close enough to look like a mistake. |

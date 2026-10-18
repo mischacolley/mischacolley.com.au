@@ -1,7 +1,8 @@
 import type { Metadata } from "next";
 import ClientLogoCarousel from "@/components/ClientLogoCarousel";
 import Header from "@/components/Header";
-import { EMAIL, SITES } from "@/lib/identity";
+import YarnLink from "@/components/YarnLink";
+import { SITES } from "@/lib/identity";
 
 const TITLE = "Work | Mischa Colley, senior technologist";
 const DESCRIPTION =
@@ -308,12 +309,11 @@ export default function Work() {
           </li>
         </ul>
 
-        <a
-          className="bg-brand hover:bg-blue-700 text-white font-bold py-4 px-4 rounded mt-2 mb-5 inline-block"
-          href={`mailto:${EMAIL}`}
-        >
+        {/* Opens the Yarn widget, same as the floating avatar, and falls
+            back to the mailto when the widget has not loaded. */}
+        <YarnLink className="bg-brand hover:bg-brand-dark transition-colors text-white font-bold py-4 px-4 rounded mt-2 mb-5 inline-block">
           Let&rsquo;s yarn
-        </a>
+        </YarnLink>
       </article>
     </>
   );

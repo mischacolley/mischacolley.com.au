@@ -3,6 +3,7 @@
 import Image from "next/image";
 import profileImage from "@/assets/images/profile.jpg";
 import { EMAIL, PROFILES } from "@/lib/identity";
+import { openYarn } from "@/lib/yarn";
 
 /**
  * Floating contact launcher, pinned bottom-right, with the social links fanned
@@ -10,12 +11,9 @@ import { EMAIL, PROFILES } from "@/lib/identity";
  * affordance now — the footer nav it replaced is gone, along with its email
  * link.
  *
- * The avatar opens the Yarn Chat widget, falling back to a mail client.
- *
- * The fallback is the point, not politeness: the href is a real `mailto:` and
- * the handler only prevents it once `window.Yarn.ready()` is true. So a
- * blocked script, a failed fetch, or a backend that is down all leave a
- * working contact link rather than a button that does nothing.
+ * The avatar opens the Yarn Chat widget, falling back to a mail client. That
+ * behaviour lives in `openYarn` because the "Let's yarn" buttons on `/now` and
+ * `/work` have to do exactly the same thing.
  */
 
 /**
@@ -78,13 +76,7 @@ export default function ContactFab() {
       <a
         href={`mailto:${EMAIL}`}
         aria-label="Let&apos;s yarn"
-        onClick={(event) => {
-          // Let modified clicks through, same as the social links above.
-          if (event.metaKey || event.ctrlKey || event.shiftKey) return;
-          if (!window.Yarn?.ready()) return; // the mailto happens instead
-          event.preventDefault();
-          window.Yarn.toggle();
-        }}
+        onClick={openYarn}
         className="group block h-full w-full rounded-full focus:outline-none focus-visible:ring-2 focus-visible:ring-brand focus-visible:ring-offset-2"
       >
         {/* Absolutely positioned so the label never widens the hit area. */}
