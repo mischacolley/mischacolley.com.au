@@ -306,7 +306,6 @@ underneath.
 | EdTech consulting: one sentence on who you help and how, or drop the bullet | Open Campus |
 | Kindred: "over a decade" or twenty years? | Kindred, in two places |
 | Keep the Indigenous Australian line? Turning the 2020 paragraph into a card dropped it, and it is the line you asked to reword rather than cut | Fractional by Nature About |
-| Today's URL. It appears nowhere in any of the five repos | A link on `/now` and `/work`. Set `SITES.today` and both pick it up |
 | Has the Learning In-between podcast launched? | Open Campus |
 | Which three SDGs to name, if the focus-area wording is ever replaced | Fractional by Nature SDG block |
 | Are the three contact addresses intentional, and do they reach one inbox? | Nothing, but worth knowing |
@@ -316,6 +315,7 @@ underneath.
 | Was open | Answer |
 | --- | --- |
 | Call to action: "Let's Chat" or "let's yarn"? | "Let's yarn", confirmed, and now on every surface |
+| Today's URL | `today.design`, confirmed. Set once in `SITES.today`; `/now` and `/work` both link it |
 | Is Open Campus the umbrella over HelloMaker, with Kindred standing alone? | Yes, confirmed. All four surfaces agree, and Learning Prompts is a sub-brand under it sharing content with HelloMaker |
 | Publish the Working with Children Check number or offer it on request? | **Already published.** `hellomaker/data/trust.ts` carries NSW, WWC1194686E, with a comment on why a vague "current and verified" said nothing |
 | Is the new HelloMaker "why" sentence in his voice? | Reviewed in the copy plan. The TODO is gone |

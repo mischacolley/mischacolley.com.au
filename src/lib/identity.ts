@@ -28,13 +28,8 @@ export const SITES = {
   helloMaker: "https://hellomaker.org",
   kindred: "https://getkindred.com.au",
   inGoodCompany: "https://ingoodcompany-studio.com/",
-  /**
-   * Today has no address anywhere in any of the five repos. The copy names the
-   * studio on `/now` and `/work`; until the real URL turns up it stays plain
-   * text, because a guessed link to someone else's business is worse than no
-   * link. Add it here and both pages pick it up.
-   */
-  today: null,
+  /** Confirmed by Mischa, 2026-10-18. Named on both `/now` and `/work`. */
+  today: "https://today.design",
 } as const;
 
 export const EMAIL = "me@mischacolley.com.au";

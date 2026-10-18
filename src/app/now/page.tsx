@@ -137,8 +137,8 @@ export default function Now() {
             Fractional by Nature
           </Outbound>{" "}
           and in strategic partnerships with studios like{" "}
-          <Outbound href={SITES.inGoodCompany}>In Good Company</Outbound> and
-          Today.
+          <Outbound href={SITES.inGoodCompany}>In Good Company</Outbound> and{" "}
+          <Outbound href={SITES.today}>Today</Outbound>.
         </p>
 
         <p className="text-lg mb-5">

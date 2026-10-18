@@ -302,10 +302,8 @@ export default function Work() {
           <li className="list-disc list-inside">
             I&rsquo;m not alone. When a project needs more disciplines or a
             bigger studio you&rsquo;ll find me working with friends like{" "}
-            {/* Today is named but not linked: its URL appears nowhere in any
-                of the five repos, and a guessed address is worse than none. */}
-            <Outbound href={SITES.inGoodCompany}>In Good Company</Outbound> and
-            Today.
+            <Outbound href={SITES.inGoodCompany}>In Good Company</Outbound> and{" "}
+            <Outbound href={SITES.today}>Today</Outbound>.
           </li>
         </ul>
 

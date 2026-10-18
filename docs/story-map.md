@@ -189,9 +189,7 @@ The hub. Answers "who is this person?" and should sound like Mischa talking.
   and Work, where it bridges the personal and the professional and says "four
   day week" without words; the camping shot closes Away from the screen.
   Neither file exists, so both are marked in place as comments with the
-  `<Image>` to drop in. Also waiting on Today's URL — the studio is named in
-  Work and is the only link in the plan with no address anywhere in the five
-  repos, so it is plain text rather than a guess.
+  `<Image>` to drop in.
 - **Decided, 18 October:** the triple threat stays, in the LinkedIn wording.
   `/now` also carries FbN's quote-band line word for word now
   ("...people doing their best work on projects that really matter, however
@@ -249,8 +247,7 @@ The hub. Answers "who is this person?" and should sound like Mischa talking.
   echo stands.
 - **Still waiting on:** the share image. The plan wants the outdoor photo, but
   which photo becomes the share image is open, so `/work` keeps its existing
-  card rather than pointing at a file that does not exist. Also Today's URL,
-  as on `/now`.
+  card rather than pointing at a file that does not exist.
 - **One thing the plan got wrong about this page.** It says `/work` uses the
   site-wide default title and description, so the new ones would be an
   addition. It does not — the page has carried its own `metadata` block, its
@@ -283,10 +280,9 @@ The hub. Answers "who is this person?" and should sound like Mischa talking.
 - **`src/lib/identity.ts` is the one place the cross-site URLs live.** They
   were duplicated across `/now`, `/work`, `ContactFab` and `projects.ts` —
   four chances to update three and miss one. Plain strings, no environment
-  read, so a client component can import it. `SITES.today` is deliberately
-  `null`: the studio is named in the copy on both pages and its address
-  appears nowhere in any of the five repos, so it stays plain text until the
-  real URL turns up. Fill that one field and both pages pick it up.
+  read, so a client component can import it. `SITES.today` was the last
+  blank; Mischa confirmed today.design on 18 October and both pages picked it
+  up from the one field.
 - **The JSON-LD is honest about what it claims.** `sameAs` is profiles only
   (LinkedIn, GitHub, Instagram, all already in `ContactFab`). The project
   sites are organisations Mischa runs, not other identities of his, so they
@@ -307,6 +303,7 @@ The hub. Answers "who is this person?" and should sound like Mischa talking.
 | Date | Change | Why |
 | --- | --- | --- |
 | 2026-10-18 | One Yarn handler behind every "Let's yarn", and an on-brand hover | The buttons at the foot of `/now` and `/work` were plain `mailto:` anchors, so the site's own CTA was the one thing on the page that did not open the chat widget. `src/lib/yarn.ts` now holds the single handler and `YarnLink` carries it into the server-rendered pages, mailto fallback intact. The hover was Tailwind's `blue-700`, a different and far more saturated blue than `#6699cc`; `brand-dark` is one step down in the same family. |
+| 2026-10-18 | Today links to today.design | The last blank in `SITES`. It had been plain text on `/now` and `/work` because guessing someone else's address is worse than no link. Confirmed by Mischa. |
 | 2026-10-18 | Site-wide title and description, `Person` JSON-LD, and `src/lib/identity.ts` | The metadata was three copies of a stale literal in one file. The cross-site URLs were four copies across four files, which is the failure the five-sites-one-person goal cannot survive. Both are now single sources. The JSON-LD is the machine-readable half of the same idea. |
 | 2026-10-18 | Landed the `/work` copy, ported FbN's client logo strip | The page was selling services to clients on a site whose reader is deciding whether to hire or collaborate with a person. The services already existed on FbN, so this was the safe half of the move. Inverting the order matters as much as the words: the arc was the first thing on the page and is the last thing a scanning reader needs. |
 | 2026-10-18 | Landed the `/now` copy from the copy plan | The page had been carrying four typos and a `[insert related profession here]` placeholder in production while the draft sat in a doc. Landing it also settled two shared-line questions: the triple threat stays in the LinkedIn wording, and the relationships line is now FbN's exact words rather than a paraphrase that was close enough to look like a mistake. |
