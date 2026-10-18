@@ -11,7 +11,16 @@ module.exports = {
         mono: ['ui-monospace', 'SFMono-Regular', 'Monaco', 'Consolas', 'Liberation Mono', 'Courier New', 'monospace'],
       },
       colors: {
-        brand: '#6699cc', // Same as your original Gatsby site
+        brand: {
+          // Same as your original Gatsby site. `bg-brand` and `text-brand`
+          // still resolve to DEFAULT, so nothing had to change to add the
+          // hover shade.
+          DEFAULT: '#6699cc',
+          // One step darker in the same family, for hover and active states.
+          // The buttons used to hover to Tailwind's `blue-700`, which is a
+          // different, much more saturated blue and read as a mistake.
+          dark: '#5588bb',
+        },
       },
       keyframes: {
         blink: {
